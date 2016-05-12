@@ -1,0 +1,352 @@
+// Color Palette
+//
+// These are the primary colors for the site
+//
+// Markup:
+// <div class="bg {$modifiers}"></div>
+//
+// .black                - $black: #261D19;
+// .off-black            - $off-back: #404040;
+// .gray                 - $gray: #eaeaea;
+// .blue                 - $blue: #728EAD;
+// .drenched-blue        - $drenched-blue: saturate($blue, 30%);
+// .light-blue           - $light-blue: lighten($blue, 20%);
+// .green                - $green: #40C27A;
+// .yellow               - $yellow: #F9B634;
+//
+// Styleguide 1
+
+$black: #261D19;
+$off-black: #555;
+$grayer: #888;
+$gray: #eaeaea;
+$red: #FF6A40;
+$blue: #728EAD;
+$drenched-blue: saturate($blue, 30%);
+$light-blue: lighten($blue, 20%);
+$green: #40C27A;
+$yellow: #F9B634;
+$white: white;
+
+$dotted: #aaa;
+
+.bg {
+	background-color: $white;
+}
+.black {
+	background-color: $black;
+}
+.off-black {
+	background-color: $off-black;
+}
+.gray {
+	background-color: $gray;
+}
+.blue {
+	background-color: $blue;
+}
+.drenched-blue {
+	background-color: $drenched-blue;
+}
+.light-blue {
+	background-color: $light-blue;
+}
+.green {
+	background-color: $green;
+}
+.yellow {
+	background-color: $yellow;
+}
+
+//
+// GLOBALS
+//
+$color-primary: $blue;
+$color-success: $green;
+$color-info: #5bc0de;
+$color-warning: #f0ad4e;
+$color-error: #d9534f;
+$border-radius: 2px;
+
+
+//
+// ALERTS
+//
+$alert-padding: 0.7em 1.5em;
+$alert-border-radius: $border-radius;
+$alert-font-color: $white;
+
+
+//
+// ANIMATIONS
+//
+
+
+//
+// BUTTONS
+//
+$button-padding: .8em 5em;
+$button-border-radius: $border-radius;
+$button-primary-color: $green;
+$button-primary-font-color: $white;
+$button-secondary-color: $blue;
+$button-secondary-font-color: $white;
+$button-highlight-color: $yellow;
+$button-highlight-font-color: $white;
+
+
+//
+// FORMS
+//
+$form-input-padding: 0.5em 0.75em;
+$form-input-font-color: $off-black;
+$form-input-bg-color: $white;
+$form-input-active-color: $color-primary;
+$form-input-border-color: lighten($off-black, 50%);
+$form-input-container-margin: 1em 0;
+
+//
+// LAYOUT
+//
+$site-min-width: 25em;
+$site-max-width: 1200px / 16px * 1em;
+$content-max-width: 875px / 16px * 1em;
+$vertical-gutter: 30px / 16px * 1em;
+$header-padding: 25px 0;
+
+//
+// BREAKPOINTS
+//
+$breakpoint-min-width: min-width 0;
+$breakpoint-small-width: min-width 25em;
+$breakpoint-med-small-width: min-width 40.5em;
+$breakpoint-medium-width: min-width 50em;
+$breakpoint-large-width: min-width 62.5em;
+$breakpoint-to-max-width: min-width $site-max-width;
+$breakpoint-full-width: max-width $site-max-width;
+
+//
+// TABLES
+//
+$table-border: 1px solid $gray;
+$table-border-radius: $border-radius;
+$table-header-vertical-align: bottom;
+$table-header-font-color: $off-black;
+$table-header-font-weight: 600;
+$table-header-bg-color: $gray;
+$table-header-text-transform: none;
+$table-row-bg-color: $white;
+$table-row-alt-bg-color: $gray;
+$table-row-hover-color: $gray;
+$table-row-transition: background .2s ease, border-color .2s ease, color .2s ease;
+$table-cell-vertical-align: middle;
+$table-cell-font-color: $off-black;
+$table-cell-border: 1px solid $gray;
+$table-cell-padding: .7em .8em;
+$table-cell-text-align: left; // LTR
+
+
+//
+// TABS
+//
+$tabs-container-margin: 1em 0 1.5em;
+$tabs-container-bg-color: transparent;
+$tabs-border-color: none;
+$tabs-height: 40px;
+$tabs-bg-color: transparent;
+$tabs-bg-color-hover: darken($tabs-bg-color, 5%);
+$tabs-border-radius: $border-radius;
+
+
+//
+// TYPOGRAPHY
+//
+// Bearskin uses rem units for fonts. Setting <html> font size ($bear-font-size) to 62.5% resets
+// the browser default font size to 10px, then everything in <body> uses rems (with pixel fallbacks).
+// As a result, with the exception of $bear-font-size, the other font sizes should be listed here
+// in pixel units.
+//
+//
+$bear-font-size: 62.5%;
+$bear-line-height: 1.5;
+$body-font-size: 16px;
+$base-font-size: $body-font-size;
+$h1-font-size: 60px;
+$h2-font-size: 36px;
+$h3-font-size: 1.3  * $body-font-size;
+$h4-font-size: 1.2  * $body-font-size;
+$h5-font-size: 0.83 * $body-font-size;
+$h6-font-size: 0.75 * $body-font-size;
+$header-font-family: "Helvetica Neue", Helvetica, sans-serif;
+$body-text-font-family: "Helvetica Neue", Helvetica, sans-serif;
+$base-font-color: $black;
+$link-color: $blue;
+$link-color-hover: darken($link-color, 20%);
+$link-color-active: darken($link-color, 50%);
+
+//
+// Zivtech theme variables
+//
+$zivtech-blue: #728EAD;
+$zivtech-light-blue: lighten($zivtech-blue, 10%);
+$zivtech-drenched-blue: saturate($zivtech-blue, 30%);
+$zivtech-green: #40C27A;
+$zivtech-yellow: #F9B634;
+$zivtech-off-black: #404040;
+$zivtech-dark: #261D19;
+$zivtech-pale: #eaeaea;
+$zivtech-white: white;
+$zivtech-brown-gray: #7C7775;
+
+//
+// Bearskin variables
+//
+//
+//
+// Bearskin theme colors
+// you can override these here, or just ignore them ...
+$bear-yellow: $zivtech-yellow;
+$bear-brown: #82705B;
+$bear-browner: #5F5555;
+$bear-greyer: #837B80;
+$bear-grey: lighten($bear-greyer, 40%);
+$bear-blue: $zivtech-blue;
+$bear-dark: #545452;
+$bear-lighten-dark: #6C6C6C;
+$bear-whitey: $zivtech-white;
+
+//
+//
+//
+// Default variables below
+// Feel free to change
+//
+//
+//
+
+
+//
+// GLOBALS
+//
+$color-primary: $zivtech-blue !default;
+$color-success: $zivtech-green !default;
+$color-info: #5bc0de !default;
+$color-warning: #f0ad4e !default;
+$color-error: #d9534f !default;
+$border-radius: 2px !default;
+
+
+//
+// ALERTS
+//
+$alert-padding: 0.7em 1.5em !default;
+$alert-border-radius: $border-radius !default;
+$alert-font-color: $bear-whitey !default;
+
+
+//
+// ANIMATIONS
+//
+
+
+//
+// BUTTONS
+//
+$button-padding: .8em 5em !default;
+$button-border-radius: $border-radius !default;
+$button-primary-color: $zivtech-green !default;
+$button-primary-font-color: $bear-whitey !default;
+$button-secondary-color: $zivtech-blue !default;
+$button-secondary-font-color: $bear-whitey !default;
+$button-highlight-color: $bear-yellow !default;
+$button-highlight-font-color: $bear-whitey !default;
+
+
+//
+// FORMS
+//
+$form-input-padding: 0.5em 0.75em !default;
+$form-input-font-color: $zivtech-off-black !default;
+$form-input-bg-color: $bear-whitey !default;
+$form-input-active-color: $color-primary !default;
+$form-input-border-color: lighten($zivtech-off-black, 50%) !default;
+$form-input-container-margin: 1em 0 !default;
+
+//
+// LAYOUT
+//
+$site-min-width: 25em !default;
+$site-max-width: 1200px / 16px * 1em !default;
+$content-max-width: 875px / 16px * 1em !default;
+$vertical-gutter: 30px / 16px * 1em !default;
+$header-padding: 25px 0 !default;
+
+//
+// BREAKPOINTS
+//
+$breakpoint-min-width: min-width 0 !default;
+$breakpoint-small-width: min-width 25em !default;
+$breakpoint-med-small-width: min-width 40.5em !default;
+$breakpoint-medium-width: min-width 50em !default;
+$breakpoint-large-width: min-width 62.5em !default;
+$breakpoint-to-max-width: min-width $site-max-width !default;
+$breakpoint-full-width: max-width $site-max-width !default;
+
+//
+// TABLES
+//
+$table-border: 1px solid $bear-grey !default;
+$table-border-radius: $border-radius !default;
+$table-header-vertical-align: bottom !default;
+$table-header-font-color: $zivtech-off-black !default;
+$table-header-font-weight: 600 !default;
+$table-header-bg-color: $bear-greyer !default;
+$table-header-text-transform: none !default;
+$table-row-bg-color: $bear-whitey !default;
+$table-row-alt-bg-color: $bear-grey !default;
+$table-row-hover-color: $bear-grey !default;
+$table-row-transition: background .2s ease, border-color .2s ease, color .2s ease !default;
+$table-cell-vertical-align: middle !default;
+$table-cell-font-color: $zivtech-off-black !default;
+$table-cell-border: 1px solid $bear-grey !default;
+$table-cell-padding: .7em .8em !default;
+$table-cell-text-align: left !default; // LTR
+
+
+//
+// TABS
+//
+$tabs-container-margin: 1em 0 1.5em !default;
+$tabs-container-bg-color: transparent !default;
+$tabs-border-color: none !default;
+$tabs-height: 40px !default;
+$tabs-bg-color: transparent !default;
+$tabs-bg-color-hover: darken($tabs-bg-color, 5%) !default;
+$tabs-border-radius: $border-radius !default;
+
+
+//
+// TYPOGRAPHY
+//
+// Bearskin uses rem units for fonts. Setting <html> font size ($bear-font-size) to 62.5% resets
+// the browser default font size to 10px, then everything in <body> uses rems (with pixel fallbacks).
+// As a result, with the exception of $bear-font-size, the other font sizes should be listed here
+// in pixel units.
+//
+//
+$bear-font-size: 62.5% !default;
+$bear-line-height: 1.5 !default;
+$body-font-size: 16px !default;
+$base-font-size: $body-font-size !default;
+$h1-font-size: 60px !default;
+$h2-font-size: 36px !default;
+$h3-font-size: 1.3  * $body-font-size !default;
+$h4-font-size: 1.2  * $body-font-size !default;
+$h5-font-size: 0.83 * $body-font-size !default;
+$h6-font-size: 0.75 * $body-font-size !default;
+$header-font-family: "Helvetica Neue", Helvetica, sans-serif !default;
+$body-text-font-family: "Helvetica Neue", Helvetica, sans-serif !default;
+$base-font-color: $zivtech-off-black !default;
+$link-color: $zivtech-blue !default;
+$link-color-hover: darken($link-color, 10%) !default;
+$active-link-color: darken($link-color, 25%) !default;

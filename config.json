@@ -1,0 +1,23 @@
+{
+    "sass": {
+        "srcFiles": "./sass/**/*.scss",
+        "options": {
+            "outputStyle": "expanded"
+        },
+        "destDir": "./css"
+    },
+    "patternsDir": "./_patterns",
+    "imageFiles": "./images/**/*",
+    "patternLab": {
+        "dir": "./pattern-lab"
+    },
+    "drupal": {
+        "cssDir": "../css",
+        "imagesDir": "../images",
+        "patternsDir": "../templates/patterns",
+        "templatesDir": "../templates"
+    },
+    "drush": {
+        "alias": "@local.d8.ap"
+    }
+}
