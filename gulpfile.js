@@ -14,6 +14,7 @@ var config        = require('./config.json')  ,
     postcss       = require('gulp-postcss'),
     autoprefixer  = require('autoprefixer'),
     mqpacker      = require('css-mqpacker'),
+    run       = require('gulp-run'),
     sourcemaps    = require('gulp-sourcemaps');
 
 // js utilities
@@ -93,12 +94,6 @@ gulp.task('images', function () {
     .pipe(gulp.dest('./images/'));
 });
 
-gulp.task('copy-patterns', function() {
-  return gulp.src('pattern-lab/source/_patterns/**/*.html.twig')
-    .pipe(flatten())
-    .pipe(gulp.dest('templates/patterns'));
-});
-
 gulp.task('patterns-change', function() {
   runSequence('copy-patterns', 'generate-pattern-lab');
 });
@@ -115,6 +110,11 @@ gulp.task('generate-pattern-lab', function() {
   if (isDirectory(config.patternLab.dir)) {
     run('php ' + config.patternLab.dir + '/core/console --generate').exec();
   }
+});
+
+gulp.task('copy-patterns', function() {
+  return gulp.src('./pattern-lab/source/_patterns/**/*.html.twig')
+    .pipe(gulp.dest('./templates/patterns'));
 });
 
 gulp.task('clear-cache', function() {
@@ -135,4 +135,4 @@ gulp.task('watch', function() {
 
 gulp.task('default', ['sass', 'watch']);
 gulp.task('styles', ['sass']);
-gulp.task('build', ['sass', 'scripts', 'images']);
+gulp.task('build', ['sass', 'scripts', 'images', 'generate-pattern-lab', 'copy-patterns']);
