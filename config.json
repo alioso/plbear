@@ -1,6 +1,6 @@
 {
-  "patternsDir": "./pattern-lab/source/_patterns",
-  "imageFiles": "./pattern-lab/images/**/*",
+  "patternsDir": "./source/_patterns",
+  "imageFiles": "./source/images/**/*",
   "patternLab": {
       "dir": "./pattern-lab"
   },

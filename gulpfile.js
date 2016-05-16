@@ -107,9 +107,11 @@ gulp.task('sass-change', function() {
 });
 
 gulp.task('generate-pattern-lab', function() {
-  if (isDirectory(config.patternLab.dir)) {
-    run('php ' + config.patternLab.dir + '/core/console --generate').exec();
-  }
+  run('php ' + config.patternLab.dir + '/core/console --generate').exec();
+});
+
+gulp.task('start-server', function() {
+  run('php ' + config.patternLab.dir + '/core/console --server').exec();
 });
 
 gulp.task('copy-patterns', function() {
