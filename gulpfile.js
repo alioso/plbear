@@ -10,7 +10,7 @@ var config        = require('./config.json')  ,
     runSequence   = require('run-sequence'),
     sass          = require('gulp-sass'),
     cssGlobbing   = require('gulp-css-globbing'),
-    flatten       = require('flatten'),
+    flatten       = require('gulp-flatten'),
     postcss       = require('gulp-postcss'),
     autoprefixer  = require('autoprefixer'),
     mqpacker      = require('css-mqpacker'),
@@ -114,7 +114,8 @@ gulp.task('generate-pattern-lab', function() {
 
 gulp.task('copy-patterns', function() {
   return gulp.src('./pattern-lab/source/_patterns/**/*.html.twig')
-    .pipe(gulp.dest('./templates/patterns'));
+    .pipe(flatten())
+    .pipe(gulp.dest('./templates'));
 });
 
 gulp.task('clear-cache', function() {

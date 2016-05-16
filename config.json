@@ -5,10 +5,10 @@
       "dir": "./pattern-lab"
   },
   "drupal": {
-      "cssDir": "../css",
-      "imagesDir": "../images",
-      "patternsDir": "../templates/patterns",
-      "templatesDir": "../templates"
+      "cssDir": "./css",
+      "imagesDir": "./images",
+      "patternsDir": "./templates/patterns",
+      "templatesDir": "./templates"
   },
   "drush": {
       "alias": "root"
