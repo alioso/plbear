@@ -72,7 +72,8 @@ gulp.task('sass', function () {
     .pipe(gulpif(buildSourceMaps, sourcemaps.write()))
     .pipe(postcss(processors))
     .on('error', handleError('Post CSS Processing'))
-    .pipe(gulp.dest('./css'));
+    .pipe(gulp.dest('./css'))
+    .pipe(gulp.dest('./pattern-lab/source/css'));
 });
 
 gulp.task('scripts', function () {
