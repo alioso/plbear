@@ -1,0 +1,5 @@
+{
+    "require": {
+        "aleksip/plugin-data-transform": "^0.10.1"
+    }
+}

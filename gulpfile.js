@@ -138,4 +138,4 @@ gulp.task('watch', function() {
 
 gulp.task('default', ['sass', 'watch']);
 gulp.task('styles', ['sass']);
-gulp.task('build', ['sass', 'scripts', 'images', 'patterns-change']);
+gulp.task('build', ['sass', 'scripts', 'images']);
