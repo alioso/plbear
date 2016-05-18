@@ -100,7 +100,7 @@ gulp.task('clear-cache', function() {
 });
 
 gulp.task('patterns-change', function() {
-  runSequence('generate-pattern-lab', 'clear-cache');
+  runSequence('generate-pattern-lab', 'copy-patterns', 'clear-cache');
 });
 
 gulp.task('templates-change', function() {
@@ -123,6 +123,12 @@ gulp.task('reload', function () {
   browserSync.reload();
 });
 
+gulp.task('copy-patterns', function() {
+  return gulp.src('./pattern-lab/source/_patterns/**/*.html.twig')
+    .pipe(flatten())
+    .pipe(gulp.dest(config.drupal.patternsDir));
+});
+
 gulp.task('watch', function() {
   gulp.watch('./sass/**/*.scss', ['sass-change']);
   gulp.watch('./js/*.js', ['scripts']);
@@ -132,4 +138,4 @@ gulp.task('watch', function() {
 
 gulp.task('default', ['sass', 'watch']);
 gulp.task('styles', ['sass']);
-gulp.task('build', ['sass', 'scripts', 'images', 'generate-pattern-lab']);
+gulp.task('build', ['sass', 'scripts', 'images', 'patterns-change']);
