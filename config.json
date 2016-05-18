@@ -11,6 +11,6 @@
       "templatesDir": "./templates"
   },
   "drush": {
-      "alias": "root"
+      "alias": "@plbear.local"
   }
 }

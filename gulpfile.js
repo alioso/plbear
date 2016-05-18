@@ -14,7 +14,7 @@ var config        = require('./config.json')  ,
     postcss       = require('gulp-postcss'),
     autoprefixer  = require('autoprefixer'),
     mqpacker      = require('css-mqpacker'),
-    run       = require('gulp-run'),
+    run           = require('gulp-run'),
     sourcemaps    = require('gulp-sourcemaps');
 
 // js utilities
@@ -95,8 +95,12 @@ gulp.task('images', function () {
     .pipe(gulp.dest('./images/'));
 });
 
+gulp.task('clear-cache', function() {
+  return run('drush ' + config.drush.alias + ' cr').exec();
+});
+
 gulp.task('patterns-change', function() {
-  runSequence('copy-patterns', 'generate-pattern-lab');
+  runSequence('generate-pattern-lab', 'clear-cache');
 });
 
 gulp.task('templates-change', function() {
@@ -115,16 +119,6 @@ gulp.task('start-server', function() {
   run('php ' + config.patternLab.dir + '/core/console --server').exec();
 });
 
-gulp.task('copy-patterns', function() {
-  return gulp.src('./pattern-lab/source/_patterns/**/*.html.twig')
-    .pipe(flatten())
-    .pipe(gulp.dest('./templates'));
-});
-
-gulp.task('clear-cache', function() {
-  return run('drush ' + config.drush.alias + ' cr').exec();
-});
-
 gulp.task('reload', function () {
   browserSync.reload();
 });
@@ -133,10 +127,9 @@ gulp.task('watch', function() {
   gulp.watch('./sass/**/*.scss', ['sass-change']);
   gulp.watch('./js/*.js', ['scripts']);
   gulp.watch('./images/**/*.{gif,jpg,png}', ['images']);
-  gulp.watch('pattern-lab/source/_patterns/**/*', ['patterns-change']);
-  gulp.watch('./templates/**/*.html.twig', ['templates-change']);
+  gulp.watch('./pattern-lab/source/_patterns/**/*', ['patterns-change', 'generate-pattern-lab']);
 });
 
 gulp.task('default', ['sass', 'watch']);
 gulp.task('styles', ['sass']);
-gulp.task('build', ['sass', 'scripts', 'images', 'generate-pattern-lab', 'copy-patterns']);
+gulp.task('build', ['sass', 'scripts', 'images', 'generate-pattern-lab']);
