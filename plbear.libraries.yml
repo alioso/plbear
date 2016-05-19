@@ -2,5 +2,5 @@ global-styling:
   version: 1.x
   css:
     theme:
-      css/plprint.css: {}
+      css/plbear.css: {}
       css/print.css: { media: print }
