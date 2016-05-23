@@ -4,8 +4,8 @@ description: An atomic design and Pattern Lab friendly starting point for new Dr
 package: Bear
 core: 8.x
 libraries:
-  - core/normalize
-  - plbear/global-styling
+  - plbear/global-styles
+  - plbear/global-scripts
 
 regions:
   header: 'Header'
@@ -32,3 +32,6 @@ component-libraries:
   pages:
     paths:
       - pattern-lab/source/_patterns/04-pages
+  templates:
+    paths:
+      - pattern-lab/source/_patterns/05-templates

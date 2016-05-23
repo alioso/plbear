@@ -1,6 +1,16 @@
-global-styling:
+global-styles:
   version: 1.x
   css:
     theme:
       css/plbear.css: {}
-      css/print.css: { media: print }
+
+global-scripts:
+  version: 1.x
+  js:
+    js/scripts.js: { scope: header }
+  dependencies:
+    - core/jquery
+    - core/drupal.ajax
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once

@@ -15,7 +15,9 @@ var config        = require('./config.json')  ,
     autoprefixer  = require('autoprefixer'),
     mqpacker      = require('css-mqpacker'),
     run           = require('gulp-run'),
-    sourcemaps    = require('gulp-sourcemaps');
+    sourcemaps    = require('gulp-sourcemaps'),
+    browserSync   = require('browser-sync').create(),
+    reload        = browserSync.reload;
 
 // js utilities
 var jshint        = require('gulp-jshint'),
@@ -51,14 +53,19 @@ var handleError = function (task) {
   };
 };
 
-function isDirectory(dir) {
-  try {
-    return fs.statSync(dir).isDirectory();
-  }
-  catch (err) {
-    return false;
-  }
-}
+// BrowserSync
+gulp.task('browserSync', function() {
+  browserSync.init({
+    port: config.browserSync.port,
+    proxy: config.browserSync.hostname,
+    open: config.browserSync.openAutomatically,
+    reloadDelay: config.browserSync.reloadDelay,
+    injectChanges: config.browserSync.injectChanges,
+    notify: config.browserSync.notify,
+    online: config.browserSync.online,
+    browser: ["google chrome", "firefox"]
+  });
+});
 
 gulp.task('sass', function () {
   gutil.log(gutil.colors.yellow('Compiling the theme CSS!'));
@@ -69,11 +76,12 @@ gulp.task('sass', function () {
     .pipe(gulpif(buildSourceMaps, sourcemaps.init()))
     .pipe(sass())
     .on('error', handleError('Sass Compiling'))
-    .pipe(gulpif(buildSourceMaps, sourcemaps.write()))
+    //.pipe(gulpif(buildSourceMaps, sourcemaps.write()))
     .pipe(postcss(processors))
     .on('error', handleError('Post CSS Processing'))
     .pipe(gulp.dest('./css'))
-    .pipe(gulp.dest('./pattern-lab/source/css'));
+    .pipe(gulp.dest('./pattern-lab/source/css'))
+    .pipe(browserSync.reload({stream:true}));
 });
 
 gulp.task('scripts', function () {
@@ -115,11 +123,7 @@ gulp.task('start-server', function() {
   run('php ' + config.patternLab.dir + '/core/console --server').exec();
 });
 
-gulp.task('reload', function () {
-  browserSync.reload();
-});
-
-gulp.task('watch', function() {
+gulp.task('watch', ['browserSync'], function() {
   gulp.watch('./sass/**/*.scss', ['sass-change']);
   gulp.watch('./js/*.js', ['scripts']);
   gulp.watch('./images/**/*.{gif,jpg,png}', ['images']);
@@ -127,6 +131,6 @@ gulp.task('watch', function() {
   gulp.watch('./templates/**/*', ['patterns-change']);
 });
 
-gulp.task('default', ['sass', 'watch']);
+gulp.task('default', ['browserSync', 'sass', 'watch']);
 gulp.task('styles', ['sass']);
 gulp.task('build', ['sass', 'scripts', 'images', 'patterns-change']);

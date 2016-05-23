@@ -3,10 +3,10 @@
 
 // Theme
 @import '01-utilities/all';
-@import '02-atoms/all';
-@import '03-molecules/all';
-@import '04-organisms/all';
-@import '05-pages/all';
+@import '02-atoms/*';
+@import '03-molecules/*';
+@import '04-organisms/*';
+@import '05-pages/*';
 
 // external
-@import url('//fonts.googleapis.com/css?family=Droid+Sans');
+// @import url('//fonts.googleapis.com/css?family=Droid+Sans');

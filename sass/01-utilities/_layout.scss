@@ -4,14 +4,6 @@ body {
   *, *:before, *:after {
     box-sizing: border-box;
   }
-  img {
-    display: block;
-    max-width: 100%;
-    height: 100%;
-  }
-  main {
-    padding-bottom: 30px;
-  }
 }
 
 .wrapper {
@@ -30,23 +22,6 @@ body {
   }
 }
 
-// Including our mixin here for easier changes
-@mixin layout-padding {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-//*********
-// Wrappers
-//*********
-
-.wrapper--header {
-  background-color: $zivtech-pale;
-}
-.wrapper--breadcrumb {
-	border-top: 1px solid #ddd;
-}
-
 //************************************
 // Padding/Layout rules for main pages
 //************************************
@@ -55,13 +30,10 @@ body {
 .site-main,
 #footer,
 #breadcrumb {
-  @include cf;
   max-width: $site-max-width;
   margin: 0 auto;
 }
-.region--navigation {
-  display: inline-block;
-}
+
 .site-header,
 .site-main,
 .breadcrumbs-wrapper,

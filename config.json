@@ -12,5 +12,14 @@
   },
   "drush": {
       "alias": "@plbear.local"
+  },
+  "browserSync": {
+      "hostname": "plbear.dev",
+      "port": 3000,
+      "openAutomatically": false,
+      "reloadDelay": 0,
+      "injectChanges": true,
+      "notify": false,
+      "online": true
   }
 }

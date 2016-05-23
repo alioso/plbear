@@ -11,9 +11,10 @@
   "description": "The base theme for Drupal websites built by Zivtech",
   "devDependencies": {
     "autoprefixer": "^5.2.0",
-    "browser-sync": "^2.8.2",
+    "browser-sync": "^2.12.8",
     "css-mqpacker": "^3.1.0",
     "documentjs": "^0.4.1",
+    "fs": "0.0.2",
     "gulp": "^3.9.0",
     "gulp-css-globbing": "^0.1.8",
     "gulp-flatten": "^0.2.0",
