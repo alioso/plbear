@@ -7,10 +7,18 @@ global-styles:
 global-scripts:
   version: 1.x
   js:
-    js/scripts.js: { scope: header }
+    js/scripts.js: {}
   dependencies:
     - core/jquery
     - core/drupal.ajax
     - core/drupal
     - core/drupalSettings
     - core/jquery.once
+
+gutenberg:
+  version: 1.x
+  css:
+    theme:
+      css/gutenberg.css: {}
+  js:
+    js/vendor/gutenberg.js: {}

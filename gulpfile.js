@@ -76,7 +76,7 @@ gulp.task('sass', function () {
     .pipe(gulpif(buildSourceMaps, sourcemaps.init()))
     .pipe(sass())
     .on('error', handleError('Sass Compiling'))
-    //.pipe(gulpif(buildSourceMaps, sourcemaps.write()))
+    .pipe(gulpif(buildSourceMaps, sourcemaps.write()))
     .pipe(postcss(processors))
     .on('error', handleError('Post CSS Processing'))
     .pipe(gulp.dest('./css'))
@@ -123,6 +123,22 @@ gulp.task('start-server', function() {
   run('php ' + config.patternLab.dir + '/core/console --server').exec();
 });
 
+gulp.task('gutenberg', function() {
+  return gulp.src('./sass/vendor/gutenberg/gutenberg.scss')
+    .pipe(cssGlobbing({
+      extensions: ['.scss']
+    }))
+    .pipe(gulpif(buildSourceMaps, sourcemaps.init()))
+    .pipe(sass())
+    .on('error', handleError('Sass Compiling'))
+    .pipe(gulpif(buildSourceMaps, sourcemaps.write()))
+    .pipe(postcss(processors))
+    .on('error', handleError('Post CSS Processing'))
+    .pipe(gulp.dest('./css'))
+    .pipe(gulp.dest('./pattern-lab/source/css'))
+    .pipe(browserSync.reload({stream:true}));
+});
+
 gulp.task('watch', ['browserSync'], function() {
   gulp.watch('./sass/**/*.scss', ['sass-change']);
   gulp.watch('./js/*.js', ['scripts']);
@@ -133,4 +149,4 @@ gulp.task('watch', ['browserSync'], function() {
 
 gulp.task('default', ['browserSync', 'sass', 'watch']);
 gulp.task('styles', ['sass']);
-gulp.task('build', ['sass', 'scripts', 'images', 'patterns-change']);
+gulp.task('build', ['sass', 'gutenberg', 'scripts', 'images', 'patterns-change']);
