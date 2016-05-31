@@ -1,13 +1,6 @@
 /* Gutenberg defaults
    ========================================================================== */
 
-// Maximum width of the article (Mobile)
-article,
-body > footer {
-  width: 80%;
-  margin: 0 auto;
-}
-
 // Grid button
 .toggleWrapper {
   @if $edit-mode == true {
@@ -26,15 +19,6 @@ body > footer {
   @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
     right: #{$leading-desktop + 'px'};
     top: #{$leading-desktop + 'px'};
-  }
-
-}
-
-article {
-
-  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
-    max-width: #{1.5 * $max-width * $base-desktop + 'px'};
-    max-width: #{1.5 * $max-width + 'rem'};
   }
 
 }

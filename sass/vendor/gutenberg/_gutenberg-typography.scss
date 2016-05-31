@@ -78,7 +78,7 @@ html {
 // Line-height & margin reset
 * {
   @include line-height(1);
-  @include margin(0, 0, 1);
+  @include margin(0, 0, 0);
 
   @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
     $leading: $leading-desktop;

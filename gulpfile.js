@@ -2,7 +2,7 @@
 
 // utilities
 var config        = require('./config.json')  ,
-    gulp          = require('gulp'),
+    gulp          = require('gulp-param')(require('gulp'), process.argv),
     gutil         = require('gulp-util'),
     notify        = require('gulp-notify'),
     argv          = require('yargs').argv,
@@ -10,11 +10,12 @@ var config        = require('./config.json')  ,
     runSequence   = require('run-sequence'),
     sass          = require('gulp-sass'),
     cssGlobbing   = require('gulp-css-globbing'),
-    flatten       = require('gulp-flatten'),
     postcss       = require('gulp-postcss'),
     autoprefixer  = require('autoprefixer'),
     mqpacker      = require('css-mqpacker'),
+    contains      = require('gulp-contains'),
     run           = require('gulp-run'),
+    rename        = require('gulp-rename'),
     sourcemaps    = require('gulp-sourcemaps'),
     browserSync   = require('browser-sync').create(),
     reload        = browserSync.reload;
@@ -52,6 +53,28 @@ var handleError = function (task) {
     this.emit('end');
   };
 };
+
+var log = function(file, cb) {
+  console.log(file.path);
+  cb(null, file);
+};
+
+gulp.task('export', function(component) {
+  gutil.log(component);
+  return gulp.src('./**/*', {base: './'})
+  .pipe(contains({
+		search: component,
+		onFound: function (string, file, cb) {
+      gulp.src('/'+file.path)
+        .pipe(gulp.dest('./components/export/'+component+'/'));
+        //gutil.log(file.path);
+        return false;
+		},
+    onNotFound: function (file, cb) {
+      gutil.log(gutil.colors.bgRed("No component found with this name!"));
+    }
+  }));
+});
 
 // BrowserSync
 gulp.task('browserSync', function() {
@@ -108,7 +131,7 @@ gulp.task('cr', function() {
 });
 
 gulp.task('patterns-change', function() {
-  runSequence('generate-pattern-lab', 'cr');
+  runSequence('generate-pattern-lab');
 });
 
 gulp.task('sass-change', function() {

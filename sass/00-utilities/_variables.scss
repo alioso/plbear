@@ -275,12 +275,9 @@ $form-input-container-margin: 1em 0 !default;
 //
 // LAYOUT
 //
-$site-min-width: 25em !default;
-$site-max-width: 1200px / 16px * 1em !default;
-$content-max-width: 875px / 16px * 1em !default;
-$vertical-gutter: 30px / 16px * 1em !default;
-$header-padding: 25px 0 !default;
-$site-max-width-raw: 1200;
+
+// Configure Gutenberg for specific layout options in sass/vendor/gutemberg/_gutenberg-config.scss 
+
 
 //
 // BREAKPOINTS

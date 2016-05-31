@@ -2,8 +2,9 @@
 @import 'vendor/all';
 
 // Theme
-@import '01-utilities/all';
-@import '02-atoms/*';
-@import '03-molecules/*';
-@import '04-organisms/*';
-@import '05-pages/*';
+@import '00-utilities/all';
+@import '01-atoms/*';
+@import '02-molecules/*';
+@import '03-organisms/*';
+@import '04-pages/*';
+@import '05-templates/*';

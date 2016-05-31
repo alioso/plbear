@@ -4,9 +4,9 @@
       "class": []
     }
   },
-  "site_logo": "../../../../logo.svg",
-  "site_title": "Drupal Lab",
+  "site_logo": "../../../images/logo.svg",
+  "site_name": "New Title",
   "site_slogan": "Drupal 8 + Pattern Lab Twig",
-  "pl_prefix": "<div class=\"col-md-9\">",
+  "pl_prefix": "<div class=\"block block--branding test class alignLeft\" id=\"block-plbear-branding\">",
   "pl_suffix": "</div>"
 }

@@ -16,17 +16,17 @@
     "documentjs": "^0.4.1",
     "fs": "0.0.2",
     "gulp": "^3.9.0",
+    "gulp-contains": "^1.1.0",
     "gulp-css-globbing": "^0.1.8",
-    "gulp-flatten": "^0.2.0",
     "gulp-if": "^1.2.5",
     "gulp-imagemin": "^2.3.0",
     "gulp-jshint": "^1.11.2",
     "gulp-livereload": "^3.8.0",
     "gulp-notify": "^2.2.0",
+    "gulp-param": "^1.0.3",
     "gulp-postcss": "^5.1.10",
     "gulp-run": "^1.6.12",
     "gulp-sass": "^2.0.4",
-    "gulp-sass-glob": "0.0.8",
     "gulp-sourcemaps": "^1.5.2",
     "gulp-util": "^3.0.6",
     "gulp-watch": "^4.3.4",
@@ -36,5 +36,8 @@
   },
   "scripts": {
     "postinstall": "sh npm_clean.sh"
+  },
+  "dependencies": {
+    "vinyl-paths": "^2.1.0"
   }
 }

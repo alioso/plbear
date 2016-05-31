@@ -1,0 +1,13 @@
+.branding {
+  &__site-logo {
+
+    @include padding(1, 0, 1, 0);
+
+    img {
+      margin: 0;
+    }
+  }
+  &__site-name {
+
+  }
+}

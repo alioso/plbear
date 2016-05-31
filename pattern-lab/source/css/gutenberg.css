@@ -170,8 +170,8 @@ html {
 * {
   line-height: 26px;
   line-height: 1.625rem;
-  margin: 0px 0px 26px;
-  margin: 0rem 0rem 1.625rem; }
+  margin: 0px 0px 0px;
+  margin: 0rem 0rem 0rem; }
 
 /* Paragraph
    ========================================================================== */
@@ -345,11 +345,6 @@ code {
 
 /* Gutenberg defaults
    ========================================================================== */
-article,
-body > footer {
-  width: 80%;
-  margin: 0 auto; }
-
 .toggleWrapper {
   display: block;
   position: fixed;
@@ -572,9 +567,6 @@ body > footer {
   .toggleWrapper{
     right: 31px;
     top: 31px; }
-  article{
-    max-width: 2025px;
-    max-width: 112.5rem; }
   .btnToggleGrid{
     top: 31px;
     right: 31px; }
