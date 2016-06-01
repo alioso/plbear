@@ -1,3 +1,11 @@
+.element-invisible {
+  @include element-invisible;
+}
+
+.visually-hidden {
+  @include element-invisible;
+}
+
 #skip-link {
   margin: 0;
   padding: 0;

@@ -13,15 +13,8 @@
  * - site_slogan: Slogan for site as defined in Site information settings.
  */
 #}
-{%
-  set classes = [
-    'test',
-    'class',
-    'new-class',
-  ]
-%}
 {% set attributes = attributes.addClass(classes) %}
 
 {% block content %}
-  {% include "@molecules/blocks/branding.twig"  %}
+  {% include "@molecules/blocks/branding.twig" %}
 {% endblock %}

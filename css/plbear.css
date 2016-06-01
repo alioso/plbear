@@ -183,8 +183,8 @@ h1 {
   font-size: 2.5rem;
   line-height: 52px;
   line-height: 3.25rem;
-  margin-top: 104px;
-  margin-top: 6.5rem;
+  margin-top: 52px;
+  margin-top: 3.25rem;
   margin-bottom: 26px;
   margin-bottom: 1.625rem; }
 
@@ -193,8 +193,8 @@ h2 {
   font-size: 1.6875rem;
   line-height: 39px;
   line-height: 2.4375rem;
-  margin-top: 65px;
-  margin-top: 4.0625rem;
+  margin-top: 32.5px;
+  margin-top: 2.03125rem;
   margin-bottom: 13px;
   margin-bottom: 0.8125rem; }
 
@@ -203,8 +203,8 @@ h3 {
   font-size: 1.375rem;
   line-height: 26px;
   line-height: 1.625rem;
-  margin-top: 52px;
-  margin-top: 3.25rem;
+  margin-top: 26px;
+  margin-top: 1.625rem;
   margin-bottom: 13px;
   margin-bottom: 0.8125rem; }
 
@@ -213,8 +213,8 @@ h4 {
   font-size: 1.2rem;
   line-height: 26px;
   line-height: 1.625rem;
-  margin-top: 39px;
-  margin-top: 2.4375rem;
+  margin-top: 19.5px;
+  margin-top: 1.21875rem;
   margin-bottom: 13px;
   margin-bottom: 0.8125rem; }
 
@@ -223,8 +223,8 @@ h5 {
   font-size: 1rem;
   line-height: 26px;
   line-height: 1.625rem;
-  margin-top: 65px;
-  margin-top: 4.0625rem;
+  margin-top: 32.5px;
+  margin-top: 2.03125rem;
   margin-bottom: 13px;
   margin-bottom: 0.8125rem; }
 
@@ -233,8 +233,8 @@ h6 {
   font-size: 1rem;
   line-height: 26px;
   line-height: 1.625rem;
-  margin-top: 65px;
-  margin-top: 4.0625rem;
+  margin-top: 32.5px;
+  margin-top: 2.03125rem;
   margin-bottom: 13px;
   margin-bottom: 0.8125rem; }
 
@@ -421,6 +421,20 @@ code {
 .yellow {
   background-color: #F9B634; }
 
+.element-invisible {
+  position: absolute !important;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px); }
+
+.visually-hidden {
+  position: absolute !important;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px); }
+
 #skip-link {
   margin: 0;
   padding: 0; }
@@ -440,151 +454,6 @@ body.with-sticky-footer .wrapper--main {
   flex: 1 0 auto;
   -webkit-flex: 1 0 auto;
   overflow: hidden; }
-
-::-webkit-input-placeholder {
-  opacity: 0;
-  transition: opacity .2s ease-in-out;
-  color: #eaeaea; }
-
-::-moz-placeholder {
-  opacity: 0;
-  transition: opacity .2s ease-in-out;
-  color: #eaeaea; }
-
-:-ms-input-placeholder {
-  opacity: 0;
-  transition: opacity .2s ease-in-out;
-  color: #eaeaea; }
-
-::placeholder {
-  opacity: 0;
-  transition: opacity .2s ease-in-out;
-  color: #eaeaea; }
-
-:focus::-webkit-input-placeholder {
-  opacity: .5; }
-
-:focus::-moz-placeholder {
-  opacity: .5; }
-
-:focus:-ms-input-placeholder {
-  opacity: .5; }
-
-:focus::placeholder {
-  opacity: .5; }
-
-.vertical-tabs__panes {
-  overflow: hidden; }
-
-.compact-form-label {
-  top: 9px;
-  left: 17px;
-  z-index: 1;
-  font-size: 100%; }
-
-body:not(.semantic-ui):not(.panels-ipe) form .form-submit {
-  background: #eee;
-  border: 1px solid #ccc;
-  padding: 5px 10px 6px 10px;
-  border-radius: 3px;
-  transition: all .2s ease-in-out;
-  margin-top: 5px; }
-  body:not(.semantic-ui):not(.panels-ipe) form .form-submit:hover, body:not(.semantic-ui):not(.panels-ipe) form .form-submit:focus {
-    background: #666;
-    color: white;
-    border-color: #222; }
-
-body:not(.semantic-ui):not(.panels-ipe) form .description {
-  font-size: 80%;
-  color: #261D19;
-  font-style: italic;
-  padding: 0 10px;
-  margin: 10px 0;
-  border-left: dotted 1px #aaa;
-  max-width: 600px; }
-
-body:not(.semantic-ui):not(.panels-ipe) #breadcrumbs .chevron:before {
-  content: ">";
-  padding: 0 8px;
-  color: #261D19; }
-
-.ui.form .form-item.labeled {
-  padding-top: 1.2em;
-  margin-bottom: 1em !important; }
-  .ui.form .form-item.labeled:first-child {
-    margin-top: -1.2em; }
-  .ui.form .form-item.labeled label {
-    position: absolute;
-    top: 2.3em;
-    padding: 0;
-    transition: all .2s ease-in-out;
-    cursor: text;
-    color: #888; }
-    .ui.form .form-item.labeled label.active {
-      top: 2px;
-      font-size: 85%;
-      color: #728EAD; }
-      .ui.form .form-item.labeled label.active.error {
-        color: #FF6A40 !important; }
-  .ui.form .form-item.labeled input {
-    max-width: 30em;
-    border-radius: 0;
-    background: transparent;
-    border: 0;
-    border-bottom: 1px solid #888;
-    padding: .7em  0;
-    margin-bottom: .3em;
-    -webkit-text-fill-color: transparent; }
-    .ui.form .form-item.labeled input:focus, .ui.form .form-item.labeled input.valued {
-      background: transparent;
-      -webkit-text-fill-color: #261D19; }
-    .ui.form .form-item.labeled input.error {
-      border-bottom-color: #FF6A40;
-      -webkit-text-fill-color: #261D19 !important; }
-  .ui.form .form-item.labeled .mt {
-    width: 100%;
-    position: relative;
-    max-width: 30em; }
-    .ui.form .form-item.labeled .mt:before, .ui.form .form-item.labeled .mt:after {
-      content: '';
-      height: 2px;
-      width: 0;
-      bottom: 5px;
-      position: absolute;
-      background: #728EAD;
-      transition: 0.2s all ease-in-out; }
-    .ui.form .form-item.labeled .mt.error:before, .ui.form .form-item.labeled .mt.error:after {
-      background: #FF6A40; }
-    .ui.form .form-item.labeled .mt:before {
-      left: 50%; }
-    .ui.form .form-item.labeled .mt:after {
-      right: 50%; }
-    .ui.form .form-item.labeled .mt.focus:before, .ui.form .form-item.labeled .mt.focus:after {
-      width: 50%; }
-
-.ui.form input.ui.button[type="submit"] {
-  margin-top: 0.5em; }
-
-label {
-  color: #888;
-  padding: 0 0 5px 0;
-  display: block;
-  font-size: 90%; }
-
-.ui.dropdown {
-  color: #555; }
-  .ui.dropdown .text {
-    font-size: 14px; }
-  .ui.dropdown .default.text {
-    color: #888; }
-
-.ui.checkbox,
-.ui.radio.checkbox {
-  margin-right: 15px; }
-  .ui.checkbox label,
-  .ui.radio.checkbox label {
-    padding-left: 1.5em;
-    color: #555; }
 
 figure {
   margin: 1em 0; }
@@ -679,8 +548,8 @@ i.icon, i.icons {
     font-size: 2.5rem;
     line-height: 62px;
     line-height: 3.44444rem;
-    margin-top: 124px;
-    margin-top: 6.88889rem;
+    margin-top: 62px;
+    margin-top: 3.44444rem;
     margin-bottom: 31px;
     margin-bottom: 1.72222rem; }
   h2{
@@ -688,8 +557,8 @@ i.icon, i.icons {
     font-size: 1.6875rem;
     line-height: 46.5px;
     line-height: 2.58333rem;
-    margin-top: 77.5px;
-    margin-top: 4.30556rem;
+    margin-top: 38.75px;
+    margin-top: 2.15278rem;
     margin-bottom: 15.5px;
     margin-bottom: 0.86111rem; }
   h3{
@@ -697,8 +566,8 @@ i.icon, i.icons {
     font-size: 1.375rem;
     line-height: 31px;
     line-height: 1.72222rem;
-    margin-top: 62px;
-    margin-top: 3.44444rem;
+    margin-top: 31px;
+    margin-top: 1.72222rem;
     margin-bottom: 15.5px;
     margin-bottom: 0.86111rem; }
   h4{
@@ -706,8 +575,8 @@ i.icon, i.icons {
     font-size: 1.2rem;
     line-height: 31px;
     line-height: 1.72222rem;
-    margin-top: 46.5px;
-    margin-top: 2.58333rem;
+    margin-top: 23.25px;
+    margin-top: 1.29167rem;
     margin-bottom: 15.5px;
     margin-bottom: 0.86111rem; }
   h5{
@@ -715,8 +584,8 @@ i.icon, i.icons {
     font-size: 1rem;
     line-height: 31px;
     line-height: 1.72222rem;
-    margin-top: 77.5px;
-    margin-top: 4.30556rem;
+    margin-top: 38.75px;
+    margin-top: 2.15278rem;
     margin-bottom: 15.5px;
     margin-bottom: 0.86111rem; }
   h6{
@@ -724,8 +593,8 @@ i.icon, i.icons {
     font-size: 1rem;
     line-height: 31px;
     line-height: 1.72222rem;
-    margin-top: 77.5px;
-    margin-top: 4.30556rem;
+    margin-top: 38.75px;
+    margin-top: 2.15278rem;
     margin-bottom: 15.5px;
     margin-bottom: 0.86111rem; }
   h1 + h2{
