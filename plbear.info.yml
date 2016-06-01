@@ -3,11 +3,15 @@ type: theme
 description: An atomic design and Pattern Lab friendly starting point for new Drupal themes.
 package: Bear
 core: 8.x
+
 libraries:
   - plbear/gutenberg
   - plbear/global-styles
   - plbear/global-scripts
-  
+
+libraries-override:
+  system/base: false
+
 regions:
   header: 'Header'
   navigation: 'Navigation bar'
