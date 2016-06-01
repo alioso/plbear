@@ -1,11 +1,11 @@
 'use strict';
 
 // utilities
-var config        = require('./config.json')  ,
-    gulp          = require('gulp-param')(require('gulp'), process.argv),
+var config        = require('./config.json'),
+    argv          = require('yargs').argv,
+    gulp          = require('gulp'),
     gutil         = require('gulp-util'),
     notify        = require('gulp-notify'),
-    argv          = require('yargs').argv,
     gulpif        = require('gulp-if'),
     runSequence   = require('run-sequence'),
     sass          = require('gulp-sass'),
@@ -29,6 +29,8 @@ var imagemin      = require('gulp-imagemin');
 
 //  should we build sourcemaps? "gulp build --sourcemaps"
 var buildSourceMaps = !!argv.sourcemaps;
+
+var component = !!argv.param;
 
 // post CSS processors
 var processors = [
@@ -54,13 +56,10 @@ var handleError = function (task) {
   };
 };
 
-var log = function(file, cb) {
-  console.log(file.path);
-  cb(null, file);
-};
+var component = argv.component ? argv.component : 'null';
 
-gulp.task('export', function(component) {
-  gutil.log(component);
+gulp.task('export', function() {
+
   return gulp.src('./**/*', {base: './'})
   .pipe(contains({
 		search: component,

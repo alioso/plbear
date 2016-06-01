@@ -23,7 +23,6 @@
     "gulp-jshint": "^1.11.2",
     "gulp-livereload": "^3.8.0",
     "gulp-notify": "^2.2.0",
-    "gulp-param": "^1.0.3",
     "gulp-postcss": "^5.1.10",
     "gulp-run": "^1.6.12",
     "gulp-sass": "^2.0.4",
