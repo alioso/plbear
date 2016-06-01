@@ -59,14 +59,12 @@ var handleError = function (task) {
 var component = argv.component ? argv.component : 'null';
 
 gulp.task('export', function() {
-
-  return gulp.src('./**/*', {base: './'})
+  return gulp.src('./**/*.{scss,twig,js}', {base: './'})
   .pipe(contains({
 		search: component,
 		onFound: function (string, file, cb) {
       gulp.src('/'+file.path)
         .pipe(gulp.dest('./components/export/'+component+'/'));
-        //gutil.log(file.path);
         return false;
 		},
     onNotFound: function (file, cb) {
@@ -143,22 +141,6 @@ gulp.task('generate-pattern-lab', function() {
 
 gulp.task('start-server', function() {
   run('php ' + config.patternLab.dir + '/core/console --server').exec();
-});
-
-gulp.task('gutenberg', function() {
-  return gulp.src('./sass/vendor/gutenberg/gutenberg.scss')
-    .pipe(cssGlobbing({
-      extensions: ['.scss']
-    }))
-    .pipe(gulpif(buildSourceMaps, sourcemaps.init()))
-    .pipe(sass())
-    .on('error', handleError('Sass Compiling'))
-    .pipe(gulpif(buildSourceMaps, sourcemaps.write()))
-    .pipe(postcss(processors))
-    .on('error', handleError('Post CSS Processing'))
-    .pipe(gulp.dest('./css'))
-    .pipe(gulp.dest('./pattern-lab/source/css'))
-    .pipe(browserSync.reload({stream:true}));
 });
 
 gulp.task('watch', ['browserSync'], function() {

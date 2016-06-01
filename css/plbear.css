@@ -873,8 +873,13 @@ i.icon, i.icons {
 
 .wrapper {
   max-width: 100%; }
-
-@media screen and (min-width: 80em){
+  .wrapper #header,
+  .wrapper #main,
+  .wrapper #breadcrumb,
+  .wrapper #footer {
+    padding: 0px 13px;
+    padding: 0rem 0.8125rem; }
+  @media screen and (min-width: 80em){
   body,
   html{
     margin: 0;
@@ -1056,8 +1061,7 @@ i.icon, i.icons {
     margin-right: auto; }
   .floatRight{
     float: right; } }
-
-@media (min-width: 50em){
+  @media (min-width: 50em){
   .layout-sidebar-first main{
     zoom: 1;
     float: left;
