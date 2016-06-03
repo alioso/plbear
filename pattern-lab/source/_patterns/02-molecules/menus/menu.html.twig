@@ -29,10 +29,8 @@
 {% macro menu_links(items, attributes, menu_level) %}
   {% import _self as menus %}
   {% if items %}
-    {% if menu_level == 0 %}
-      <ul{{ attributes.addClass('menu') }}>
-    {% else %}
-      <ul class="menu">
+    {% if menu_level != 0 %}
+      <div{{ attributes.addClass('sub-menu') }}>
     {% endif %}
     {% for item in items %}
       {%
@@ -43,13 +41,11 @@
           item.in_active_trail ? 'menu-item--active-trail',
         ]
       %}
-      <li{{ item.attributes.addClass(classes) }}>
-        {{ link(item.title, item.url) }}
+        {{ link(item.title, item.url, item.attributes.addClass(classes)) }}
         {% if item.below %}
           {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
         {% endif %}
-      </li>
     {% endfor %}
-    </ul>
+  </div>
   {% endif %}
 {% endmacro %}

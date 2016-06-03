@@ -379,21 +379,6 @@ code {
 .grid-off {
   background-position-y: -64px; }
 
-.alignLeft {
-  text-align: left; }
-
-.alignCenter {
-  text-align: center; }
-
-.alignRight {
-  text-align: right; }
-
-.uppercase {
-  letter-spacing: .1em;
-  text-transform: uppercase; }
-
-/* Put your styles below this line
-   ========================================================================== */
 /* Global Reset Styles ------------------ */
 input,
 textarea,
@@ -603,26 +588,6 @@ body.with-sticky-footer .wrapper--main {
   -webkit-flex: 1 0 auto;
   overflow: hidden; }
 
-figure {
-  margin: 1em 0; }
-  figure figcaption {
-    padding: .5em 0;
-    font-size: 90%;
-    font-style: italic; }
-
-.ui.button {
-  font-weight: normal; }
-
-i.icon, i.icons {
-  font-size: 1.5em; }
-
-.ui.popup {
-  font-size: 90%;
-  color: #555; }
-
-.panel-pane {
-  margin-bottom: 30px; }
-
 .branding__site-logo {
   padding: 26px 0px 26px;
   padding: 1.625rem 0rem 1.625rem; }
@@ -643,21 +608,8 @@ i.icon, i.icons {
     -ms-flex-positive: 1;
         flex-grow: 1; }
 
-.panel-display .left,
-.panel-display .right {
-  padding: 0; }
-
 .site-sidebars {
   padding: 0; }
-
-.wrapper--header {
-  background-color: #eaeaea; }
-
-.wrapper--breadcrumb {
-  border-top: 1px solid #ddd; }
-
-#main {
-  padding-bottom: 30px; }
 
 .wrapper {
   max-width: 100%; }
@@ -667,6 +619,10 @@ i.icon, i.icons {
   .wrapper #footer {
     padding: 0px 13px;
     padding: 0rem 0.8125rem; }
+  .wrapper--header {
+    background-color: #eaeaea; }
+  .wrapper--breadcrumb {
+    border-top: 1px solid #ddd; }
   @media screen and (min-width: 80em){
   body,
   html{
@@ -841,14 +797,7 @@ i.icon, i.icons {
     top: 31px; }
   .btnToggleGrid{
     top: 31px;
-    right: 31px; }
-  .floatLeft{
-    float: left; }
-  .floatCenter{
-    margin-left: auto;
-    margin-right: auto; }
-  .floatRight{
-    float: right; } }
+    right: 31px; } }
   @media (min-width: 50em){
   .layout-sidebar-first main{
     zoom: 1;
@@ -984,10 +933,6 @@ i.icon, i.icons {
     clear: both; }
   .layout-two-sidebars .sidebar-second:last-child{
     margin-right: 0%; }
-  .panel-display .column.right{
-    padding: 0 0 20px 50px; }
-  .panel-display .column.left{
-    padding: 0 50px 20px 0; }
   .site-sidebars.sidebar-second{
     padding: 0 0 20px 50px; }
   .site-sidebars.sidebar-first{

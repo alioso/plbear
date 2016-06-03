@@ -1,17 +1,3 @@
-.panel-display {
-	.left,
-	.right {
-		padding: 0;
-	}
-	@include breakpoint($breakpoint-medium-width) {
-		.column.right {
-      padding: 0 0 20px 50px;
-    }
-    .column.left {
-      padding: 0 50px 20px 0;
-    }
-	}
-}
 .site-sidebars {
 	padding: 0;
 	@include breakpoint($breakpoint-medium-width) {
