@@ -1,6 +1,8 @@
 /* Configuration
    ========================================================================== */
 
+@import "../../00-utilities/variables";
+
 $edit-mode: true; // [ true / false ] - Enables/disables the grid toggle button.
 
 // Theme / Fonts
@@ -44,15 +46,15 @@ $headings: (
 ) !default;
 
 // Colors
-$color-font-body: #222;
+$color-font-body: $black;
 $color-font-headings: $color-font-body;
 $color-font-light: #888;
 $color-font-figcaption: $color-font-body;
 
-$color-link-normal: $color-font-body;
-$color-link-hover: $color-font-body;
-$color-link-active: #f00;
-$color-link-visited: $color-font-light;
+$color-link-normal: $blue;
+$color-link-hover: $dark-blue;
+$color-link-active: $dark-blue;
+$color-link-visited: $blue;
 
 // Horizontal rule
 $hr-style: line; // [ line / type ]

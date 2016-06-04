@@ -16,7 +16,7 @@
 {% set attributes = attributes.addClass(classes) %}
 
 {% block content %}
-<aside class="branding">
+<aside class="branding" role="complementary">
   {% if site_logo %}
     <div class="branding__site-logo">
       <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">

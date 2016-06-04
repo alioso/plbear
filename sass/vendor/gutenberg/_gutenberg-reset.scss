@@ -38,20 +38,7 @@ small {
 }
 
 // Border Box
-body,
-article,
-section,
-footer,
-header,
-div,
-input,
-nav,
-article ol,
-article ul,
-blockquote,
-figure {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
+* {
   box-sizing: border-box;
 }
 

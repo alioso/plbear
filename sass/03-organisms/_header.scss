@@ -1,14 +1,1 @@
-#header {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
 
-  .region {
-    &--header {
-      flex-grow: 0;
-    }
-    &--navigation {
-      flex-grow: 1;
-    }
-  }
-}

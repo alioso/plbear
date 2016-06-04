@@ -1,9 +1,7 @@
-<header id ="header" class="site-header" role="banner">
-  <section{{ attributes.addClass(classes) }}>
+{% extends "region.html.twig" %}
 
-    {% block content %}
-      {{ content }}
-    {% endblock %}
-
-  </section>
-</header>
+{% block content %}
+  <header id ="header" class="site-header" role="banner">
+    {{ content }}
+  </header>
+{% endblock %}
