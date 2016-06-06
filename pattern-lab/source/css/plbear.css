@@ -547,6 +547,9 @@ input[type="reset"]:focus {
   background-color: #888;
   color: white; }
 
+form .descripton {
+  font-size: 90%; }
+
 .element-invisible {
   position: absolute;
   height: 0;
@@ -581,37 +584,27 @@ body.with-sticky-footer .wrapper--main {
   -webkit-flex: 1 0 auto;
   overflow: hidden; }
 
-.nav ul {
-  margin: 0;
-  padding: 0; }
+/* No files to import found in 02-molecules//* */
+section[id^="container-"] {
+  padding: 0px 26px;
+  padding: 0rem 1.625rem; }
 
-.nav .sub-menu {
-  visibility: hidden;
-  position: absolute;
-  left: 0;
-  opacity: 0;
-  transition: opacity .3s ease-in-out; }
-
-.nav .menu-item {
-  list-style-type: none;
-  display: inline;
-  margin: 0px 13px 0px 0px;
-  margin: 0rem 0.8125rem 0rem 0rem; }
-  .nav .menu-item--expanded {
-    position: relative; }
-    .nav .menu-item--expanded:hover .sub-menu, .nav .menu-item--expanded:focus .sub-menu {
-      visibility: visible;
-      opacity: 1; }
-
-.branding__site-logo img {
-  margin: 0; }
+#container-header {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: start;
+      justify-content: flex-start; }
+  #container-header * {
+    margin: 0; }
 
 .region--header {
+  padding: 26px 0px;
+  padding: 1.625rem 0rem;
   -ms-flex-positive: 0;
       flex-grow: 0;
-  margin-bottom: 0;
-  padding: 26px 0px;
-  padding: 1.625rem 0rem; }
+  margin-bottom: 0; }
 
 .region--navigation {
   -ms-flex-positive: 1;
@@ -624,27 +617,20 @@ body.with-sticky-footer .wrapper--main {
 
 .wrapper {
   max-width: 100%;
-  clear: both; }
-  .wrapper #header,
-  .wrapper #main,
-  .wrapper #breadcrumb,
-  .wrapper #footer {
-    padding: 0px 26px;
-    padding: 0rem 1.625rem; }
+  clear: both;
+  margin: 0; }
   .wrapper--header {
     background-color: #f5f5f5;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: row;
-        flex-direction: row;
-    -ms-flex-pack: start;
-        justify-content: flex-start;
     margin: 0; }
-    .wrapper--header * {
-      margin: 0; }
   .wrapper--breadcrumb {
     border-top: 1px solid #ddd; }
-  @media screen and (min-width: 80em){
+
+#main {
+  margin: 0 auto; }
+
+/* No files to import found in 05-templates//* */
+
+@media screen and (min-width: 80em){
   body,
   html{
     margin: 0;
@@ -819,7 +805,8 @@ body.with-sticky-footer .wrapper--main {
   .btnToggleGrid{
     top: 31px;
     right: 31px; } }
-  @media (min-width: 50em){
+
+@media (min-width: 50em){
   .layout-sidebar-first main{
     zoom: 1;
     float: left;

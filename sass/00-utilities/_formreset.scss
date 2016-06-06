@@ -292,3 +292,12 @@ input[type="reset"]:focus {
 	background-color: $form-button-hover-bg-color;
 	color: $form-button-hover-font-color;
 }
+
+
+// Drupal specific
+
+form {
+	.descripton {
+		font-size: 90%;
+	}
+}

@@ -89,7 +89,7 @@ gulp.task('browserSync', function() {
 
 gulp.task('sass', function () {
   gutil.log(gutil.colors.yellow('Compiling the theme CSS!'));
-  return gulp.src('./sass/*.scss')
+  return gulp.src('./sass/**/*.scss')
     .pipe(cssGlobbing({
       extensions: ['.scss']
     }))

@@ -1,0 +1,13 @@
+section[id^="container-"] {
+  @include padding(0, 1);
+}
+
+#container-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  * {
+    margin: 0;
+  }
+}

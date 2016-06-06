@@ -3,17 +3,19 @@
 </div>
 
 <div class="wrapper wrapper--header ">
-  {{ page.header }}
-  {{ page.navigation }}
+  <section id="container-header" role="region">
+    {{ page.header }}
+    {{ page.navigation }}
+  </section>
 </div>
 
 <div class="wrapper wrapper--main">
-  <section id="main" role="region">
+  <section id="container-main" role="region">
     <main id="content" class="column main" role="main">
       {% if page is not empty %}
-        <section class="main__highlighted">
+        <div class="main__highlighted">
           {{ page.highlighted }}
-        </section>
+        </div>
       {% endif %}
 
       {{ breadcrumb }}
@@ -29,9 +31,9 @@
       {% endif %}
 
       {% if messages is not empty %}
-        <section class="main__messages" role="region">
+        <div class="main__messages" role="region">
           {{ messages }}
-        </section>
+        </div>
       {% endif %}
 
       {% if tabs is not empty or tabs is not empty %}
@@ -53,9 +55,9 @@
         </nav>
       {% endif %}
 
-      <section class="main__content">
+      <div class="main__content">
         {{ page.content }}
-      </section>
+      </div>
 
       {% if feed_icons is not empty %}
         <nav class="main__feed-icons" role="navigation">
@@ -83,13 +85,15 @@
 </div>
 
 <div class="wrapper wrapper--breadcrumb">
-  {{ page.breadcrumb }}
+  <section id="container-breadcrumb" role="region">
+    {{ page.breadcrumb }}
+  </section>
 </div>
 
 <div class="wrapper wrapper--footer">
-  <div class="site-footer">
+  <section id="container-footer" role="region">
     <footer id="footer">
       {{ page.footer }}
     </footer>
-  </div>
+  </section>
 </div>
