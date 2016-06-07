@@ -79,14 +79,12 @@ html {
 // Line-height & margin reset
 * {
   @include line-height(1);
-  @include margin(0, 0, .5);
 
   @include breakpoint($breakpoint-medium-width) {
     $leading: $leading-desktop;
     $leading-rem: $leading-rem-desktop;
 
     @include line-height(1);
-    @include margin-bottom(1);
     max-width: #{$max-width * $base-desktop + 'px'};
     max-width: #{$max-width + 'rem'};
     margin-left: auto;

@@ -297,7 +297,12 @@ input[type="reset"]:focus {
 // Drupal specific
 
 form {
-	.descripton {
-		font-size: 90%;
+
+	.form-item {
+		@include margin-bottom(1);
 	}
+	.description {
+		font-size: 80%;
+	}
+
 }
