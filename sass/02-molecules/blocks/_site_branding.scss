@@ -1,9 +1,11 @@
 .branding {
-  &__site-logo {
 
+  &__site-logo {
+    min-width: 75px;
   }
-  
+
   &__site-name {
 
   }
+  
 }

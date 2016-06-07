@@ -12,6 +12,7 @@ $leading-desktop: round($base-desktop * $line-height-desktop);
 $leading-rem-desktop: $leading-desktop / $base-desktop;
 
 @import 'gutenberg-mixins';
+@import '../breakpoint/stylesheets/breakpoint';
 
 /* Font themes
    ========================================================================== */
@@ -78,13 +79,11 @@ html {
 // Line-height & margin reset
 * {
   @include line-height(1);
-  @include margin(0, 0, 0);
+  @include margin(0, 0, .5);
 
-  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+  @include breakpoint($breakpoint-medium-width) {
     $leading: $leading-desktop;
     $leading-rem: $leading-rem-desktop;
-
-    @import 'gutenberg-mixins';
 
     @include line-height(1);
     @include margin-bottom(1);

@@ -159,8 +159,8 @@ html {
 * {
   line-height: 26px;
   line-height: 1.625rem;
-  margin: 0px 0px 0px;
-  margin: 0rem 0rem 0rem; }
+  margin: 0px 0px 13px;
+  margin: 0rem 0rem 0.8125rem; }
 
 /* Paragraph
    ========================================================================== */
@@ -584,6 +584,9 @@ body.with-sticky-footer .wrapper--main {
   -webkit-flex: 1 0 auto;
   overflow: hidden; }
 
+.branding__site-logo {
+  min-width: 75px; }
+
 .nav ul {
   margin: 0;
   padding: 0; }
@@ -662,17 +665,6 @@ section[id^="container-"] {
   html{
     font-size: 18px;
     font-size: 1.125rem; }
-  *{
-    /* Mixins
-   ========================================================================== */
-    line-height: 31px;
-    line-height: 1.72222rem;
-    margin-bottom: 31px;
-    margin-bottom: 1.72222rem;
-    max-width: 1350px;
-    max-width: 75rem;
-    margin-left: auto;
-    margin-right: auto; }
   /* Mixins
    ========================================================================== */
   /* Mixins
@@ -829,6 +821,15 @@ section[id^="container-"] {
     top: 31px;
     right: 31px; } }
 @media (min-width: 50em){
+  *{
+    line-height: 26px;
+    line-height: 1.625rem;
+    margin-bottom: 26px;
+    margin-bottom: 1.625rem;
+    max-width: 1350px;
+    max-width: 75rem;
+    margin-left: auto;
+    margin-right: auto; }
   .layout-sidebar-first main{
     zoom: 1;
     float: left;
