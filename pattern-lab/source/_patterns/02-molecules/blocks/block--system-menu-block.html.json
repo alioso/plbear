@@ -2,15 +2,14 @@
   "attributes": {
     "Attribute()": {
       "class": [
-        "region",
-        "region-header",
-        "row"
+        "block",
+        "nav",
+        "navigation"
       ]
     }
   },
   "content": {
     "join()": [
-      "molecules-block--system-branding-block.html",
       "molecules-menu.html"
     ]
   }

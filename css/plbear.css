@@ -2757,8 +2757,8 @@ details {
     details summary i {
       margin: 0px 13px 0px 0px;
       margin: 0rem 0.8125rem 0rem 0rem; }
-    details summary[aria-expanded="false"] i:before {
-      content: "\f0fe"; }
+  details:not([open]) summary i:before {
+    content: "\f0fe"; }
   details .details-wrapper {
     padding: 13px 13px;
     padding: 0.8125rem 0.8125rem;
@@ -2769,15 +2769,15 @@ details {
   min-width: 75px; }
 
 .local-tasks {
-  margin-bottom: 39px;
-  margin-bottom: 2.4375rem;
+  margin-bottom: 26px;
+  margin-bottom: 1.625rem;
   font-size: 90%;
   padding: 0; }
   .local-tasks--task {
-    margin: 0px 13px 0px 0px;
-    margin: 0rem 0.8125rem 0rem 0rem;
+    margin: 0px 13px 13px 0px;
+    margin: 0rem 0.8125rem 0.8125rem 0rem;
     list-style-type: none;
-    display: inline; }
+    display: inline-block; }
     .local-tasks--task a {
       padding: 7.8px 13px;
       padding: 0.4875rem 0.8125rem;

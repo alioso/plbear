@@ -1,7 +1,42 @@
 {
+  "attributes": {
+    "Attribute()": {
+      "class": [
+        "menu",
+        "nav"
+      ]
+    }
+  },
   "items": [
     {
-      "title": "Home",
+      "title": "Link 1",
+      "url": "#",
+      "attributes": {
+        "Attribute()": {
+          "class": []
+        }
+      }
+    },
+    {
+      "title": "Link 2",
+      "url": "#",
+      "attributes": {
+        "Attribute()": {
+          "class": []
+        }
+      }
+    },
+    {
+      "title": "Link 3",
+      "url": "#",
+      "attributes": {
+        "Attribute()": {
+          "class": []
+        }
+      }
+    },
+    {
+      "title": "Link 4",
       "url": "#",
       "attributes": {
         "Attribute()": {

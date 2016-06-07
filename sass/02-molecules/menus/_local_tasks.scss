@@ -1,5 +1,5 @@
 .local-tasks {
-  @include margin-bottom(1.5);
+  @include margin-bottom(1);
 
   font-size: 90%;
   padding: 0;
@@ -13,10 +13,10 @@
   }
 
   &--task {
-    @include margin(0, .5, 0, 0);
+    @include margin(0, .5, .5, 0);
 
     list-style-type: none;
-    display: inline;
+    display: inline-block;
 
     a {
       @include padding(.3, .5);
