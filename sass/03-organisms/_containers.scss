@@ -4,10 +4,5 @@ section[id^="container-"] {
 
 #container-header {
   display: flex;
-  flex-direction: row;
   justify-content: flex-start;
-
-  * {
-    margin: 0;
-  }
 }
