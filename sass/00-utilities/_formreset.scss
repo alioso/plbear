@@ -83,12 +83,6 @@ datalist {
 	font-size: $form-font-size;
 }
 
-label {
-	display: $form-display;
-	@include center-layout;
-}
-
-
 
 /* Input & Textarea ------------------ */
 
@@ -278,7 +272,7 @@ button:focus  {
 
 input[type="checkbox"]:focus,
 input[type="radio"]:focus {
-	outline: $form-focus-border-color solid 2px;
+	outline: $form-focus-border-color solid 1px;
 }
 
 button:hover,
@@ -303,6 +297,9 @@ form {
 	}
 	.description {
 		font-size: 80%;
+	}
+	.form-submit {
+		margin: 0;
 	}
 
 }

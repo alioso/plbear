@@ -12,6 +12,9 @@ libraries:
 libraries-override:
   system/base: false
 
+stylesheets-remove:
+  - core/themes/stable/css/file/file.admin.css
+
 regions:
   header: 'Header'
   navigation: 'Navigation bar'
