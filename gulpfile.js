@@ -64,7 +64,7 @@ gulp.task('export', function() {
 		search: component,
 		onFound: function (string, file, cb) {
       gulp.src('/'+file.path)
-        .pipe(gulp.dest('./components/export/'+component+'/'));
+        .pipe(gulp.dest('./export/'+component+'/'));
         return false;
 		},
     onNotFound: function (file, cb) {
@@ -89,7 +89,7 @@ gulp.task('browserSync', function() {
 
 gulp.task('sass', function () {
   gutil.log(gutil.colors.yellow('Compiling the theme CSS!'));
-  return gulp.src('./sass/*.scss')
+  return gulp.src('./components/*.scss')
     .pipe(cssGlobbing({
       extensions: ['.scss']
     }))
@@ -100,7 +100,7 @@ gulp.task('sass', function () {
     .pipe(postcss(processors))
     .on('error', handleError('Post CSS Processing'))
     .pipe(gulp.dest('./css'))
-    .pipe(gulp.dest('./pattern-lab/source/css'))
+    .pipe(gulp.dest('./components/styleguide/css'))
     .pipe(browserSync.reload({stream:true}));
 });
 
@@ -144,7 +144,7 @@ gulp.task('start-server', function() {
 });
 
 gulp.task('watch', ['browserSync'], function() {
-  gulp.watch('./sass/**/*.scss', ['sass-change']);
+  gulp.watch('./components/**/*.scss', ['sass']);
   gulp.watch('./js/*.js', ['scripts']);
   gulp.watch('./images/**/*.{gif,jpg,png}', ['images']);
   gulp.watch('./pattern-lab/source/_patterns/**/*', ['patterns-change']);
@@ -153,4 +153,4 @@ gulp.task('watch', ['browserSync'], function() {
 
 gulp.task('default', ['browserSync', 'sass', 'watch']);
 gulp.task('styles', ['sass']);
-gulp.task('build', ['sass', 'gutenberg', 'scripts', 'images', 'patterns-change']);
+gulp.task('build', ['sass', 'scripts', 'images', 'patterns-change']);
