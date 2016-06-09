@@ -127,6 +127,10 @@ gulp.task('cr', function() {
   return run('drush ' + config.drush.alias + ' cr').exec();
 });
 
+gulp.task('new', function() {
+  return run ('yo' + config.patternLab.dir +'/generator/index.js')
+});
+
 gulp.task('patterns-change', function() {
   runSequence('generate-pattern-lab');
 });
