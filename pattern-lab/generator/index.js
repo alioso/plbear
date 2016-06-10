@@ -1,15 +1,18 @@
 'use strict';
+
 var yeoman = require('yeoman-generator');
 var includes = require('lodash.includes');
 var path = require('path');
 var fs = require('fs');
-var plBase = ('./source/_patterns');
+var chalk = require('chalk');
+var plBase = ('./components/_patterns');
 
 module.exports = yeoman.Base.extend({
   prompting: function () {
 
-    console.log('Hi! This will help you build a component folder with assets.');
-    console.log('Templates for this are in: ' + path.relative(process.cwd(), __dirname));
+    console.log('');
+    console.log(chalk.bold.blue('Salutations. Let\'s build a component!'));
+    console.log(chalk.yellow('All templates are located at: ' + path.relative(process.cwd(), __dirname)));
     console.log('');
 
     var prompts = [{
@@ -44,7 +47,7 @@ module.exports = yeoman.Base.extend({
       ]
     }, {
       name: 'name',
-      message: 'What shall we name it?',
+      message: 'What shall we name it? ' + chalk.blue('Let\'s respect naming convention. Please only use underscore for spacing. Good chances are that this name will need to match a  machine name (check the template suggestions with debug mode!)'),
       filter: function(answer) {
         return answer.replace(/ /g, '-').toLowerCase();
       }

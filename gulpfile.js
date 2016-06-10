@@ -15,6 +15,7 @@ var config        = require('./config.json'),
     mqpacker      = require('css-mqpacker'),
     contains      = require('gulp-contains'),
     run           = require('gulp-run'),
+    exec           = require('child_process').exec,
     rename        = require('gulp-rename'),
     sourcemaps    = require('gulp-sourcemaps'),
     browserSync   = require('browser-sync').create(),
@@ -127,8 +128,8 @@ gulp.task('cr', function() {
   return run('drush ' + config.drush.alias + ' cr').exec();
 });
 
-gulp.task('new', function() {
-  return run ('yo' + config.patternLab.dir +'/generator/index.js')
+gulp.task('component', function() {
+  return run('yo ./pattern-lab/generator/index.js').exec();
 });
 
 gulp.task('patterns-change', function() {
