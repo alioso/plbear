@@ -2561,7 +2561,7 @@ fieldset {
   color: inherit;
   vertical-align: top;
   display: block;
-  margin: 10px 0; }
+  margin: auto 0; }
 
 datalist {
   font-family: inherit, sans-serif;
@@ -2651,7 +2651,8 @@ select[multiple] {
 
 /* Fieldset ------------------ */
 fieldset {
-  padding: 10px 25px;
+  padding: 26px 52px 26px;
+  padding: 1.625rem 3.25rem 1.625rem;
   border-radius: 2px;
   border: 1px solid #888; }
 
@@ -2665,7 +2666,7 @@ input[type="button"],
 input[type="submit"],
 input[type="reset"],
 input[type="image"] {
-  height: 40px;
+  height: auto;
   width: auto;
   max-width: 100%;
   background-color: #eaeaea;
@@ -3042,9 +3043,7 @@ section[id^="container-"] {
     line-height: 26px;
     line-height: 1.625rem;
     max-width: 1350px;
-    max-width: 75rem;
-    margin-left: auto;
-    margin-right: auto; }
+    max-width: 75rem; }
   .layout-sidebar-first main{
     zoom: 1;
     float: left;

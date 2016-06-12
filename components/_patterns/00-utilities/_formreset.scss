@@ -31,7 +31,7 @@ $form-allow-select-vendor-styling: true !default;
 $form-fieldset-bare: false !default;
 
 // Buttons & Input Submits
-$form-button-height: 40px !default;
+$form-button-height: auto !default;
 $form-button-width: auto !default;
 $form-button-max-width: 100% !default;
 $form-button-font-color: $form-font-color !default;
@@ -47,11 +47,11 @@ $form-display: block !default;
 // Center/Left-Aligned Layout
 @mixin center-layout {
 	@if $form-centered == true {
-		margin: 10px auto;
+		margin: auto;
 		text-align: center;
 	}
 	@else {
-		margin: 10px 0;
+		margin: auto 0;
 	}
 }
 
@@ -163,12 +163,6 @@ input[type="radio"] {
 	display: inline-block;
 	vertical-align: middle;
 }
-// For checkbox and radio to be centered, need to wrap the input and label in a span -
-// .checkbox-container {
-// 	display: block;
-// 	text-align: center;
-// }
-
 
 /* Select ------------------ */
 
@@ -202,7 +196,7 @@ fieldset {
 		border: 0;
 	}
 	@else {
-		padding: 10px 25px;
+		@include padding(1 , 2, 1, 2);
 		border-radius: $form-border-radius;
 		border: $form-border-width $form-border-style $form-border-color;
 	}
