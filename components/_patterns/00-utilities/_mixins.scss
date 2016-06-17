@@ -1,8 +1,3 @@
-@mixin layout-padding {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
 // element-invisible as defined by http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
 @mixin element-invisible {
   position: absolute;
