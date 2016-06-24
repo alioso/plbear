@@ -45,4 +45,4 @@ after making your changes and compile css, run
 gulp run-test
 Note: you can also just run test between environments
 
-#D7AX/#DAX - I pledge to make this theme as accessible as it can be. If you find any flaws, please submit an issue. Help me fix them if you can.
+#D8AX/#DAX - I pledge to make this theme as accessible as it can be. If you find any flaws, please submit an issue. Help me fix them if you can.

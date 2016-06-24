@@ -1,43 +1,54 @@
 'use strict';
 
-// utilities
-var config        = require('./config.json'),
-    argv          = require('yargs').argv,
-    gulp          = require('gulp'),
-    gutil         = require('gulp-util'),
-    notify        = require('gulp-notify'),
-    gulpif        = require('gulp-if'),
-    runSequence   = require('run-sequence'),
-    sass          = require('gulp-sass'),
-    cssGlobbing   = require('gulp-css-globbing'),
-    postcss       = require('gulp-postcss'),
-    autoprefixer  = require('autoprefixer'),
-    mqpacker      = require('css-mqpacker'),
-    contains      = require('gulp-contains'),
-    run           = require('gulp-run'),
-    exec           = require('child_process').exec,
-    rename        = require('gulp-rename'),
-    sourcemaps    = require('gulp-sourcemaps'),
-    browserSync   = require('browser-sync').create(),
-    reload        = browserSync.reload;
+// core utilities
+var defaultConfig   = require('./config.json'),
+    gulp            = require('gulp'),
+    gutil           = require('gulp-util'),
+    notify          = require('gulp-notify'),
+    argv            = require('yargs').argv,
+    gulpif          = require('gulp-if'),
+    clean           = require('gulp-clean'),
+    browserSync     = require('browser-sync').create();
+
+// css utilities
+var sass            = require('gulp-sass'),
+    cssGlobbing     = require('gulp-css-globbing'),
+    postcss         = require('gulp-postcss'),
+    autoprefixer    = require('autoprefixer'),
+    mqpacker        = require('css-mqpacker'),
+    run             = require('gulp-run'),
+    sourcemaps      = require('gulp-sourcemaps');
 
 // js utilities
-var jshint        = require('gulp-jshint'),
-    stylish       = require('jshint-stylish');
+var jshint          = require('gulp-jshint'),
+    stylish         = require('jshint-stylish');
 
 // image utilities
-var imagemin      = require('gulp-imagemin');
+var imagemin        = require('gulp-imagemin');
 
 //  should we build sourcemaps? "gulp build --sourcemaps"
 var buildSourceMaps = !!argv.sourcemaps;
 
-var component = !!argv.param;
-
 // post CSS processors
 var processors = [
-  autoprefixer({browsers: ['last 2 version', 'IE 9']}), // specify browser compatibility with https://github.com/ai/browserslist
+  autoprefixer({browsers: ['last 2 version']}), // specify browser compatibility with https://github.com/ai/browserslist
   mqpacker // this will reorganize css into media query groups, better for performance
 ];
+
+// create settings from config file and arguments
+var config = {
+  drush: {
+    alias: argv.drushAlias || defaultConfig.drush.alias
+  },
+  browserSync: {
+    hostname: argv.hostname || defaultConfig.browserSync.hostname,
+    openAutomatically: argv.openAutomatically || defaultConfig.browserSync.openAutomatically,
+    reloadDelay: argv.reloadDelay || defaultConfig.browserSync.reloadDelay,
+    injectChanges: argv.injectChanges || defaultConfig.browserSync.injectChanges,
+    notify: argv.notify || defaultConfig.browserSync.notify,
+    online: argv.online || defaultConfig.browserSync.online
+  }
+};
 
 // error notifications
 var handleError = function (task) {
@@ -57,40 +68,9 @@ var handleError = function (task) {
   };
 };
 
-var component = argv.component ? argv.component : 'null';
-
-gulp.task('export', function() {
-  return gulp.src('./**/*.{scss,twig,js}', {base: './'})
-  .pipe(contains({
-		search: component,
-		onFound: function (string, file, cb) {
-      gulp.src('/'+file.path)
-        .pipe(gulp.dest('./export/'+component+'/'));
-        return false;
-		},
-    onNotFound: function (file, cb) {
-      gutil.log(gutil.colors.bgRed("No component found with this name!"));
-    }
-  }));
-});
-
-// BrowserSync
-gulp.task('browserSync', function() {
-  browserSync.init({
-    port: config.browserSync.port,
-    proxy: config.browserSync.hostname,
-    open: config.browserSync.openAutomatically,
-    reloadDelay: config.browserSync.reloadDelay,
-    injectChanges: config.browserSync.injectChanges,
-    notify: config.browserSync.notify,
-    online: config.browserSync.online,
-    browser: ["google chrome", "firefox"]
-  });
-});
-
 gulp.task('sass', function () {
   gutil.log(gutil.colors.yellow('Compiling the theme CSS!'));
-  return gulp.src('./components/*.scss')
+  return gulp.src('./sass/*.scss')
     .pipe(cssGlobbing({
       extensions: ['.scss']
     }))
@@ -101,8 +81,22 @@ gulp.task('sass', function () {
     .pipe(postcss(processors))
     .on('error', handleError('Post CSS Processing'))
     .pipe(gulp.dest('./css'))
-    .pipe(gulp.dest('./components/styleguide/css'))
     .pipe(browserSync.reload({stream:true}));
+});
+
+gulp.task('panels', function () {
+  gutil.log(gutil.colors.yellow('Compiling the panel layouts CSS!'));
+  return gulp.src('./panels-layouts/**/*.scss')
+    .pipe(cssGlobbing({
+      extensions: ['.scss']
+    }))
+    .pipe(gulpif(buildSourceMaps, sourcemaps.init()))
+    .pipe(sass())
+    .on('error', handleError('Sass Compiling'))
+    .pipe(gulpif(buildSourceMaps, sourcemaps.write()))
+    .pipe(postcss(processors))
+    .pipe(gulp.dest('./panels-layouts'))
+    .on('error', handleError('Post CSS Processing'));
 });
 
 gulp.task('scripts', function () {
@@ -124,38 +118,39 @@ gulp.task('images', function () {
     .pipe(gulp.dest('./images/'));
 });
 
-gulp.task('cr', function() {
-  return run('drush ' + config.drush.alias + ' cr').exec();
-});
-
-gulp.task('component', function() {
-  return run('yo ./pattern-lab/generator/index.js').exec();
-});
-
-gulp.task('patterns-change', function() {
-  runSequence('generate-pattern-lab');
-});
-
-gulp.task('sass-change', function() {
-  runSequence('sass', 'generate-pattern-lab');
-});
-
-gulp.task('generate-pattern-lab', function() {
-  run('php ' + config.patternLab.dir + '/core/console --generate').exec();
-});
-
-gulp.task('start-server', function() {
-  run('php ' + config.patternLab.dir + '/core/console --server').exec();
+gulp.task('browserSync', function() {
+  browserSync.init({
+    proxy: config.browserSync.hostname,
+    open: config.browserSync.openAutomatically,
+    reloadDelay: config.browserSync.reloadDelay,
+    injectChanges: config.browserSync.injectChanges,
+    notify: config.browserSync.notify,
+    online: config.browserSync.online,
+    browser: ["google chrome", "firefox"]
+  });
 });
 
 gulp.task('watch', ['browserSync'], function() {
-  gulp.watch('./components/**/*.scss', ['sass']);
-  gulp.watch('./js/*.js', ['scripts']);
-  gulp.watch('./images/**/*.{gif,jpg,png}', ['images']);
-  gulp.watch('./pattern-lab/source/_patterns/**/*', ['patterns-change']);
-  gulp.watch('./templates/**/*', ['patterns-change']);
+  gulp.watch("./css/bear_skin.css");
+  gulp.watch("./sass/**/*.scss", ['sass'], ['styleguide']);
+  gulp.watch("./js/*.js", ['scripts']);
+  gulp.watch("./images/**/*.{gif,jpg,png}", ['images']);
+  gulp.watch("./templates/**/*.php");
 });
 
-gulp.task('default', ['browserSync', 'sass', 'watch']);
-gulp.task('styles', ['sass']);
-gulp.task('build', ['sass', 'scripts', 'images', 'patterns-change']);
+gulp.task('default', ['sass', 'panels', 'watch']);
+gulp.task('styles', ['sass', 'panels']);
+gulp.task('build', ['sass', 'panels', 'scripts', 'images']);
+
+
+//************************************************************//
+
+
+// CSS regression tools
+gulp.task('create-reference', function() {
+  run('(cd ./node_modules/backstopjs; npm run reference)').exec();
+});
+
+gulp.task('run-test', function() {
+  run('(cd ./node_modules/backstopjs; npm run test)').exec();
+});
