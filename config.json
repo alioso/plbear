@@ -11,10 +11,10 @@
       "templatesDir": "./templates"
   },
   "drush": {
-      "alias": "@plbear.local"
+      "alias": "@bearskin8pl.local"
   },
   "browserSync": {
-      "hostname": "plbear.dev",
+      "hostname": "bearskin8pl.vm",
       "port": 3000,
       "openAutomatically": false,
       "reloadDelay": 0,

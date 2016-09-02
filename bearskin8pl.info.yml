@@ -1,13 +1,13 @@
-name: Pattern Lab Bear Theme
+name: Bear Skin 8 Base Theme w/ Pattern Lab
 type: theme
-description: An atomic design and Pattern Lab friendly starting point for new Drupal themes.
+description: An atomic design Drupal 8 base theme including Pattern Lab
 package: Bear
 core: 8.x
 
 libraries:
-  - plbear/gutenberg
-  - plbear/global-styles
-  - plbear/global-scripts
+  - bearskin8pl/gutenberg
+  - bearskin8pl/global-styles
+  - bearskin8pl/global-scripts
 
 libraries-override:
   system/base: false

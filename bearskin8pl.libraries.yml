@@ -2,7 +2,7 @@ global-styles:
   version: 1.x
   css:
     theme:
-      css/plbear.css: {}
+      css/bearskin8pl.css: {}
 
 global-scripts:
   version: 1.x
