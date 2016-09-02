@@ -2,37 +2,38 @@
 
 // core utilities
 var defaultConfig   = require('./config.json'),
+    backstopConfig  = require('./backstop.json'),
     gulp            = require('gulp'),
+    shell           = require('gulp-shell'),
     gutil           = require('gulp-util'),
     notify          = require('gulp-notify'),
     argv            = require('yargs').argv,
     gulpif          = require('gulp-if'),
-    clean           = require('gulp-clean'),
     browserSync     = require('browser-sync').create();
 
 // css utilities
 var sass            = require('gulp-sass'),
     cssGlobbing     = require('gulp-css-globbing'),
+    scss            = require('postcss-scss'),
     postcss         = require('gulp-postcss'),
     autoprefixer    = require('autoprefixer'),
     mqpacker        = require('css-mqpacker'),
-    run             = require('gulp-run'),
-    sourcemaps      = require('gulp-sourcemaps');
+    sourcemaps      = require('gulp-sourcemaps'),
+    stylelint       = require('gulp-stylelint');
 
 // js utilities
-var jshint          = require('gulp-jshint'),
-    stylish         = require('jshint-stylish');
+var eslint = require('gulp-eslint');
 
 // image utilities
-var imagemin        = require('gulp-imagemin');
+var imagemin = require('gulp-imagemin');
 
 //  should we build sourcemaps? "gulp build --sourcemaps"
 var buildSourceMaps = !!argv.sourcemaps;
 
 // post CSS processors
 var processors = [
-  autoprefixer({browsers: ['last 2 version']}), // specify browser compatibility with https://github.com/ai/browserslist
-  mqpacker // this will reorganize css into media query groups, better for performance
+  autoprefixer({browsers: ['last 2 version', 'IE 9']}), // specify browser compatibility with https://github.com/ai/browserslist
+  mqpacker({sort: true}) // this will reorganize css into media query groups, better for performance
 ];
 
 // create settings from config file and arguments
@@ -47,7 +48,19 @@ var config = {
     injectChanges: argv.injectChanges || defaultConfig.browserSync.injectChanges,
     notify: argv.notify || defaultConfig.browserSync.notify,
     online: argv.online || defaultConfig.browserSync.online
+  },
+  backstopjs : {
+    reference: argv.reference
   }
+};
+
+// project paths
+var paths = {
+  js: 'js/*.js',
+  sass: 'sass/**/*.scss',
+  oldSass: 'old-sass/**/*.scss', // remove when done with refactor
+  images: 'images/**/*.{gif,jpg,png}',
+  templates: 'templates/**/*.php'
 };
 
 // error notifications
@@ -68,14 +81,17 @@ var handleError = function (task) {
   };
 };
 
+// Compile Sass
 gulp.task('sass', function () {
   gutil.log(gutil.colors.yellow('Compiling the theme CSS!'));
-  return gulp.src('./sass/*.scss')
+  return gulp.src(paths.sass)
     .pipe(cssGlobbing({
       extensions: ['.scss']
     }))
     .pipe(gulpif(buildSourceMaps, sourcemaps.init()))
-    .pipe(sass())
+    .pipe(sass({
+      outputStyle: 'expanded'
+    }))
     .on('error', handleError('Sass Compiling'))
     .pipe(gulpif(buildSourceMaps, sourcemaps.write()))
     .pipe(postcss(processors))
@@ -84,32 +100,55 @@ gulp.task('sass', function () {
     .pipe(browserSync.reload({stream:true}));
 });
 
-gulp.task('panels', function () {
-  gutil.log(gutil.colors.yellow('Compiling the panel layouts CSS!'));
-  return gulp.src('./panels-layouts/**/*.scss')
+// Compile Old Sass (remove function when done with refactor)
+gulp.task('oldSass', function () {
+  gutil.log(gutil.colors.yellow('Compiling the theme old CSS!'));
+  return gulp.src(paths.oldSass)
     .pipe(cssGlobbing({
       extensions: ['.scss']
     }))
     .pipe(gulpif(buildSourceMaps, sourcemaps.init()))
-    .pipe(sass())
+    .pipe(sass({
+      outputStyle: 'expanded'
+    }))
     .on('error', handleError('Sass Compiling'))
     .pipe(gulpif(buildSourceMaps, sourcemaps.write()))
     .pipe(postcss(processors))
-    .pipe(gulp.dest('./panels-layouts'))
-    .on('error', handleError('Post CSS Processing'));
+    .on('error', handleError('Post CSS Processing'))
+    .pipe(gulp.dest('./css'))
+    .pipe(browserSync.reload({stream:true}));
+});
+
+// Lint Sass
+gulp.task('sass:lint', function() {
+  gutil.log(gutil.colors.yellow('Reviewing Sass files!'));
+  return gulp.src(['sass/**/*.scss', '!sass/vendor/**/*.scss'])
+    .pipe(stylelint({
+      syntax: 'scss',
+      reporters: [
+        {formatter: 'string', console: true}
+      ],
+      failAfterError: false
+    }))
 });
 
 gulp.task('scripts', function () {
+
+});
+
+// Lint JS
+gulp.task('scripts:lint', function() {
   gutil.log(gutil.colors.yellow('Reviewing JavaScript files!'));
-  return gulp.src('./js/*.js')
-    .pipe(jshint())
-    .pipe(jshint.reporter(stylish))
-    .on('error', handleError('JS Linting'));
+  return gulp.src(['js/*.js', '!js/vendor/*', '!js/*.min.js'])
+    .pipe(eslint({
+      useEslintrc: true
+    }))
+    .pipe(eslint.format());
 });
 
 gulp.task('images', function () {
   gutil.log(gutil.colors.yellow('Crunching images!'));
-  return gulp.src('./images/**/*.{gif,jpg,png}')
+  return gulp.src(paths.images)
     .pipe(imagemin({
       progressive: true,
       svgoPlugins: [{removeViewBox: false}]
@@ -126,31 +165,32 @@ gulp.task('browserSync', function() {
     injectChanges: config.browserSync.injectChanges,
     notify: config.browserSync.notify,
     online: config.browserSync.online,
-    browser: ["google chrome", "firefox"]
+    browser: ['google chrome']
   });
 });
 
 gulp.task('watch', ['browserSync'], function() {
-  gulp.watch("./css/bear_skin.css");
-  gulp.watch("./sass/**/*.scss", ['sass'], ['styleguide']);
-  gulp.watch("./js/*.js", ['scripts']);
-  gulp.watch("./images/**/*.{gif,jpg,png}", ['images']);
-  gulp.watch("./templates/**/*.php");
+  gulp.watch([paths.sass, paths.oldSass], ['sass:lint', 'sass', 'oldSass']);
+  gulp.watch(paths.js, ['scripts:lint']);
+  gulp.watch(paths.templates);
 });
 
-gulp.task('default', ['sass', 'panels', 'watch']);
-gulp.task('styles', ['sass', 'panels']);
-gulp.task('build', ['sass', 'panels', 'scripts', 'images']);
+gulp.task('default', ['sass:lint', 'sass', 'watch']);
+gulp.task('build', ['sass:lint', 'scripts:lint', 'images']);
 
-
-//************************************************************//
-
-
+//*********************
 // CSS regression tools
-gulp.task('create-reference', function() {
-  run('(cd ./node_modules/backstopjs; npm run reference)').exec();
-});
+//*********************
 
-gulp.task('run-test', function() {
-  run('(cd ./node_modules/backstopjs; npm run test)').exec();
-});
+gulp.task('backstop:ref', shell.task([
+  'cd node_modules/backstopjs; npm run reference'
+]));
+
+gulp.task('backstop:test', shell.task([
+  'cd node_modules/backstopjs; npm run test'
+]));
+
+// Generate a sub-theme
+gulp.task('subtheme', shell.task([
+  '../SUBTHEME_STARTER/generate-theme.sh --name ' + argv.name
+]));

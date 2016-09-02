@@ -5,6 +5,7 @@ bearskin8pl.mobile:
   multipliers:
     - 1x
     - 2x
+
 bearskin8pl.small:
   label: S
   mediaQuery: 'all and (min-width: 525px) and (max-width: 800px)'
@@ -12,6 +13,7 @@ bearskin8pl.small:
   multipliers:
     - 1x
     - 2x
+
 bearskin8pl.medium:
   label: M
   mediaQuery: 'all and (min-width: 801px) and (max-width: 1024px)'
@@ -19,6 +21,7 @@ bearskin8pl.medium:
   multipliers:
     - 1x
     - 2x
+    
 bearskin8pl.large:
   label: L
   mediaQuery: 'all and (min-width: 1025px)'
