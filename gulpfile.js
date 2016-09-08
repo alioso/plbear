@@ -57,10 +57,9 @@ var config = {
 // project paths
 var paths = {
   js: 'js/*.js',
-  sass: 'sass/**/*.scss',
-  oldSass: 'old-sass/**/*.scss', // remove when done with refactor
+  sass: 'components/**/*.scss',
   images: 'images/**/*.{gif,jpg,png}',
-  templates: 'templates/**/*.php'
+  templates: 'templates/**/*.twig'
 };
 
 // error notifications
@@ -85,25 +84,6 @@ var handleError = function (task) {
 gulp.task('sass', function () {
   gutil.log(gutil.colors.yellow('Compiling the theme CSS!'));
   return gulp.src(paths.sass)
-    .pipe(cssGlobbing({
-      extensions: ['.scss']
-    }))
-    .pipe(gulpif(buildSourceMaps, sourcemaps.init()))
-    .pipe(sass({
-      outputStyle: 'expanded'
-    }))
-    .on('error', handleError('Sass Compiling'))
-    .pipe(gulpif(buildSourceMaps, sourcemaps.write()))
-    .pipe(postcss(processors))
-    .on('error', handleError('Post CSS Processing'))
-    .pipe(gulp.dest('./css'))
-    .pipe(browserSync.reload({stream:true}));
-});
-
-// Compile Old Sass (remove function when done with refactor)
-gulp.task('oldSass', function () {
-  gutil.log(gutil.colors.yellow('Compiling the theme old CSS!'));
-  return gulp.src(paths.oldSass)
     .pipe(cssGlobbing({
       extensions: ['.scss']
     }))
@@ -170,7 +150,7 @@ gulp.task('browserSync', function() {
 });
 
 gulp.task('watch', ['browserSync'], function() {
-  gulp.watch([paths.sass, paths.oldSass], ['sass:lint', 'sass', 'oldSass']);
+  gulp.watch([paths.sass], ['sass:lint', 'sass']);
   gulp.watch(paths.js, ['scripts:lint']);
   gulp.watch(paths.templates);
 });

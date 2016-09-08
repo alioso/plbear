@@ -1,7 +1,10 @@
+// vendor
+@import '../../vendor/gutenberg/gutenberg';
+
+// utilities
 @import 'variables';
 @import 'mixins';
 @import 'utility';
 @import "typography";
-@import "formreset";
 @import 'animations';
 @import 'layout';

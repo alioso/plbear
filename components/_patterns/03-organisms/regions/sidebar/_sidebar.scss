@@ -1,6 +1,6 @@
 .site-sidebars {
 
-	@include breakpoint($breakpoint-medium-width) {
+	@include breakpoint($bp-768) {
 
 		&.sidebar-second {
 			@include padding(0, 0, 2, 4);

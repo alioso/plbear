@@ -20,13 +20,13 @@
 
 .layout-sidebar-first {
   main {
-    @include breakpoint($breakpoint-medium-width) {
+    @include breakpoint($bp-768) {
       @include col(3/4);
       @include shift(1/4);
     }
   }
   .site-sidebars {
-    @include breakpoint($breakpoint-medium-width) {
+    @include breakpoint($bp-768) {
       @include col(1/4);
       @include shift(-3/4);
     }
@@ -39,12 +39,12 @@
 
 .layout-sidebar-second {
   main {
-    @include breakpoint($breakpoint-medium-width) {
+    @include breakpoint($bp-768) {
       @include col(3/4);
     }
   }
   .site-sidebars {
-    @include breakpoint($breakpoint-medium-width) {
+    @include breakpoint($bp-768) {
       @include col(1/4);
     }
   }
@@ -56,19 +56,19 @@
 
 .layout-two-sidebars {
   main {
-    @include breakpoint($breakpoint-medium-width) {
+    @include breakpoint($bp-768) {
       @include col(2/4);
       @include shift(1/4);
     }
   }
   .sidebar-first {
-    @include breakpoint($breakpoint-medium-width) {
+    @include breakpoint($bp-768) {
       @include col(1/4);
       @include shift(-2/4);
     }
   }
   .sidebar-second {
-    @include breakpoint($breakpoint-medium-width) {
+    @include breakpoint($bp-768) {
       @include col(1/4);
     }
   }

@@ -17,5 +17,6 @@ global-scripts:
 
 gutenberg:
   version: 1.x
-  js:
-    js/vendor/gutenberg.js: {}
+  css:
+    theme:
+      css/gutenberg.css: {}
