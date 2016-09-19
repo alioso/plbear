@@ -30,16 +30,16 @@ regions:
 component-libraries:
   atoms:
     paths:
-      - pattern-lab/source/_patterns/01-atoms
+      - components/_patterns/01-atoms
   molecules:
     paths:
-      - pattern-lab/source/_patterns/02-molecules
+      - components/_patterns/02-molecules
   organisms:
     paths:
-      - pattern-lab/source/_patterns/03-organisms
+      - components/_patterns/03-organisms
   pages:
     paths:
-      - pattern-lab/source/_patterns/04-pages
+      - components/_patterns/04-pages
   templates:
     paths:
-      - pattern-lab/source/_patterns/05-templates
+      - components/_patterns/05-templates

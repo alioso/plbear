@@ -149,14 +149,28 @@ gulp.task('browserSync', function() {
   });
 });
 
-gulp.task('watch', ['browserSync'], function() {
-  gulp.watch([paths.sass], ['sass:lint', 'sass']);
-  gulp.watch(paths.js, ['scripts:lint']);
-  gulp.watch(paths.templates);
-});
+//************
+// Pattern Lab
+//************
 
-gulp.task('default', ['sass:lint', 'sass', 'watch']);
-gulp.task('build', ['sass:lint', 'scripts:lint', 'images']);
+gulp.task('pl:generate', shell.task([
+  'cd pattern-lab; php core/console --generate'
+]));
+
+gulp.task('pl:watch', shell.task([
+  'cd pattern-lab; php core/console --watch'
+]));
+
+gulp.task('pl:server', shell.task([
+  'cd pattern-lab; php core/console --server'
+]));
+
+
+//******************
+// Pattern Generator
+//******************
+
+// not working with Gulp at the moment. Just use "npm run new"
 
 //*********************
 // CSS regression tools
@@ -170,7 +184,13 @@ gulp.task('backstop:test', shell.task([
   'cd node_modules/backstopjs; npm run test'
 ]));
 
-// Generate a sub-theme
-gulp.task('subtheme', shell.task([
-  '../SUBTHEME_STARTER/generate-theme.sh --name ' + argv.name
-]));
+//**********************************************************//
+
+gulp.task('watch', ['browserSync'], function() {
+  gulp.watch([paths.sass], ['sass:lint', 'sass']);
+  gulp.watch(paths.js, ['scripts:lint']);
+  gulp.watch(paths.templates);
+});
+
+gulp.task('default', ['sass:lint', 'sass', 'watch']);
+gulp.task('build', ['sass:lint', 'scripts:lint', 'images']);

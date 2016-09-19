@@ -14,22 +14,22 @@
   }
 
   .menu-item {
+    @include margin(0, 1, 0, 0);
+
     list-style-type: none;
     display: inline;
-    @include margin(0, 1, 0, 0);
 
     &--expanded {
       position: relative;
 
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
 
         .sub-menu {
           visibility: visible;
           opacity: 1;
         }
       }
-
     }
   }
-
 }
