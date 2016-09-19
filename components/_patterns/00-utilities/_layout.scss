@@ -1,17 +1,19 @@
-.element-invisible {
-  @include element-invisible;
+//*********
+// Wrappers
+//*********
+
+.wrapper {
+  width: 100%;
+  max-width: $site-max-width;
+  margin: 0 auto;
 }
 
-.visually-hidden {
-  @include element-invisible;
-}
+//***********
+// Containers
+//***********
 
-#skip-link {
-  margin: 0;
-  padding: 0;
-  li {
-    list-style-type: none;
-  }
+section[id^="container-"] {
+  @include padding(0, 1);
 }
 
 //*************
