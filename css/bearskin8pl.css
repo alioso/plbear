@@ -361,8 +361,13 @@ section[id^="container-"] {
   padding: 0 1.61111rem;
 }
 
+i {
+  margin: 0rem 0.80556rem 0rem 0rem;
+  font-weight: bold;
+}
+
 details {
-  margin-bottom: 1.61111rem;
+  margin: 1.61111rem 0;
 }
 
 details summary {
@@ -375,8 +380,36 @@ details summary i {
   margin: 0rem 0.80556rem 0rem 0rem;
 }
 
+details summary i:before {
+  content: "-";
+}
+
 details:not([open]) summary i:before {
-  content: "\f0fe";
+  content: "+";
+}
+
+details .details-wrapper {
+  padding: 0.80556rem 0.80556rem;
+  border: 1px solid #f5f5f5;
+  border-top: 0;
+}
+
+details {
+  margin: 1.61111rem 0;
+}
+
+details summary {
+  padding: 0.80556rem 0.80556rem;
+  background: #f5f5f5;
+  cursor: pointer;
+}
+
+details summary i:before {
+  content: "-";
+}
+
+details summary[aria-expanded="false"] i:before {
+  content: "+";
 }
 
 details .details-wrapper {

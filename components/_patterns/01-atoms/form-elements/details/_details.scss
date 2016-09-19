@@ -8,17 +8,17 @@ details {
     cursor: pointer;
 
     i {
-      @include margin(0, .5, 0, 0);
 
       &:before {
         content: "-";
       }
     }
-  }
 
-  &:not([open]) {
-    summary i:before {
-      content: "+";
+    &[aria-expanded="false"] {
+
+      i:before {
+        content: "+";
+      }
     }
   }
 
