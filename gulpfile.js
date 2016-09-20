@@ -81,4 +81,4 @@ gulp.task('backstop:test', shell.task([
 
 gulp.task('watch', ['serve', 'styles:watch', 'scripts:watch', 'pl:watch']);
 gulp.task('default', ['watch']);
-gulp.task('build', ['scripts:build', 'styles:build', 'pl:build']);
+gulp.task('build', ['styles:build', 'pl:build']);

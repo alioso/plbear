@@ -14,9 +14,3 @@ global-scripts:
     - core/drupal
     - core/drupalSettings
     - core/jquery.once
-
-gutenberg:
-  version: 1.x
-  css:
-    theme:
-      css/gutenberg.css: {}
