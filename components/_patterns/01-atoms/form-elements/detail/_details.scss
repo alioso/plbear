@@ -11,14 +11,14 @@ details {
       @include margin(0, .5, 0, 0);
 
       &:before {
-        content: "-";
+        content: '-';
       }
     }
   }
 
   &:not([open]) {
     summary i:before {
-      content: "+";
+      content: '+';
     }
   }
 

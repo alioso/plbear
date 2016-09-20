@@ -10,14 +10,14 @@ details {
     i {
 
       &:before {
-        content: "-";
+        content: '-';
       }
     }
 
-    &[aria-expanded="false"] {
+    &[aria-expanded='false'] {
 
       i:before {
-        content: "+";
+        content: '+';
       }
     }
   }

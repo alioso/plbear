@@ -259,6 +259,7 @@ h5, h6 {
 
 a {
   color: #728EAD;
+  -webkit-transition: all .3s;
   transition: all .3s;
   text-decoration: none;
 }
@@ -321,6 +322,7 @@ hr {
   margin-left: auto;
   background-size: 100% 29px;
   background-size: 100% 1.61111rem;
+  background-image: -webkit-linear-gradient(top, transparent 1px, transparent 12.5px, #261D19 12.5px, #261D19 16.5px, transparent 16.5px, transparent 29px);
   background-image: linear-gradient(to bottom, transparent 1px, transparent 12.5px, #261D19 12.5px, #261D19 16.5px, transparent 16.5px, transparent 29px);
   width: 100px;
 }
@@ -455,6 +457,7 @@ details .details-wrapper {
   position: absolute;
   left: 0;
   opacity: 0;
+  -webkit-transition: opacity .3s ease-in-out;
   transition: opacity .3s ease-in-out;
 }
 
@@ -478,15 +481,18 @@ details .details-wrapper {
 }
 
 .sticky-footer {
+  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   min-height: 100vh;
+  -webkit-box-orient: vertical;
   -ms-flex-direction: column;
       flex-direction: column;
 }
 
 .sticky-footer .wrapper--main {
   position: relative;
+  -webkit-box-flex: 1 0 auto;
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
   -webkit-flex: 1 0 auto;
@@ -502,12 +508,10 @@ details .details-wrapper {
   margin-bottom: 0;
 }
 
-#main {
+.skip-link {
   margin: 0 auto;
 }
 
-/* No files to import found in _patterns//05-templates//**/
-/* */
 @media (min-width: 48em){
   *{
     line-height: 1.61111;
@@ -675,11 +679,13 @@ details .details-wrapper {
     margin-right: 0%;
   }
 }
+
 @media (min-width: 75em){
   blockquote{
     margin: 1.61111rem -3.22222rem;
   }
 }
+
 @media screen and (min-width: 85em){
   body,
   html{
@@ -775,6 +781,7 @@ details .details-wrapper {
   hr{
     background-size: 100% 31px;
     background-size: 100% 1.72222rem;
+    background-image: -webkit-linear-gradient(top, transparent 1px, transparent 13.5px, #261D19 13.5px, #261D19 17.5px, transparent 17.5px, transparent 31px);
     background-image: linear-gradient(to bottom, transparent 1px, transparent 13.5px, #261D19 13.5px, #261D19 17.5px, transparent 17.5px, transparent 31px);
   }
   small{

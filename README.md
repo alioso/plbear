@@ -34,7 +34,9 @@ Follow the prompt to create the pattern of your choice. The naming convention ba
 Gulp tasks
 ----------
 
-gulp watch --hostname="YourLocalSite" to start a browsersync instance and start styling
+The default settings used for Gulp are located in `default.gulpfile.yml`. These settings include things like paths, settings, etc.
+
+You can override any of the settings by duplicating the default file and renaming it to `gulpfile.yml`. Then, change any settings you want. This file is ignored in Git.
 
 
 Additions
