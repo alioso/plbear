@@ -39,7 +39,7 @@ You can override any of the settings by duplicating the default file and renamin
 ### Additions
 We have included backstopJS to be able to run css regression test.
 
-Configure your test with `backstop.json`. When in doubt, visit [BackstopJS](https://github.com/garris/BackstopJS) for more config info.
+Configure your test with `backstop.json`. **When in doubt, visit [BackstopJS](https://github.com/garris/BackstopJS) for more config info**.
 Create your reference pointer after making your changes and compile css:
 ```sh
 $ gulp create-reference
