@@ -51,19 +51,21 @@ You can override any of the settings by duplicating the default file and renamin
 We have included backstopJS to be able to run css regression test.
 
 Configure your test w/ backstop.json (when in doubt, visit https://github.com/garris/BackstopJS for more config info.)
-
-gulp create-reference - will create your reference pointer
-after making your changes and compile css, run
+```sh
+gulp create-reference``` - will create your reference pointer
+after making your changes and compile css, run:
+```sh
 gulp run-test
+```
 Note: you can also just run test between environments
 
 
 ### Turn on dev mode
 
 Copy and rename the sites/example.settings.local.php to be sites/default/settings.local.php
-
+```sh
 $ cp sites/example.settings.local.php sites/default/settings.local.php
-
+```
 Open settings.php file in sites/default and uncomment these lines:
 
 ```php
