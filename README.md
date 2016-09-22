@@ -22,31 +22,32 @@ sudo npm install gulp -g
 ### Pattern Lab
 
 To get started you'll first need to generate the style guide:
-- gulp pl:generate
-
+```sh
+gulp pl:generate
+```
 Then start the server to access it:
-- gulp pl:server
-
-While the server is running, for auto reload on file change, in a separate terminal window (local), run
-- gulp pl:watch
-
+```sh
+gulp pl:server
+```
+While the server is running, for auto reload on file change, in a separate terminal window (local), run:
+```sh
+gulp pl:watch
+```
 
 ### Generate a pattern
-
 We have a builder in the theme to generate patterns.
-- npm run new
-
+```sh
+npm run new
+```
 Follow the prompt to create the pattern of your choice. The naming convention basically needs to follow the template suggestion (see the "Turn on dev mode") of this doc for more info.
 
 ### Gulp tasks
-
 The default settings used for Gulp are located in `default.gulpfile.yml`. These settings include things like paths, settings, etc.
 
 You can override any of the settings by duplicating the default file and renaming it to `gulpfile.yml`. Then, change any settings you want. This file is ignored in Git.
 
 
 ### Additions
-
 We have included backstopJS to be able to run css regression test.
 
 Configure your test w/ backstop.json (when in doubt, visit https://github.com/garris/BackstopJS for more config info.)
