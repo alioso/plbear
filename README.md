@@ -3,7 +3,7 @@
 Bear Skin is the default theme for the [Bear](https://github.com/zivtech/bear), which is a Drupal starter kit installation profile that can be used for building a new Drupal site. Bear Skin does not rely on the profile. Therefore, it **can be used as a standalone [starter theme](https://www.drupal.org/node/323993)**.
 
 ## Getting started
-Before getting started, make sure that you have the latest version of [node.js](https://nodejs.org/en/) installed. To start building CSS, you have to first install all of the gulp dependencies. `cd` to the project directory in your terminal and run:
+Before getting started, make sure that you have the latest version of [node.js](https://nodejs.org/en/) and [yeoman](http://yeoman.io/) installed. To start building CSS, you have to first install all of the gulp dependencies. `cd` to the project directory in your terminal and run:
 ```sh
 npm install
 ```
