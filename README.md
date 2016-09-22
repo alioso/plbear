@@ -19,11 +19,7 @@ sudo npm install gulp -g
 
 ### Pattern Lab
 
-To get started you'll first need to generate the style guide:
-```sh
-gulp pl:generate
-```
-Then start the server to access it:
+To get started you'll first need to start the server to access it:
 ```sh
 gulp pl:server
 ```
