@@ -5,28 +5,28 @@ Bear Skin is the default theme for the [Bear](https://github.com/zivtech/bear), 
 ## Getting started
 Before getting started, make sure that you have the latest version of [node.js](https://nodejs.org/en/) and [yeoman](http://yeoman.io/) installed. To start building CSS, you have to first install all of the gulp dependencies. `cd` to the project directory in your terminal and run:
 ```sh
-npm install
+$ npm install
 ```
 
 You might run into some errors initially, depending on your local setup. if so, make sure that your local paths are correct:
 ```sh
-npm config set prefix /usr/local
+$ npm config set prefix /usr/local
 ```
 Then reinstall gulp:
 ```sh
-sudo npm install gulp -g
+$ sudo npm install gulp -g
 ```
 
 ### Pattern Lab
 in a separate terminal window on your local machine, run:
 ```sh
-gulp pl:watch
+$ gulp pl:watch
 ```
 
 ### Generate a pattern
 We have a builder in the theme to generate patterns.
 ```sh
-npm run new
+$ npm run new
 ```
 Follow the prompt to create the pattern of your choice. The naming convention basically needs to follow the template suggestion (see the [Turn on dev mode](#Turn-on-dev-mode)) of this doc for more info.
 
@@ -42,11 +42,11 @@ We have included backstopJS to be able to run css regression test.
 Configure your test with `backstop.json`. When in doubt, visit [BackstopJS](https://github.com/garris/BackstopJS) for more config info.
 Create your reference pointer after making your changes and compile css:
 ```sh
-gulp create-reference
+$ gulp create-reference
 ```
 To test that, run:
 ```sh
-gulp run-test
+$ gulp run-test
 ```
 Note: you can also just run test between environments
 
