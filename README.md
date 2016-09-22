@@ -28,7 +28,7 @@ We have a builder in the theme to generate patterns.
 ```sh
 npm run new
 ```
-Follow the prompt to create the pattern of your choice. The naming convention basically needs to follow the template suggestion (see the "Turn on dev mode") of this doc for more info.
+Follow the prompt to create the pattern of your choice. The naming convention basically needs to follow the template suggestion (see the [Turn on dev mode](#Turn-on-dev-mode)) of this doc for more info.
 
 ### Gulp tasks
 The default settings used for Gulp are located in `default.gulpfile.yml`. These settings include things like paths, settings, etc.
@@ -39,7 +39,7 @@ You can override any of the settings by duplicating the default file and renamin
 ### Additions
 We have included backstopJS to be able to run css regression test.
 
-Configure your test w/ backstop.json (when in doubt, visit https://github.com/garris/BackstopJS for more config info.)
+Configure your test with `backstop.json`. When in doubt, visit [BackstopJS](https://github.com/garris/BackstopJS) for more config info.
 Create your reference pointer after making your changes and compile css:
 ```sh
 gulp create-reference
@@ -50,8 +50,7 @@ gulp run-test
 ```
 Note: you can also just run test between environments
 
-
-### Turn on dev mode
+# Turn on dev mode
 
 Copy and rename the `sites/example.settings.local.php` to be `sites/default/settings.local.php`
 ```sh
@@ -73,7 +72,7 @@ Open `settings.local.php` and uncomment this line to enable the null cache servi
 $settings['container_yamls'][] = DRUPAL_ROOT . '/sites/development.services.yml';
 ```
 
-In settings.local.php change the following to be TRUE if you want to work with enabled css- and js-aggregation:
+In `settings.local.php` change the following to be `TRUE` if you want to work with enabled css- and js-aggregation:
 
 ```php
 $config['system.performance']['css']['preprocess'] = FALSE;
@@ -87,7 +86,7 @@ $settings['cache']['bins']['render'] = 'cache.backend.null';
 $settings['cache']['bins']['dynamic_page_cache'] = 'cache.backend.null';
 ```
 
-If you do not want to install test modules and themes, set following to FALSE
+If you do not want to install test modules and themes, set following to `FALSE`
 
 ```php
 $settings['extension_discovery_scan_tests'] = TRUE;
@@ -103,13 +102,8 @@ parameters:
     cache: false
 ```
 
-Afterwards you have to rebuild the Drupal cache. Otherwise your website may encounter an unexpected error on page reload. This can be done by with drush:
-```sh
-drush cr
-```
-or by visiting the following URL from your Drupal 8 website:
-[http://[yoursite]/core/rebuild.php](http://yoursite/core/rebuild.php)
+Afterwards you have to rebuild the Drupal cache. Otherwise your website may encounter an unexpected error on page reload. This can be done with `drush cr` or by going to `/core/rebuild.php` from your Drupal 8 website.
 
-Finished! Now you're able to develop in Drupal 8 without manual cache rebuilds on a regular basis.
+**Finished!** Now you're able to develop in Drupal 8 without manual cache rebuilds on a regular basis.
 
 #### D8AX/#DAX - I pledge to make this theme as accessible as it can be. If you find any flaws, please submit an issue. Help me fix them if you can.
