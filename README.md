@@ -28,7 +28,7 @@ We have a builder in the theme to generate patterns.
 ```sh
 $ npm run new
 ```
-Follow the prompt to create the pattern of your choice. The naming convention basically needs to follow the template suggestion (see the [Turn on dev mode](#Turn-on-dev-mode)) of this doc for more info.
+Follow the prompt to create the pattern of your choice. The naming convention basically needs to follow the template suggestion (see the [Turn on dev mode](#turn-on-dev-mode) of this doc for more info.
 
 ### Gulp tasks
 The default settings used for Gulp are located in `default.gulpfile.yml`. These settings include things like paths, settings, etc.
@@ -50,7 +50,8 @@ $ gulp run-test
 ```
 Note: you can also just run test between environments
 
-# Turn on dev mode
+
+## Turn on dev mode <a id="turn-on-dev-mode"></a>
 
 Copy and rename the `sites/example.settings.local.php` to be `sites/default/settings.local.php`
 ```sh
