@@ -108,6 +108,8 @@ Afterwards you have to rebuild the Drupal cache. Otherwise your website may enco
 
 #### D8AX/#DAX - I pledge to make this theme as accessible as it can be. If you find any flaws, please submit an issue. Help me fix them if you can.
 
+* * *
+
 ## A word on twig template inheritance
 
 - `include`: Dump the contents of that template into this one.
