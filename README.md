@@ -18,12 +18,7 @@ sudo npm install gulp -g
 ```
 
 ### Pattern Lab
-
-To get started you'll first need to start the server to access it:
-```sh
-gulp pl:server
-```
-While the server is running, for auto reload on file change, in a separate terminal window (local), run:
+in a separate terminal window on your local machine, run:
 ```sh
 gulp pl:watch
 ```
