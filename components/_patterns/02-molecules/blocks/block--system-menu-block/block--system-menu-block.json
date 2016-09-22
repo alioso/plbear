@@ -1,16 +1,12 @@
 {
   "attributes": {
     "Attribute()": {
+      "role": "navigation",
+      "aria-labelledby": "heading_id",
       "class": [
-        "block",
-        "nav",
-        "navigation"
+        "menu"
       ]
     }
   },
-  "content": {
-    "join()": [
-      "molecules-menu.html"
-    ]
-  }
+  "content": ""
 }

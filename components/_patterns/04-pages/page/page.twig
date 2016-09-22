@@ -1,14 +1,14 @@
-<div class="wrapper wrapper--header ">
-  <section id="container-header" role="region">
+<header class="wrapper wrapper-header">
+  <div id="container-header" role="region" class="wrapper__inner wrapper-header__inner">
     {{ page.header }}
     {{ page.navigation }}
-  </section>
-</div>
+  </div>
+</header>
 
-<div class="wrapper wrapper--main">
-  <section id="container-main" role="region">
-    <main id="content" class="column main" role="main">
-      {% if page is not empty %}
+<main class="wrapper wrapper--main">
+  <section id="container-main" role="region" class="wrapper__inner wrapper-main__inner">
+    <div id="content" class="column main" role="main">
+      {% if page.highlighted %}
         <div class="main__highlighted">
           {{ page.highlighted }}
         </div>
@@ -18,36 +18,33 @@
 
       <a id="main-content"></a>
 
-      {% if title is not empty %}
-        {{ title_prefix }}
-        <h1 class="main__title" role="heading">{{ title }}</h1>
-        {{ title_suffix }}
-      {% else %} {#// this is needed for ARIA #}
-        <h1 class="u-hidden">{{ bear_page_title }}</h1>
+      {% if messages %}
+        {% set classes = ["main__messages"] %}
+        {% embed "@molecules/blocks/block/block.twig"
+        with {
+        "element": "div"
+        } %}
+          {% block content %}
+            {{ messages }}
+          {% endblock %}
+        {% endembed %}
       {% endif %}
 
-      {% if messages is not empty %}
-        <div class="main__messages" role="region">
-          {{ messages }}
-        </div>
-      {% endif %}
-
-      {% if tabs is not empty or tabs is not empty %}
+      {% if tabs %}
         <nav class="main__tabs" role="navigation">
           {{ tabs }}
         </nav>
       {% endif %}
 
-      {% if page is not empty %}
+      {% if page.help %}
         <aside class="main__help" role="note">
           {{ page.help }}
         </aside>
       {% endif %}
 
-      {% if action_links is not empty %}
+      {% if action_links %}
         <nav class="main__action-links" role="navigation">
-          <ul class="action-links"
-              role="menubar">{{ action_links }}</ul>
+          <ul class="action-links" role="menubar">{{ action_links }}</ul>
         </nav>
       {% endif %}
 
@@ -55,41 +52,30 @@
         {{ page.content }}
       </div>
 
-      {% if feed_icons is not empty %}
+      {% if feed_icons %}
         <nav class="main__feed-icons" role="navigation">
           {{ feed_icons }}
         </nav>
       {% endif %}
 
-    </main>
+    </div>
     <!-- /#content -->
 
-    {% if page.sidebar_first %}
-      <aside class="sidebar-first site-sidebars">
-        {{ page.sidebar_first }}
-      </aside><!-- /.sidebars -->
-    {% endif %}
-
-    {% if page.sidebar_second  %}
-      <aside class="sidebar-second site-sidebars">
-        {{ page.sidebar_second }}
-      </aside><!-- /.sidebars -->
-    {% endif %}
+    {{ page.sidebar_first }}
+    {{ page.sidebar_second }}
 
   </section>
   <!-- /#main -->
-</div>
+</main>
 
-<div class="wrapper wrapper--breadcrumb">
-  <section id="container-breadcrumb" role="region">
+<aside class="wrapper wrapper-breadcrumb">
+  <section id="container-breadcrumb" role="region" class="wrapper__inner wrapper-breadcrumb__inner">
     {{ page.breadcrumb }}
   </section>
-</div>
+</aside>
 
-<div class="wrapper wrapper--footer">
-  <section id="container-footer" role="region">
-    <footer id="footer" class="site-footer">
-      {{ page.footer }}
-    </footer>
+<footer class="wrapper wrapper-footer">
+  <section id="container-footer" role="region" class="wrapper__inner wrapper-footer__inner">
+    {{ page.footer }}
   </section>
-</div>
+</footer>

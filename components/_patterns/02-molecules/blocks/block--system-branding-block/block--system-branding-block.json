@@ -1,4 +1,11 @@
 {
+  "attributes": {
+    "Attribute()": {
+      "class": [
+        "branding"
+      ]
+    }
+  },
   "site_logo": "../../../images/logo.svg",
   "site_name": "Website Title",
   "site_slogan": "The website slogan"
