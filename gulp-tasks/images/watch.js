@@ -3,7 +3,7 @@
 var browserSync = require('browser-sync');
 
 module.exports = function (gulp, options) {
-  return gulp.watch(options.js.src, ['scripts:lint'], function () {
+  return gulp.watch(options.images.src, ['images:build'], function () {
     if (options.browserSync.patterns.enabled) {
       console.log('patterns reload');
       browserSync.get('patterns').reload();

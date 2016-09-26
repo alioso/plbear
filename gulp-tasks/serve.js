@@ -5,7 +5,7 @@ var browserSync = require('browser-sync');
 var patterns = browserSync.create('patterns');
 var site = browserSync.create('site');
 
-module.exports = function(gulp, options) {
+module.exports = function (gulp, options) {
   if (options.browserSync.patterns.enabled) {
     var plOptions = merge({}, options.browserSync.patterns, {
       snippetOptions: {

@@ -5,9 +5,6 @@ var path = require('path');
 var yaml = require('js-yaml');
 var fs = require('fs');
 var browserSync = require('browser-sync');
-//var inject = require('gulp-inject');
-//var bowerFiles = require('main-bower-files');
-//var _ = require('lodash');
 
 module.exports = function (gulp, options) {
   var plConfig = yaml.safeLoad(
@@ -22,9 +19,14 @@ module.exports = function (gulp, options) {
 
   function plBuild(cb) {
     core.sh('php ' + consolePath + ' --generate', true, function () {
-      if (options.browserSync.enabled) {
-        browserSync.get('pl').reload();
+      if (options.browserSync.patterns.enabled) {
+        browserSync.get('patterns').reload();
       }
+
+      if (options.browserSync.site.enabled) {
+        browserSync.get('site').reload();
+      }
+
       cb();
     });
   }
@@ -32,16 +34,19 @@ module.exports = function (gulp, options) {
   gulp.task('pl:build', plBuild);
 
 
-
   gulp.task('pl:watch', function () {
-    var plGlob = path.normalize(plSource + '/**/*.{' + watchedExtensions + '}' );
+    var plGlob = path.normalize(plSource + '/**/*.{' + watchedExtensions + '}');
     console.log('glob files', plGlob);
 
-    gulp.watch(plGlob, function(event) {
+    gulp.watch(plGlob, function (event) {
       console.log('File ' + path.relative(process.cwd(), event.path) + ' was ' + event.type + ', running tasks...');
-      core.sh('php ' + consolePath +  ' --generate', false, function() {
+      core.sh('php ' + consolePath + ' --generate', false, function () {
         if (options.browserSync.patterns.enabled) {
           browserSync.get('patterns').reload();
+        }
+
+        if (options.browserSync.site.enabled) {
+          browserSync.get('site').reload();
         }
       });
     });

@@ -16,7 +16,7 @@ var browserSync = require('browser-sync');
 module.exports = {
   dep: ['styles:clean'],
   fn: function (gulp, options) {
-    
+
     var processors = [
       autoprefixer({browsers: options.css.browsers}),
       mqpacker({sort: true})
@@ -42,7 +42,7 @@ module.exports = {
       .pipe(postcss(processors))
       .pipe(flatten())
       .pipe(gulp.dest(options.css.dest))
-      .on('end', function() {
+      .on('end', function () {
         if (options.browserSync.patterns.enabled) {
           browserSync.get('patterns').reload();
         }
