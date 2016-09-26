@@ -93,7 +93,7 @@ If you do not want to install test modules and themes, set following to `FALSE`
 $settings['extension_discovery_scan_tests'] = TRUE;
 ```
 
-Open `development.services.yml` in the sites folder and add the following block (to disable twig cache)
+Open `development.services.yml` in the `/sites` folder and add the following block (to disable twig cache)
 
 ```yaml
 parameters:
