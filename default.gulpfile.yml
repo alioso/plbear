@@ -18,23 +18,23 @@ patternLab:
   dir: "./pattern-lab"
   patterns: "./components/_patterns/**/*.{twig,json}"
 css:
-  src: ["./components/**/*.scss"]
-  dest: "./css"
+  src: ["components/**/*.scss"]
+  dest: "css"
   lint:
     enabled: true
     failOnError: false
   browsers: ["last 2 version", "> 5%", "IE 9"]
 js:
-  src: ["./js/*.js"]
+  src: ["js/*.js"]
   dest: "./js"
   lint:
     enabled: true
     failOnError: false
 images:
-  src: ["./images/**/*.{jpg,jpeg,gif,png}"]
+  src: ["images/**/*.{jpg,jpeg,gif,png}"]
   dest: "./images"
 templates:
-  src: ["./templates/**/*.html.twig"]
+  src: ["templates/**/*.html.twig"]
 drush:
   alias: "@bearskin8pl.local"
 browserSync:
