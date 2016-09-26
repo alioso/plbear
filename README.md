@@ -3,7 +3,24 @@
 Bear Skin is the default theme for the [Bear](https://github.com/zivtech/bear), which is a Drupal starter kit installation profile that can be used for building a new Drupal site. Bear Skin does not rely on the profile. Therefore, it **can be used as a standalone [starter theme](https://www.drupal.org/node/323993)**.
 
 ## Getting started
-Before getting started, make sure that you have the latest version of [node.js](https://nodejs.org/en/) and [yeoman](http://yeoman.io/) installed. To start building CSS, you have to first install all of the gulp dependencies. `cd` to the project directory in your terminal and run:
+
+Before getting started, make sure that you have the latest version of [node.js](https://nodejs.org/en/) and [yeoman](http://yeoman.io/) installed. Also, you will need to have composer installed. On a Mac, this is easiest with homebrew.
+
+Next, install pattern lab dependencies from Composer. `cd` to the patter-lab directory and execute `composer install`.
+
+Then, generate the base pattern lab files. `cd` back to the theme directory and run `php pattern-lab/core/console --generate`. If everything went well, you should have a `public` directory inside the `pattern-lab` directory.
+
+### Gulp config 
+
+The default settings used for Gulp are located in `default.gulpfile.yml`. These settings include things like paths, settings, etc.
+
+You can override any of the settings by duplicating the default file and renaming it to `gulpfile.yml`. Then, change any settings you want. This file is ignored in Git.
+
+Also, individual gulp tasks live in the `gulp-tasks` directory. 
+
+### Building CSS
+
+To start building CSS, you have to first install all of the gulp dependencies. `cd` to the project directory in your terminal and run:
 ```sh
 $ npm install
 ```
@@ -29,11 +46,6 @@ We have a builder in the theme to generate patterns.
 $ npm run new
 ```
 Follow the prompt to create the pattern of your choice. The naming convention basically needs to follow the template suggestion (see the [Turn on dev mode](#turn-on-dev-mode) of this doc for more info.
-
-### Gulp tasks
-The default settings used for Gulp are located in `default.gulpfile.yml`. These settings include things like paths, settings, etc.
-
-You can override any of the settings by duplicating the default file and renaming it to `gulpfile.yml`. Then, change any settings you want. This file is ignored in Git.
 
 
 ### Additions
