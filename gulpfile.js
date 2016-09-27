@@ -14,8 +14,6 @@
   gulpif          = require('gulp-if'),
   browserSync     = require('browser-sync').create();
 
-var assign = require('lodash.assign');
-
   //  should we build sourcemaps? "gulp build --sourcemaps"
   var buildSourceMaps = !!argv.sourcemaps;
 
