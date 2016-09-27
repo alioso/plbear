@@ -130,7 +130,7 @@ Afterwards you have to rebuild the Drupal cache. Otherwise your website may enco
 
 Here is a set of examples that illustrate the point:
 
-### foo.html
+### foo.html.twig
 
 ```twig
 {% block header %}
@@ -153,10 +153,10 @@ Produces:
 </section>
 ```
 
-### bar.html
+### bar.html.twig
 
 ```twig
-{% extends "foo.html" %}
+{% extends "foo.html.twig" %}
 
 {% block header %}
   <h2>This is Bar's Title</h2>
@@ -172,12 +172,12 @@ Produces:
 </section>
 ```
 
-### baz.html
+### baz.html.twig
 
 ```twig
 <h1>This is the title from Baz</h1>
 <h2>We're adding lots of stuff</h2>
-{% embed "bar.html" %}
+{% embed "bar.html.twig" %}
   {% block header %}
     <h3>This is overriding the h2 from Bar and redefining it here in Baz!</h3>
   {% endblock %}
