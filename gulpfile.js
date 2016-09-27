@@ -5,6 +5,19 @@
   var yaml = require('js-yaml');
   var fs = require('fs');
   var assign = require('lodash.assign');
+  var backstopConfig  = require('./backstop.json'),
+  gulp            = require('gulp'),
+  shell           = require('gulp-shell'),
+  gutil           = require('gulp-util'),
+  notify          = require('gulp-notify'),
+  argv            = require('yargs').argv,
+  gulpif          = require('gulp-if'),
+  browserSync     = require('browser-sync').create();
+
+var assign = require('lodash.assign');
+
+  //  should we build sourcemaps? "gulp build --sourcemaps"
+  var buildSourceMaps = !!argv.sourcemaps;
 
   // read default config settings
   var config = yaml.safeLoad(fs.readFileSync('default.gulpfile.yml', 'utf8'), {json: true});
