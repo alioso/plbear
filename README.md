@@ -65,7 +65,7 @@ Note: you can also just run test between environments
 
 ## Turn on dev mode <a id="turn-on-dev-mode"></a>
 
-Copy and rename the `sites/example.settings.local.php` to be `sites/default/settings.local.php`
+On your Mac, copy and rename the `sites/example.settings.local.php` to be `sites/default/settings.local.php`
 ```sh
 $ cp sites/example.settings.local.php sites/default/settings.local.php
 ```
