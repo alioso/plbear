@@ -69,7 +69,7 @@ On your Mac, copy and rename the `sites/example.settings.local.php` to be `sites
 ```sh
 $ cp sites/example.settings.local.php sites/default/settings.local.php
 ```
-Open `settings.php` file in `sites/default` and uncomment these lines:
+Open `default.settings.php` file in `sites/default` and uncomment these lines:
 
 ```php
 if (file_exists(__DIR__ . '/settings.local.php')) {
