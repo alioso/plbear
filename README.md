@@ -35,7 +35,7 @@ $ sudo npm install gulp -g
 ```
 
 ### Pattern Lab
-in a separate terminal window on your local machine, run:
+Open a new terminal window on your local machine, `cd` to your theme directory and run:
 ```sh
 $ gulp pl:watch
 ```
