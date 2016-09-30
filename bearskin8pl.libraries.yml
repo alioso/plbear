@@ -15,6 +15,7 @@ global-scripts:
     - core/drupal
     - core/drupalSettings
     - core/jquery.once
+
 ui:
   version: 1.x
   css:
@@ -22,3 +23,8 @@ ui:
       ui/css/bearskin-ui.css: {}
   js:
     ui/js/bearskin-ui.js: {}
+
+flexboxgrid:
+  css:
+    theme:
+      css/flexboxgrid.min.css: {}
