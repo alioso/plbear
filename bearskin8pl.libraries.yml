@@ -7,6 +7,7 @@ global-styles:
 global-scripts:
   version: 1.x
   js:
+    js/vendor/flexibility.js: {}
     js/scripts.js: {}
   dependencies:
     - core/jquery
