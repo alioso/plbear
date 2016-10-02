@@ -1,5 +1,3 @@
-@charset "UTF-8";
-/*! Gutenberg reset — adapted from Normalize */
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -9,8 +7,6 @@ body {
   margin: 0;
 }
 
-/* HTML5 display definitions
-   ========================================================================== */
 article,
 aside,
 details,
@@ -38,9 +34,7 @@ canvas,
 progress,
 video {
   display: inline-block;
-  /* 1 */
   vertical-align: baseline;
-  /* 2 */
 }
 
 audio:not([controls]) {
@@ -53,8 +47,6 @@ template {
   display: none;
 }
 
-/* Links
-   ========================================================================== */
 a {
   background: transparent;
 }
@@ -64,8 +56,6 @@ a:hover {
   outline: 0;
 }
 
-/* Text-level semantics
-   ========================================================================== */
 abbr {
   letter-spacing: 0.1em;
 }
@@ -115,8 +105,6 @@ i {
   vertical-align: baseline;
 }
 
-/* Embedded content
-   ========================================================================== */
 img {
   border: 0;
 }
@@ -125,8 +113,6 @@ svg:not(:root) {
   overflow: hidden;
 }
 
-/* Grouping content
-   ========================================================================== */
 hr {
   box-sizing: content-box;
   height: 0;
@@ -143,8 +129,6 @@ samp {
   font-family: monospace, monospace;
 }
 
-/* Tables
-   ========================================================================== */
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -155,8 +139,6 @@ th {
   padding: 0;
 }
 
-/* Images
-   ========================================================================== */
 img {
   max-width: 100%;
   display: block;
@@ -526,11 +508,13 @@ details .details-wrapper {
   margin-bottom: 0;
 }
 
-@media (min-width: 48em){
-  *{
+@media (min-width: 48em) {
+
+  * {
     line-height: 1.61111;
   }
-  .layout-sidebar-first .column.main, .layout-sidebar-second .column.main{
+
+  .layout-sidebar-first .column.main, .layout-sidebar-second .column.main {
     padding: 0rem 0rem 0rem 1.61111rem;
     -webkit-box-ordinal-group: 3;
     -ms-flex-order: 2;
@@ -538,25 +522,29 @@ details .details-wrapper {
     -ms-flex-preferred-size: 75%;
     flex-basis: 75%;
   }
-  .layout-sidebar-first .column.sidebar, .layout-sidebar-second .column.sidebar{
+
+  .layout-sidebar-first .column.sidebar, .layout-sidebar-second .column.sidebar {
     -webkit-box-ordinal-group: 2;
     -ms-flex-order: 1;
     order: 1;
     -ms-flex-preferred-size: 25%;
     flex-basis: 25%;
   }
-  .layout-sidebar-second .column.main{
+
+  .layout-sidebar-second .column.main {
     padding: 0rem 1.61111rem 0rem 0rem;
     -webkit-box-ordinal-group: 2;
     -ms-flex-order: 1;
     order: 1;
   }
-  .layout-sidebar-second .column.sidebar{
+
+  .layout-sidebar-second .column.sidebar {
     -webkit-box-ordinal-group: 3;
     -ms-flex-order: 2;
     order: 2;
   }
-  .layout-two-sidebars .column.main{
+
+  .layout-two-sidebars .column.main {
     padding: 0 1.61111rem;
     -webkit-box-ordinal-group: 3;
     -ms-flex-order: 2;
@@ -564,130 +552,155 @@ details .details-wrapper {
     -ms-flex-preferred-size: 75%;
     flex-basis: 75%;
   }
-  .layout-two-sidebars .column.sidebar{
+
+  .layout-two-sidebars .column.sidebar {
     -ms-flex-preferred-size: 25%;
     flex-basis: 25%;
   }
-  .layout-two-sidebars .column.sidebar.sidebar--first{
+
+  .layout-two-sidebars .column.sidebar.sidebar--first {
     -webkit-box-ordinal-group: 2;
     -ms-flex-order: 1;
     order: 1;
   }
-  .layout-two-sidebars .column.sidebar.sidebar--second{
+
+  .layout-two-sidebars .column.sidebar.sidebar--second {
     -webkit-box-ordinal-group: 4;
     -ms-flex-order: 3;
     order: 3;
   }
 }
 
-@media (min-width: 75em){
-  blockquote{
+@media (min-width: 75em) {
+
+  blockquote {
     margin: 1.61111rem -3.22222rem;
   }
 }
 
-@media screen and (min-width: 85em){
+@media screen and (min-width: 85em) {
+
   body,
-  html{
+  html {
     margin: 0;
     width: 100%;
     max-width: none;
   }
-  html{
+
+  html {
     font-size: 18px;
     font-size: 1rem;
   }
-  h1{
+
+  h1 {
     font-size: 3rem;
     line-height: 1.72222;
     margin-top: 1.72222rem;
     margin-bottom: 1.72222rem;
   }
-  h2{
+
+  h2 {
     font-size: 2.1rem;
     line-height: 1.72222;
     margin-top: 2.15278rem;
     margin-bottom: 0.86111rem;
   }
-  h3{
+
+  h3 {
     font-size: 1.625rem;
     line-height: 1.72222;
     margin-top: 1.72222rem;
     margin-bottom: 0.86111rem;
   }
-  h4{
+
+  h4 {
     font-size: 1rem;
     line-height: 1.72222;
     margin-top: 1.72222rem;
     margin-bottom: 0.86111rem;
   }
-  h5{
+
+  h5 {
     font-size: 0.815rem;
     line-height: 1.72222;
     margin-top: 2.15278rem;
     margin-bottom: 0.86111rem;
   }
-  h6{
+
+  h6 {
     font-size: 0.75rem;
     line-height: 1.72222;
     margin-top: 2.15278rem;
     margin-bottom: 0.86111rem;
   }
-  h1 + h2{
+
+  h1 + h2 {
     margin-top: 1.72222rem;
   }
+
   h2 + h3,
   h3 + h4,
-  h4 + h5{
+  h4 + h5 {
     margin-top: 0.86111rem;
   }
-  h5 + h6{
+
+  h5 + h6 {
     margin-top: -0.86111rem;
   }
+
   figure.floatLeft,
-  figure.floatRight{
+  figure.floatRight {
     max-width: 720px;
     max-width: 40rem;
     padding: 0 1.72222rem;
   }
+
   figure.floatLeft blockquote,
-  figure.floatRight blockquote{
+  figure.floatRight blockquote {
     padding: 0;
     text-align: left;
   }
+
   figure.floatLeft blockquote p,
-  figure.floatRight blockquote p{
+  figure.floatRight blockquote p {
     font-size: 1.2rem;
     line-height: 1.72222;
   }
-  figcaption{
+
+  figcaption {
     line-height: 1.72222;
     margin-bottom: 0;
   }
-  figure blockquote{
+
+  figure blockquote {
     padding: 3.44444rem 0 1.72222rem;
     text-align: center;
   }
-  figure blockquote p{
+
+  figure blockquote p {
     font-size: 1.6875rem;
     line-height: 2.58333;
   }
-  hr{
+
+  hr {
     margin-top: 3.44444rem;
     margin-bottom: 3.44444rem;
     height: 31px;
     height: 1.72222rem;
   }
-  hr{
+
+  hr {
     background-size: 100% 31px;
     background-size: 100% 1.72222rem;
     background-image: -webkit-linear-gradient(top, transparent 1px, transparent 13.5px, #261D19 13.5px, #261D19 17.5px, transparent 17.5px, transparent 31px);
     background-image: linear-gradient(to bottom, transparent 1px, transparent 13.5px, #261D19 13.5px, #261D19 17.5px, transparent 17.5px, transparent 31px);
   }
-  small{
+
+  small {
     line-height: 0.86111;
   }
-  code{
+
+  code {
     padding: 1.72222rem;
   }
 }
