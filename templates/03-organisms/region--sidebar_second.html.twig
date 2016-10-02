@@ -13,11 +13,9 @@
  */
 #}
 {% set classes = [
-'region',
-'region--' ~ region|clean_class,
+'column',
+'sidebar',
+'sidebar--second'
 ] %}
 
-{% include "@organisms/regions/region/region.twig"
-with {
-"element": "aside"
-} %}
+{% include "@organisms/region/region.twig" %}

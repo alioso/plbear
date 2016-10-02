@@ -1,81 +1,54 @@
-<header class="wrapper wrapper-header">
-  <div id="container-header" role="region" class="wrapper__inner wrapper-header__inner">
-    {{ page.header }}
-    {{ page.navigation }}
+{% block region_header %}
+  {{ region_header }}
+{% endblock %}
+
+<div class="wrapper-highlighted">
+  <div role="region" class="wrapper-highlighted__inner">
+    {% block region_highlighted %}
+      {{ region_highlighted }}
+    {% endblock %}
   </div>
-</header>
+</div>
 
-<main class="wrapper wrapper--main">
-  <section id="container-main" role="region" class="wrapper__inner wrapper-main__inner">
-    <div id="content" class="column main" role="main">
-      {% if page.highlighted %}
-        <div class="main__highlighted">
-          {{ page.highlighted }}
-        </div>
-      {% endif %}
+<div class="wrapper-main">
+  <div class="wrapper-main__inner">
 
-      {{ breadcrumb }}
+    <div class="column main" role="main">
 
-      <a id="main-content"></a>
+      {% block region_help %}
+        {{ region_help }}
+      {% endblock %}
 
-      {% if messages %}
-        {% set classes = ["main__messages"] %}
-        {% embed "@molecules/blocks/block/block.twig"
-        with {
-        "element": "div"
-        } %}
-          {% block content %}
-            {{ messages }}
-          {% endblock %}
-        {% endembed %}
-      {% endif %}
+      <a id="main"></a>
 
-      {% if tabs %}
-        <nav class="main__tabs" role="navigation">
-          {{ tabs }}
-        </nav>
-      {% endif %}
-
-      {% if page.help %}
-        <aside class="main__help" role="note">
-          {{ page.help }}
-        </aside>
-      {% endif %}
-
-      {% if action_links %}
-        <nav class="main__action-links" role="navigation">
-          <ul class="action-links" role="menubar">{{ action_links }}</ul>
-        </nav>
-      {% endif %}
-
-      <div class="main__content">
-        {{ page.content }}
-      </div>
+      {% block region_content %}
+        {{ region_content }}
+      {% endblock %}
 
       {% if feed_icons %}
-        <nav class="main__feed-icons" role="navigation">
-          {{ feed_icons }}
-        </nav>
+        {{ feed_icons }}
       {% endif %}
 
     </div>
-    <!-- /#content -->
 
-    {{ page.sidebar_first }}
-    {{ page.sidebar_second }}
+    {% block region_sidebar_first %}
+      {{ region_sidebar_first }}
+    {% endblock %}
 
-  </section>
-  <!-- /#main -->
-</main>
+    {% block region_sidebar_second %}
+      {{ region_sidebar_second }}
+    {% endblock %}
+  </div>
+</div>
 
-<aside class="wrapper wrapper-breadcrumb">
-  <section id="container-breadcrumb" role="region" class="wrapper__inner wrapper-breadcrumb__inner">
-    {{ page.breadcrumb }}
-  </section>
+<aside class="wrapper-breadcrumb">
+  <div role="region" class="wrapper-breadcrumb__inner">
+    {% block region_breadcrumb %}
+      {{ region_breadcrumb }}
+    {% endblock %}
+  </div>
 </aside>
 
-<footer class="wrapper wrapper-footer">
-  <section id="container-footer" role="region" class="wrapper__inner wrapper-footer__inner">
-    {{ page.footer }}
-  </section>
-</footer>
+{% block region_footer %}
+  {{ region_footer }}
+{% endblock %}
