@@ -532,6 +532,63 @@ p {
   font-family: "Noto Serif";
 }
 
+.button {
+  font-size: 1.1rem;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  background-color: #3F3F3F;
+  color: white;
+  padding: 0.5rem 2rem;
+  text-decoration: none;
+  cursor: pointer;
+  border-style: none;
+  border-radius: 5px;
+  font-family: "Montserrat";
+  background: -webkit-linear-gradient(#427AB3, #2E6296);
+  background: linear-gradient(#427AB3, #2E6296);
+}
+
+.button:hover, .button:focus, .button:visited {
+  background-color: #261D19;
+  text-decoration: none;
+  color: white;
+}
+
+.button:hover {
+  background: -webkit-linear-gradient(#225E9A, #1E4976);
+  background: linear-gradient(#225E9A, #1E4976);
+}
+
+.form-submit {
+  font-size: 1.1rem;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  background-color: #3F3F3F;
+  color: white;
+  padding: 0.5rem 2rem;
+  text-decoration: none;
+  cursor: pointer;
+  border-style: none;
+  border-radius: 5px;
+  font-family: "Montserrat";
+  background: -webkit-linear-gradient(#02978E, #0A8277);
+  background: linear-gradient(#02978E, #0A8277);
+  padding: 0.5rem 1.5rem;
+}
+
+.form-submit:hover, .form-submit:focus, .form-submit:visited {
+  background-color: #261D19;
+  text-decoration: none;
+  color: white;
+}
+
+.form-submit:hover {
+  background: -webkit-linear-gradient(#016F68, #00534C);
+  background: linear-gradient(#016F68, #00534C);
+}
+
 @media (min-width: 48em){
   *{
     line-height: 1.61111;
