@@ -1,0 +1,49 @@
+{
+  "attributes": {
+    "Attribute()": {
+      "class": [
+        "menu",
+        "nav",
+        "tab"
+      ]
+    }
+  },
+  "tabs": [
+    {
+      "text": "Tab 1",
+      "url": "#",
+      "attributes": {
+        "Attribute()": {
+          "class": []
+        }
+      }
+    },
+    {
+      "text": "Tab 2",
+      "url": "#",
+      "attributes": {
+        "Attribute()": {
+          "class": []
+        }
+      }
+    },
+    {
+      "text": "Tab 3",
+      "url": "#",
+      "attributes": {
+        "Attribute()": {
+          "class": []
+        }
+      }
+    },
+    {
+      "text": "Tab 4",
+      "url": "#",
+      "attributes": {
+        "Attribute()": {
+          "class": []
+        }
+      }
+    }
+  ]
+}
