@@ -2,20 +2,11 @@
 // Wrappers
 //*********
 
-[class^=wrapper] {
-  -js-display: flex;
-  display: flex;
-
+.wrapper-outer {
   width: 100%;
   max-width: $site-max-width;
   margin: 0 auto;
-}
 
-//***********
-// Containers
-//***********
-
-section[id^='container-'] {
   @include padding(0, 1);
 }
 
@@ -24,9 +15,12 @@ section[id^='container-'] {
 //*************
 
 .layout-sidebar-first {
+
   .wrapper-main__inner {
-    js-display: flex;
-    display: flex;
+    @include breakpoint($bp-768) {
+      js-display: flex;
+      display: flex;
+    }
   }
 
   .column.main {
@@ -74,8 +68,10 @@ section[id^='container-'] {
 
 .layout-two-sidebars {
   .wrapper-main__inner {
-    js-display: flex;
-    display: flex;
+    @include breakpoint($bp-768) {
+      js-display: flex;
+      display: flex;
+    }
   }
 
   .column.main {

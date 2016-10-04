@@ -30,20 +30,25 @@
   {% import _self as menus %}
   {% if items %}
     {% if menu_level == 0 %}
-      <ul{{ attributes.addClass('menu') }}>
+    {%
+      set ulClasses = [
+        'menu'
+      ]
+    %}
+      <ul {{attributes.addClass(ulClasses)}}>
     {% else %}
       <ul class="menu menu--sub-menu">
     {% endif %}
     {% for item in items %}
       {%
-        set classes = [
+        set liClasses = [
           'menu__item',
           item.is_expanded ? 'menu-item--expanded',
           item.is_collapsed ? 'menu-item--collapsed',
           item.in_active_trail ? 'menu-item--active-trail',
         ]
       %}
-      <li{{ item.attributes.addClass(classes) }}>
+      <li{{ item.attributes.addClass(liClasses) }}>
         {% set linkattributes = { class: ['menu__link'] } %}
         {{ link(item.title, item.url, linkattributes) }}
         {% if item.below %}

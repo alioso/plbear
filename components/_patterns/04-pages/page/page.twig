@@ -2,7 +2,7 @@
   {{ region_header }}
 {% endblock %}
 
-<div class="wrapper-highlighted">
+<div class="wrapper-outer wrapper-highlighted">
   <div role="region" class="wrapper-highlighted__inner">
     {% block region_highlighted %}
       {{ region_highlighted }}
@@ -10,7 +10,7 @@
   </div>
 </div>
 
-<div class="wrapper-main">
+<div class="wrapper-outer wrapper-main">
   <div class="wrapper-main__inner">
 
     <div class="column main" role="main">
@@ -41,7 +41,7 @@
   </div>
 </div>
 
-<aside class="wrapper-breadcrumb">
+<aside class="wrapper-outer wrapper-breadcrumb">
   <div role="region" class="wrapper-breadcrumb__inner">
     {% block region_breadcrumb %}
       {{ region_breadcrumb }}
