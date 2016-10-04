@@ -335,11 +335,10 @@ code {
   clip: rect(1px, 1px, 1px, 1px);
 }
 
-.wrapper-outer {
+.wrapper--inner {
   width: 100%;
   max-width: 75em;
   margin: 0 auto;
-  padding: 0 1.61111rem;
 }
 
 i {

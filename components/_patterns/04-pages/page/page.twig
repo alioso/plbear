@@ -2,16 +2,16 @@
   {{ region_header }}
 {% endblock %}
 
-<div class="wrapper-outer wrapper-highlighted">
-  <div role="region" class="wrapper-highlighted__inner">
+<div class="wrapper-highlighted">
+  <div role="region" class="wrapper--inner wrapper-highlighted__inner">
     {% block region_highlighted %}
       {{ region_highlighted }}
     {% endblock %}
   </div>
 </div>
 
-<div class="wrapper-outer wrapper-main">
-  <div class="wrapper-main__inner">
+<div class="wrapper-main">
+  <div class="wrapper--inner wrapper-main__inner">
 
     <div class="column main" role="main">
 
@@ -41,8 +41,8 @@
   </div>
 </div>
 
-<aside class="wrapper-outer wrapper-breadcrumb">
-  <div role="region" class="wrapper-breadcrumb__inner">
+<aside class="wrapper-breadcrumb">
+  <div role="region" class="wrapper--inner wrapper-breadcrumb__inner">
     {% block region_breadcrumb %}
       {{ region_breadcrumb }}
     {% endblock %}

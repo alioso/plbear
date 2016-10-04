@@ -2,12 +2,10 @@
 // Wrappers
 //*********
 
-.wrapper-outer {
+.wrapper--inner {
   width: 100%;
   max-width: $site-max-width;
   margin: 0 auto;
-
-  @include padding(0, 1);
 }
 
 //*************
