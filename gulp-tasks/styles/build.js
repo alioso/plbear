@@ -31,12 +31,12 @@ module.exports = function (gulp, options) {
         this.emit('end');
       }
     }))
-    .pipe(gulpif(options.buildSourceMaps, sourcemaps.init({debug: true})))
+    .pipe(gulpif(options.css.buildSourceMaps, sourcemaps.init({debug: true})))
     .pipe(sass({
       outputStyle: 'expanded'
     }))
     .on('error', sass.logError)
-    .pipe(gulpif(options.buildSourceMaps, sourcemaps.write()))
+    .pipe(gulpif(options.css.buildSourceMaps, sourcemaps.write()))
     .pipe(postcss(processors))
     .pipe(flatten())
     .pipe(gulp.dest(options.css.dest))

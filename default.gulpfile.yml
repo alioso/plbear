@@ -21,6 +21,15 @@ css:
   src: ["components/**/*.scss"]
   ui: ["ui/**/*.scss"]
   dest: "css"
+  buildSourceMaps: false
+  lint:
+    enabled: true
+    failOnError: false
+  browsers: ["last 2 version", "> 5%", "IE 9"]
+ui:
+  src: ["ui/sass/**/*.scss"]
+  dest: "ui/css"
+  buildSourceMaps: false
   lint:
     enabled: true
     failOnError: false
