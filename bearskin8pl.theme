@@ -23,13 +23,13 @@ function bearskin8pl_preprocess_html(&$variables, $hook) {
 
   if (theme_get_setting('ui') == 'grey_ui') {
     $variables['attributes']['class'][] = 'ui ui--grey';
-    $variables['#attached']['library'][] = 'ui';
+    $variables['#attached']['library'][] = 'bearskin8pl/ui';
   } else if (theme_get_setting('ui') == 'blue_ui') {
     $variables['attributes']['class'][] = 'ui ui--blue';
-    $variables['#attached']['library'][] = 'ui';
+    $variables['#attached']['library'][] = 'bearskin8pl/ui';
   } else if (theme_get_setting('ui') == 'green_ui') {
     $variables['attributes']['class'][] = 'ui ui--green';
-    $variables['#attached']['library'][] = 'ui';
+    $variables['#attached']['library'][] = 'bearskin8pl/ui';
   }
 
   // if the sticky footer option is selected, set a class
