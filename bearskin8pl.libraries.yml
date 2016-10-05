@@ -20,6 +20,6 @@ ui:
   version: 1.x
   css:
     theme:
-      css/bearskin-ui.css: {}
+      ui/css/bearskin-ui.css: {}
   js:
-    js/bearskin-ui: {}
+    ui/js/bearskin-ui.js: {}
