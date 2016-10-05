@@ -3,22 +3,22 @@
 //******
 
 .button {
-  @include ui-button;
-  @include ui-linear-gradient($ui-blue-button-gradient-top, $ui-blue-button-gradient-bottom);
+  //@include ui-button;
+  //@include ui-linear-gradient($ui-blue-button-gradient-top, $ui-blue-button-gradient-bottom);
 
   &:hover {
-    @include ui-linear-gradient($ui-blue-button-hover-gradient-top, $ui-blue-button-hover-gradient-bottom);
+   // @include ui-linear-gradient($ui-blue-button-hover-gradient-top, $ui-blue-button-hover-gradient-bottom);
   }
 }
 
 .form-submit {
-  @include ui-button;
-  @include ui-linear-gradient($ui-green-button-gradient-top, $ui-green-button-gradient-bottom);
+  //@include ui-button;
+  //@include ui-linear-gradient($ui-green-button-gradient-top, $ui-green-button-gradient-bottom);
 
   padding: $ui-form-submit-padding;
 
   &:hover {
-    @include ui-linear-gradient($ui-green-button-hover-gradient-top, $ui-green-button-hover-gradient-bottom);
+    //@include ui-linear-gradient($ui-green-button-hover-gradient-top, $ui-green-button-hover-gradient-bottom);
   }
 }
 

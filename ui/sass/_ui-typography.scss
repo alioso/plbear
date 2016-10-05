@@ -15,12 +15,12 @@ h2, h3 {
 
 // This is a label
 .label {
-  @include font-size(.85);
+  //@include font-size(.85);
   font-family: $Montserrat;
   text-transform: uppercase;
 }
 
 p {
-  @include font-size(.85);
+  //@include font-size(.85);
   font-family: $Noto-serif;
 }

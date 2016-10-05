@@ -13,43 +13,40 @@ var flatten = require('gulp-flatten');
 var gulpif = require('gulp-if');
 var browserSync = require('browser-sync');
 
-module.exports = {
-  dep: ['styles:clean'],
-  fn: function (gulp, options) {
+module.exports = function (gulp, options) {
 
-    var processors = [
-      autoprefixer({browsers: options.css.browsers}),
-      mqpacker({sort: true})
-    ];
+  var processors = [
+    autoprefixer({browsers: options.css.browsers}),
+    mqpacker({sort: true})
+  ];
 
-    return gulp.src(options.css.src)
-      .pipe(sassGlob())
-      .pipe(plumber({
-        errorHandler: function (error) {
-          notify.onError({
-            title: 'CSS <%= error.name %> - Line <%= error.line %>',
-            message: '<%= error.message %>'
-          })(error);
-          this.emit('end');
-        }
-      }))
-      .pipe(gulpif(options.buildSourceMaps, sourcemaps.init({debug: true})))
-      .pipe(sass({
-        outputStyle: 'expanded'
-      }))
-      .on('error', sass.logError)
-      .pipe(gulpif(options.buildSourceMaps, sourcemaps.write()))
-      .pipe(postcss(processors))
-      .pipe(flatten())
-      .pipe(gulp.dest(options.css.dest))
-      .on('end', function () {
-        if (options.browserSync.patterns.enabled) {
-          browserSync.get('patterns').reload();
-        }
+  return gulp.src(options.css.src)
+    .pipe(sassGlob())
+    .pipe(plumber({
+      errorHandler: function (error) {
+        notify.onError({
+          title: 'CSS <%= error.name %> - Line <%= error.line %>',
+          message: '<%= error.message %>'
+        })(error);
+        this.emit('end');
+      }
+    }))
+    .pipe(gulpif(options.buildSourceMaps, sourcemaps.init({debug: true})))
+    .pipe(sass({
+      outputStyle: 'expanded'
+    }))
+    .on('error', sass.logError)
+    .pipe(gulpif(options.buildSourceMaps, sourcemaps.write()))
+    .pipe(postcss(processors))
+    .pipe(flatten())
+    .pipe(gulp.dest(options.css.dest))
+    .on('end', function () {
+      if (options.browserSync.patterns.enabled) {
+        browserSync.get('patterns').reload();
+      }
 
-        if (options.browserSync.site.enabled) {
-          browserSync.get('site').reload();
-        }
-      });
-  }
+      if (options.browserSync.site.enabled) {
+        browserSync.get('site').reload();
+      }
+    });
 };
