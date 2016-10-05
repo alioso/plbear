@@ -1,5 +1,324 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700,900");
-@import url("https://fonts.googleapis.com/css?family=Noto+Serif:400,700,900");
+@import url("//fonts.googleapis.com/css?family=Montserrat:400,700,900");
+@import url("//fonts.googleapis.com/css?family=Noto+Serif:400,700,900");
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary,
+cite,
+code,
+small {
+  display: block;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden],
+template {
+  display: none;
+}
+
+a {
+  background: transparent;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+abbr {
+  letter-spacing: 0.1em;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+small {
+  font-size: 70%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+em,
+i {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+pre {
+  overflow: auto;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  margin: inherit auto;
+}
+
+html {
+  font-size: 100%;
+  font-size: 18px;
+  font-family: "Georgia", serif;
+  color: "Georgia", serif;
+  font-weight: 400;
+}
+
+* {
+  line-height: 1.61111;
+}
+
+p {
+  margin-bottom: 1.61111rem;
+  font-size: 1.1rem;
+}
+
+h1 {
+  font-size: 3rem;
+  line-height: 1.61111;
+  margin-top: 1.61111rem;
+  margin-bottom: 1.61111rem;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 1.61111;
+  margin-top: 2.01389rem;
+  margin-bottom: 0.80556rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  line-height: 1.61111;
+  margin-top: 1.61111rem;
+  margin-bottom: 0.80556rem;
+}
+
+h4 {
+  font-size: 1.1rem;
+  line-height: 1.61111;
+  margin-top: 1.61111rem;
+  margin-bottom: 0.80556rem;
+}
+
+h5 {
+  font-size: 0.815rem;
+  line-height: 1.61111;
+  margin-top: 2.01389rem;
+  margin-bottom: 0.80556rem;
+}
+
+h6 {
+  font-size: 0.75rem;
+  line-height: 1.61111;
+  margin-top: 2.01389rem;
+  margin-bottom: 0.80556rem;
+}
+
+h1 + h2 {
+  margin-top: 1.61111rem;
+}
+
+h2 + h3,
+h3 + h4,
+h4 + h5 {
+  margin-top: 0.80556rem;
+}
+
+h5 + h6 {
+  margin-top: -0.80556rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Georgia", serif;
+  font-weight: normal;
+}
+
+h1.grid-title,
+h2.grid-title,
+h3.grid-title,
+h4.grid-title {
+  margin: 0;
+}
+
+h5, h6 {
+  text-transform: uppercase;
+  font-family: "Arial", sans-serif;
+  font-weight: 700;
+}
+
+a {
+  color: #728EAD;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #445b75;
+}
+
+a:visited {
+  color: #728EAD;
+}
+
+a:active {
+  color: #445b75;
+}
+
+figure {
+  margin: 0;
+}
+
+figcaption {
+  line-height: 1.61111;
+  color: #261D19;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+blockquote {
+  margin: 1.61111rem 0;
+  font-weight: 500;
+}
+
+cite {
+  font-style: normal;
+}
+
+figure blockquote {
+  padding: 1.61111rem 0;
+}
+
+figure blockquote p {
+  font-size: 1.6875rem;
+  line-height: 2.41667;
+}
+
+ul li,
+ol li {
+  margin-bottom: 0;
+}
+
+hr {
+  margin-top: 3.22222rem;
+  margin-bottom: 3.22222rem;
+  border: 0;
+  color: #261D19;
+  display: block;
+  height: 29px;
+  height: 1.61111rem;
+  margin-right: auto;
+  margin-left: auto;
+  background-size: 100% 29px;
+  background-size: 100% 1.61111rem;
+  background-image: -webkit-linear-gradient(top, transparent 1px, transparent 12.5px, #261D19 12.5px, #261D19 16.5px, transparent 16.5px, transparent 29px);
+  background-image: linear-gradient(to bottom, transparent 1px, transparent 12.5px, #261D19 12.5px, #261D19 16.5px, transparent 16.5px, transparent 29px);
+  width: 100px;
+}
+
+small {
+  line-height: 0.80556;
+}
+
+code {
+  padding: 1.61111rem;
+}
+
 h1, h4 {
   font-family: "Montserrat";
   text-transform: uppercase;
@@ -10,14 +329,196 @@ h2, h3 {
 }
 
 .label {
+  font-size: 0.85rem;
   font-family: "Montserrat";
   text-transform: uppercase;
 }
 
 p {
+  font-size: 0.85rem;
   font-family: "Noto Serif";
 }
 
-.form-submit {
-  padding: 0.5rem 1.5rem;
+.ui--grey .button, .ui--grey .form-submit {
+  font-size: 1.1rem;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+  border-style: none;
+  -webkit-transition: background-color .2s ease-in-out;
+  transition: background-color .2s ease-in-out;
+  background-color: #808080;
+  color: white;
+  padding: 0.5rem 2rem;
+  border-radius: 5px;
+  font-family: "Montserrat";
+}
+
+.ui--grey .button:hover, .ui--grey .form-submit:hover, .ui--grey .button:focus, .ui--grey .form-submit:focus, .ui--grey .button:visited, .ui--grey .form-submit:visited {
+  background-color: #3F3F3F;
+  text-decoration: none;
+}
+
+.ui--blue .button, .ui--blue .form-submit {
+  font-size: 1.1rem;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+  border-style: none;
+  -webkit-transition: background-color .2s ease-in-out;
+  transition: background-color .2s ease-in-out;
+  background-color: #548BC3;
+  color: white;
+  padding: 0.5rem 2rem;
+  border-radius: 5px;
+  font-family: "Montserrat";
+}
+
+.ui--blue .button:hover, .ui--blue .form-submit:hover, .ui--blue .button:focus, .ui--blue .form-submit:focus, .ui--blue .button:visited, .ui--blue .form-submit:visited {
+  background-color: #004987;
+  text-decoration: none;
+}
+
+.ui--green .button, .ui--green .form-submit {
+  font-size: 1.1rem;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+  border-style: none;
+  -webkit-transition: background-color .2s ease-in-out;
+  transition: background-color .2s ease-in-out;
+  background-color: #078A80;
+  color: white;
+  padding: 0.5rem 2rem;
+  border-radius: 5px;
+  font-family: "Montserrat";
+}
+
+.ui--green .button:hover, .ui--green .form-submit:hover, .ui--green .button:focus, .ui--green .form-submit:focus, .ui--green .button:visited, .ui--green .form-submit:visited {
+  background-color: #00635D;
+  text-decoration: none;
+}
+
+@media (min-width: 48em){
+  *{
+    line-height: 1.61111;
+  }
+}
+
+@media (min-width: 75em){
+  blockquote{
+    margin: 1.61111rem -3.22222rem;
+  }
+}
+
+@media screen and (min-width: 85em){
+  body,
+  html{
+    margin: 0;
+    width: 100%;
+    max-width: none;
+  }
+  html{
+    font-size: 18px;
+    font-size: 1rem;
+  }
+  h1{
+    font-size: 3rem;
+    line-height: 1.72222;
+    margin-top: 1.72222rem;
+    margin-bottom: 1.72222rem;
+  }
+  h2{
+    font-size: 2rem;
+    line-height: 1.72222;
+    margin-top: 2.15278rem;
+    margin-bottom: 0.86111rem;
+  }
+  h3{
+    font-size: 1.25rem;
+    line-height: 1.72222;
+    margin-top: 1.72222rem;
+    margin-bottom: 0.86111rem;
+  }
+  h4{
+    font-size: 1.1rem;
+    line-height: 1.72222;
+    margin-top: 1.72222rem;
+    margin-bottom: 0.86111rem;
+  }
+  h5{
+    font-size: 0.815rem;
+    line-height: 1.72222;
+    margin-top: 2.15278rem;
+    margin-bottom: 0.86111rem;
+  }
+  h6{
+    font-size: 0.75rem;
+    line-height: 1.72222;
+    margin-top: 2.15278rem;
+    margin-bottom: 0.86111rem;
+  }
+  h1 + h2{
+    margin-top: 1.72222rem;
+  }
+  h2 + h3,
+  h3 + h4,
+  h4 + h5{
+    margin-top: 0.86111rem;
+  }
+  h5 + h6{
+    margin-top: -0.86111rem;
+  }
+  figure.floatLeft,
+  figure.floatRight{
+    max-width: 720px;
+    max-width: 40rem;
+    padding: 0 1.72222rem;
+  }
+  figure.floatLeft blockquote,
+  figure.floatRight blockquote{
+    padding: 0;
+    text-align: left;
+  }
+  figure.floatLeft blockquote p,
+  figure.floatRight blockquote p{
+    font-size: 1.2rem;
+    line-height: 1.72222;
+  }
+  figcaption{
+    line-height: 1.72222;
+    margin-bottom: 0;
+  }
+  figure blockquote{
+    padding: 3.44444rem 0 1.72222rem;
+    text-align: center;
+  }
+  figure blockquote p{
+    font-size: 1.6875rem;
+    line-height: 2.58333;
+  }
+  hr{
+    margin-top: 3.44444rem;
+    margin-bottom: 3.44444rem;
+    height: 31px;
+    height: 1.72222rem;
+  }
+  hr{
+    background-size: 100% 31px;
+    background-size: 100% 1.72222rem;
+    background-image: -webkit-linear-gradient(top, transparent 1px, transparent 13.5px, #261D19 13.5px, #261D19 17.5px, transparent 17.5px, transparent 31px);
+    background-image: linear-gradient(to bottom, transparent 1px, transparent 13.5px, #261D19 13.5px, #261D19 17.5px, transparent 17.5px, transparent 31px);
+  }
+  small{
+    line-height: 0.86111;
+  }
+  code{
+    padding: 1.72222rem;
+  }
 }

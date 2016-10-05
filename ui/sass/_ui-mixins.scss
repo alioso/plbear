@@ -1,26 +1,4 @@
-@mixin ui-button($color: $ui-dark-gray, $font-color: $white, $padding: $ui-button-padding, $hover-color: $black) {
-  @include font-size(1.1);
 
-  position: relative;
-  display: inline-block;
-  outline: none;
-  background-color: $color;
-  color: $font-color;
-  padding: $padding;
-  text-decoration: none;
-  cursor: pointer;
-  border-style: none;
-  border-radius: $ui-border-radius;
-  font-family: $Montserrat;
-
-  &:hover, 
-  &:focus, 
-  &:visited {
-    background-color: $hover-color;
-    text-decoration: none;
-    color: $font-color;
-  }
-}
 
 @mixin ui-linear-gradient($fromColor, $toColor) {
   background: linear-gradient($fromColor, $toColor);

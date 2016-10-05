@@ -1,25 +1,35 @@
+@mixin ui-color($light, $normal, $dark, $gradient-top, $gradient-bottom, $hover-gradient-top, $hover-gradient-bottom) {
+
 //******
 // Atoms
 //******
-
 .button {
-  //@include ui-button;
-  //@include ui-linear-gradient($ui-blue-button-gradient-top, $ui-blue-button-gradient-bottom);
+  @include font-size(1.1);
 
-  &:hover {
-   // @include ui-linear-gradient($ui-blue-button-hover-gradient-top, $ui-blue-button-hover-gradient-bottom);
+  position: relative;
+  display: inline-block;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+  border-style: none;
+  transition: background-color .2s ease-in-out;
+
+  background-color: $normal;
+  color: $white;
+  padding: $ui-button-padding;
+  border-radius: $ui-border-radius;
+  font-family: $Montserrat;
+
+  &:hover,
+  &:focus,
+  &:visited {
+    background-color: $dark;
+    text-decoration: none;
   }
 }
 
 .form-submit {
-  //@include ui-button;
-  //@include ui-linear-gradient($ui-green-button-gradient-top, $ui-green-button-gradient-bottom);
-
-  padding: $ui-form-submit-padding;
-
-  &:hover {
-    //@include ui-linear-gradient($ui-green-button-hover-gradient-top, $ui-green-button-hover-gradient-bottom);
-  }
+  @extend .button;
 }
 
 
@@ -44,3 +54,4 @@
 //**********
 // Templates
 //**********
+}

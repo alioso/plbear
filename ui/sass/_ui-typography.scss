@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,900');
-@import url('https://fonts.googleapis.com/css?family=Noto+Serif:400,700,900');
+@import url('//fonts.googleapis.com/css?family=Montserrat:400,700,900');
+@import url('//fonts.googleapis.com/css?family=Noto+Serif:400,700,900');
 
 $Montserrat: 'Montserrat';
 $Noto-serif: 'Noto Serif';
@@ -15,12 +15,14 @@ h2, h3 {
 
 // This is a label
 .label {
-  //@include font-size(.85);
+  @include font-size(.85);
+
   font-family: $Montserrat;
   text-transform: uppercase;
 }
 
 p {
-  //@include font-size(.85);
+  @include font-size(.85);
+
   font-family: $Noto-serif;
 }

@@ -1,17 +1,12 @@
-//gray color scheme
-$ui-lightest-gray: #F5F5F5;
-$ui-light-gray: #DCDCDC;
-$ui-gray: #808080;
-$ui-dark-gray: #3F3F3F;
+$ui-button-padding: .5rem 2rem;
+$ui-form-submit-padding: .5rem 1.5rem;
+$ui-border-radius: 5px;
 
-//green color scheme
-$ui-yellow: #E6AB0F;
-$ui-green: #078A80;
-$ui-dark-green: #00635D;
-$ui-green-button-gradient-top: #02978E;
-$ui-green-button-gradient-bottom: #0A8277;
-$ui-green-button-hover-gradient-top: #016F68;
-$ui-green-button-hover-gradient-bottom: #00534C;
+//gray color scheme
+$ui-lightest-grey: #F5F5F5;
+$ui-light-grey: #DCDCDC;
+$ui-grey: #808080;
+$ui-dark-grey: #3F3F3F;
 
 //blue color scheme
 $ui-light-blue: #EAF5FF;
@@ -22,6 +17,11 @@ $ui-blue-button-gradient-bottom: #2E6296;
 $ui-blue-button-hover-gradient-top: #225E9A;
 $ui-blue-button-hover-gradient-bottom: #1E4976;
 
-$ui-button-padding: .5rem 2rem;
-$ui-form-submit-padding: .5rem 1.5rem;
-$ui-border-radius: 5px;
+//green color scheme
+$ui-yellow: #E6AB0F;
+$ui-green: #078A80;
+$ui-dark-green: #00635D;
+$ui-green-button-gradient-top: #02978E;
+$ui-green-button-gradient-bottom: #0A8277;
+$ui-green-button-hover-gradient-top: #016F68;
+$ui-green-button-hover-gradient-bottom: #00534C;
