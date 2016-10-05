@@ -7,9 +7,12 @@ module.exports = function (gulp, options) {
   source.push('!js/vendor/*');
   source.push('!js/*.min.js');
 
-  return gulp.src(source)
-    .pipe(eslint({
-      useEslintrc: true
-    }))
-    .pipe(eslint.format());
+  if (options.js.lint.enabled) {
+    return gulp.src(source)
+      .pipe(eslint({
+        useEslintrc: true
+      }))
+      .pipe(eslint.format());
+  }
+  return console.log('linting not enabled');
 };
