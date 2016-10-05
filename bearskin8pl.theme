@@ -17,12 +17,16 @@ function bearskin8pl_preprocess_html(&$variables, $hook) {
   $variables['attributes']['class'][] = $variables['logged_in'] ? 'logged-in' : 'not-logged-in';
 
   // add class depending on Theme layout settings
-  $variables['fixed_layout'] = (theme_get_setting('main_layout') == 'fixed');
-  $variables['fluid_layout'] = (theme_get_setting('main_layout') == 'fluid');
-  if (theme_get_setting('main_layout') == 'fixed') {
-    $variables['attributes']['class'][] = 'fixed-bear';
-  } else if (theme_get_setting('main_layout') == 'fluid') {
-    $variables['attributes']['class'][] = 'fluid-bear';
+  $variables['grey_ui'] = (theme_get_setting('ui') == 'grey_ui');
+  $variables['blue_ui'] = (theme_get_setting('ui') == 'blue_ui');
+  $variables['green_ui'] = (theme_get_setting('ui') == 'green_ui');
+
+  if (theme_get_setting('ui') == 'grey_ui') {
+    $variables['attributes']['class'][] = 'ui ui--grey';
+  } else if (theme_get_setting('ui') == 'blue_ui') {
+    $variables['attributes']['class'][] = 'ui ui--blue';
+  } else if (theme_get_setting('ui') == 'green_ui') {
+    $variables['attributes']['class'][] = 'ui ui--green';
   }
 
   // if the sticky footer option is selected, set a class
