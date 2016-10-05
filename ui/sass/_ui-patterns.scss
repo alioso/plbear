@@ -3,8 +3,19 @@
 //******
 // Atoms
 //******
+
+form {
+  @include padding(1, 1);
+
+  background: $ui-lightest-grey;
+}
+
+.form-item {
+  @include margin-bottom(.5);
+}
+
 .button {
-  @include font-size(1.1);
+  @include font-size(.8);
 
   position: relative;
   display: inline-block;
@@ -12,9 +23,9 @@
   text-decoration: none;
   cursor: pointer;
   border-style: none;
-  transition: background-color .2s ease-in-out;
+  transition: background .2s ease-in-out;
 
-  background-color: $normal;
+  background: linear-gradient($gradient-top, $gradient-bottom);
   color: $white;
   padding: $ui-button-padding;
   border-radius: $ui-border-radius;
@@ -23,13 +34,43 @@
   &:hover,
   &:focus,
   &:visited {
-    background-color: $dark;
+    background: linear-gradient($hover-gradient-top, $hover-gradient-bottom);
     text-decoration: none;
   }
 }
 
 .form-submit {
   @extend .button;
+}
+
+.form-text,
+.form-email {
+  @include padding(.3, .2);
+
+  width: 100%;
+  max-width: 30em;
+  border: 1px solid $ui-light-grey;
+}
+
+input[type="search"] {
+  @extend .form-text;
+
+  appearance: initial;
+}
+
+label {
+  @include font-size(.9);
+
+  display: block;
+  font-family: $Montserrat;
+}
+
+.description {
+  @include font-size(.7);
+
+  font-family: $Montserrat;
+  color: $ui-grey;
+  font-weight: 400;
 }
 
 

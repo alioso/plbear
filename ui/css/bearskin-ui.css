@@ -1,5 +1,5 @@
-@import url("//fonts.googleapis.com/css?family=Montserrat:400,700,900");
-@import url("//fonts.googleapis.com/css?family=Noto+Serif:400,700,900");
+@import url("//fonts.googleapis.com/css?family=Montserrat:400,700");
+@import url("//fonts.googleapis.com/css?family=Noto+Serif:400,700");
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -319,6 +319,10 @@ code {
   padding: 1.61111rem;
 }
 
+body {
+  font-family: "Noto Serif";
+}
+
 h1, h4 {
   font-family: "Montserrat";
   text-transform: uppercase;
@@ -328,81 +332,184 @@ h2, h3 {
   font-family: "Montserrat";
 }
 
-.label {
-  font-size: 0.85rem;
-  font-family: "Montserrat";
-  text-transform: uppercase;
+.ui--grey form {
+  padding: 1.61111rem 1.61111rem;
+  background: #F5F5F5;
 }
 
-p {
-  font-size: 0.85rem;
-  font-family: "Noto Serif";
+.ui--grey .form-item {
+  margin-bottom: 0.80556rem;
 }
 
 .ui--grey .button, .ui--grey .form-submit {
-  font-size: 1.1rem;
+  font-size: 0.8rem;
   position: relative;
   display: inline-block;
   outline: none;
   text-decoration: none;
   cursor: pointer;
   border-style: none;
-  -webkit-transition: background-color .2s ease-in-out;
-  transition: background-color .2s ease-in-out;
-  background-color: #808080;
+  -webkit-transition: background .2s ease-in-out;
+  transition: background .2s ease-in-out;
+  background: -webkit-linear-gradient(false, false);
+  background: linear-gradient(false, false);
   color: white;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 1rem;
   border-radius: 5px;
   font-family: "Montserrat";
 }
 
 .ui--grey .button:hover, .ui--grey .form-submit:hover, .ui--grey .button:focus, .ui--grey .form-submit:focus, .ui--grey .button:visited, .ui--grey .form-submit:visited {
-  background-color: #3F3F3F;
+  background: -webkit-linear-gradient(false, false);
+  background: linear-gradient(false, false);
   text-decoration: none;
 }
 
+.ui--grey .form-text, .ui--grey input[type="search"],
+.ui--grey .form-email {
+  padding: 0.48333rem 0.32222rem;
+  width: 100%;
+  max-width: 30em;
+  border: 1px solid #DCDCDC;
+}
+
+.ui--grey input[type="search"] {
+  -webkit-appearance: initial;
+     -moz-appearance: initial;
+          appearance: initial;
+}
+
+.ui--grey label {
+  font-size: 0.9rem;
+  display: block;
+  font-family: "Montserrat";
+}
+
+.ui--grey .description {
+  font-size: 0.7rem;
+  font-family: "Montserrat";
+  color: #808080;
+  font-weight: 400;
+}
+
+.ui--blue form {
+  padding: 1.61111rem 1.61111rem;
+  background: #F5F5F5;
+}
+
+.ui--blue .form-item {
+  margin-bottom: 0.80556rem;
+}
+
 .ui--blue .button, .ui--blue .form-submit {
-  font-size: 1.1rem;
+  font-size: 0.8rem;
   position: relative;
   display: inline-block;
   outline: none;
   text-decoration: none;
   cursor: pointer;
   border-style: none;
-  -webkit-transition: background-color .2s ease-in-out;
-  transition: background-color .2s ease-in-out;
-  background-color: #548BC3;
+  -webkit-transition: background .2s ease-in-out;
+  transition: background .2s ease-in-out;
+  background: -webkit-linear-gradient(#427AB3, #2E6296);
+  background: linear-gradient(#427AB3, #2E6296);
   color: white;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 1rem;
   border-radius: 5px;
   font-family: "Montserrat";
 }
 
 .ui--blue .button:hover, .ui--blue .form-submit:hover, .ui--blue .button:focus, .ui--blue .form-submit:focus, .ui--blue .button:visited, .ui--blue .form-submit:visited {
-  background-color: #004987;
+  background: -webkit-linear-gradient(#225E9A, #1E4976);
+  background: linear-gradient(#225E9A, #1E4976);
   text-decoration: none;
 }
 
+.ui--blue .form-text, .ui--blue input[type="search"],
+.ui--blue .form-email {
+  padding: 0.48333rem 0.32222rem;
+  width: 100%;
+  max-width: 30em;
+  border: 1px solid #DCDCDC;
+}
+
+.ui--blue input[type="search"] {
+  -webkit-appearance: initial;
+     -moz-appearance: initial;
+          appearance: initial;
+}
+
+.ui--blue label {
+  font-size: 0.9rem;
+  display: block;
+  font-family: "Montserrat";
+}
+
+.ui--blue .description {
+  font-size: 0.7rem;
+  font-family: "Montserrat";
+  color: #808080;
+  font-weight: 400;
+}
+
+.ui--green form {
+  padding: 1.61111rem 1.61111rem;
+  background: #F5F5F5;
+}
+
+.ui--green .form-item {
+  margin-bottom: 0.80556rem;
+}
+
 .ui--green .button, .ui--green .form-submit {
-  font-size: 1.1rem;
+  font-size: 0.8rem;
   position: relative;
   display: inline-block;
   outline: none;
   text-decoration: none;
   cursor: pointer;
   border-style: none;
-  -webkit-transition: background-color .2s ease-in-out;
-  transition: background-color .2s ease-in-out;
-  background-color: #078A80;
+  -webkit-transition: background .2s ease-in-out;
+  transition: background .2s ease-in-out;
+  background: -webkit-linear-gradient(#02978E, #0A8277);
+  background: linear-gradient(#02978E, #0A8277);
   color: white;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 1rem;
   border-radius: 5px;
   font-family: "Montserrat";
 }
 
 .ui--green .button:hover, .ui--green .form-submit:hover, .ui--green .button:focus, .ui--green .form-submit:focus, .ui--green .button:visited, .ui--green .form-submit:visited {
-  background-color: #00635D;
+  background: -webkit-linear-gradient(#016F68, #00534C);
+  background: linear-gradient(#016F68, #00534C);
   text-decoration: none;
+}
+
+.ui--green .form-text, .ui--green input[type="search"],
+.ui--green .form-email {
+  padding: 0.48333rem 0.32222rem;
+  width: 100%;
+  max-width: 30em;
+  border: 1px solid #DCDCDC;
+}
+
+.ui--green input[type="search"] {
+  -webkit-appearance: initial;
+     -moz-appearance: initial;
+          appearance: initial;
+}
+
+.ui--green label {
+  font-size: 0.9rem;
+  display: block;
+  font-family: "Montserrat";
+}
+
+.ui--green .description {
+  font-size: 0.7rem;
+  font-family: "Montserrat";
+  color: #808080;
+  font-weight: 400;
 }
 
 @media (min-width: 48em){
