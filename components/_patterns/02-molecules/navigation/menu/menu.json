@@ -3,7 +3,8 @@
     "Attribute()": {
       "class": [
         "menu",
-        "nav"
+        "nav",
+        "inline"
       ]
     }
   },

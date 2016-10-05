@@ -336,6 +336,7 @@ code {
 }
 
 .wrapper--inner {
+  padding: 0 1.61111rem;
   width: 100%;
   max-width: 75em;
   margin: 0 auto;
