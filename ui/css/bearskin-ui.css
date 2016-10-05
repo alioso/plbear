@@ -321,6 +321,7 @@ code {
 
 body {
   font-family: "Noto Serif";
+  color: #222;
 }
 
 h1, h4 {
@@ -367,7 +368,9 @@ h2, h3 {
 
 .ui--grey .form-text, .ui--grey input[type="search"],
 .ui--grey .form-email {
-  padding: 0.48333rem 0.32222rem;
+  padding: 0.32222rem 0.32222rem;
+  font-size: 1rem;
+  font-family: "Montserrat";
   width: 100%;
   max-width: 30em;
   border: 1px solid #DCDCDC;
@@ -427,7 +430,9 @@ h2, h3 {
 
 .ui--blue .form-text, .ui--blue input[type="search"],
 .ui--blue .form-email {
-  padding: 0.48333rem 0.32222rem;
+  padding: 0.32222rem 0.32222rem;
+  font-size: 1rem;
+  font-family: "Montserrat";
   width: 100%;
   max-width: 30em;
   border: 1px solid #DCDCDC;
@@ -487,7 +492,9 @@ h2, h3 {
 
 .ui--green .form-text, .ui--green input[type="search"],
 .ui--green .form-email {
-  padding: 0.48333rem 0.32222rem;
+  padding: 0.32222rem 0.32222rem;
+  font-size: 1rem;
+  font-family: "Montserrat";
   width: 100%;
   max-width: 30em;
   border: 1px solid #DCDCDC;

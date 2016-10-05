@@ -45,7 +45,10 @@ form {
 
 .form-text,
 .form-email {
-  @include padding(.3, .2);
+  @include padding(.2, .2);
+  @include font-size(1);
+
+  font-family: $Montserrat;
 
   width: 100%;
   max-width: 30em;
@@ -86,13 +89,4 @@ label {
 
 
 
-//******
-// Pages
-//******
-
-
-
-//**********
-// Templates
-//**********
 }
