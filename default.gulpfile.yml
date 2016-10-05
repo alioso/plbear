@@ -16,7 +16,7 @@ patternLab:
     - jpeg
     - png
   dir: "./pattern-lab"
-  patterns: "./components/_patterns/**/*.{twig,json}"
+  patterns: "components/_patterns/**/*.{twig,json}"
 css:
   src: ["components/**/*.scss"]
   ui: ["ui/**/*.scss"]
