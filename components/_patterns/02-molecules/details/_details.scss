@@ -6,26 +6,9 @@ details {
 
     background: $light-grey;
     cursor: pointer;
-
-    i {
-
-      &:before {
-        content: '-';
-      }
-    }
-
-    &[aria-expanded='false'] {
-
-      i:before {
-        content: '+';
-      }
-    }
   }
 
   .details-wrapper {
     @include padding(.5, .5);
-
-    border: 1px solid $light-grey;
-    border-top: 0;
   }
 }

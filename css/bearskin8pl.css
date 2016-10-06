@@ -361,18 +361,8 @@ details summary {
   cursor: pointer;
 }
 
-details summary i:before {
-  content: '-';
-}
-
-details summary[aria-expanded='false'] i:before {
-  content: '+';
-}
-
 details .details-wrapper {
   padding: 0.80556rem 0.80556rem;
-  border: 1px solid #f5f5f5;
-  border-top: 0;
 }
 
 .messages {

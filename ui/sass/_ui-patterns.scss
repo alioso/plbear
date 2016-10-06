@@ -131,6 +131,35 @@ label {
   }
 }
 
+details {
+
+  summary {
+    background: $ui-lightest-grey;
+    border: 1px solid $ui-light-grey;
+
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    &__icon {
+      order: 2;
+    }
+
+    &__title {
+      order: 1;
+    }
+  }
+
+  .details-wrapper {
+    @include padding(.5, .5);
+  }
+}
+
+.accordion {
+  @extend details;
+}
+
 //**********
 // Organisms
 //**********

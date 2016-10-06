@@ -12,6 +12,9 @@ body {
 article,
 aside,
 details,
+.ui--grey .accordion,
+.ui--blue .accordion,
+.ui--green .accordion,
 figcaption,
 figure,
 footer,
@@ -658,6 +661,38 @@ h2, h3 {
   font-family: "Montserrat";
 }
 
+.ui--grey details summary, .ui--grey .accordion summary {
+  background: #F5F5F5;
+  border: 1px solid #DCDCDC;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ui--grey details summary__icon, .ui--grey .accordion summary__icon {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.ui--grey details summary__title, .ui--grey .accordion summary__title {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.ui--grey details .details-wrapper, .ui--grey .accordion .details-wrapper {
+  padding: 0.80556rem 0.80556rem;
+}
+
 .ui--blue form {
   padding: 1.61111rem 1.61111rem;
   background: #F5F5F5;
@@ -746,6 +781,38 @@ h2, h3 {
   font-family: "Montserrat";
 }
 
+.ui--blue details summary, .ui--blue .accordion summary {
+  background: #F5F5F5;
+  border: 1px solid #DCDCDC;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ui--blue details summary__icon, .ui--blue .accordion summary__icon {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.ui--blue details summary__title, .ui--blue .accordion summary__title {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.ui--blue details .details-wrapper, .ui--blue .accordion .details-wrapper {
+  padding: 0.80556rem 0.80556rem;
+}
+
 .ui--green form {
   padding: 1.61111rem 1.61111rem;
   background: #F5F5F5;
@@ -832,6 +899,38 @@ h2, h3 {
 .ui--green .messages {
   font-size: 0.7rem;
   font-family: "Montserrat";
+}
+
+.ui--green details summary, .ui--green .accordion summary {
+  background: #F5F5F5;
+  border: 1px solid #DCDCDC;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ui--green details summary__icon, .ui--green .accordion summary__icon {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.ui--green details summary__title, .ui--green .accordion summary__title {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.ui--green details .details-wrapper, .ui--green .accordion .details-wrapper {
+  padding: 0.80556rem 0.80556rem;
 }
 
 @media (min-width: 48em){
