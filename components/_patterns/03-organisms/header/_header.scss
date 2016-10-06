@@ -1,1 +1,6 @@
+ .wrapper-header{
 
+   &__inner {
+     @include margin(1, 0);
+   }
+ }
