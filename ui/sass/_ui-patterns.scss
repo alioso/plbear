@@ -102,11 +102,34 @@ label {
 
     font-family: $Montserrat;
     text-transform: uppercase;
-    background: $ui-lightest-grey;
     border-radius: $ui-border-radius;
+    color: $ui-grey;
+
+    &:hover,
+    &:focus,
+    &.is-active {
+      color: $ui-black;
+    }
   }
 }
 
+.messages {
+ @include font-size(.7);
+
+ font-family: $Montserrat;
+
+  &--success {
+
+  }
+
+  &--warning {
+
+  }
+
+  &--error {
+
+  }
+}
 
 //**********
 // Organisms

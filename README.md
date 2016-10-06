@@ -6,9 +6,17 @@ Bear Skin is the default theme for the [Bear](https://github.com/zivtech/bear), 
 
 Before getting started, make sure that you have the latest version of [node.js](https://nodejs.org/en/) and [yeoman](http://yeoman.io/) installed. Also, you will need to have composer installed. On a Mac, this is easiest with homebrew.
 
-Next, install pattern lab dependencies from Composer. `cd` to the `patter-lab` directory and execute `composer install`.
+Next, install pattern lab dependencies from Composer. `cd` to the `pattern-lab` directory and run:
+```sh
+$ composer install
+```
 
-Then, generate the base pattern lab files. `cd` back to the theme directory and run `php pattern-lab/core/console --generate`. If everything went well, you should have a `public` directory inside the `pattern-lab` directory.
+Then, generate the base pattern lab files. `cd` back to the theme directory and run:
+```sh
+$ php pattern-lab/core/console --generate
+```
+
+If everything went well, you should have a `public` directory inside the `pattern-lab` directory.
 
 ### Gulp config 
 
