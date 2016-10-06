@@ -8,7 +8,12 @@ Before getting started, make sure that you have the latest version of [node.js](
 
 Next, install pattern lab dependencies from Composer. `cd` to the `patter-lab` directory and execute `composer install`.
 
-Then, generate the base pattern lab files. `cd` back to the theme directory and run `php pattern-lab/core/console --generate`. If everything went well, you should have a `public` directory inside the `pattern-lab` directory.
+Then, generate the base pattern lab files. `cd` back to the theme directory and run:
+```sh
+$ php pattern-lab/core/console --generate
+```
+
+If everything went well, you should have a `public` directory inside the `pattern-lab` directory.
 
 ### Gulp config 
 
