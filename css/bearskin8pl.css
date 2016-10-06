@@ -365,10 +365,16 @@ code {
 }
 
 .wrapper--inner {
+<<<<<<< 40f424b319d8f3bce164fddbcd8d89848ad7de33
   padding: 0 1.625rem;
   width: 100%;
   max-width: 75em;
+=======
+  padding: 0 1.61111rem;
+>>>>>>> fix linting issues
   margin: 0 auto;
+  max-width: 75em;
+  width: 100%;
 }
 
 .s-wrapper {
@@ -608,20 +614,24 @@ details .details-wrapper {
   }
 
   .layout-sidebar-first .column.main, .layout-sidebar-second .column.main {
+<<<<<<< 40f424b319d8f3bce164fddbcd8d89848ad7de33
     padding: 0rem 0rem 0rem 3.25rem;
+=======
+    padding: 0rem 0rem 0rem 1.61111rem;
+    -ms-flex-preferred-size: 75%;
+    flex-basis: 75%;
+>>>>>>> fix linting issues
     -webkit-box-ordinal-group: 3;
     -ms-flex-order: 2;
     order: 2;
-    -ms-flex-preferred-size: 75%;
-    flex-basis: 75%;
   }
 
   .layout-sidebar-first .column.sidebar, .layout-sidebar-second .column.sidebar {
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
     -webkit-box-ordinal-group: 2;
     -ms-flex-order: 1;
     order: 1;
-    -ms-flex-preferred-size: 25%;
-    flex-basis: 25%;
   }
 
   .layout-sidebar-second .column.main {
@@ -645,12 +655,16 @@ details .details-wrapper {
   }
 
   .layout-two-sidebars .column.main {
+<<<<<<< 40f424b319d8f3bce164fddbcd8d89848ad7de33
     padding: 0 1.625rem;
+=======
+    padding: 0 1.61111rem;
+    -ms-flex-preferred-size: 75%;
+    flex-basis: 75%;
+>>>>>>> fix linting issues
     -webkit-box-ordinal-group: 3;
     -ms-flex-order: 2;
     order: 2;
-    -ms-flex-preferred-size: 75%;
-    flex-basis: 75%;
   }
 
   .layout-two-sidebars .column.sidebar {

@@ -4,10 +4,9 @@
 
 .wrapper--inner {
   @include padding(0, 1);
-
-  width: 100%;
-  max-width: $site-max-width;
   margin: 0 auto;
+  max-width: $site-max-width;
+  width: 100%;
 }
 
 //*************
@@ -27,15 +26,15 @@
     @include breakpoint($bp-768) {
       @include padding(0, 0, 0, 2);
 
-      order: 2;
       flex-basis: 75%;
+      order: 2;
     }
   }
 
   .column.sidebar {
     @include breakpoint($bp-768) {
-      order: 1;
       flex-basis: 25%;
+      order: 1;
     }
   }
 }
@@ -78,8 +77,8 @@
     @include breakpoint($bp-768) {
       @include padding(0, 1);
 
-      order: 2;
       flex-basis: 75%;
+      order: 2;
     }
   }
 
