@@ -1,0 +1,15 @@
+{
+  "children": {
+    "join()": [
+      "<input type='checkbox' id='checkbox'>",
+      "<label for='checkbox'>I am a checkbox!</label>"
+    ]
+  },
+  "attributes": {
+    "Attribute()": {
+      "class": [
+        "form-checkboxes"
+      ]
+    }
+  }
+}

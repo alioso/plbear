@@ -1,0 +1,15 @@
+{
+  "children": {
+    "join()": [
+      "<input type='radio' id='radio'>",
+      "<label for='radio'>I am a radio button!</label>"
+    ]
+  },
+  "attributes": {
+    "Attribute()": {
+      "class": [
+        "form-radio"
+      ]
+    }
+  }
+}
