@@ -102,8 +102,14 @@ label {
 
     font-family: $Montserrat;
     text-transform: uppercase;
-    background: $ui-lightest-grey;
     border-radius: $ui-border-radius;
+    color: $ui-grey;
+
+    &:hover,
+    &:focus,
+    &.is-active {
+      color: $ui-black;
+    }
   }
 }
 
@@ -113,7 +119,7 @@ label {
  font-family: $Montserrat;
 
   &--success {
- 
+
   }
 
   &--warning {
@@ -121,7 +127,7 @@ label {
   }
 
   &--error {
-  
+
   }
 }
 

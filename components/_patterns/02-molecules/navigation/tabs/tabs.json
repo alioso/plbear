@@ -10,40 +10,21 @@
   },
   "tabs": [
     {
-      "text": "Tab 1",
+      "text": "Tab 1 (active)",
       "url": "#",
-      "attributes": {
-        "Attribute()": {
-          "class": []
-        }
-      }
+      "active": true
     },
     {
       "text": "Tab 2",
-      "url": "#",
-      "attributes": {
-        "Attribute()": {
-          "class": []
-        }
-      }
+      "url": "#"
     },
     {
       "text": "Tab 3",
-      "url": "#",
-      "attributes": {
-        "Attribute()": {
-          "class": []
-        }
-      }
+      "url": "#"
     },
     {
       "text": "Tab 4",
-      "url": "#",
-      "attributes": {
-        "Attribute()": {
-          "class": []
-        }
-      }
+      "url": "#"
     }
   ]
 }

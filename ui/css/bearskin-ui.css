@@ -380,7 +380,7 @@ code {
 
 body {
   font-family: "Noto Serif";
-  color: #222;
+  color: #261D19;
 }
 
 h1, h4 {
@@ -467,8 +467,12 @@ h2, h3 {
   font-size: 0.8rem;
   font-family: "Montserrat";
   text-transform: uppercase;
-  background: #F5F5F5;
   border-radius: 5px;
+  color: #808080;
+}
+
+.ui--grey .tabs__tab-link:hover, .ui--grey .tabs__tab-link:focus, .ui--grey .tabs__tab-link.is-active {
+  color: #222;
 }
 
 .ui--grey .messages {
@@ -551,8 +555,12 @@ h2, h3 {
   font-size: 0.8rem;
   font-family: "Montserrat";
   text-transform: uppercase;
-  background: #F5F5F5;
   border-radius: 5px;
+  color: #808080;
+}
+
+.ui--blue .tabs__tab-link:hover, .ui--blue .tabs__tab-link:focus, .ui--blue .tabs__tab-link.is-active {
+  color: #222;
 }
 
 .ui--blue .messages {
@@ -635,8 +643,12 @@ h2, h3 {
   font-size: 0.8rem;
   font-family: "Montserrat";
   text-transform: uppercase;
-  background: #F5F5F5;
   border-radius: 5px;
+  color: #808080;
+}
+
+.ui--green .tabs__tab-link:hover, .ui--green .tabs__tab-link:focus, .ui--green .tabs__tab-link.is-active {
+  color: #222;
 }
 
 .ui--green .messages {
