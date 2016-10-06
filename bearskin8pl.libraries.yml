@@ -28,3 +28,7 @@ flexboxgrid:
   css:
     theme:
       css/flexboxgrid.min.css: {}
+
+flexibility:
+  js:
+    js/flexibility.js: {}
