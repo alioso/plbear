@@ -34,6 +34,16 @@ ui:
     enabled: true
     failOnError: false
   browsers: ["last 2 version", "> 5%", "IE 9"]
+  iconfont:
+    src: "ui/svg/icons/**/*.svg"
+    dest: "ui/fonts"
+    scssFile: "../sass/_ui-font-icon.scss"
+    fontPath: "../fonts/"
+    config:
+      normalize: true
+      fontName: "bearskinui"
+      prependUnicode: true
+      formats: ["ttf", "eot", "woff", "woff2", "svg"]
 js:
   src: ["js/*.js"]
   dest: "./js"

@@ -333,6 +333,148 @@ h2, h3 {
   font-family: "Montserrat";
 }
 
+@font-face {
+  font-family: "bearskinui";
+  src: url("../fonts/bearskinui.eot");
+  src: url("../fonts/bearskinui.eot?#iefix") format("eot"), url("../fonts/bearskinui.woff2") format("woff2"), url("../fonts/bearskinui.woff") format("woff"), url("../fonts/bearskinui.ttf") format("truetype"), url("../fonts/bearskinui.svg#bearskinui") format("svg");
+}
+
+.icon:before {
+  font-family: "bearskinui";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  /* speak: none; only necessary if not using the private unicode range (firstGlyph option) */
+  text-decoration: none;
+  text-transform: none;
+}
+
+.icon-uEA01-add:before {
+  content: "\E001";
+}
+
+.icon-uEA02-bin:before {
+  content: "\E002";
+}
+
+.icon-uEA03-book:before {
+  content: "\E003";
+}
+
+.icon-uEA04-calculate:before {
+  content: "\E004";
+}
+
+.icon-uEA05-camera:before {
+  content: "\E005";
+}
+
+.icon-uEA06-cards:before {
+  content: "\E006";
+}
+
+.icon-uEA07-clock:before {
+  content: "\E007";
+}
+
+.icon-uEA08-clock2:before {
+  content: "\E008";
+}
+
+.icon-uEA09-cloud:before {
+  content: "\E009";
+}
+
+.icon-uEA0A-download:before {
+  content: "\E00A";
+}
+
+.icon-uEA0B-edit:before {
+  content: "\E00B";
+}
+
+.icon-uEA0C-envelope:before {
+  content: "\E00C";
+}
+
+.icon-uEA0D-file:before {
+  content: "\E00D";
+}
+
+.icon-uEA0E-files:before {
+  content: "\E00E";
+}
+
+.icon-uEA0F-flag:before {
+  content: "\E00F";
+}
+
+.icon-uEA10-folder:before {
+  content: "\E010";
+}
+
+.icon-uEA11-globe:before {
+  content: "\E011";
+}
+
+.icon-uEA12-inbox:before {
+  content: "\E012";
+}
+
+.icon-uEA13-info:before {
+  content: "\E013";
+}
+
+.icon-uEA14-refresh:before {
+  content: "\E014";
+}
+
+.icon-uEA15-remove:before {
+  content: "\E015";
+}
+
+.icon-uEA16-revert:before {
+  content: "\E016";
+}
+
+.icon-uEA17-search:before {
+  content: "\E017";
+}
+
+.icon-uEA18-send:before {
+  content: "\E018";
+}
+
+.icon-uEA19-star:before {
+  content: "\E019";
+}
+
+.icon-uEA1A-stopwatch:before {
+  content: "\E01A";
+}
+
+.icon-uEA1B-time:before {
+  content: "\E01B";
+}
+
+.icon-uEA1C-trash:before {
+  content: "\E01C";
+}
+
+.icon-uEA1D-upload:before {
+  content: "\E01D";
+}
+
+.icon-uEA1E-user:before {
+  content: "\E01E";
+}
+
+.icon-uEA1F-view:before {
+  content: "\E01F";
+}
+
 .ui--grey form {
   padding: 1.61111rem 1.61111rem;
   background: #F5F5F5;
