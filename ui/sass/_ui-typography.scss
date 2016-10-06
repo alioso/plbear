@@ -6,11 +6,11 @@ $Noto-serif: 'Noto Serif';
 
 @font-face {
   font-family: 'bearskin';
-  src:  url('../fonts/bearskin.eot?5063hx');
-  src:  url('../fonts/bearskin.eot?5063hx#iefix') format('embedded-opentype'),
-    url('../fonts/bearskin.ttf?5063hx') format('truetype'),
-    url('../fonts/bearskin.woff?5063hx') format('woff'),
-    url('../fonts/bearskin.svg?5063hx#icomoon') format('svg');
+  src:  url('../fonts/bearskin/bearskin.eot?5063hx');
+  src:  url('../fonts/bearskin/bearskin.eot?5063hx#iefix') format('embedded-opentype'),
+    url('../fonts/bearskin/bearskin.ttf?5063hx') format('truetype'),
+    url('../fonts/bearskin/bearskin.woff?5063hx') format('woff'),
+    url('../fonts/bearskin/bearskin.svg?5063hx#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -18,7 +18,7 @@ $Noto-serif: 'Noto Serif';
 [class^="icon-"],
 [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
+  font-family: 'bearskin' !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
