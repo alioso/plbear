@@ -4,7 +4,7 @@ details {
   summary {
     @include padding(.5, .5);
 
-    background: $light-gray;
+    background: $light-grey;
     cursor: pointer;
 
     i {
@@ -25,7 +25,7 @@ details {
   .details-wrapper {
     @include padding(.5, .5);
 
-    border: 1px solid $light-gray;
+    border: 1px solid $light-grey;
     border-top: 0;
   }
 }

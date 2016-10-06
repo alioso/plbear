@@ -390,9 +390,7 @@ h2, h3 {
 
 .ui--grey .description {
   font-size: 0.7rem;
-  font-family: "Montserrat";
   color: #808080;
-  font-weight: 400;
 }
 
 .ui--grey .breadcrumb__item {
@@ -404,6 +402,14 @@ h2, h3 {
 
 .ui--grey .breadcrumb__link {
   padding-right: 5px;
+}
+
+.ui--grey .tabs__tab-link {
+  font-size: 0.8rem;
+  font-family: "Montserrat";
+  text-transform: uppercase;
+  background: #F5F5F5;
+  border-radius: 5px;
 }
 
 .ui--blue form {
@@ -463,9 +469,7 @@ h2, h3 {
 
 .ui--blue .description {
   font-size: 0.7rem;
-  font-family: "Montserrat";
   color: #808080;
-  font-weight: 400;
 }
 
 .ui--blue .breadcrumb__item {
@@ -477,6 +481,14 @@ h2, h3 {
 
 .ui--blue .breadcrumb__link {
   padding-right: 5px;
+}
+
+.ui--blue .tabs__tab-link {
+  font-size: 0.8rem;
+  font-family: "Montserrat";
+  text-transform: uppercase;
+  background: #F5F5F5;
+  border-radius: 5px;
 }
 
 .ui--green form {
@@ -536,9 +548,7 @@ h2, h3 {
 
 .ui--green .description {
   font-size: 0.7rem;
-  font-family: "Montserrat";
   color: #808080;
-  font-weight: 400;
 }
 
 .ui--green .breadcrumb__item {
@@ -550,6 +560,14 @@ h2, h3 {
 
 .ui--green .breadcrumb__link {
   padding-right: 5px;
+}
+
+.ui--green .tabs__tab-link {
+  font-size: 0.8rem;
+  font-family: "Montserrat";
+  text-transform: uppercase;
+  background: #F5F5F5;
+  border-radius: 5px;
 }
 
 @media (min-width: 48em){

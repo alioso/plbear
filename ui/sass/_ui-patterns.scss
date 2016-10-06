@@ -71,9 +71,7 @@ label {
 .description {
   @include font-size(.7);
 
-  font-family: $Montserrat;
   color: $ui-grey;
-  font-weight: 400;
 }
 
 
@@ -96,6 +94,19 @@ label {
 
   }
 }
+
+.tabs {
+
+  &__tab-link {
+    @include font-size(.8);
+
+    font-family: $Montserrat;
+    text-transform: uppercase;
+    background: $ui-lightest-grey;
+    border-radius: $ui-border-radius;
+  }
+}
+
 
 //**********
 // Organisms
