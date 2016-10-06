@@ -1,0 +1,35 @@
+.messages {
+  @include padding(.3,.8);
+  @include font-size(.8);
+
+  color: $dark-grey;
+  background-color: $light-grey;
+  border: 2px solid darken($grey, 5%);
+
+  &--success {
+    @include padding(.3,.8);
+    @include font-size(.8);
+
+    color: $green;
+    background-color: lighten($green, 45%);
+    border: 2px solid lighten($green, 35%);
+  }
+
+  &--warning {
+    @include padding(.3,.8);
+    @include font-size(.8);
+
+    color: $orange;
+    background-color: lighten($orange, 50%);
+    border: 2px solid lighten($orange, 40%);
+  }
+
+  &--error {
+    @include padding(.3,.8);
+    @include font-size(.8);
+
+    color: $red;
+    background-color: lighten($red, 35%);
+    border: 2px solid lighten($red, 25%);
+  }
+}

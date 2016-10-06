@@ -107,6 +107,23 @@ label {
   }
 }
 
+.messages {
+ @include font-size(.7);
+
+ font-family: $Montserrat;
+
+  &--success {
+ 
+  }
+
+  &--warning {
+
+  }
+
+  &--error {
+  
+  }
+}
 
 //**********
 // Organisms

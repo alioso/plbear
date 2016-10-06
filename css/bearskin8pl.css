@@ -375,6 +375,38 @@ details .details-wrapper {
   border-top: 0;
 }
 
+.messages {
+  padding: 0.48333rem 1.28889rem;
+  font-size: 0.8rem;
+  color: #888;
+  background-color: #f5f5f5;
+  border: 2px solid #dddddd;
+}
+
+.messages--success {
+  padding: 0.48333rem 1.28889rem;
+  font-size: 0.8rem;
+  color: #40C27A;
+  background-color: #eefaf3;
+  border: 2px solid #c7edd8;
+}
+
+.messages--warning {
+  padding: 0.48333rem 1.28889rem;
+  font-size: 0.8rem;
+  color: #E09600;
+  background-color: #fff5e0;
+  border: 2px solid #ffe4ad;
+}
+
+.messages--error {
+  padding: 0.48333rem 1.28889rem;
+  font-size: 0.8rem;
+  color: #FF6A40;
+  background-color: #fff5f3;
+  border: 2px solid #ffcdc0;
+}
+
 .breadcrumb {
   padding: 0.80556rem 0;
 }

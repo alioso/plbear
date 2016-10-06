@@ -471,6 +471,11 @@ h2, h3 {
   border-radius: 5px;
 }
 
+.ui--grey .messages {
+  font-size: 0.7rem;
+  font-family: "Montserrat";
+}
+
 .ui--blue form {
   padding: 1.61111rem 1.61111rem;
   background: #F5F5F5;
@@ -550,6 +555,11 @@ h2, h3 {
   border-radius: 5px;
 }
 
+.ui--blue .messages {
+  font-size: 0.7rem;
+  font-family: "Montserrat";
+}
+
 .ui--green form {
   padding: 1.61111rem 1.61111rem;
   background: #F5F5F5;
@@ -627,6 +637,11 @@ h2, h3 {
   text-transform: uppercase;
   background: #F5F5F5;
   border-radius: 5px;
+}
+
+.ui--green .messages {
+  font-size: 0.7rem;
+  font-family: "Montserrat";
 }
 
 @media (min-width: 48em){
