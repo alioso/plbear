@@ -403,6 +403,20 @@ details .details-wrapper {
   border-top: 0;
 }
 
+.breadcrumb {
+  padding: 0.80556rem 0;
+}
+
+.breadcrumb__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumb__item {
+  display: inline;
+}
+
 .nav ul {
   margin: 0;
   padding: 0;

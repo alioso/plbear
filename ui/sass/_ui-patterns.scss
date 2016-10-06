@@ -81,7 +81,21 @@ label {
 // Molecules
 //**********
 
+.breadcrumb {
 
+  &__item {
+    @include font-size(.8);
+
+    font-family: $Montserrat;
+    text-transform: uppercase;
+    margin-right: 5px;
+  }
+
+  &__link {
+    padding-right: 5px;
+
+  }
+}
 
 //**********
 // Organisms
