@@ -73,9 +73,7 @@ label {
 
     text-transform: uppercase;
   }
-
 }
-
 
 .breadcrumb {
 
@@ -112,21 +110,10 @@ label {
 }
 
 .messages {
- @include font-size(.7);
+ @include font-size(.9);
+ @include padding(1, 1);
 
  font-family: $Montserrat;
-
-  &--success {
-
-  }
-
-  &--warning {
-
-  }
-
-  &--error {
-
-  }
 }
 
 details {
@@ -237,9 +224,12 @@ details {
   }
 }
 
+.wrapper-breadcrumb {
+  border-top: 1px solid $ui-lightest-grey;
+}
+
 .wrapper-footer {
   background: $ui-lightest-grey;
-  border-top: 1px solid $ui-light-grey;
 
   &__inner{
     @include margin-top(1);

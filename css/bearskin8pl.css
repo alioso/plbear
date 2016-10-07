@@ -575,7 +575,7 @@ details .details-wrapper {
           flex-direction: column;
 }
 
-.sticky-footer .wrapper--main {
+.sticky-footer .wrapper-main {
   position: relative;
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
