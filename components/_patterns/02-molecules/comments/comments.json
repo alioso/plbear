@@ -1,0 +1,10 @@
+{
+  "attributes": {
+    "Attribute()": {
+      "class": [
+        "js-comment"
+      ]
+    }
+  },
+  "content": "This is a comment."
+}
