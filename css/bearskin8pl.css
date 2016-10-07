@@ -147,75 +147,74 @@ img {
 
 html {
   font-size: 100%;
-  font-size: 18px;
+  font-size: 16px;
   font-family: "Georgia", serif;
   color: "Georgia", serif;
   font-weight: 400;
 }
 
 * {
-  line-height: 1.61111;
+  line-height: 1.625;
 }
 
 p {
-  margin-bottom: 1.61111rem;
-  font-size: 1.1rem;
+  margin-bottom: 1.625rem;
 }
 
 h1 {
   font-size: 3rem;
-  line-height: 1.61111;
-  margin-top: 1.61111rem;
-  margin-bottom: 1.61111rem;
+  line-height: 1.625;
+  margin-top: 1.625rem;
+  margin-bottom: 1.625rem;
 }
 
 h2 {
   font-size: 2rem;
-  line-height: 1.61111;
-  margin-top: 2.01389rem;
-  margin-bottom: 0.80556rem;
+  line-height: 1.625;
+  margin-top: 2.03125rem;
+  margin-bottom: 0.8125rem;
 }
 
 h3 {
   font-size: 1.25rem;
-  line-height: 1.61111;
-  margin-top: 1.61111rem;
-  margin-bottom: 0.80556rem;
+  line-height: 1.625;
+  margin-top: 1.625rem;
+  margin-bottom: 0.8125rem;
 }
 
 h4 {
   font-size: 1.1rem;
-  line-height: 1.61111;
-  margin-top: 1.61111rem;
-  margin-bottom: 0.80556rem;
+  line-height: 1.625;
+  margin-top: 1.625rem;
+  margin-bottom: 0.8125rem;
 }
 
 h5 {
   font-size: 0.815rem;
-  line-height: 1.61111;
-  margin-top: 2.01389rem;
-  margin-bottom: 0.80556rem;
+  line-height: 1.625;
+  margin-top: 2.03125rem;
+  margin-bottom: 0.8125rem;
 }
 
 h6 {
   font-size: 0.75rem;
-  line-height: 1.61111;
-  margin-top: 2.01389rem;
-  margin-bottom: 0.80556rem;
+  line-height: 1.625;
+  margin-top: 2.03125rem;
+  margin-bottom: 0.8125rem;
 }
 
 h1 + h2 {
-  margin-top: 1.61111rem;
+  margin-top: 1.625rem;
 }
 
 h2 + h3,
 h3 + h4,
 h4 + h5 {
-  margin-top: 0.80556rem;
+  margin-top: 0.8125rem;
 }
 
 h5 + h6 {
-  margin-top: -0.80556rem;
+  margin-top: -0.8125rem;
 }
 
 h1,
@@ -263,14 +262,14 @@ figure {
 }
 
 figcaption {
-  line-height: 1.61111;
+  line-height: 1.625;
   color: #261D19;
   margin-bottom: 0;
   text-align: center;
 }
 
 blockquote {
-  margin: 1.61111rem 0;
+  margin: 1.625rem 0;
   font-weight: 500;
 }
 
@@ -279,12 +278,12 @@ cite {
 }
 
 figure blockquote {
-  padding: 1.61111rem 0;
+  padding: 1.625rem 0;
 }
 
 figure blockquote p {
   font-size: 1.6875rem;
-  line-height: 2.41667;
+  line-height: 2.4375;
 }
 
 ul li,
@@ -293,28 +292,28 @@ ol li {
 }
 
 hr {
-  margin-top: 3.22222rem;
-  margin-bottom: 3.22222rem;
+  margin-top: 3.25rem;
+  margin-bottom: 3.25rem;
   border: 0;
   color: #261D19;
   display: block;
-  height: 29px;
-  height: 1.61111rem;
+  height: 26px;
+  height: 1.625rem;
   margin-right: auto;
   margin-left: auto;
-  background-size: 100% 29px;
-  background-size: 100% 1.61111rem;
-  background-image: -webkit-linear-gradient(top, transparent 1px, transparent 12.5px, #261D19 12.5px, #261D19 16.5px, transparent 16.5px, transparent 29px);
-  background-image: linear-gradient(to bottom, transparent 1px, transparent 12.5px, #261D19 12.5px, #261D19 16.5px, transparent 16.5px, transparent 29px);
+  background-size: 100% 26px;
+  background-size: 100% 1.625rem;
+  background-image: -webkit-linear-gradient(top, transparent 1px, transparent 11px, #261D19 11px, #261D19 15px, transparent 15px, transparent 26px);
+  background-image: linear-gradient(to bottom, transparent 1px, transparent 11px, #261D19 11px, #261D19 15px, transparent 15px, transparent 26px);
   width: 100px;
 }
 
 small {
-  line-height: 0.80556;
+  line-height: 0.8125;
 }
 
 code {
-  padding: 1.61111rem;
+  padding: 1.625rem;
 }
 
 .skip-link {
@@ -335,15 +334,41 @@ code {
   clip: rect(1px, 1px, 1px, 1px);
 }
 
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-1.25em);
+            transform: translateY(-1.25em);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-1.25em);
+            transform: translateY(-1.25em);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
 .wrapper--inner {
-  padding: 0 1.61111rem;
+  padding: 0 1.625rem;
   width: 100%;
   max-width: 75em;
   margin: 0 auto;
 }
 
 i {
-  margin: 0rem 0.80556rem 0rem 0rem;
+  margin: 0rem 0.8125rem 0rem 0rem;
   font-weight: bold;
 }
 
@@ -352,21 +377,21 @@ i {
 }
 
 details {
-  margin: 1.61111rem 0;
+  margin: 1.625rem 0;
 }
 
 details summary {
-  padding: 0.80556rem 0.80556rem;
+  padding: 0.8125rem 0.8125rem;
   background: #f5f5f5;
   cursor: pointer;
 }
 
 details .details-wrapper {
-  padding: 0.80556rem 0.80556rem;
+  padding: 0.8125rem 0.8125rem;
 }
 
 .messages {
-  padding: 0.48333rem 1.28889rem;
+  padding: 0.4875rem 1.3rem;
   font-size: 0.8rem;
   color: #888;
   background-color: #f5f5f5;
@@ -374,7 +399,7 @@ details .details-wrapper {
 }
 
 .messages--success {
-  padding: 0.48333rem 1.28889rem;
+  padding: 0.4875rem 1.3rem;
   font-size: 0.8rem;
   color: #40C27A;
   background-color: #eefaf3;
@@ -382,7 +407,7 @@ details .details-wrapper {
 }
 
 .messages--warning {
-  padding: 0.48333rem 1.28889rem;
+  padding: 0.4875rem 1.3rem;
   font-size: 0.8rem;
   color: #E09600;
   background-color: #fff5e0;
@@ -390,7 +415,7 @@ details .details-wrapper {
 }
 
 .messages--error {
-  padding: 0.48333rem 1.28889rem;
+  padding: 0.4875rem 1.3rem;
   font-size: 0.8rem;
   color: #FF6A40;
   background-color: #fff5f3;
@@ -398,7 +423,7 @@ details .details-wrapper {
 }
 
 .breadcrumb {
-  padding: 0.80556rem 0;
+  padding: 0.8125rem 0;
 }
 
 .breadcrumb__list {
@@ -417,7 +442,7 @@ details .details-wrapper {
 }
 
 .menu__item {
-  margin: 0rem 1.61111rem 0rem 0rem;
+  margin: 0rem 1.625rem 0rem 0rem;
   list-style-type: none;
   display: inline;
 }
@@ -441,7 +466,7 @@ details .details-wrapper {
 }
 
 .tabs {
-  margin: 0.80556rem 0;
+  margin: 0.8125rem 0;
   display: inline-block;
   padding: 0;
   list-style-type: none;
@@ -469,7 +494,7 @@ details .details-wrapper {
 }
 
 .tabs__tab-link {
-  padding: 0.48333rem 0.80556rem;
+  padding: 0.4875rem 0.8125rem;
   display: inline-block;
   background: #f5f5f5;
 }
@@ -479,7 +504,7 @@ details .details-wrapper {
 }
 
 .site-footer {
-  padding: 1.61111rem 0;
+  padding: 1.625rem 0;
 }
 
 .sticky-footer {
@@ -502,13 +527,13 @@ details .details-wrapper {
 }
 
 .wrapper-header__inner {
-  margin: 1.61111rem 0;
+  margin: 1.625rem 0;
 }
 
 @media (min-width: 48em) {
 
   * {
-    line-height: 1.61111;
+    line-height: 1.625;
   }
 
   .layout-sidebar-first .wrapper-main__inner, .layout-sidebar-second .wrapper-main__inner {
@@ -519,7 +544,7 @@ details .details-wrapper {
   }
 
   .layout-sidebar-first .column.main, .layout-sidebar-second .column.main {
-    padding: 0rem 0rem 0rem 1.61111rem;
+    padding: 0rem 0rem 0rem 1.625rem;
     -webkit-box-ordinal-group: 3;
     -ms-flex-order: 2;
     order: 2;
@@ -536,7 +561,7 @@ details .details-wrapper {
   }
 
   .layout-sidebar-second .column.main {
-    padding: 0rem 1.61111rem 0rem 0rem;
+    padding: 0rem 1.625rem 0rem 0rem;
     -webkit-box-ordinal-group: 2;
     -ms-flex-order: 1;
     order: 1;
@@ -556,7 +581,7 @@ details .details-wrapper {
   }
 
   .layout-two-sidebars .column.main {
-    padding: 0 1.61111rem;
+    padding: 0 1.625rem;
     -webkit-box-ordinal-group: 3;
     -ms-flex-order: 2;
     order: 2;
@@ -585,7 +610,7 @@ details .details-wrapper {
 @media (min-width: 75em) {
 
   blockquote {
-    margin: 1.61111rem -3.22222rem;
+    margin: 1.625rem -3.25rem;
   }
 }
 
@@ -599,71 +624,71 @@ details .details-wrapper {
   }
 
   html {
-    font-size: 18px;
+    font-size: 16px;
     font-size: 1rem;
   }
 
   h1 {
     font-size: 3rem;
-    line-height: 1.72222;
-    margin-top: 1.72222rem;
-    margin-bottom: 1.72222rem;
+    line-height: 1.6875;
+    margin-top: 1.6875rem;
+    margin-bottom: 1.6875rem;
   }
 
   h2 {
     font-size: 2rem;
-    line-height: 1.72222;
-    margin-top: 2.15278rem;
-    margin-bottom: 0.86111rem;
+    line-height: 1.6875;
+    margin-top: 2.10938rem;
+    margin-bottom: 0.84375rem;
   }
 
   h3 {
     font-size: 1.25rem;
-    line-height: 1.72222;
-    margin-top: 1.72222rem;
-    margin-bottom: 0.86111rem;
+    line-height: 1.6875;
+    margin-top: 1.6875rem;
+    margin-bottom: 0.84375rem;
   }
 
   h4 {
     font-size: 1.1rem;
-    line-height: 1.72222;
-    margin-top: 1.72222rem;
-    margin-bottom: 0.86111rem;
+    line-height: 1.6875;
+    margin-top: 1.6875rem;
+    margin-bottom: 0.84375rem;
   }
 
   h5 {
     font-size: 0.815rem;
-    line-height: 1.72222;
-    margin-top: 2.15278rem;
-    margin-bottom: 0.86111rem;
+    line-height: 1.6875;
+    margin-top: 2.10938rem;
+    margin-bottom: 0.84375rem;
   }
 
   h6 {
     font-size: 0.75rem;
-    line-height: 1.72222;
-    margin-top: 2.15278rem;
-    margin-bottom: 0.86111rem;
+    line-height: 1.6875;
+    margin-top: 2.10938rem;
+    margin-bottom: 0.84375rem;
   }
 
   h1 + h2 {
-    margin-top: 1.72222rem;
+    margin-top: 1.6875rem;
   }
 
   h2 + h3,
   h3 + h4,
   h4 + h5 {
-    margin-top: 0.86111rem;
+    margin-top: 0.84375rem;
   }
 
   h5 + h6 {
-    margin-top: -0.86111rem;
+    margin-top: -0.84375rem;
   }
 
   figure.floatLeft,
   figure.floatRight {
-    max-width: 720px;
+    max-width: 640px;
     max-width: 40rem;
-    padding: 0 1.72222rem;
+    padding: 0 1.6875rem;
   }
 
   figure.floatLeft blockquote,
@@ -675,43 +700,43 @@ details .details-wrapper {
   figure.floatLeft blockquote p,
   figure.floatRight blockquote p {
     font-size: 1.2rem;
-    line-height: 1.72222;
+    line-height: 1.6875;
   }
 
   figcaption {
-    line-height: 1.72222;
+    line-height: 1.6875;
     margin-bottom: 0;
   }
 
   figure blockquote {
-    padding: 3.44444rem 0 1.72222rem;
+    padding: 3.375rem 0 1.6875rem;
     text-align: center;
   }
 
   figure blockquote p {
     font-size: 1.6875rem;
-    line-height: 2.58333;
+    line-height: 2.53125;
   }
 
   hr {
-    margin-top: 3.44444rem;
-    margin-bottom: 3.44444rem;
-    height: 31px;
-    height: 1.72222rem;
+    margin-top: 3.375rem;
+    margin-bottom: 3.375rem;
+    height: 27px;
+    height: 1.6875rem;
   }
 
   hr {
-    background-size: 100% 31px;
-    background-size: 100% 1.72222rem;
-    background-image: -webkit-linear-gradient(top, transparent 1px, transparent 13.5px, #261D19 13.5px, #261D19 17.5px, transparent 17.5px, transparent 31px);
-    background-image: linear-gradient(to bottom, transparent 1px, transparent 13.5px, #261D19 13.5px, #261D19 17.5px, transparent 17.5px, transparent 31px);
+    background-size: 100% 27px;
+    background-size: 100% 1.6875rem;
+    background-image: -webkit-linear-gradient(top, transparent 1px, transparent 11.5px, #261D19 11.5px, #261D19 15.5px, transparent 15.5px, transparent 27px);
+    background-image: linear-gradient(to bottom, transparent 1px, transparent 11.5px, #261D19 11.5px, #261D19 15.5px, transparent 15.5px, transparent 27px);
   }
 
   small {
-    line-height: 0.86111;
+    line-height: 0.84375;
   }
 
   code {
-    padding: 1.72222rem;
+    padding: 1.6875rem;
   }
 }
