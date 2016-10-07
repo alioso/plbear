@@ -1,8 +1,3 @@
-.site-footer {
-  @include padding(1, 0);
-
-}
-
 .sticky-footer {
   display: flex;
   min-height: 100vh;
@@ -13,5 +8,4 @@
     flex: 1 0 auto;
     overflow: hidden;
   }
-
 }

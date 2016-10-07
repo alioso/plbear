@@ -564,10 +564,6 @@ details .details-wrapper {
   background: transparent;
 }
 
-.site-footer {
-  padding: 1.625rem 0;
-}
-
 .sticky-footer {
   display: -webkit-box;
   display: -ms-flexbox;

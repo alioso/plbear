@@ -216,7 +216,7 @@ details {
       &.is-active {
         @include button($gradient-top, $gradient-bottom, $hover-gradient-top, $hover-gradient-bottom);
         @include font-size(1);
-        
+
         color: $white;
         font-family: $Noto-serif;
       }
@@ -237,5 +237,15 @@ details {
   }
 }
 
+.wrapper-footer {
+  background: $ui-lightest-grey;
+  border-top: 1px solid $ui-light-grey;
 
+  &__inner{
+    @include margin-top(1);
+    @include margin-bottom(1);
+  }
 }
+
+
+} // closing the mixin
