@@ -372,13 +372,16 @@ code {
 }
 
 .s-wrapper {
-  border: 1px solid;
+  padding: 0.4875rem 0.8125rem;
+  border: 1px solid #eaeaea;
   position: relative;
+  max-width: 500px;
 }
 
 .s-wrapper::after {
+  font-size: 0.8rem;
   position: absolute;
-  top: 0;
+  top: 10px;
   right: 0;
   content: '\25bc';
   display: inline-block;
@@ -388,6 +391,7 @@ code {
 }
 
 .s-wrapper__select {
+  font-family: inherit;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -395,6 +399,8 @@ code {
   background-color: transparent;
   width: 100%;
   z-index: 2;
+  font-size: 1em;
+  height: 25px;
 }
 
 i {

@@ -1,23 +1,31 @@
 .s-wrapper {
-  border: 1px solid;
-   position: relative;
+  @include padding(.3, .5);
 
- &::after {
-   position: absolute;
-   top: 0;
-   right: 0;
-   content: '\25bc';
-   display: inline-block;
-   width: 20px;
-   height: 20px;
-   pointer-events: none;
- }
+  border: 1px solid $grey;
+  position: relative;
+  max-width: 500px;
 
- &__select {
-   appearance: none;
-   border: none;
-   background-color: transparent;
-   width: 100%;
-   z-index: 2;
- }
+  &::after {
+    @include font-size(.8);
+
+    position: absolute;
+    top: 10px;
+    right: 0;
+    content: '\25bc';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+  }
+
+  &__select {
+    font-family: inherit;
+    appearance: none;
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    z-index: 2;
+    font-size: 1em;
+    height: 25px;
+  }
 }
