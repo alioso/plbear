@@ -1,0 +1,19 @@
+details {
+  @include margin(1, 0);
+
+  .summary {
+    @include padding(.5, .5);
+
+    background: $light-grey;
+    cursor: pointer;
+
+    &__icon,
+    &__title {
+      display: inline-block;
+    }
+  }
+
+  .details-wrapper {
+    @include padding(.5, .5);
+  }
+}

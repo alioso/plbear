@@ -1,3 +1,5 @@
 node_modules
 export
+.DS_Store
 ; pattern-lab
+gulpfile.yml

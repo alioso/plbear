@@ -1,0 +1,11 @@
+{
+  "attributes": {
+    "Attribute()": {
+      "type": "text",
+      "class": [
+        "button",
+        "form-text"
+      ]
+    }
+  }
+}

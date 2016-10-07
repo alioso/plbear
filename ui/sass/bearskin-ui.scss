@@ -1,0 +1,27 @@
+// from vendors
+@import "../../components/vendor/gutenberg/gutenberg";
+
+// from base
+@import "../../components/_patterns/00-utilities/variables";
+@import "../../components/_patterns/00-utilities/mixins";
+
+@import 'ui-variables';
+@import 'ui-mixins';
+@import 'ui-typography';
+@import 'ui-font-icon';
+@import 'ui-patterns';
+
+.ui {
+
+  &--grey {
+    @include ui-color($ui-light-grey, $ui-grey, $ui-dark-grey, false, false, false, false);
+  }
+
+  &--blue {
+    @include ui-color($ui-light-blue, $ui-blue, $ui-dark-blue, $ui-blue-button-gradient-top, $ui-blue-button-gradient-bottom, $ui-blue-button-hover-gradient-top, $ui-blue-button-hover-gradient-bottom);
+  }
+
+  &--green {
+    @include ui-color($ui-yellow, $ui-green, $ui-dark-green, $ui-green-button-gradient-top, $ui-green-button-gradient-bottom, $ui-green-button-hover-gradient-top, $ui-green-button-hover-gradient-bottom);
+  }
+}

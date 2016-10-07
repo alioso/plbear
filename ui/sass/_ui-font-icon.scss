@@ -1,0 +1,182 @@
+@font-face {
+	font-family: "bearskinui";
+	src: url('../fonts/bearskinui.eot');
+	src: url('../fonts/bearskinui.eot?#iefix') format('eot'),
+		url('../fonts/bearskinui.woff2') format('woff2'),
+		url('../fonts/bearskinui.woff') format('woff'),
+		url('../fonts/bearskinui.ttf') format('truetype'),
+		url('../fonts/bearskinui.svg#bearskinui') format('svg');
+}
+
+.icon:before {
+	font-family: "bearskinui";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	/* speak: none; only necessary if not using the private unicode range (firstGlyph option) */
+	text-decoration: none;
+	text-transform: none;
+}
+
+
+.icon-add:before {
+	content: "\E001";
+}
+
+.icon-arrow_down:before {
+	content: "\E002";
+}
+
+.icon-arrow_left:before {
+	content: "\E003";
+}
+
+.icon-arrow_right:before {
+	content: "\E004";
+}
+
+.icon-arrow_up:before {
+	content: "\E005";
+}
+
+.icon-bg_bear_tracks:before {
+	content: "\E006";
+}
+
+.icon-bin:before {
+	content: "\E007";
+}
+
+.icon-book:before {
+	content: "\E008";
+}
+
+.icon-btn_next:before {
+	content: "\E009";
+}
+
+.icon-btn_previous:before {
+	content: "\E00A";
+}
+
+.icon-btn_toggle:before {
+	content: "\E00B";
+}
+
+.icon-calculate:before {
+	content: "\E00C";
+}
+
+.icon-camera:before {
+	content: "\E00D";
+}
+
+.icon-cards:before {
+	content: "\E00E";
+}
+
+.icon-checkmark:before {
+	content: "\E00F";
+}
+
+.icon-clock:before {
+	content: "\E010";
+}
+
+.icon-clock2:before {
+	content: "\E011";
+}
+
+.icon-cloud:before {
+	content: "\E012";
+}
+
+.icon-download:before {
+	content: "\E013";
+}
+
+.icon-edit:before {
+	content: "\E014";
+}
+
+.icon-envelope:before {
+	content: "\E015";
+}
+
+.icon-file:before {
+	content: "\E016";
+}
+
+.icon-files:before {
+	content: "\E017";
+}
+
+.icon-flag:before {
+	content: "\E018";
+}
+
+.icon-folder:before {
+	content: "\E019";
+}
+
+.icon-globe:before {
+	content: "\E01A";
+}
+
+.icon-inbox:before {
+	content: "\E01B";
+}
+
+.icon-info:before {
+	content: "\E01C";
+}
+
+.icon-refresh:before {
+	content: "\E01D";
+}
+
+.icon-remove:before {
+	content: "\E01E";
+}
+
+.icon-revert:before {
+	content: "\E01F";
+}
+
+.icon-search:before {
+	content: "\E020";
+}
+
+.icon-send:before {
+	content: "\E021";
+}
+
+.icon-star:before {
+	content: "\E022";
+}
+
+.icon-stopwatch:before {
+	content: "\E023";
+}
+
+.icon-time:before {
+	content: "\E024";
+}
+
+.icon-trash:before {
+	content: "\E025";
+}
+
+.icon-upload:before {
+	content: "\E026";
+}
+
+.icon-user:before {
+	content: "\E027";
+}
+
+.icon-view:before {
+	content: "\E028";
+}

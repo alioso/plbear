@@ -47,7 +47,7 @@ module.exports = yeoman.Base.extend({
       ]
     }, {
       name: 'name',
-      message: 'What shall we name it? ' + chalk.blue('Let\'s respect naming convention. Please only use underscore for spacing. Good chances are that this name will need to match a  machine name (check the template suggestions with debug mode!)'),
+      message: 'What shall we name it? ' + chalk.blue('Let\'s stick with a naming convention. Ex: "region--something". It will usually match the template suggestion (don\'t forget to have dev mode turned on). The scss file will be automatically preceded with _)'),
       filter: function(answer) {
         return answer.replace(/ /g, '-').toLowerCase();
       }

@@ -1,0 +1,19 @@
+@import url('//fonts.googleapis.com/css?family=Montserrat:400,700');
+@import url('//fonts.googleapis.com/css?family=Noto+Serif:400,700');
+
+$Montserrat: 'Montserrat';
+$Noto-serif: 'Noto Serif';
+
+body {
+  font-family: $Noto-serif;
+  color: $black;
+}
+
+h1, h4 {
+  font-family: $Montserrat;
+  text-transform: uppercase;
+}
+
+h2, h3 {
+  font-family: $Montserrat;
+}
