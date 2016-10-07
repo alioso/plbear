@@ -1,4 +1,9 @@
+// from vendors
 @import "../../components/vendor/gutenberg/gutenberg";
+
+// from base
+@import "../../components/_patterns/00-utilities/variables";
+@import "../../components/_patterns/00-utilities/mixins";
 
 @import 'ui-variables';
 @import 'ui-mixins';

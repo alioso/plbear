@@ -1,6 +1,7 @@
  .wrapper-header{
 
    &__inner {
-     @include margin(1, 0);
+     @include margin-top(1);
+     @include margin-bottom(1);
    }
  }

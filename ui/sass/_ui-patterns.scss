@@ -15,28 +15,7 @@ form {
 }
 
 .button {
-  @include font-size(.8);
-
-  position: relative;
-  display: inline-block;
-  outline: none;
-  text-decoration: none;
-  cursor: pointer;
-  border-style: none;
-  transition: background .2s ease-in-out;
-
-  background: linear-gradient($gradient-top, $gradient-bottom);
-  color: $white;
-  padding: $ui-button-padding;
-  border-radius: $ui-border-radius;
-  font-family: $Montserrat;
-
-  &:hover,
-  &:focus,
-  &:visited {
-    background: linear-gradient($hover-gradient-top, $hover-gradient-bottom);
-    text-decoration: none;
-  }
+  @include button($gradient-top, $gradient-bottom, $hover-gradient-top, $hover-gradient-bottom);
 }
 
 .form-submit {
@@ -78,6 +57,25 @@ label {
 //**********
 // Molecules
 //**********
+
+.branding {
+
+  display: flex;
+  align-items: center;
+
+  &__site-logo-image {
+    max-width: 100px;
+  }
+
+  &__site-name {
+    @include font-size(1.2);
+    @include margin(0, 0, 0, 1);
+
+    text-transform: uppercase;
+  }
+
+}
+
 
 .breadcrumb {
 
@@ -208,10 +206,34 @@ details {
   @extend details;
 }
 
+.menu {
+
+  &--main {
+
+    a {
+      @include link($ui-black, none, $ui-black, underline);
+
+      &.is-active {
+        @include button($gradient-top, $gradient-bottom, $hover-gradient-top, $hover-gradient-bottom);
+
+        color: $white;
+      }
+    }
+  }
+}
+
 //**********
 // Organisms
 //**********
 
+.wrapper-header {
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
 
 
 }

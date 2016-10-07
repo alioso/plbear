@@ -250,15 +250,19 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  color: #445b75;
-}
-
 a:visited {
   color: #728EAD;
 }
 
 a:active {
+  color: #445b75;
+}
+
+a:hover {
+  color: #445b75;
+}
+
+a:hover:visited {
   color: #445b75;
 }
 
@@ -573,6 +577,25 @@ h2, h3 {
   color: #808080;
 }
 
+.ui--grey .branding {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ui--grey .branding__site-logo-image {
+  max-width: 100px;
+}
+
+.ui--grey .branding__site-name {
+  font-size: 1.2rem;
+  margin: 0rem 0rem 0rem 1.625rem;
+  text-transform: uppercase;
+}
+
 .ui--grey .breadcrumb__item {
   font-size: 0.8rem;
   font-family: "Montserrat";
@@ -679,6 +702,53 @@ h2, h3 {
   border: 0;
 }
 
+.ui--grey .menu--main a {
+  color: #222;
+  text-decoration: none;
+}
+
+.ui--grey .menu--main a:hover, .ui--grey .menu--main a:focus {
+  color: #222;
+  text-decoration: underline;
+}
+
+.ui--grey .menu--main a.is-active {
+  font-size: 0.8rem;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+  border-style: none;
+  -webkit-transition: background .2s ease-in-out;
+  transition: background .2s ease-in-out;
+  background: -webkit-linear-gradient(false, false);
+  background: linear-gradient(false, false);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-family: "Montserrat";
+  color: white;
+}
+
+.ui--grey .menu--main a.is-active:hover, .ui--grey .menu--main a.is-active:focus, .ui--grey .menu--main a.is-active:visited {
+  background: -webkit-linear-gradient(false, false);
+  background: linear-gradient(false, false);
+  text-decoration: none;
+}
+
+.ui--grey .wrapper-header__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .ui--blue form {
   padding: 1.625rem 1.625rem;
   background: #F5F5F5;
@@ -737,6 +807,25 @@ h2, h3 {
 .ui--blue .description {
   font-size: 0.7rem;
   color: #808080;
+}
+
+.ui--blue .branding {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ui--blue .branding__site-logo-image {
+  max-width: 100px;
+}
+
+.ui--blue .branding__site-name {
+  font-size: 1.2rem;
+  margin: 0rem 0rem 0rem 1.625rem;
+  text-transform: uppercase;
 }
 
 .ui--blue .breadcrumb__item {
@@ -845,6 +934,53 @@ h2, h3 {
   border: 0;
 }
 
+.ui--blue .menu--main a {
+  color: #222;
+  text-decoration: none;
+}
+
+.ui--blue .menu--main a:hover, .ui--blue .menu--main a:focus {
+  color: #222;
+  text-decoration: underline;
+}
+
+.ui--blue .menu--main a.is-active {
+  font-size: 0.8rem;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+  border-style: none;
+  -webkit-transition: background .2s ease-in-out;
+  transition: background .2s ease-in-out;
+  background: -webkit-linear-gradient(#427AB3, #2E6296);
+  background: linear-gradient(#427AB3, #2E6296);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-family: "Montserrat";
+  color: white;
+}
+
+.ui--blue .menu--main a.is-active:hover, .ui--blue .menu--main a.is-active:focus, .ui--blue .menu--main a.is-active:visited {
+  background: -webkit-linear-gradient(#225E9A, #1E4976);
+  background: linear-gradient(#225E9A, #1E4976);
+  text-decoration: none;
+}
+
+.ui--blue .wrapper-header__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .ui--green form {
   padding: 1.625rem 1.625rem;
   background: #F5F5F5;
@@ -903,6 +1039,25 @@ h2, h3 {
 .ui--green .description {
   font-size: 0.7rem;
   color: #808080;
+}
+
+.ui--green .branding {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ui--green .branding__site-logo-image {
+  max-width: 100px;
+}
+
+.ui--green .branding__site-name {
+  font-size: 1.2rem;
+  margin: 0rem 0rem 0rem 1.625rem;
+  text-transform: uppercase;
 }
 
 .ui--green .breadcrumb__item {
@@ -1009,6 +1164,53 @@ h2, h3 {
   position: relative;
   z-index: 1;
   border: 0;
+}
+
+.ui--green .menu--main a {
+  color: #222;
+  text-decoration: none;
+}
+
+.ui--green .menu--main a:hover, .ui--green .menu--main a:focus {
+  color: #222;
+  text-decoration: underline;
+}
+
+.ui--green .menu--main a.is-active {
+  font-size: 0.8rem;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+  border-style: none;
+  -webkit-transition: background .2s ease-in-out;
+  transition: background .2s ease-in-out;
+  background: -webkit-linear-gradient(#02978E, #0A8277);
+  background: linear-gradient(#02978E, #0A8277);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-family: "Montserrat";
+  color: white;
+}
+
+.ui--green .menu--main a.is-active:hover, .ui--green .menu--main a.is-active:focus, .ui--green .menu--main a.is-active:visited {
+  background: -webkit-linear-gradient(#016F68, #00534C);
+  background: linear-gradient(#016F68, #00534C);
+  text-decoration: none;
+}
+
+.ui--green .wrapper-header__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 @media (min-width: 48em){

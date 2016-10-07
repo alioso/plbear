@@ -219,16 +219,20 @@ a {
   transition: all .3s;
   text-decoration: none;
 
-  &:hover {
-    color: $color-link-hover;
-  }
-
   &:visited {
-    color: $color-link-visited;
+    color: $color-link-normal;
   }
 
   &:active {
     color: $color-link-active;
+  }
+
+  &:hover {
+    color: $color-link-hover;
+
+    &:visited {
+      color: $color-link-hover;
+    }
   }
 }
 
