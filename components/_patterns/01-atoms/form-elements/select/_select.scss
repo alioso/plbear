@@ -1,0 +1,23 @@
+.s-wrapper {
+  border: 1px solid;
+   position: relative;
+
+ &::after {
+   position: absolute;
+   top: 0;
+   right: 0;
+   content: '\25bc';
+   display: inline-block;
+   width: 20px;
+   height: 20px;
+   pointer-events: none;
+ }
+
+ &__select {
+   appearance: none;
+   border: none;
+   background-color: transparent;
+   width: 100%;
+   z-index: 2;
+ }
+}

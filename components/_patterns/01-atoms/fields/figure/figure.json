@@ -1,0 +1,18 @@
+{
+  "media": "<img src='http://placekitten.com/400/300'>",
+  "attributes": {
+    "Attribute()": {
+      "class": [
+        "kitten-figure-class"
+      ]
+    }
+  },
+  "caption": "Kittehz. Aww yiss.",
+  "caption_attributes": {
+    "Attribute()": {
+      "class": [
+        "kitten-figure-class"
+      ]
+    }
+  }
+}
