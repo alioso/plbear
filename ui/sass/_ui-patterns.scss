@@ -5,9 +5,7 @@
 //******
 
 form {
-  @include padding(1, 1);
-
-  background: $ui-lightest-grey;
+  @include margin(1, 0);
 }
 
 .form-item {
@@ -38,6 +36,25 @@ input[type="search"] {
   @extend .form-text;
 
   appearance: initial;
+}
+
+.select-wrapper {
+  border-radius: $ui-border-radius;
+  background: $ui-lightest-grey;
+
+  &:after {
+    font-size: 12px;
+    padding: 11px 14px;
+    background: $ui-grey;
+    color: $white;
+    right: 0;
+    top: 0;
+  }
+}
+
+.form-select {
+
+
 }
 
 label {
@@ -122,8 +139,9 @@ details {
   &[open] {
 
     .summary {
+      @include margin-bottom(.5);
+      
       border-bottom: 0;
-      margin-bottom: 0;
 
       &__icon {
         float: right;
@@ -225,6 +243,8 @@ details {
 }
 
 .wrapper-breadcrumb {
+  @include margin-top(2);
+
   border-top: 1px solid $ui-lightest-grey;
 }
 
