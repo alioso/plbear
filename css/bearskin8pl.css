@@ -380,6 +380,18 @@ i {
   min-width: 75px;
 }
 
+.indented:first-of-type {
+  padding: 0rem 0rem 0rem 4.875rem;
+}
+
+.indented:nth-of-type(2) {
+  padding: 0rem 0rem 0rem 9.75rem;
+}
+
+.indented:nth-of-type(3) {
+  padding: 0rem 0rem 0rem 14.625rem;
+}
+
 details {
   margin: 1.625rem 0;
 }
