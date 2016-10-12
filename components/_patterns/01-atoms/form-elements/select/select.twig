@@ -1,6 +1,6 @@
 {% spaceless %}
 <div class="select-wrapper">
-  <select class="form-select select-wrapper__select" {{ attributes.addClass(modifier_class) }}>
+  <select class="form-select select-wrapper__select {{modifier_class}}">
     {% for option in options %}
       {% if option.type == 'optgroup' %}
         <optgroup label="{{ option.label }}">

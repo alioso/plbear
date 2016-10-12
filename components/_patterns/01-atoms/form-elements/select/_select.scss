@@ -1,5 +1,5 @@
 .select-wrapper {
-  @include padding(.3, .3);
+  @include padding(0, .3);
 
   border: 1px solid $grey;
   position: relative;
@@ -24,6 +24,6 @@
     width: 100%;
     z-index: 2;
     font-size: 1em;
-    height: 25px;
+    height: 40px;
   }
 }

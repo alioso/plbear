@@ -12,6 +12,14 @@ form {
   @include margin-bottom(.5);
 }
 
+label {
+  @include font-size(.9);
+  @include margin-bottom(.1);
+
+  display: block;
+  font-family: $Montserrat;
+}
+
 .button {
   @include button($gradient-top, $gradient-bottom, $hover-gradient-top, $hover-gradient-bottom);
 }
@@ -41,6 +49,7 @@ input[type="search"] {
 .select-wrapper {
   border-radius: $ui-border-radius;
   background: $ui-lightest-grey;
+  border-radius: 0 $ui-border-radius $ui-border-radius 0;
 
   &:after {
     font-size: 12px;
@@ -48,24 +57,29 @@ input[type="search"] {
     background: $ui-grey;
     color: $white;
     right: 0;
-    top: 0;
+    top: -1px;
+    border-radius: 0 $ui-border-radius $ui-border-radius 0;
+    max-height: 40px;
   }
 }
 
-.form-select {
+select {
+  height: 40px;
+}
 
+.js-form-type-checkbox {
+
+  label {
+    display: inline-block;
+  }
 
 }
 
-label {
-  @include font-size(.9);
 
-  display: block;
-  font-family: $Montserrat;
-}
 
 .description {
   @include font-size(.7);
+  @include margin-top(.2);
 
   color: $ui-grey;
 }
@@ -140,7 +154,7 @@ details {
 
     .summary {
       @include margin-bottom(.5);
-      
+
       border-bottom: 0;
 
       &__icon {

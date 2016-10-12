@@ -525,6 +525,13 @@ h2, h3 {
   margin-bottom: 0.8125rem;
 }
 
+.ui--grey label {
+  font-size: 0.9rem;
+  margin-bottom: 0.1625rem;
+  display: block;
+  font-family: "Montserrat";
+}
+
 .ui--grey .button, .ui--grey .form-submit {
   font-size: 0.8rem;
   position: relative;
@@ -568,6 +575,7 @@ h2, h3 {
 .ui--grey .select-wrapper {
   border-radius: 5px;
   background: #F5F5F5;
+  border-radius: 0 5px 5px 0;
 }
 
 .ui--grey .select-wrapper:after {
@@ -576,17 +584,22 @@ h2, h3 {
   background: #808080;
   color: white;
   right: 0;
-  top: 0;
+  top: -1px;
+  border-radius: 0 5px 5px 0;
+  max-height: 40px;
 }
 
-.ui--grey label {
-  font-size: 0.9rem;
-  display: block;
-  font-family: "Montserrat";
+.ui--grey select {
+  height: 40px;
+}
+
+.ui--grey .js-form-type-checkbox label {
+  display: inline-block;
 }
 
 .ui--grey .description {
   font-size: 0.7rem;
+  margin-top: 0.325rem;
   color: #808080;
 }
 
@@ -787,6 +800,13 @@ h2, h3 {
   margin-bottom: 0.8125rem;
 }
 
+.ui--blue label {
+  font-size: 0.9rem;
+  margin-bottom: 0.1625rem;
+  display: block;
+  font-family: "Montserrat";
+}
+
 .ui--blue .button, .ui--blue .form-submit {
   font-size: 0.8rem;
   position: relative;
@@ -830,6 +850,7 @@ h2, h3 {
 .ui--blue .select-wrapper {
   border-radius: 5px;
   background: #F5F5F5;
+  border-radius: 0 5px 5px 0;
 }
 
 .ui--blue .select-wrapper:after {
@@ -838,17 +859,22 @@ h2, h3 {
   background: #808080;
   color: white;
   right: 0;
-  top: 0;
+  top: -1px;
+  border-radius: 0 5px 5px 0;
+  max-height: 40px;
 }
 
-.ui--blue label {
-  font-size: 0.9rem;
-  display: block;
-  font-family: "Montserrat";
+.ui--blue select {
+  height: 40px;
+}
+
+.ui--blue .js-form-type-checkbox label {
+  display: inline-block;
 }
 
 .ui--blue .description {
   font-size: 0.7rem;
+  margin-top: 0.325rem;
   color: #808080;
 }
 
@@ -1049,6 +1075,13 @@ h2, h3 {
   margin-bottom: 0.8125rem;
 }
 
+.ui--green label {
+  font-size: 0.9rem;
+  margin-bottom: 0.1625rem;
+  display: block;
+  font-family: "Montserrat";
+}
+
 .ui--green .button, .ui--green .form-submit {
   font-size: 0.8rem;
   position: relative;
@@ -1092,6 +1125,7 @@ h2, h3 {
 .ui--green .select-wrapper {
   border-radius: 5px;
   background: #F5F5F5;
+  border-radius: 0 5px 5px 0;
 }
 
 .ui--green .select-wrapper:after {
@@ -1100,17 +1134,22 @@ h2, h3 {
   background: #808080;
   color: white;
   right: 0;
-  top: 0;
+  top: -1px;
+  border-radius: 0 5px 5px 0;
+  max-height: 40px;
 }
 
-.ui--green label {
-  font-size: 0.9rem;
-  display: block;
-  font-family: "Montserrat";
+.ui--green select {
+  height: 40px;
+}
+
+.ui--green .js-form-type-checkbox label {
+  display: inline-block;
 }
 
 .ui--green .description {
   font-size: 0.7rem;
+  margin-top: 0.325rem;
   color: #808080;
 }
 

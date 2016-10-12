@@ -372,11 +372,15 @@ code {
 }
 
 .form-item {
-  margin-bottom: 0.8125rem;
+  margin: 0.8125rem 0;
+}
+
+.form-checkboxes input {
+  margin: 0 5px 0 0;
 }
 
 .select-wrapper {
-  padding: 0.4875rem 0.4875rem;
+  padding: 0 0.4875rem;
   border: 1px solid #eaeaea;
   position: relative;
   max-width: 500px;
@@ -402,7 +406,7 @@ code {
   width: 100%;
   z-index: 2;
   font-size: 1em;
-  height: 25px;
+  height: 40px;
 }
 
 i {
