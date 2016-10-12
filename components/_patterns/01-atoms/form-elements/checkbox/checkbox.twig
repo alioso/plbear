@@ -1,3 +1,4 @@
-<div class="form-checkboxes {{modifier_class}}">
-  {{ children }}
+<div class="checkbox-wrapper {{modifier_class}}">
+  <input{{ attributes.setAttribute('tabindex', 0) }} />{{ children }}
+  <i class="icon icon-checkmark"></i>
 </div>

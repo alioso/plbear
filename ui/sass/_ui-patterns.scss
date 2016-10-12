@@ -4,6 +4,22 @@
 // Atoms
 //******
 
+::-webkit-input-placeholder {
+   @include placeholder;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   @include placeholder;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   @include placeholder;
+}
+
+:-ms-input-placeholder {
+   @include placeholder;
+}
+
 form {
   @include margin(1, 0);
 }
@@ -29,7 +45,8 @@ label {
 }
 
 .form-text,
-.form-email {
+.form-email,
+.form-textarea {
   @include padding(.2, .2);
   @include font-size(1);
 
@@ -38,12 +55,22 @@ label {
   width: 100%;
   max-width: 30em;
   border: 1px solid $ui-light-grey;
+  transition: border .2s ease-in-out;
+
+  &:focus {
+    outline: 0;
+    border-color: $normal;
+  }
 }
 
 input[type="search"] {
   @extend .form-text;
 
   appearance: initial;
+}
+
+.filter-wrapper {
+  border: 1px solid $ui-light-grey;
 }
 
 .select-wrapper {
@@ -63,19 +90,78 @@ input[type="search"] {
   }
 }
 
-select {
-  height: 40px;
-}
-
-.js-form-type-checkbox {
+.js-form-type-checkbox,
+.js-form-type-radio {
 
   label {
     display: inline-block;
+    position: relative;
+    z-index: 2;
+    padding-left: 25px;
+    margin-left: -20px;
+    cursor: pointer;
   }
-
 }
 
+.checkbox-wrapper {
+  top: 2px;
+  display: inline-block;
+  position: relative;
+  width: 17px;
+  height: 17px;
+  border: 2px solid $ui-light-grey;
+  border-radius: $ui-border-radius;
+  z-index: 1;
+  background: $ui-lightest-grey;
 
+  i {
+    color: $normal;
+    font-size: 20px;
+    position: absolute;
+    top: 4px;
+    left: -1px;
+    opacity: 0;
+    transition: opacity .2s ease-in-out;
+  }
+
+  .form-checkbox {
+    display: none;
+
+    &:checked + i {
+      opacity: 1;
+    }
+  }
+}
+
+.radio-wrapper {
+  top: 2px;
+  display: inline-block;
+  position: relative;
+  width: 17px;
+  height: 17px;
+  border: 2px solid $ui-light-grey;
+  border-radius: 50%;
+  z-index: 1;
+  background: $ui-lightest-grey;
+
+  i {
+    color: $normal;
+    font-size: 20px;
+    position: absolute;
+    top: 4px;
+    left: -1px;
+    opacity: 0;
+    transition: opacity .2s ease-in-out;
+  }
+
+  .form-radio {
+    display: none;
+
+    &:checked + i {
+      opacity: 1;
+    }
+  }
+}
 
 .description {
   @include font-size(.7);
@@ -84,6 +170,52 @@ select {
   color: $ui-grey;
 }
 
+.js-form-type-vertical-tabs {
+  display: inline-block;
+  width: 100%;
+}
+
+.vertical-tabs {
+
+  &__menu-item-title {
+    text-decoration: none !important;
+  }
+
+  &__pane {
+    clear: none;
+  }
+
+  .summary,
+  .details-wrapper {
+    border: none !important;
+  }
+
+  &__menu-item-summary {
+
+    padding-left: 5px;
+  }
+}
+
+.dropbutton-multiple {
+  margin-right: 5px;
+}
+
+.dropbutton-widget {
+  @extend .button;
+
+  .form-submit {
+    padding: 0;
+    background: transparent;
+  }
+
+  .secondary-action {
+    margin-top: 5px
+  }
+
+  .dropbutton-toggle button {
+    color: $white;
+  }
+}
 
 //**********
 // Molecules
@@ -138,6 +270,10 @@ select {
       color: $ui-black;
     }
   }
+}
+
+fieldset {
+  border: 1px solid $ui-light-grey;
 }
 
 .messages {
@@ -265,9 +401,48 @@ details {
 .wrapper-footer {
   background: $ui-lightest-grey;
 
-  &__inner{
+  &__inner {
     @include margin-top(1);
     @include margin-bottom(1);
+  }
+}
+
+table {
+
+  .form-item {
+    margin: 0;
+  }
+
+  tbody {
+
+    tr {
+      border-bottom: 1px solid $ui-light-grey;
+
+      &:last-child {
+        border: 0;
+      }
+    }
+  }
+
+  td {
+    @include padding(.5, 0);
+  }
+
+  .checkbox-wrapper {
+    display: block;
+    width: auto;
+    height: auto;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+
+    .form-checkbox {
+      display: block;
+    }
+
+    .icon-check {
+      display: none;
+    }
   }
 }
 

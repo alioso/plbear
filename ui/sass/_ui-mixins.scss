@@ -22,3 +22,9 @@
     text-decoration: none;
   }
 }
+
+@mixin placeholder {
+  @include font-size(.8);
+
+  font-weight: 400;
+}

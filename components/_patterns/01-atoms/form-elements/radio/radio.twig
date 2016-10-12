@@ -1,3 +1,4 @@
-<div {{ attributes }}>
-  {{ children }}
+<div class="radio-wrapper {{modifier_class}}">
+  <input{{ attributes.setAttribute('tabindex', 0) }} />{{ children }}
+  <i class="icon icon-btn_toggle"></i>
 </div>
