@@ -392,6 +392,26 @@ i {
   padding: 0rem 0rem 0rem 14.625rem;
 }
 
+.comment footer p {
+  border-bottom: 1px solid #eaeaea;
+  margin-bottom: 0;
+}
+
+.comment p {
+  color: #555;
+  margin-top: 10px;
+}
+
+.comment ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.comment ul a {
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
 details {
   margin: 1.625rem 0;
 }

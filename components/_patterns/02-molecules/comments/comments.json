@@ -4,12 +4,6 @@
       "class": ["comment"]
     }
   },
-  
-  "title_attributes": {
-    "Attribute()": {
-      "class": ["comment__title"]
-    }
-  },
     
   "title": "Comment Title",
   "content_attributes": {

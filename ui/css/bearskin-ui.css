@@ -737,6 +737,14 @@ h2, h3 {
   text-decoration: none;
 }
 
+.ui--grey .comment footer {
+  font-family: "Montserrat";
+}
+
+.ui--grey .comment__content {
+  font-family: "Noto Serif";
+}
+
 .ui--grey .wrapper-header__inner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -969,6 +977,14 @@ h2, h3 {
   text-decoration: none;
 }
 
+.ui--blue .comment footer {
+  font-family: "Montserrat";
+}
+
+.ui--blue .comment__content {
+  font-family: "Noto Serif";
+}
+
 .ui--blue .wrapper-header__inner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1199,6 +1215,14 @@ h2, h3 {
   background: -webkit-linear-gradient(#016F68, #00534C);
   background: linear-gradient(#016F68, #00534C);
   text-decoration: none;
+}
+
+.ui--green .comment footer {
+  font-family: "Montserrat";
+}
+
+.ui--green .comment__content {
+  font-family: "Noto Serif";
 }
 
 .ui--green .wrapper-header__inner {
