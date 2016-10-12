@@ -107,8 +107,8 @@ input[type="search"] {
   top: 2px;
   display: inline-block;
   position: relative;
-  width: 17px;
-  height: 17px;
+  width: 16px;
+  height: 16px;
   border: 2px solid $ui-light-grey;
   border-radius: $ui-border-radius;
   z-index: 1;
@@ -116,10 +116,10 @@ input[type="search"] {
 
   i {
     color: $normal;
-    font-size: 20px;
+    font-size: 22px;
     position: absolute;
-    top: 4px;
-    left: -1px;
+    top: -6px;
+    left: -2px;
     opacity: 0;
     transition: opacity .2s ease-in-out;
   }
@@ -137,8 +137,8 @@ input[type="search"] {
   top: 2px;
   display: inline-block;
   position: relative;
-  width: 17px;
-  height: 17px;
+  width: 18px;
+  height: 18px;
   border: 2px solid $ui-light-grey;
   border-radius: 50%;
   z-index: 1;
@@ -146,10 +146,10 @@ input[type="search"] {
 
   i {
     color: $normal;
-    font-size: 20px;
+    font-size: 14px;
     position: absolute;
-    top: 4px;
-    left: -1px;
+    top: 0;
+    left: 1.5px;
     opacity: 0;
     transition: opacity .2s ease-in-out;
   }
