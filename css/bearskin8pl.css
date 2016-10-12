@@ -582,6 +582,22 @@ details .details-wrapper {
   background: transparent;
 }
 
+.tabs--secondary .tabs__tab {
+  margin: 0.8125rem 0.8125rem 0.8125rem 0;
+  border: 0;
+  border-radius: 0;
+}
+
+.tabs--secondary .tabs__tab-link {
+  padding: 0;
+  background: transparent;
+}
+
+.tabs--secondary .tabs__tab-link.is-active {
+  border-bottom: 2px solid #555;
+  border-radius: 0;
+}
+
 .sticky-footer {
   display: -webkit-box;
   display: -ms-flexbox;
