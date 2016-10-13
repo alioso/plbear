@@ -1,10 +1,11 @@
 .select-wrapper {
+  padding-right: 50px;
   border: 1px solid $grey;
   position: relative;
   max-width: 500px;
 
   &::after {
-    @include font-size(.8);
+    @include font-size(.7);
 
     position: absolute;
     top: 10px;
@@ -22,6 +23,7 @@
     width: 100%;
     z-index: 2;
     font-size: 1em;
-    height: 40px;
+    height: 34px;
+    padding: 0 0 0 .5em;
   }
 }

@@ -79,14 +79,14 @@ input[type="search"] {
   border-radius: 0 $ui-border-radius $ui-border-radius 0;
 
   &:after {
-    font-size: 12px;
-    padding: 11px 14px;
+    font-size: 9px;
+    padding: 12px 12px 10px 12px;
     background: $ui-grey;
     color: $white;
     right: 0;
     top: -1px;
     border-radius: 0 $ui-border-radius $ui-border-radius 0;
-    max-height: 40px;
+    max-height: 34px;
   }
 }
 
@@ -212,9 +212,17 @@ input[type="search"] {
     margin-top: 5px
   }
 
-  .dropbutton-toggle button {
+  .dropbutton-toggle button,
+  a {
     color: $white;
   }
+}
+
+code {
+  @include margin(.5, 0);
+  
+  border: 1px dotted $ui-light-grey;
+  background: $ui-lightest-grey;
 }
 
 //**********
@@ -379,6 +387,14 @@ details {
   }
 }
 
+.list-group {
+
+  &__link:not(:first-child) {
+
+    @include margin-top(.5);
+  }
+}
+
 //**********
 // Organisms
 //**********
@@ -408,9 +424,17 @@ details {
 }
 
 table {
+  @include margin(1, 0);
+
+  width: 100%;
+  border: 1px solid $ui-light-grey;
 
   .form-item {
     margin: 0;
+  }
+
+  thead {
+    background: $ui-lightest-grey;
   }
 
   tbody {
@@ -424,8 +448,15 @@ table {
     }
   }
 
-  td {
-    @include padding(.5, 0);
+  td,
+  th {
+    @include padding(.3, .5);
+
+    text-align: left;
+  }
+
+  ul {
+    padding-left: 15px;
   }
 
   .checkbox-wrapper {
