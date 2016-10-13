@@ -7,7 +7,6 @@ global-styles:
 global-scripts:
   version: 1.x
   js:
-    js/vendor/flexibility.js: {}
     js/scripts.js: {}
   dependencies:
     - core/jquery
@@ -15,6 +14,7 @@ global-scripts:
     - core/drupal
     - core/drupalSettings
     - core/jquery.once
+
 ui:
   version: 1.x
   css:
@@ -22,3 +22,12 @@ ui:
       ui/css/bearskin-ui.css: {}
   js:
     ui/js/bearskin-ui.js: {}
+
+flexboxgrid:
+  css:
+    theme:
+      css/flexboxgrid.min.css: {}
+
+flexibility:
+  js:
+    js/vendor/flexibility.js: {}

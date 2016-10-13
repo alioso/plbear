@@ -12,6 +12,7 @@
     "del": "^2.2.2",
     "eslint": "^2.13.1",
     "eslint-config-probo": "^1.1.0",
+    "flexboxgrid": "^6.3.1",
     "fs": "0.0.1-security",
     "gulp": "^3.9.1",
     "gulp-cached": "^1.1.0",
@@ -45,6 +46,8 @@
     "yeoman-generator": "^0.23.3"
   },
   "dependencies": {
+    "flexboxgrid": "^6.3.1",
+    "lodash.assign": "^4.2.0",
     "slimerjs": "^0.906.2"
   },
   "scripts": {

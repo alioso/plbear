@@ -8,6 +8,8 @@ libraries:
   - bearskin8pl/gutenberg
   - bearskin8pl/global-styles
   - bearskin8pl/global-scripts
+  - bearskin8pl/flexboxgrid
+  - bearskin8pl/flexibility
 
 libraries-override:
   system/base: false
