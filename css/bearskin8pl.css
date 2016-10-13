@@ -610,6 +610,10 @@ details .details-wrapper {
   text-align: center;
 }
 
+.pager .pager__item--ellipsis {
+  color: #888;
+}
+
 .tabs {
   margin: 0.8125rem 0;
   display: inline-block;
