@@ -585,7 +585,7 @@ details .details-wrapper {
 .pager li {
   font-size: 1rem;
   margin: 0 0.1625rem;
-  display: inline;
+  display: inline-block;
 }
 
 .pager .is-active {
