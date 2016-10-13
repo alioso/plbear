@@ -220,7 +220,7 @@ input[type="search"] {
 
 code {
   @include margin(.5, 0);
-  
+
   border: 1px dotted $ui-light-grey;
   background: $ui-lightest-grey;
 }
@@ -393,6 +393,15 @@ details {
 
     @include margin-top(.5);
   }
+}
+
+//comments
+.comment footer {
+  font-family: $Montserrat;
+}
+
+.comment__content {
+  font-family: $Noto-serif;
 }
 
 //**********

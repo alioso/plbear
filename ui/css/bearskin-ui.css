@@ -3695,6 +3695,14 @@ strong {
   margin-top: 0.8125rem;
 }
 
+.ui--grey .comment footer {
+  font-family: "Montserrat";
+}
+
+.ui--grey .comment__content {
+  font-family: "Noto Serif";
+}
+
 .ui--grey .wrapper-header__inner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4173,6 +4181,14 @@ strong {
   margin-top: 0.8125rem;
 }
 
+.ui--blue .comment footer {
+  font-family: "Montserrat";
+}
+
+.ui--blue .comment__content {
+  font-family: "Noto Serif";
+}
+
 .ui--blue .wrapper-header__inner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4649,6 +4665,14 @@ strong {
 
 .ui--green .list-group__link:not(:first-child) {
   margin-top: 0.8125rem;
+}
+
+.ui--green .comment footer {
+  font-family: "Montserrat";
+}
+
+.ui--green .comment__content {
+  font-family: "Noto Serif";
 }
 
 .ui--green .wrapper-header__inner {
