@@ -297,7 +297,7 @@ figure blockquote p {
 
 ul li,
 ol li {
-  margin-bottom: 0;
+  margin-bottom: 0.8125rem;
 }
 
 hr {
@@ -3355,7 +3355,8 @@ strong {
 
 .ui--grey .form-text, .ui--grey input[type="search"],
 .ui--grey .form-email,
-.ui--grey .form-textarea {
+.ui--grey .form-textarea,
+.ui--grey .form-date {
   padding: 0.325rem 0.325rem;
   font-size: 1rem;
   font-family: "Montserrat";
@@ -3368,9 +3369,17 @@ strong {
 
 .ui--grey .form-text:focus, .ui--grey input[type="search"]:focus,
 .ui--grey .form-email:focus,
-.ui--grey .form-textarea:focus {
+.ui--grey .form-textarea:focus,
+.ui--grey .form-date:focus {
   outline: 0;
   border-color: #808080;
+}
+
+.ui--grey button.link {
+  margin-left: 5px;
+  border: 1px solid #DCDCDC;
+  font-family: "Montserrat";
+  background: #F5F5F5;
 }
 
 .ui--grey input[type="search"] {
@@ -3386,7 +3395,7 @@ strong {
 .ui--grey .select-wrapper {
   border-radius: 5px;
   background: #F5F5F5;
-  border-radius: 0 5px 5px 0;
+  border-radius: 5px;
 }
 
 .ui--grey .select-wrapper:after {
@@ -3442,7 +3451,7 @@ strong {
 }
 
 .ui--grey .radio-wrapper {
-  top: 2px;
+  top: 3px;
   display: inline-block;
   position: relative;
   width: 18px;
@@ -3472,10 +3481,14 @@ strong {
   opacity: 1;
 }
 
-.ui--grey .description {
+.ui--grey .description, .ui--grey .field-suffix {
   font-size: 0.7rem;
   margin-top: 0.325rem;
   color: #808080;
+}
+
+.ui--grey .field-suffix {
+  display: block;
 }
 
 .ui--grey .js-form-type-vertical-tabs {
@@ -3703,6 +3716,30 @@ strong {
   font-family: "Noto Serif";
 }
 
+.ui--grey .progress {
+  margin: 1.625rem 0;
+}
+
+.ui--grey .progress__track {
+  border: 1px solid #DCDCDC;
+  background: #F5F5F5;
+  height: 25px;
+  border-radius: 5px;
+}
+
+.ui--grey .progress__bar {
+  height: 100%;
+  background: #808080;
+  border-radius: 5px;
+}
+
+.ui--grey .progress__percentage {
+  padding: 0.8125rem 0.8125rem;
+  color: #808080;
+  font-family: "Montserrat";
+  text-align: center;
+}
+
 .ui--grey .wrapper-header__inner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3841,7 +3878,8 @@ strong {
 
 .ui--blue .form-text, .ui--blue input[type="search"],
 .ui--blue .form-email,
-.ui--blue .form-textarea {
+.ui--blue .form-textarea,
+.ui--blue .form-date {
   padding: 0.325rem 0.325rem;
   font-size: 1rem;
   font-family: "Montserrat";
@@ -3854,9 +3892,17 @@ strong {
 
 .ui--blue .form-text:focus, .ui--blue input[type="search"]:focus,
 .ui--blue .form-email:focus,
-.ui--blue .form-textarea:focus {
+.ui--blue .form-textarea:focus,
+.ui--blue .form-date:focus {
   outline: 0;
   border-color: #548BC3;
+}
+
+.ui--blue button.link {
+  margin-left: 5px;
+  border: 1px solid #DCDCDC;
+  font-family: "Montserrat";
+  background: #F5F5F5;
 }
 
 .ui--blue input[type="search"] {
@@ -3872,7 +3918,7 @@ strong {
 .ui--blue .select-wrapper {
   border-radius: 5px;
   background: #F5F5F5;
-  border-radius: 0 5px 5px 0;
+  border-radius: 5px;
 }
 
 .ui--blue .select-wrapper:after {
@@ -3928,7 +3974,7 @@ strong {
 }
 
 .ui--blue .radio-wrapper {
-  top: 2px;
+  top: 3px;
   display: inline-block;
   position: relative;
   width: 18px;
@@ -3958,10 +4004,14 @@ strong {
   opacity: 1;
 }
 
-.ui--blue .description {
+.ui--blue .description, .ui--blue .field-suffix {
   font-size: 0.7rem;
   margin-top: 0.325rem;
   color: #808080;
+}
+
+.ui--blue .field-suffix {
+  display: block;
 }
 
 .ui--blue .js-form-type-vertical-tabs {
@@ -4189,6 +4239,30 @@ strong {
   font-family: "Noto Serif";
 }
 
+.ui--blue .progress {
+  margin: 1.625rem 0;
+}
+
+.ui--blue .progress__track {
+  border: 1px solid #DCDCDC;
+  background: #F5F5F5;
+  height: 25px;
+  border-radius: 5px;
+}
+
+.ui--blue .progress__bar {
+  height: 100%;
+  background: #548BC3;
+  border-radius: 5px;
+}
+
+.ui--blue .progress__percentage {
+  padding: 0.8125rem 0.8125rem;
+  color: #548BC3;
+  font-family: "Montserrat";
+  text-align: center;
+}
+
 .ui--blue .wrapper-header__inner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4327,7 +4401,8 @@ strong {
 
 .ui--green .form-text, .ui--green input[type="search"],
 .ui--green .form-email,
-.ui--green .form-textarea {
+.ui--green .form-textarea,
+.ui--green .form-date {
   padding: 0.325rem 0.325rem;
   font-size: 1rem;
   font-family: "Montserrat";
@@ -4340,9 +4415,17 @@ strong {
 
 .ui--green .form-text:focus, .ui--green input[type="search"]:focus,
 .ui--green .form-email:focus,
-.ui--green .form-textarea:focus {
+.ui--green .form-textarea:focus,
+.ui--green .form-date:focus {
   outline: 0;
   border-color: #078A80;
+}
+
+.ui--green button.link {
+  margin-left: 5px;
+  border: 1px solid #DCDCDC;
+  font-family: "Montserrat";
+  background: #F5F5F5;
 }
 
 .ui--green input[type="search"] {
@@ -4358,7 +4441,7 @@ strong {
 .ui--green .select-wrapper {
   border-radius: 5px;
   background: #F5F5F5;
-  border-radius: 0 5px 5px 0;
+  border-radius: 5px;
 }
 
 .ui--green .select-wrapper:after {
@@ -4414,7 +4497,7 @@ strong {
 }
 
 .ui--green .radio-wrapper {
-  top: 2px;
+  top: 3px;
   display: inline-block;
   position: relative;
   width: 18px;
@@ -4444,10 +4527,14 @@ strong {
   opacity: 1;
 }
 
-.ui--green .description {
+.ui--green .description, .ui--green .field-suffix {
   font-size: 0.7rem;
   margin-top: 0.325rem;
   color: #808080;
+}
+
+.ui--green .field-suffix {
+  display: block;
 }
 
 .ui--green .js-form-type-vertical-tabs {
@@ -4673,6 +4760,30 @@ strong {
 
 .ui--green .comment__content {
   font-family: "Noto Serif";
+}
+
+.ui--green .progress {
+  margin: 1.625rem 0;
+}
+
+.ui--green .progress__track {
+  border: 1px solid #DCDCDC;
+  background: #F5F5F5;
+  height: 25px;
+  border-radius: 5px;
+}
+
+.ui--green .progress__bar {
+  height: 100%;
+  background: #078A80;
+  border-radius: 5px;
+}
+
+.ui--green .progress__percentage {
+  padding: 0.8125rem 0.8125rem;
+  color: #078A80;
+  font-family: "Montserrat";
+  text-align: center;
 }
 
 .ui--green .wrapper-header__inner {
