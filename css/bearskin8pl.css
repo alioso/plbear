@@ -580,6 +580,42 @@ details .details-wrapper {
   transition: opacity .3s ease-in-out;
 }
 
+.pager ul {
+  list-style: none;
+}
+
+.pager li {
+  font-size: 1rem;
+  margin: 0 0.1625rem;
+  display: inline-block;
+}
+
+.pager .is-active {
+  padding: 0 0.4875rem;
+  background: #eaeaea;
+  color: #888;
+}
+
+.pager a {
+  color: #888;
+}
+
+.pager span {
+  line-height: 0.8125;
+  background: #728EAD;
+  color: white;
+  border: 1px solid #728EAD;
+  border-radius: 50px;
+  width: 17px;
+  height: 17px;
+  display: inline-block;
+  text-align: center;
+}
+
+.pager .pager__item--ellipsis {
+  color: #888;
+}
+
 .tabs {
   margin: 0.8125rem 0;
   display: inline-block;

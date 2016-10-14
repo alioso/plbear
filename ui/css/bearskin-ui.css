@@ -3792,6 +3792,10 @@ strong {
   margin-top: 0.8125rem;
 }
 
+.ui--grey .pager li {
+  font-family: "Montserrat";
+}
+
 .ui--grey .comment footer {
   font-family: "Montserrat";
 }
@@ -4399,6 +4403,10 @@ strong {
   margin-top: 0.8125rem;
 }
 
+.ui--blue .pager li {
+  font-family: "Montserrat";
+}
+
 .ui--blue .comment footer {
   font-family: "Montserrat";
 }
@@ -5004,6 +5012,10 @@ strong {
 
 .ui--green .list-group__link:not(:first-child) {
   margin-top: 0.8125rem;
+}
+
+.ui--green .pager li {
+  font-family: "Montserrat";
 }
 
 .ui--green .comment footer {
