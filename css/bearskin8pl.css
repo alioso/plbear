@@ -299,7 +299,7 @@ hr {
   margin-top: 3.25rem;
   margin-bottom: 3.25rem;
   border: 0;
-  color: #261D19;
+  color: #eaeaea;
   display: block;
   height: 26px;
   height: 1.625rem;
@@ -307,8 +307,8 @@ hr {
   margin-left: auto;
   background-size: 100% 26px;
   background-size: 100% 1.625rem;
-  background-image: -webkit-linear-gradient(top, transparent 1px, transparent 11px, #261D19 11px, #261D19 15px, transparent 15px, transparent 26px);
-  background-image: linear-gradient(to bottom, transparent 1px, transparent 11px, #261D19 11px, #261D19 15px, transparent 15px, transparent 26px);
+  background-image: -webkit-linear-gradient(top, transparent 1px, transparent 11px, #eaeaea 11px, #eaeaea 15px, transparent 15px, transparent 26px);
+  background-image: linear-gradient(to bottom, transparent 1px, transparent 11px, #eaeaea 11px, #eaeaea 15px, transparent 15px, transparent 26px);
   width: 100px;
 }
 
@@ -856,8 +856,8 @@ details .details-wrapper {
   hr {
     background-size: 100% 27px;
     background-size: 100% 1.6875rem;
-    background-image: -webkit-linear-gradient(top, transparent 1px, transparent 11.5px, #261D19 11.5px, #261D19 15.5px, transparent 15.5px, transparent 27px);
-    background-image: linear-gradient(to bottom, transparent 1px, transparent 11.5px, #261D19 11.5px, #261D19 15.5px, transparent 15.5px, transparent 27px);
+    background-image: -webkit-linear-gradient(top, transparent 1px, transparent 11.5px, #eaeaea 11.5px, #eaeaea 15.5px, transparent 15.5px, transparent 27px);
+    background-image: linear-gradient(to bottom, transparent 1px, transparent 11.5px, #eaeaea 11.5px, #eaeaea 15.5px, transparent 15.5px, transparent 27px);
   }
 
   small {
