@@ -1,4 +1,4 @@
 # Set the default values of settings on the theme-settings.php form.
 
-ui: no_ui
+ui: green
 sticky_footer: 1

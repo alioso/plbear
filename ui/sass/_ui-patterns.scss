@@ -239,6 +239,32 @@ code {
   background: $ui-lightest-grey;
 }
 
+#mnav {
+  font-size: 26px;
+  display: block;
+  position: relative;
+  z-index: 6;
+  color: $ui-black;
+
+  i {
+    transition: all .2s ease-in-out;
+  }
+
+  &.open {
+    color: $white;
+
+    i {
+      &:before {
+        content: "\f00d";
+      }
+    }
+  }
+
+  @include breakpoint($bp-768) {
+    display: none;
+  }
+}
+
 //**********
 // Molecules
 //**********
@@ -384,8 +410,15 @@ details {
 }
 
 .menu {
+  transition: background .2s ease-in-out;
 
   &--main {
+    position: relative;
+    top: -200px;
+
+    @include breakpoint($bp-768) {
+      top: 0;
+    }
 
     a {
       @include link($ui-black, none, $ui-black, underline);
@@ -396,6 +429,51 @@ details {
 
         color: $white;
         font-family: $Noto-serif;
+      }
+    }
+
+    &.open {
+      position: absolute;
+      z-index: 5;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      right: 0;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, .85);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .menu {
+        width: 100%;
+
+        &__item {
+          display: block;
+          margin: 0;
+          text-align: center;
+          width: 100%;
+        }
+
+        &__link {
+          @include link($white, none, $white, none);
+
+          font-family: $Montserrat;
+          text-transform: uppercase;
+          display: block;
+          padding: 10px;
+          width: 100%;
+          background: transparent;
+          border-radius: 0 !important;
+
+          &:hover,
+          &:focus,
+          &.is-active {
+            background: $normal;
+          }
+        }
       }
     }
   }
