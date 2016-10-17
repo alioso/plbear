@@ -37,6 +37,7 @@ function bearskin8pl_preprocess_html(&$variables, $hook) {
     $variables['attributes']['class'][] = 'with-sticky-footer';
   }
 
+  // adding classes for basic layouts
   if (!empty($variables['page']['sidebar_first']) && !empty($variables['page']['sidebar_second'])) {
     $variables['attributes']['class'][] = 'layout-two-sidebars';
   }
@@ -58,9 +59,7 @@ function bearskin8pl_preprocess_html(&$variables, $hook) {
  */
 function bearskin8pl_preprocess_region(&$variables) {
   $variables['attributes']['class'][] = 'region';
-  $variables['attributes']['class'][] =
-    'region--' . $variables['elements']['#region']
-  ;
+  $variables['attributes']['class'][] = 'region--' . $variables['elements']['#region'];
 }
 
 /**
@@ -88,6 +87,7 @@ function bearskin8pl_preprocess_block(&$variables) {
     // Powered by Drupal block.
     'system_powered_by_block' => 'block--powered-by'
   );
+
   if (array_key_exists($variables['plugin_id'], $map)) {
     // Block found in map.
     $variables['attributes']['class'][] = $map[$variables['plugin_id']];
@@ -95,9 +95,7 @@ function bearskin8pl_preprocess_block(&$variables) {
   elseif (substr($variables['plugin_id'], 0, 18) === 'system_menu_block:') {
     // Menu blocks, including main navigation.
     $variables['attributes']['class'][] = 'nav';
-    $variables['attributes']['class'][] =
-      'nav--' . substr($variables['plugin_id'], 18)
-    ;
+    $variables['attributes']['class'][] = 'nav--' . substr($variables['plugin_id'], 18);
   }
 }
 
@@ -155,6 +153,7 @@ function bearskin8pl_preprocess_node(&$variables) {
   $variables['attributes']['class'][] = 'node';
   $variables['attributes']['class'][] = 'node--' . $variables['node']->getType();
   $variables['attributes']['class'][] = $variables['view_mode'];
+  
   if ($variables['view_mode'] !== 'page') {
     $variables['title_attributes']['class'][] = 'node__title';
   }
