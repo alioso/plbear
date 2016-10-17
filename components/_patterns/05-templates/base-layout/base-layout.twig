@@ -1,0 +1,41 @@
+<div class="layout">
+
+  {% block row_top %}
+    <div class="row row--top">
+      {{ content.top_row }}
+    </div>
+  {% endblock %}
+
+  <div class="row row--center">
+
+    {% block content %}
+
+      {% block left_sidebar %}
+        <aside class="sidebar sidebar--left col-lg-3">
+          {{ content.left_sidebar }}
+        </aside>
+      {% endblock %}
+
+      {% block main_content %}
+        <main class="row main-content col-lg-6">
+          {{ content.main }}
+        </main>
+      {% endblock %}
+
+      {% block right_sidebar %}
+        <aside class="sidebar sidebar--right col-lg-3">
+          {{ content.right_sidebar }}
+        </aside>
+      {% endblock %}
+
+    {% endblock %}
+
+  </div>
+
+  {% block row_bottom %}
+    <div class="row row--bottom">
+      {{ content.bottom_row }}
+    </div>
+  {% endblock %}
+
+</div>
