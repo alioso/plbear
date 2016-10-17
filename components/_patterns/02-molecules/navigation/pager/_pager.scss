@@ -6,17 +6,16 @@
 
   li {
     @include font-size(1);
-    @include margin(0, .1);
     display: inline-block;
   }
 
   .is-active {
-    @include padding(0, .3);
     background: $grey;
     color: $dark-grey;
   }
 
   a {
+    @include padding(0, .3);
     color: $dark-grey;
   }
 

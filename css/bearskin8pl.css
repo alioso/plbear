@@ -591,17 +591,16 @@ details .details-wrapper {
 
 .pager li {
   font-size: 1rem;
-  margin: 0 0.1625rem;
   display: inline-block;
 }
 
 .pager .is-active {
-  padding: 0 0.4875rem;
   background: #eaeaea;
   color: #888;
 }
 
 .pager a {
+  padding: 0 0.4875rem;
   color: #888;
 }
 
