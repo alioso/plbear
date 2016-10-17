@@ -263,13 +263,13 @@ a:hover:visited {
 
 figure {
   margin: 0;
+  display: inline-block;
 }
 
 figcaption {
   line-height: 1.625;
   color: #261D19;
   margin-bottom: 0;
-  text-align: center;
 }
 
 blockquote {
@@ -331,7 +331,7 @@ code {
 
 .visually-hidden,
 .element-invisible {
-  position: absolute !important;
+  position: absolute;
   height: 0;
   width: 0;
   overflow: hidden;
@@ -377,6 +377,14 @@ code {
 
 .form-checkboxes input {
   margin: 0 5px 0 0;
+}
+
+.form-checkboxes i {
+  visibility: hidden;
+}
+
+.radio i {
+  visibility: hidden;
 }
 
 .select-wrapper {
@@ -448,30 +456,27 @@ i {
 }
 
 .indented:first-of-type {
-  padding: 0rem 0rem 0rem 4.875rem;
+  padding: 0rem 0rem 0rem 1.625rem;
 }
 
 .indented:nth-of-type(2) {
-  padding: 0rem 0rem 0rem 9.75rem;
+  padding: 0rem 0rem 0rem 3.25rem;
 }
 
 .indented:nth-of-type(3) {
-  padding: 0rem 0rem 0rem 14.625rem;
+  padding: 0rem 0rem 0rem 4.875rem;
 }
 
 .comment footer p {
+  color: #555;
+  margin-top: 10px;
   border-bottom: 1px solid #eaeaea;
   margin-bottom: 0;
 }
 
-.comment p {
-  color: #555;
-  margin-top: 10px;
-}
-
 .comment ul {
   list-style: none;
-  padding-left: 0;
+  padding: 0;
 }
 
 .comment ul a {

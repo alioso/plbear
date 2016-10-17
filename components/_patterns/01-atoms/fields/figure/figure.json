@@ -3,15 +3,15 @@
   "attributes": {
     "Attribute()": {
       "class": [
-        "kitten-figure-class"
+        "figure-class"
       ]
     }
   },
-  "caption": "Kittehz. Aww yiss.",
+  "caption": "Here is a caption.",
   "caption_attributes": {
     "Attribute()": {
       "class": [
-        "kitten-figure-class"
+        "figure-class"
       ]
     }
   }
