@@ -1,5 +1,5 @@
 @mixin element-invisible {
-  position: absolute !important;
+  position: absolute;
   height: 0;
   width: 0;
   overflow: hidden;

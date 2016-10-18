@@ -17,7 +17,6 @@
 
   .wrapper-main__inner {
     @include breakpoint($bp-768) {
-      js-display: flex;
       display: flex;
     }
   }
@@ -68,7 +67,6 @@
 .layout-two-sidebars {
   .wrapper-main__inner {
     @include breakpoint($bp-768) {
-      js-display: flex;
       display: flex;
     }
   }
