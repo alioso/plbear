@@ -1,0 +1,17 @@
+{% extends 'templates-base-layout' %}
+
+{% block content %}
+
+  {% block main_content %}
+    <main class="main-content col-xs-12 col-md-8 second {{plClass}}">
+      {{ content.main }}
+    </main>
+  {% endblock %}
+
+  {% block left_sidebar %}
+    <aside class="sidebar sidebar--left col-xs-12 col-md-4 first-md {{plClass}}">
+      {{ content.left_sidebar }}
+    </aside>
+  {% endblock %}
+
+{% endblock %}
