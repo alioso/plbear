@@ -1,6 +1,6 @@
 name: Bear Skin 8 Base Theme w/ Pattern Lab
 type: theme
-description: 'An atomic design Drupal 8 base theme including Pattern Lab'
+description: 'An atomic design Drupal 8 base theme including Pattern Lab.'
 package: Bear
 core: 8.x
 
