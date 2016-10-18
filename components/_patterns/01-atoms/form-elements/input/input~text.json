@@ -3,9 +3,9 @@
     "Attribute()": {
       "type": "text",
       "class": [
-        "button",
         "form-text"
-      ]
+      ],
+      "value": "Swibros tesliwam oprupro gugofric"
     }
   }
 }

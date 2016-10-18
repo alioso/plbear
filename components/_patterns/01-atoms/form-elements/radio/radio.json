@@ -1,7 +1,7 @@
 {
-  "children": {
+  "pl_radio_label": {
     "join()": [
-      "<label for='radio'>I am a radio button!</label>"
+      "<label for='radio' class='option'>I am a radio button!</label>"
     ]
   },
   "attributes": {
@@ -9,7 +9,10 @@
       "class": [
         "form-radio"
       ],
-      "type": "radio"
+      "type": "radio",
+      "checked": "checked"
     }
-  }
+  },
+  "pl_open_form_item": "<div class='js-form-item form-item js-form-type-radio form-item-radios js-form-item-radios'>",
+  "pl_close_form_item": "</div>"
 }
