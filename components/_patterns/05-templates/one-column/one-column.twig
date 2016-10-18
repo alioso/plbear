@@ -2,22 +2,10 @@
 
 {% block content %}
 
-  {% block left_sidebar %}
-    <aside class="sidebar sidebar--left col-lg-3">
-      {{ content.left_sidebar }}
-    </aside>
-  {% endblock %}
-
   {% block main_content %}
-    <main class="row main-content col-lg-6">
+    <main class="main-content col-lg {{plClass}}">
       {{ content.main }}
     </main>
-  {% endblock %}
-
-  {% block right_sidebar %}
-    <aside class="sidebar sidebar--right col-lg-3">
-      {{ content.right_sidebar }}
-    </aside>
   {% endblock %}
 
 {% endblock %}
