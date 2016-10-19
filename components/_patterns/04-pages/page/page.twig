@@ -2,13 +2,13 @@
   {{ region_header }}
 {% endblock %}
 
+{% block region_highlighted %}
 <div class="wrapper-highlighted">
   <div class="wrapper--inner wrapper-highlighted__inner">
-    {% block region_highlighted %}
-      {{ region_highlighted }}
     {% endblock %}
   </div>
 </div>
+{{ region_highlighted }}
 
 <div class="wrapper-main">
   <div class="wrapper--inner wrapper-main__inner">
@@ -41,13 +41,13 @@
   </div>
 </div>
 
+{% block region_breadcrumb %}
 <div class="wrapper-breadcrumb">
   <div class="wrapper--inner wrapper-breadcrumb__inner">
-    {% block region_breadcrumb %}
-      {{ region_breadcrumb }}
-    {% endblock %}
+    {{ region_breadcrumb }}
   </div>
 </div>
+{% endblock %}
 
 {% block region_footer %}
   {{ region_footer }}
