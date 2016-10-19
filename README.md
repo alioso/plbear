@@ -6,10 +6,14 @@ Bear Skin is the default theme for the [Bear](https://github.com/zivtech/bear), 
 
 Before getting started, make sure that you have the latest version of [node.js](https://nodejs.org/en/) and [yeoman](http://yeoman.io/) installed. Also, you will need to have composer installed. On a Mac, this is easiest with homebrew.
 
+## Install Pattern Lab
+
 Next, install pattern lab dependencies from Composer. `cd` to the `pattern-lab` directory and run:
 ```sh
 $ composer install
 ```
+
+## Generate Pattern Lab files
 
 Then, generate the base pattern lab files. `cd` back to the theme directory and run:
 ```sh
@@ -43,12 +47,14 @@ $ sudo npm install gulp -g
 ```
 
 ### Pattern Lab
+
 Open a new terminal window on your local machine, `cd` to your theme directory and run:
 ```sh
 $ gulp pl:watch
 ```
 
 ### Generate a pattern
+
 We have a builder in the theme to generate patterns.
 ```sh
 $ npm run new
@@ -57,6 +63,7 @@ Follow the prompt to create the pattern of your choice. The naming convention ba
 
 
 ### Additions
+
 We have included backstopJS to be able to run css regression test.
 
 Configure your test with `backstop.json`. **When in doubt, visit [BackstopJS](https://github.com/garris/BackstopJS) for more config info**.
