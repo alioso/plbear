@@ -1,0 +1,619 @@
+@mixin ui-color($light, $normal, $dark, $gradient-top, $gradient-bottom, $hover-gradient-top, $hover-gradient-bottom) {
+
+//******
+// Atoms
+//******
+
+::-webkit-input-placeholder {
+   @include placeholder;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   @include placeholder;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   @include placeholder;
+}
+
+:-ms-input-placeholder {
+   @include placeholder;
+}
+
+form {
+  @include margin(1, 0);
+}
+
+.form-item {
+  @include margin-bottom(.5);
+}
+
+label {
+  @include font-size(.9);
+  @include margin-bottom(.1);
+
+  display: block;
+  font-family: $Montserrat;
+}
+
+.button {
+  @include button($gradient-top, $gradient-bottom, $hover-gradient-top, $hover-gradient-bottom);
+}
+
+.form-submit {
+  @extend .button;
+}
+
+.form-text,
+.form-email,
+.form-textarea,
+.form-date {
+  @include padding(.2, .2);
+  @include font-size(1);
+
+  font-family: $Montserrat;
+
+  width: 100%;
+  max-width: 30em;
+  border: 1px solid $ui-light-grey;
+  transition: border .2s ease-in-out;
+
+  &:focus {
+    outline: 0;
+    border-color: $normal;
+  }
+}
+
+button.link {
+  margin-left: 5px;
+  border: 1px solid $ui-light-grey;
+  font-family: $Montserrat;
+  background: $ui-lightest-grey;
+}
+
+input[type="search"] {
+  @extend .form-text;
+
+  appearance: initial;
+}
+
+.filter-wrapper {
+  border: 1px solid $ui-light-grey;
+}
+
+.select-wrapper {
+  border-radius: $ui-border-radius;
+  background: $ui-lightest-grey;
+  border-radius: $ui-border-radius;
+
+  &:after {
+    font-size: 9px;
+    padding: 11px 12px 10px 12px;
+    background: $ui-grey;
+    color: $white;
+    right: 0;
+    top: -1px;
+    border-radius: 0 $ui-border-radius $ui-border-radius 0;
+    max-height: 34px;
+  }
+}
+
+.js-form-type-checkbox,
+.js-form-type-radio {
+
+  label {
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    padding-left: 25px;
+    margin-left: -20px;
+    cursor: pointer;
+  }
+
+  i {
+    visibility: visible;
+  }
+}
+
+.checkbox-wrapper {
+  top: 2px;
+  display: inline-block;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  border: 2px solid $ui-light-grey;
+  border-radius: $ui-border-radius;
+  z-index: 1;
+  background: $ui-lightest-grey;
+
+  i {
+    color: $normal;
+    font-size: 22px;
+    position: absolute;
+    top: -6px;
+    left: -2px;
+    opacity: 0;
+    transition: opacity .2s ease-in-out;
+  }
+
+  .form-checkbox {
+    display: none;
+
+    &:checked + i {
+      opacity: 1;
+    }
+  }
+}
+
+.radio-wrapper {
+  top: 3px;
+  display: inline-block;
+  position: relative;
+  width: 18px;
+  height: 18px;
+  border: 2px solid $ui-light-grey;
+  border-radius: 50%;
+  z-index: 1;
+  background: $ui-lightest-grey;
+
+  i {
+    color: $normal;
+    font-size: 14px;
+    position: absolute;
+    top: 0;
+    left: 1.5px;
+    opacity: 0;
+    transition: opacity .2s ease-in-out;
+  }
+
+  .form-radio {
+    display: none;
+
+    &:checked + i {
+      opacity: 1;
+    }
+  }
+}
+
+.description {
+  @include font-size(.7);
+  @include margin-top(.2);
+
+  color: $ui-grey;
+}
+
+.field-suffix {
+  @extend .description;
+
+  display: block;
+}
+
+.js-form-type-vertical-tabs {
+  display: inline-block;
+  width: 100%;
+}
+
+.vertical-tabs {
+
+  &__menu-item-title {
+    text-decoration: none !important;
+  }
+
+  &__pane {
+    clear: none;
+  }
+
+  .summary,
+  .details-wrapper {
+    border: none !important;
+  }
+
+  &__menu-item-summary {
+
+    padding-left: 5px;
+  }
+}
+
+.dropbutton-multiple {
+  margin-right: 5px;
+}
+
+.dropbutton-widget {
+  @extend .button;
+
+  .form-submit {
+    padding: 0;
+    background: transparent;
+  }
+
+  .secondary-action {
+    margin-top: 5px
+  }
+
+  .dropbutton-toggle button,
+  a {
+    color: $white;
+  }
+}
+
+code {
+  @include margin(.5, 0);
+
+  border: 1px dotted $ui-light-grey;
+  background: $ui-lightest-grey;
+}
+
+#mnav {
+  font-size: 26px;
+  display: block;
+  position: relative;
+  z-index: 6;
+  color: $ui-black;
+
+  i {
+    transition: all .2s ease-in-out;
+  }
+
+  &.open {
+    color: $white;
+
+    i {
+      &:before {
+        content: "\f00d";
+      }
+    }
+  }
+
+  @include breakpoint($bp-768) {
+    display: none;
+  }
+}
+
+//**********
+// Molecules
+//**********
+
+.branding {
+
+  display: flex;
+  align-items: center;
+
+  &__site-logo-image {
+    max-width: 100px;
+  }
+
+  &__site-name {
+    @include font-size(1.2);
+    @include margin(0, 0, 0, 1);
+
+    text-transform: uppercase;
+  }
+}
+
+.breadcrumb {
+
+  &__item {
+    @include font-size(.8);
+
+    font-family: $Montserrat;
+    text-transform: uppercase;
+    margin-right: 5px;
+  }
+
+  &__link {
+    padding-right: 5px;
+
+  }
+}
+
+.tabs {
+
+  &__tab-link {
+    @include font-size(.8);
+
+    font-family: $Montserrat;
+    text-transform: uppercase;
+    border-radius: $ui-border-radius;
+    color: $ui-grey;
+
+    &:hover,
+    &:focus,
+    &.is-active {
+      color: $ui-black;
+    }
+  }
+}
+
+fieldset {
+  border: 1px solid $ui-light-grey;
+}
+
+.messages {
+ @include font-size(.9);
+ @include padding(1, 1);
+
+ font-family: $Montserrat;
+}
+
+details {
+  clear: both;
+
+  &[open] {
+
+    .summary {
+      @include margin-bottom(.5);
+
+      border-bottom: 0;
+
+      &__icon {
+        float: right;
+      }
+
+      i {
+        transform: rotate(180deg);
+      }
+    }
+
+    .details-wrapper {
+      border: 1px solid $ui-light-grey;
+      border-top: 0;
+      animation-name: fadeInDown;
+      animation-duration: 0.5s;
+    }
+  }
+}
+
+.summary {
+  @include margin-bottom(1);
+
+  background: $ui-lightest-grey;
+  border: 1px solid $ui-light-grey;
+  display: block;
+  float: left;
+  width: 100%;
+  outline: 0;
+  position: relative;
+  z-index: 2;
+
+  &::-webkit-details-marker {
+    display: none;
+  }
+
+  &__icon {
+    float: right;
+    text-indent: -9999px;
+
+    display: flex;
+    align-items: center;
+  }
+
+  i {
+    transition: transform .2s linear;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 7px solid black;
+  }
+
+  &__title {
+    float: left;
+  }
+}
+
+.details-wrapper {
+  @include padding(.5, .5);
+
+  position: relative;
+  z-index: 1;
+  border: 0;
+}
+
+.accordion {
+  @extend details;
+}
+
+.menu {
+  transition: background .2s ease-in-out;
+
+  &--main {
+    position: relative;
+    top: -200px;
+
+    @include breakpoint($bp-768) {
+      top: 0;
+    }
+
+    a {
+      @include link($ui-black, none, $ui-black, underline);
+
+      &.is-active {
+        @include button($gradient-top, $gradient-bottom, $hover-gradient-top, $hover-gradient-bottom);
+        @include font-size(1);
+
+        color: $white;
+        font-family: $Noto-serif;
+      }
+    }
+
+    &.open {
+      position: absolute;
+      z-index: 5;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      right: 0;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, .85);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .menu {
+        width: 100%;
+
+        &__item {
+          display: block;
+          margin: 0;
+          text-align: center;
+          width: 100%;
+        }
+
+        &__link {
+          @include link($white, none, $white, none);
+
+          font-family: $Montserrat;
+          text-transform: uppercase;
+          display: block;
+          padding: 10px;
+          width: 100%;
+          background: transparent;
+          border-radius: 0 !important;
+
+          &:hover,
+          &:focus,
+          &.is-active {
+            background: $normal;
+          }
+        }
+      }
+    }
+  }
+}
+
+.list-group {
+
+  &__link:not(:first-child) {
+
+    @include margin-top(.5);
+  }
+}
+
+//pager
+
+.pager {
+  li {
+    font-family: $Montserrat;
+  }
+}
+
+//comments
+.comment footer {
+  font-family: $Montserrat;
+}
+
+.comment__content {
+  font-family: $Noto-serif;
+}
+
+.progress {
+  @include margin(1, 0);
+
+  &__track {
+    border: 1px solid $ui-light-grey;
+    background: $ui-lightest-grey;
+    height: 25px;
+    border-radius: $ui-border-radius;
+  }
+
+  &__bar {
+    height: 100%;
+    background: $normal;
+    border-radius: $ui-border-radius;
+  }
+
+  &__percentage {
+    @include padding(.5, .5);
+
+    color: $normal;
+    font-family: $Montserrat;
+    text-align: center;
+  }
+}
+
+//**********
+// Organisms
+//**********
+
+.wrapper-header {
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.wrapper-breadcrumb {
+  @include margin-top(2);
+
+  border-top: 1px solid $ui-lightest-grey;
+}
+
+.wrapper-footer {
+  background: $ui-lightest-grey;
+
+  &__inner {
+    @include margin-top(1);
+    @include margin-bottom(1);
+  }
+}
+
+table {
+  @include margin(1, 0);
+
+  width: 100%;
+  border: 1px solid $ui-light-grey;
+
+  .form-item {
+    margin: 0;
+  }
+
+  thead {
+    background: $ui-lightest-grey;
+  }
+
+  tbody {
+
+    tr {
+      border-bottom: 1px solid $ui-light-grey;
+
+      &:last-child {
+        border: 0;
+      }
+    }
+  }
+
+  td,
+  th {
+    @include padding(.3, .5);
+
+    text-align: left;
+  }
+
+  ul {
+    padding-left: 15px;
+  }
+
+  .checkbox-wrapper {
+    display: block;
+    width: auto;
+    height: auto;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+
+    .form-checkbox {
+      display: block;
+    }
+
+    .icon-check {
+      display: none;
+    }
+  }
+}
+
+
+} // closing the mixin

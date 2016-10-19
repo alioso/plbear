@@ -34,3 +34,32 @@
   padding-top: 0;
   padding-bottom: 0;
 }
+
+body.pl {
+  padding: 1rem;
+}
+
+.container-fluid {
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
+}
+
+.inner {
+  text-align: center;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  background: #eee;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  justify-content: center;
+  width: 100%;
+}
+
+.main-content .inner,
+.sidebar .inner {
+  padding: 10rem 2rem;
+}
+
+.container-fluid {
+  margin-top: 1rem;
+}

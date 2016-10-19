@@ -1,4 +1,3 @@
-// element-invisible as defined by http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
 @mixin element-invisible {
   position: absolute;
   height: 0;
@@ -6,6 +5,7 @@
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
 }
+
 @mixin element-invisible-off {
   position: relative;
   height: auto;
@@ -17,7 +17,9 @@
 @mixin link($color, $text-decoration, $hover-color, $hover-text-decoration) {
   color: $color;
   text-decoration: $text-decoration;
-  &:hover, &:focus {
+
+  &:hover,
+  &:focus {
     color: $hover-color;
     text-decoration: $hover-text-decoration;
   }

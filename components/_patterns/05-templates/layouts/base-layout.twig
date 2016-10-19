@@ -1,0 +1,41 @@
+<div class="container-fluid">
+
+  {% block row_top %}
+    <div class="row--top {{plClass}}">
+      {{ content.top_row }}
+    </div>
+  {% endblock %}
+
+  <div class="row row-center">
+
+    {% block content %}
+
+      {% block left_sidebar %}
+        <aside class="sidebar sidebar--left col-xs-12 col-md-3 {{plClass}}">
+          {{ content.left_sidebar }}
+        </aside>
+      {% endblock %}
+
+      {% block main_content %}
+        <main class="main-content col-xs-12 col-md-6 {{plClass}}">
+          {{ content.main }}
+        </main>
+      {% endblock %}
+
+      {% block right_sidebar %}
+        <aside class="sidebar sidebar--right col-xs-12 col-md-3 {{plClass}}">
+          {{ content.right_sidebar }}
+        </aside>
+      {% endblock %}
+
+    {% endblock %}
+
+  </div>
+
+  {% block row_bottom %}
+    <div class="row--top {{plClass}}">
+      {{ content.bottom_row }}
+    </div>
+  {% endblock %}
+
+</div>

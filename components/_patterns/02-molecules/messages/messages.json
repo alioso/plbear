@@ -1,0 +1,10 @@
+{
+  "attributes": {
+    "Attribute()": {
+      "class": [
+        "messages"
+      ]
+    }
+  },
+  "content": "This is a message."
+}

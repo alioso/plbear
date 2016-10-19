@@ -1,17 +1,12 @@
-.element-invisible {
-  @include element-invisible;
-}
+//*********
+// Wrappers
+//*********
 
-.visually-hidden {
-  @include element-invisible;
-}
-
-#skip-link {
-  margin: 0;
-  padding: 0;
-  li {
-    list-style-type: none;
-  }
+.wrapper--inner {
+  @include padding(0, 1);
+  margin: 0 auto;
+  max-width: $site-max-width;
+  width: 100%;
 }
 
 //*************
@@ -19,16 +14,26 @@
 //*************
 
 .layout-sidebar-first {
-  main {
-    @include breakpoint($breakpoint-medium-width) {
-      @include col(3/4);
-      @include shift(1/4);
+
+  .wrapper-main__inner {
+    @include breakpoint($bp-768) {
+      display: flex;
     }
   }
-  .site-sidebars {
-    @include breakpoint($breakpoint-medium-width) {
-      @include col(1/4);
-      @include shift(-3/4);
+
+  .column.main {
+    @include breakpoint($bp-768) {
+      @include padding(0, 0, 0, 2);
+
+      flex-basis: 75%;
+      order: 2;
+    }
+  }
+
+  .column.sidebar {
+    @include breakpoint($bp-768) {
+      flex-basis: 25%;
+      order: 1;
     }
   }
 }
@@ -38,14 +43,19 @@
 //**************
 
 .layout-sidebar-second {
-  main {
-    @include breakpoint($breakpoint-medium-width) {
-      @include col(3/4);
+  @extend .layout-sidebar-first;
+
+  .column.main {
+    @include breakpoint($bp-768) {
+      @include padding(0, 2, 0, 0);
+
+      order: 1;
     }
   }
-  .site-sidebars {
-    @include breakpoint($breakpoint-medium-width) {
-      @include col(1/4);
+
+  .column.sidebar {
+    @include breakpoint($bp-768) {
+      order: 2;
     }
   }
 }
@@ -55,21 +65,32 @@
 //**************
 
 .layout-two-sidebars {
-  main {
-    @include breakpoint($breakpoint-medium-width) {
-      @include col(2/4);
-      @include shift(1/4);
+  .wrapper-main__inner {
+    @include breakpoint($bp-768) {
+      display: flex;
     }
   }
-  .sidebar-first {
-    @include breakpoint($breakpoint-medium-width) {
-      @include col(1/4);
-      @include shift(-2/4);
+
+  .column.main {
+    @include breakpoint($bp-768) {
+      @include padding(0, 1);
+
+      flex-basis: 75%;
+      order: 2;
     }
   }
-  .sidebar-second {
-    @include breakpoint($breakpoint-medium-width) {
-      @include col(1/4);
+
+  .column.sidebar {
+    @include breakpoint($bp-768) {
+      flex-basis: 25%;
+
+      &.sidebar--first {
+        order: 1;
+      }
+
+      &.sidebar--second {
+        order: 3;
+      }
     }
   }
 }

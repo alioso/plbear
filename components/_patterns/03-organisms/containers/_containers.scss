@@ -1,8 +1,0 @@
-section[id^="container-"] {
-  @include padding(0, 1);
-}
-
-#container-header {
-  display: flex;
-  justify-content: flex-start;
-}

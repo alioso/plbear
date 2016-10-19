@@ -1,0 +1,54 @@
+{% block region_header %}
+  {{ region_header }}
+{% endblock %}
+
+<div class="wrapper-highlighted">
+  <div class="wrapper--inner wrapper-highlighted__inner">
+    {% block region_highlighted %}
+      {{ region_highlighted }}
+    {% endblock %}
+  </div>
+</div>
+
+<div class="wrapper-main">
+  <div class="wrapper--inner wrapper-main__inner">
+
+    <div class="column main" role="main">
+
+      {% block region_help %}
+        {{ region_help }}
+      {% endblock %}
+
+      <a id="main"></a>
+
+      {% block region_content %}
+        {{ region_content }}
+      {% endblock %}
+
+      {% if feed_icons %}
+        {{ feed_icons }}
+      {% endif %}
+
+    </div>
+
+    {% block region_sidebar_first %}
+      {{ region_sidebar_first }}
+    {% endblock %}
+
+    {% block region_sidebar_second %}
+      {{ region_sidebar_second }}
+    {% endblock %}
+  </div>
+</div>
+
+<div class="wrapper-breadcrumb">
+  <div class="wrapper--inner wrapper-breadcrumb__inner">
+    {% block region_breadcrumb %}
+      {{ region_breadcrumb }}
+    {% endblock %}
+  </div>
+</div>
+
+{% block region_footer %}
+  {{ region_footer }}
+{% endblock %}

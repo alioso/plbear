@@ -1,0 +1,30 @@
+@mixin button($gradient-top, $gradient-bottom, $hover-gradient-top, $hover-gradient-bottom) {
+  @include font-size(.8);
+
+  position: relative;
+  display: inline-block;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+  border-style: none;
+  transition: background .2s ease-in-out;
+
+  background: linear-gradient($gradient-top, $gradient-bottom);
+  color: $white;
+  padding: $ui-button-padding;
+  border-radius: $ui-border-radius;
+  font-family: $Montserrat;
+
+  &:hover,
+  &:focus,
+  &:visited {
+    background: linear-gradient($hover-gradient-top, $hover-gradient-bottom);
+    text-decoration: none;
+  }
+}
+
+@mixin placeholder {
+  @include font-size(.8);
+
+  font-weight: 400;
+}

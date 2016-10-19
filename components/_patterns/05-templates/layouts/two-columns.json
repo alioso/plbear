@@ -1,0 +1,9 @@
+{
+  "content": {
+    "top_row": "<div class='inner'>Top Row</div>",
+    "left_sidebar": "<div class='inner'>Left Column</div>",
+    "right_sidebar": "<div class='inner'>Right Column</div>",
+    "bottom_row": "<div class='inner'>Bottom Row</div>"
+  },
+  "plClass": "pl-col"
+}

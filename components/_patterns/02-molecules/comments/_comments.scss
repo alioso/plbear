@@ -1,0 +1,34 @@
+.indented:first-of-type {
+  @include padding(0, 0, 0, 1);
+}
+
+.indented:nth-of-type(2) {
+  @include padding(0, 0, 0, 2);
+}
+
+.indented:nth-of-type(3) {
+  @include padding(0, 0, 0, 3);
+}
+
+.comment {
+
+  footer {
+
+    p {
+      color: $off-black;
+      margin-top: 10px;
+      border-bottom: 1px solid $grey;
+      margin-bottom: 0;
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    a {
+      text-decoration: underline;
+      text-transform: uppercase;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+.messages {
+  @include font-size(.8);
+  @include padding(.3,.8);
+  @include margin-bottom(.5);
+
+
+  color: $dark-grey;
+  background-color: $light-grey;
+  border: 2px solid darken($grey, 5%);
+
+  display: flex;
+  align-items: center;
+
+  &__icon {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 22px;
+  }
+
+  &--status {
+    color: $green;
+    background-color: lighten($green, 45%);
+    border: 2px solid lighten($green, 35%);
+  }
+
+  &--warning {
+    color: $orange;
+    background-color: lighten($orange, 50%);
+    border: 2px solid lighten($orange, 40%);
+  }
+
+  &--error {
+    color: $red;
+    background-color: lighten($red, 35%);
+    border: 2px solid lighten($red, 25%);
+  }
+}
