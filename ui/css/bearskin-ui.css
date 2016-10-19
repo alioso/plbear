@@ -3476,6 +3476,25 @@ strong {
   font-family: "Montserrat";
 }
 
+.ui--grey .pager span {
+  background: #808080;
+  border: 1px solid #808080;
+}
+
+.ui--grey .pager .is-active {
+  background: #DCDCDC;
+  color: #808080;
+}
+
+.ui--grey .pager a {
+  color: #808080;
+}
+
+.ui--grey .pager__item--ellipsis:after {
+  color: #808080;
+  content: '. . .';
+}
+
 .ui--grey .comment footer {
   font-family: "Montserrat";
 }
@@ -4092,6 +4111,25 @@ strong {
   font-family: "Montserrat";
 }
 
+.ui--blue .pager span {
+  background: #548BC3;
+  border: 1px solid #548BC3;
+}
+
+.ui--blue .pager .is-active {
+  background: #DCDCDC;
+  color: #808080;
+}
+
+.ui--blue .pager a {
+  color: #808080;
+}
+
+.ui--blue .pager__item--ellipsis:after {
+  color: #808080;
+  content: '. . .';
+}
+
 .ui--blue .comment footer {
   font-family: "Montserrat";
 }
@@ -4706,6 +4744,25 @@ strong {
 
 .ui--green .pager li {
   font-family: "Montserrat";
+}
+
+.ui--green .pager span {
+  background: #078A80;
+  border: 1px solid #078A80;
+}
+
+.ui--green .pager .is-active {
+  background: #DCDCDC;
+  color: #808080;
+}
+
+.ui--green .pager a {
+  color: #808080;
+}
+
+.ui--green .pager__item--ellipsis:after {
+  color: #808080;
+  content: '. . .';
 }
 
 .ui--green .comment footer {

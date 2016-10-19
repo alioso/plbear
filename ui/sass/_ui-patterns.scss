@@ -497,6 +497,25 @@ details {
   li {
     font-family: $Montserrat;
   }
+
+  span {
+    background: $normal;
+    border: 1px solid $normal;
+  }
+
+  .is-active {
+    background: $ui-light-grey;
+    color: $ui-grey;
+  }
+
+  a {
+    color: $ui-grey;
+  }
+}
+
+.pager__item--ellipsis:after {
+  color: $ui-grey;
+  content: '. . .';
 }
 
 //comments

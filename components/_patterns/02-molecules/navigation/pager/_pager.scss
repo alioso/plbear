@@ -6,17 +6,16 @@
 
   li {
     @include font-size(1);
-    @include margin(0, .1);
     display: inline-block;
   }
 
   .is-active {
-    @include padding(0, .3);
     background: $grey;
     color: $dark-grey;
   }
 
   a {
+    @include padding(0, .3);
     color: $dark-grey;
   }
 
@@ -30,9 +29,31 @@
     height: 17px;
     display: inline-block;
     text-align: center;
+    &:after {
+      font-size: 4px;
+      vertical-align: middle;
+    }
   }
 
-  .pager__item--ellipsis {
+  .pager__item--ellipsis:after {
     color: $dark-grey;
+    content: '. . .';
   }
+
+  .single-left-arrow:after {
+    content: '\25C0';
+  }
+
+  .double-left-arrow:after {
+    content: '\00ab';
+  }
+
+  .single-right-arrow:after {
+    content: '\25b6';
+  }
+
+  .double-right-arrow:after {
+    content: '\00bb';
+  }
+
 }
