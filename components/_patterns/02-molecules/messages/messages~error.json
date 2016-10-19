@@ -2,9 +2,9 @@
   "attributes": {
     "Attribute()": {
       "class": [
-        "messages"
+        "messages--error"
       ]
     }
   },
-  "messages": ["This is a simple message."]
+  "message": ["This is an error message."]
 }

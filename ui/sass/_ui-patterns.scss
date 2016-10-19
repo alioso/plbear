@@ -1,5 +1,66 @@
 @mixin ui-color($light, $normal, $dark, $gradient-top, $gradient-bottom, $hover-gradient-top, $hover-gradient-bottom) {
 
+
+//****************************
+// Reusable typography classes
+//****************************
+
+.light {
+  color: $light;
+
+  &--bg {
+    background-color: $light;
+  }
+}
+
+.normal {
+  color: $normal;
+
+  &--bg {
+    background-color: $normal;
+  }
+}
+
+.dark {
+  color: $dark;
+
+  &--bg {
+    background-color: $dark;
+  }
+}
+
+.lightest-grey {
+  color: $ui-lightest-grey;
+
+  &--bg {
+    background-color: $ui-lightest-grey;
+  }
+}
+
+.light-grey {
+  color: $ui-light-grey;
+
+  &--bg {
+    background-color: $ui-light-grey;
+  }
+}
+
+.grey {
+  color: $ui-grey;
+
+  &--bg {
+    background-color: $ui-grey;
+  }
+}
+
+.serif {
+  font-family: $serif;
+}
+
+.sans {
+  font-family: $sans;
+}
+
 //******
 // Atoms
 //******
@@ -33,7 +94,7 @@ label {
   @include margin-bottom(.1);
 
   display: block;
-  font-family: $Montserrat;
+  font-family: $sans;
 }
 
 .button {
@@ -51,7 +112,7 @@ label {
   @include padding(.2, .2);
   @include font-size(1);
 
-  font-family: $Montserrat;
+  font-family: $sans;
 
   width: 100%;
   max-width: 30em;
@@ -67,7 +128,7 @@ label {
 button.link {
   margin-left: 5px;
   border: 1px solid $ui-light-grey;
-  font-family: $Montserrat;
+  font-family: $sans;
   background: $ui-lightest-grey;
 }
 
@@ -304,7 +365,7 @@ code {
   &__item {
     @include font-size(.8);
 
-    font-family: $Montserrat;
+    font-family: $sans;
     text-transform: uppercase;
     margin-right: 5px;
   }
@@ -320,7 +381,7 @@ code {
   &__tab-link {
     @include font-size(.8);
 
-    font-family: $Montserrat;
+    font-family: $sans;
     text-transform: uppercase;
     border-radius: $ui-border-radius;
     color: $ui-grey;
@@ -341,7 +402,7 @@ fieldset {
  @include font-size(.9);
  @include padding(1, 1);
 
- font-family: $Montserrat;
+ font-family: $sans;
 }
 
 details {
@@ -442,7 +503,7 @@ details {
         @include font-size(1);
 
         color: $white;
-        font-family: $Noto-serif;
+        font-family: $serif;
       }
     }
 
@@ -473,7 +534,7 @@ details {
         &__link {
           @include link($white, none, $white, none);
 
-          font-family: $Montserrat;
+          font-family: $sans;
           text-transform: uppercase;
           display: block;
           padding: 10px;
@@ -504,7 +565,7 @@ details {
 
 .pager {
   li {
-    font-family: $Montserrat;
+    font-family: $sans;
   }
 
   i {
@@ -520,11 +581,11 @@ details {
 
 //comments
 .comment footer {
-  font-family: $Montserrat;
+  font-family: $sans;
 }
 
 .comment__content {
-  font-family: $Noto-serif;
+  font-family: $serif;
 }
 
 .progress {
@@ -547,7 +608,7 @@ details {
     @include padding(.5, .5);
 
     color: $normal;
-    font-family: $Montserrat;
+    font-family: $sans;
     text-align: center;
   }
 }

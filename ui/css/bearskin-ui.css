@@ -2967,6 +2967,62 @@ strong {
   content: "\f2b4";
 }
 
+.ui--grey .light {
+  color: #DCDCDC;
+}
+
+.ui--grey .light--bg {
+  background-color: #DCDCDC;
+}
+
+.ui--grey .normal {
+  color: #808080;
+}
+
+.ui--grey .normal--bg {
+  background-color: #808080;
+}
+
+.ui--grey .dark {
+  color: #3F3F3F;
+}
+
+.ui--grey .dark--bg {
+  background-color: #3F3F3F;
+}
+
+.ui--grey .lightest-grey {
+  color: #F5F5F5;
+}
+
+.ui--grey .lightest-grey--bg {
+  background-color: #F5F5F5;
+}
+
+.ui--grey .light-grey {
+  color: #DCDCDC;
+}
+
+.ui--grey .light-grey--bg {
+  background-color: #DCDCDC;
+}
+
+.ui--grey .grey {
+  color: #808080;
+}
+
+.ui--grey .grey--bg {
+  background-color: #808080;
+}
+
+.ui--grey .serif {
+  font-family: "Noto Serif";
+}
+
+.ui--grey .sans {
+  font-family: "Montserrat";
+}
+
 .ui--grey ::-webkit-input-placeholder {
   font-size: 0.8rem;
   font-weight: 400;
@@ -3592,6 +3648,62 @@ strong {
   display: none;
 }
 
+.ui--blue .light {
+  color: #EAF5FF;
+}
+
+.ui--blue .light--bg {
+  background-color: #EAF5FF;
+}
+
+.ui--blue .normal {
+  color: #548BC3;
+}
+
+.ui--blue .normal--bg {
+  background-color: #548BC3;
+}
+
+.ui--blue .dark {
+  color: #004987;
+}
+
+.ui--blue .dark--bg {
+  background-color: #004987;
+}
+
+.ui--blue .lightest-grey {
+  color: #F5F5F5;
+}
+
+.ui--blue .lightest-grey--bg {
+  background-color: #F5F5F5;
+}
+
+.ui--blue .light-grey {
+  color: #DCDCDC;
+}
+
+.ui--blue .light-grey--bg {
+  background-color: #DCDCDC;
+}
+
+.ui--blue .grey {
+  color: #808080;
+}
+
+.ui--blue .grey--bg {
+  background-color: #808080;
+}
+
+.ui--blue .serif {
+  font-family: "Noto Serif";
+}
+
+.ui--blue .sans {
+  font-family: "Montserrat";
+}
+
 .ui--blue ::-webkit-input-placeholder {
   font-size: 0.8rem;
   font-weight: 400;
@@ -4215,6 +4327,62 @@ strong {
 
 .ui--blue table .checkbox-wrapper .icon-check {
   display: none;
+}
+
+.ui--green .light {
+  color: #E6AB0F;
+}
+
+.ui--green .light--bg {
+  background-color: #E6AB0F;
+}
+
+.ui--green .normal {
+  color: #078A80;
+}
+
+.ui--green .normal--bg {
+  background-color: #078A80;
+}
+
+.ui--green .dark {
+  color: #00635D;
+}
+
+.ui--green .dark--bg {
+  background-color: #00635D;
+}
+
+.ui--green .lightest-grey {
+  color: #F5F5F5;
+}
+
+.ui--green .lightest-grey--bg {
+  background-color: #F5F5F5;
+}
+
+.ui--green .light-grey {
+  color: #DCDCDC;
+}
+
+.ui--green .light-grey--bg {
+  background-color: #DCDCDC;
+}
+
+.ui--green .grey {
+  color: #808080;
+}
+
+.ui--green .grey--bg {
+  background-color: #808080;
+}
+
+.ui--green .serif {
+  font-family: "Noto Serif";
+}
+
+.ui--green .sans {
+  font-family: "Montserrat";
 }
 
 .ui--green ::-webkit-input-placeholder {
