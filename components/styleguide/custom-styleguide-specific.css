@@ -63,3 +63,13 @@ body.pl {
 .container-fluid {
   margin-top: 1rem;
 }
+
+.icon-wrapper {
+  display: inline-block;
+  padding: 20px;
+}
+
+.icon-wrapper i {
+  display: flex;
+  justify-content: center;
+}
