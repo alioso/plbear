@@ -4,7 +4,7 @@ Bear Skin is the default theme for the [Bear](https://github.com/zivtech/bear), 
 
 ## Getting started
 
-Before getting started, make sure that you have the latest version of [node.js](https://nodejs.org/en/) and [yeoman](http://yeoman.io/) installed. Also, you will need to have composer installed. On a Mac, this is easiest with homebrew.
+Before getting started, make sure that you have the latest version of [node.js](https://nodejs.org/en/) and [yeoman](http://yeoman.io/) installed. Also, you will need to have [composer](https://getcomposer.org/doc/00-intro.md) installed. On a Mac, this is easiest with [homebrew](http://brew.sh/).
 
 ## Install Pattern Lab
 
