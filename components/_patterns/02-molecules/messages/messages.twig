@@ -1,4 +1,4 @@
-<div class="messages {{ modifier_class }}" {% if type == 'error' %} role="alert" {% else %} role="contentinfo" {% endif %} {% if heading %}aria-label="{{ heading }}"{% endif %} {{ attributes }}>
+<div {% if type == 'error' %} role="alert" {% else %} role="contentinfo" {% endif %} {% if heading %}aria-label="{{ heading }}"{% endif %} {{ attributes }}>
 
   {% block heading %}
     {% if heading %}

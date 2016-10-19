@@ -3,10 +3,9 @@
     "Attribute()": {
       "class": [
         "messages",
-        "messages--error"
+        "messages--warning"
       ]
     }
   },
-  "type": "error",
-  "messages": ["This is an error message."]
+  "messages": ["This is a warning message."]
 }
