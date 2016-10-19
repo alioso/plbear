@@ -25,6 +25,11 @@
   margin-left: -2rem;
 }
 
+.single-row {
+  margin-right: -1rem;
+  margin-left: -1rem;
+}
+
 .row.reverse {
   -ms-flex-direction: row-reverse;
   -webkit-box-orient: horizontal;
