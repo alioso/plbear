@@ -1,15 +1,18 @@
 {
-  "children": {
+  "pl_checkbox_label": {
     "join()": [
-      "<label for='checkbox'>I am a checkbox!</label>"
+      "<label for='checkbox' class='option'>I am a checkbox!</label>"
     ]
   },
   "attributes": {
     "Attribute()": {
       "class": [
-        "form-checkboxes"
+        "form-checkbox"
       ],
-      "type": "checkbox"
+      "type": "checkbox",
+      "checked": "checked"
     }
-  }
+  },
+  "pl_open_form_item": "<div class='js-form-item form-item js-form-type-checkbox form-item-checkbox js-form-item-checkbox'>",
+  "pl_close_form_item": "</div>"
 }
