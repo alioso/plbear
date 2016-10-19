@@ -1,7 +1,7 @@
 {
   "content": {
     "top_row": "<div class='inner'>Top Row</div>",
-    "left_sidebar": "<div class='inner'>Left Sidebar</div>",
+    "left": "<div class='inner'>Left Sidebar</div>",
     "main": "<div class='inner'>Main Content</div>",
     "bottom_row": "<div class='inner'>Bottom Row</div>"
   },

@@ -19,7 +19,7 @@ left_sidebar:
       label: Top Row
     left:
       label: Left Sidebar
-    content:
+    main:
       label: Main content
     bottom_row:
       label: Bottom Row
@@ -31,7 +31,7 @@ right_sidebar:
   regions:
     top_row:
       label: Top Row
-    content:
+    main:
       label: Main content
     right:
       label: Right Sidebar
@@ -45,7 +45,9 @@ two_sidebars:
   regions:
     top_row:
       label: Top Row
-    content:
+    left:
+      label: Left Sidebar
+    main:
       label: Main content
     right:
       label: Right Sidebar
