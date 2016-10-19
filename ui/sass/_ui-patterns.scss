@@ -498,24 +498,15 @@ details {
     font-family: $Montserrat;
   }
 
-  span {
+  i {
     background: $normal;
-    border: 1px solid $normal;
-  }
+    transition: background .2s ease-in-out;
 
-  .is-active {
-    background: $ui-light-grey;
-    color: $ui-grey;
+    &:hover,
+    &:focus {
+      background: $dark;
+    }
   }
-
-  a {
-    color: $ui-grey;
-  }
-}
-
-.pager__item--ellipsis:after {
-  color: $ui-grey;
-  content: '. . .';
 }
 
 //comments

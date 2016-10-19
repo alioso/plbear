@@ -3476,23 +3476,14 @@ strong {
   font-family: "Montserrat";
 }
 
-.ui--grey .pager span {
+.ui--grey .pager i {
   background: #808080;
-  border: 1px solid #808080;
+  -webkit-transition: background .2s ease-in-out;
+  transition: background .2s ease-in-out;
 }
 
-.ui--grey .pager .is-active {
-  background: #DCDCDC;
-  color: #808080;
-}
-
-.ui--grey .pager a {
-  color: #808080;
-}
-
-.ui--grey .pager__item--ellipsis:after {
-  color: #808080;
-  content: '. . .';
+.ui--grey .pager i:hover, .ui--grey .pager i:focus {
+  background: #3F3F3F;
 }
 
 .ui--grey .comment footer {
@@ -4111,23 +4102,14 @@ strong {
   font-family: "Montserrat";
 }
 
-.ui--blue .pager span {
+.ui--blue .pager i {
   background: #548BC3;
-  border: 1px solid #548BC3;
+  -webkit-transition: background .2s ease-in-out;
+  transition: background .2s ease-in-out;
 }
 
-.ui--blue .pager .is-active {
-  background: #DCDCDC;
-  color: #808080;
-}
-
-.ui--blue .pager a {
-  color: #808080;
-}
-
-.ui--blue .pager__item--ellipsis:after {
-  color: #808080;
-  content: '. . .';
+.ui--blue .pager i:hover, .ui--blue .pager i:focus {
+  background: #004987;
 }
 
 .ui--blue .comment footer {
@@ -4746,23 +4728,14 @@ strong {
   font-family: "Montserrat";
 }
 
-.ui--green .pager span {
+.ui--green .pager i {
   background: #078A80;
-  border: 1px solid #078A80;
+  -webkit-transition: background .2s ease-in-out;
+  transition: background .2s ease-in-out;
 }
 
-.ui--green .pager .is-active {
-  background: #DCDCDC;
-  color: #808080;
-}
-
-.ui--green .pager a {
-  color: #808080;
-}
-
-.ui--green .pager__item--ellipsis:after {
-  color: #808080;
-  content: '. . .';
+.ui--green .pager i:hover, .ui--green .pager i:focus {
+  background: #00635D;
 }
 
 .ui--green .comment footer {

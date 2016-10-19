@@ -1,59 +1,96 @@
 .pager {
 
-  ul {
+  &__items {
+    @include padding(1, 0);
+    
     list-style: none;
-  }
-
-  li {
-    @include font-size(1);
-    display: inline-block;
-  }
-
-  .is-active {
-    background: $grey;
-    color: $dark-grey;
-  }
-
-  a {
-    @include padding(0, .3);
-    color: $dark-grey;
-  }
-
-  span {
-    @include line-height(.5);
-    background: $blue;
-    color: $white;
-    border: 1px solid $blue;
-    border-radius: 50px;
-    width: 17px;
-    height: 17px;
-    display: inline-block;
+    margin: 0 auto;
     text-align: center;
-    &:after {
-      font-size: 4px;
-      vertical-align: middle;
+  }
+
+  &__item {
+    @include font-size(1);
+
+    display: inline-block;
+
+    &.is-active {
+      background: $grey;
+      color: $dark-grey;
+    }
+
+    &--ellipsis {
+      @include padding(0, .2);
+
+      &:after {
+        color: $dark-grey;
+        content: '. . .';
+      }
+    }
+
+    &--first,
+    &--previous {
+      transform: rotate(180deg);
+
+      i {
+        top: 3px !important;
+      }
     }
   }
 
-  .pager__item--ellipsis:after {
+  &__link {
+    display: block;
+    padding: 2px 8px;
     color: $dark-grey;
-    content: '. . .';
+    position: relative;
   }
 
-  .single-left-arrow:after {
-    content: '\25C0';
+  i {
+    font-size: 12px;
+    text-align: center;
+    background: $dark-grey;
+    color: $white;
+    border-radius: 50%;
+    width: 23px;
+    height: 23px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    top: 6px;
+    margin: 0;
+
+    &:before {
+      position: absolute;
+      top: 4px;
+      left: 3px;
+      right: 0;
+    }
   }
 
-  .double-left-arrow:after {
-    content: '\00ab';
+  .single-left-arrow {
+
+    &:after {
+      content: '\25C0';
+    }
   }
 
-  .single-right-arrow:after {
-    content: '\25b6';
+  .double-left-arrow {
+
+    &:after {
+      content: '\00ab';
+    }
   }
 
-  .double-right-arrow:after {
-    content: '\00bb';
+  .single-right-arrow {
+
+    &:after {
+      content: '\25b6';
+    }
   }
 
+  .double-right-arrow {
+
+    &:after {
+      content: '\00bb';
+    }
+  }
 }

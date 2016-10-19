@@ -585,45 +585,69 @@ details .details-wrapper {
   transition: opacity .3s ease-in-out;
 }
 
-.pager ul {
+.pager__items {
+  padding: 1.625rem 0;
   list-style: none;
+  margin: 0 auto;
+  text-align: center;
 }
 
-.pager li {
+.pager__item {
   font-size: 1rem;
   display: inline-block;
 }
 
-.pager .is-active {
+.pager__item.is-active {
   background: #eaeaea;
   color: #888;
 }
 
-.pager a {
-  padding: 0 0.4875rem;
-  color: #888;
+.pager__item--ellipsis {
+  padding: 0 0.325rem;
 }
 
-.pager span {
-  line-height: 0.8125;
-  background: #728EAD;
-  color: white;
-  border: 1px solid #728EAD;
-  border-radius: 50px;
-  width: 17px;
-  height: 17px;
-  display: inline-block;
-  text-align: center;
-}
-
-.pager span:after {
-  font-size: 4px;
-  vertical-align: middle;
-}
-
-.pager .pager__item--ellipsis:after {
+.pager__item--ellipsis:after {
   color: #888;
   content: '. . .';
+}
+
+.pager__item--first, .pager__item--previous {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.pager__item--first i, .pager__item--previous i {
+  top: 3px !important;
+}
+
+.pager__link {
+  display: block;
+  padding: 2px 8px;
+  color: #888;
+  position: relative;
+}
+
+.pager i {
+  font-size: 12px;
+  text-align: center;
+  background: #888;
+  color: white;
+  border-radius: 50%;
+  width: 23px;
+  height: 23px;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  top: 6px;
+  margin: 0;
+}
+
+.pager i:before {
+  position: absolute;
+  top: 4px;
+  left: 3px;
+  right: 0;
 }
 
 .pager .single-left-arrow:after {
