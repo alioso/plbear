@@ -3247,13 +3247,13 @@ strong {
           align-items: center;
 }
 
-.ui--grey .branding__site-logo-image {
-  max-width: 100px;
+.ui--grey .branding__site-logo {
+  max-width: 50px;
 }
 
 .ui--grey .branding__site-name {
-  font-size: 1.2rem;
-  margin: 0rem 0rem 0rem 1.625rem;
+  font-size: 1rem;
+  margin: 0rem 0.8125rem 0rem;
   text-transform: uppercase;
 }
 
@@ -3374,7 +3374,7 @@ strong {
 }
 
 .ui--grey .menu--main {
-  position: relative;
+  position: absolute;
   top: -200px;
 }
 
@@ -3416,7 +3416,6 @@ strong {
 }
 
 .ui--grey .menu--main.open {
-  position: absolute;
   z-index: 5;
   width: 100%;
   height: 100%;
@@ -3873,13 +3872,13 @@ strong {
           align-items: center;
 }
 
-.ui--blue .branding__site-logo-image {
-  max-width: 100px;
+.ui--blue .branding__site-logo {
+  max-width: 50px;
 }
 
 .ui--blue .branding__site-name {
-  font-size: 1.2rem;
-  margin: 0rem 0rem 0rem 1.625rem;
+  font-size: 1rem;
+  margin: 0rem 0.8125rem 0rem;
   text-transform: uppercase;
 }
 
@@ -4000,7 +3999,7 @@ strong {
 }
 
 .ui--blue .menu--main {
-  position: relative;
+  position: absolute;
   top: -200px;
 }
 
@@ -4042,7 +4041,6 @@ strong {
 }
 
 .ui--blue .menu--main.open {
-  position: absolute;
   z-index: 5;
   width: 100%;
   height: 100%;
@@ -4499,13 +4497,13 @@ strong {
           align-items: center;
 }
 
-.ui--green .branding__site-logo-image {
-  max-width: 100px;
+.ui--green .branding__site-logo {
+  max-width: 50px;
 }
 
 .ui--green .branding__site-name {
-  font-size: 1.2rem;
-  margin: 0rem 0rem 0rem 1.625rem;
+  font-size: 1rem;
+  margin: 0rem 0.8125rem 0rem;
   text-transform: uppercase;
 }
 
@@ -4626,7 +4624,7 @@ strong {
 }
 
 .ui--green .menu--main {
-  position: relative;
+  position: absolute;
   top: -200px;
 }
 
@@ -4668,7 +4666,6 @@ strong {
 }
 
 .ui--green .menu--main.open {
-  position: absolute;
   z-index: 5;
   width: 100%;
   height: 100%;
@@ -4849,19 +4846,43 @@ strong {
   .ui--grey #mnav{
     display: none;
   }
+  .ui--grey .branding__site-logo{
+    max-width: 100px;
+  }
+  .ui--grey .branding__site-name{
+    font-size: 1.2rem;
+    margin: 0rem 1.625rem 0rem;
+  }
   .ui--grey .menu--main{
+    position: relative;
     top: 0;
   }
   .ui--blue #mnav{
     display: none;
   }
+  .ui--blue .branding__site-logo{
+    max-width: 100px;
+  }
+  .ui--blue .branding__site-name{
+    font-size: 1.2rem;
+    margin: 0rem 1.625rem 0rem;
+  }
   .ui--blue .menu--main{
+    position: relative;
     top: 0;
   }
   .ui--green #mnav{
     display: none;
   }
+  .ui--green .branding__site-logo{
+    max-width: 100px;
+  }
+  .ui--green .branding__site-name{
+    font-size: 1.2rem;
+    margin: 0rem 1.625rem 0rem;
+  }
   .ui--green .menu--main{
+    position: relative;
     top: 0;
   }
 }

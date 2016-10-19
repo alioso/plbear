@@ -278,15 +278,24 @@ code {
   display: flex;
   align-items: center;
 
-  &__site-logo-image {
-    max-width: 100px;
+  &__site-logo {
+    max-width: 50px;
+
+    @include breakpoint($bp-768) {
+      max-width: 100px;
+    }
   }
 
   &__site-name {
-    @include font-size(1.2);
-    @include margin(0, 0, 0, 1);
+    @include font-size(1);
+    @include margin(0, .5, 0, .5);
 
     text-transform: uppercase;
+
+    @include breakpoint($bp-768) {
+      @include font-size(1.2);
+      @include margin(0, 1, 0, 1);
+    }
   }
 }
 
@@ -417,10 +426,11 @@ details {
   transition: background .2s ease-in-out;
 
   &--main {
-    position: relative;
+    position: absolute;
     top: -200px;
 
     @include breakpoint($bp-768) {
+      position: relative;
       top: 0;
     }
 
@@ -437,7 +447,6 @@ details {
     }
 
     &.open {
-      position: absolute;
       z-index: 5;
       width: 100%;
       height: 100%;
