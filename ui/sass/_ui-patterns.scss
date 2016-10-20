@@ -407,6 +407,10 @@ code {
   .form-submit {
     @include margin(0, 0, 0, .5);
   }
+
+  &__site-slogan {
+    @include margin(0, 0, 0, 1);
+  }
 }
 
 .breadcrumb {
@@ -694,6 +698,13 @@ details {
   &__inner {
     @include margin-top(1);
     @include margin-bottom(1);
+  }
+}
+
+.region {
+
+  &--header {
+    display: flex;
   }
 }
 
