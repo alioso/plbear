@@ -5137,22 +5137,12 @@ strong {
 }
 
 @media (min-width: 48em){
-  .ui--grey #mnav{
-    display: none;
-  }
   .ui--grey .branding__site-logo{
     max-width: 100px;
   }
   .ui--grey .branding__site-name{
     font-size: 1.2rem;
     margin: 0rem 1.625rem 0rem;
-  }
-  .ui--grey .menu--main{
-    position: relative;
-    top: 0;
-  }
-  .ui--blue #mnav{
-    display: none;
   }
   .ui--blue .branding__site-logo{
     max-width: 100px;
@@ -5161,19 +5151,32 @@ strong {
     font-size: 1.2rem;
     margin: 0rem 1.625rem 0rem;
   }
-  .ui--blue .menu--main{
-    position: relative;
-    top: 0;
-  }
-  .ui--green #mnav{
-    display: none;
-  }
   .ui--green .branding__site-logo{
     max-width: 100px;
   }
   .ui--green .branding__site-name{
     font-size: 1.2rem;
     margin: 0rem 1.625rem 0rem;
+  }
+}
+
+@media (min-width: 62em){
+  .ui--grey #mnav{
+    display: none;
+  }
+  .ui--grey .menu--main{
+    position: relative;
+    top: 0;
+  }
+  .ui--blue #mnav{
+    display: none;
+  }
+  .ui--blue .menu--main{
+    position: relative;
+    top: 0;
+  }
+  .ui--green #mnav{
+    display: none;
   }
   .ui--green .menu--main{
     position: relative;
