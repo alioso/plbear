@@ -1,0 +1,13 @@
+.branding {
+
+  &__site-logo {
+    min-width: 75px;
+  }
+
+  &__flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+}
