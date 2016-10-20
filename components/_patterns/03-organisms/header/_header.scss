@@ -5,3 +5,12 @@
      @include margin-bottom(1);
    }
  }
+
+.wrapper-header {
+  background: $tangerine;
+}
+
+.wrapper-main {
+  @include alpha(background, $emerald, .5);
+  margin-top: -100px;
+}

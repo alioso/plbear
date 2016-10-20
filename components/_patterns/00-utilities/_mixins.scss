@@ -24,3 +24,44 @@
     text-decoration: $hover-text-decoration;
   }
 }
+
+@function hex($color, $percentage) {
+  @if $percentage == .1 {
+    @return lighten($color, 45%);
+  }
+  @if $percentage == .2 {
+    @return lighten($color, 40%);
+  }
+  @if $percentage == .3 {
+    @return lighten($color, 35%);
+  }
+  @if $percentage == .4 {
+    @return lighten($color, 30%);
+  }
+  @if $percentage == .5 {
+    @return lighten($color, 25%);
+  }
+  @if $percentage == .6 {
+    @return lighten($color, 20%);
+  }
+  @if $percentage == .7 {
+    @return lighten($color, 15%);
+  }
+  @if $percentage == .8 {
+    @return lighten($color, 10%);
+  }
+  @if $percentage == .9 {
+    @return lighten($color, 5%);
+  }
+}
+
+@mixin alpha($type, $color, $percentage) {
+  @if $type == color {
+    color: hex($color, $percentage);
+    color: rgba($color, $percentage);
+  }
+  @if $type == background {
+    background-color: hex($color, $percentage);
+    background-color: rgba($color, $percentage);
+  }
+}

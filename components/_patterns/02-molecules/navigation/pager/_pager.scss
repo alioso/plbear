@@ -15,14 +15,14 @@
 
     &.is-active {
       background: $gallery;
-      color: $gray;
+      color: $grey;
     }
 
     &--ellipsis {
       @include padding(0, .2);
 
       &::after {
-        color: $gray;
+        color: $grey;
         content: '. . .';
       }
     }
@@ -38,14 +38,14 @@
   }
 
   &__link {
-    color: $gray;
+    color: $grey;
     display: block;
     padding: 2px 8px;
     position: relative;
   }
 
   i {
-    background: $gray;
+    background: $grey;
     border-radius: 50%;
     color: $white;
     display: inline-block;
