@@ -11,19 +11,19 @@
 
     display: inline-block;
     overflow: auto;
-    border-bottom: 1px solid $grey;
-    border-right: 1px solid $grey;
-    border-top: 1px solid $grey;
+    border-bottom: 1px solid $gallery;
+    border-right: 1px solid $gallery;
+    border-top: 1px solid $gallery;
     border-radius: 5px 5px 0 0;
 
     &.is-active {
-      border: 1px solid $grey;
+      border: 1px solid $gallery;
       border-bottom: 1px solid transparent;
       border-left: 0;
     }
 
     &:first-child {
-      border-left: 1px solid $grey;
+      border-left: 1px solid $gallery;
     }
   }
 
@@ -31,7 +31,7 @@
     @include padding(.3, .5);
 
     display: inline-block;
-    background: $light-grey;
+    background: $wild-sand;
 
     &.is-active {
       background: transparent;
@@ -53,7 +53,7 @@
       background: transparent;
 
       &.is-active {
-        border-bottom: 2px solid $off-black;
+        border-bottom: 2px solid $emperor;
         border-radius: 0;
       }
     }

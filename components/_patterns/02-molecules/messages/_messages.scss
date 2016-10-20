@@ -4,9 +4,9 @@
   @include margin-bottom(.5);
 
 
-  color: $dark-grey;
-  background-color: $light-grey;
-  border: 2px solid darken($grey, 5%);
+  color: $grey;
+  background-color: $wild-sand;
+  border: 2px solid darken($gallery, 5%);
 
   display: flex;
   align-items: center;
@@ -18,20 +18,20 @@
   }
 
   &--status {
-    color: $green;
-    background-color: lighten($green, 45%);
-    border: 2px solid lighten($green, 35%);
+    color: $emerald;
+    background-color: lighten($emerald, 45%);
+    border: 2px solid lighten($emerald, 35%);
   }
 
   &--warning {
-    color: $orange;
-    background-color: lighten($orange, 50%);
-    border: 2px solid lighten($orange, 40%);
+    color: $tangerine;
+    background-color: lighten($tangerine, 50%);
+    border: 2px solid lighten($tangerine, 40%);
   }
 
   &--error {
-    color: $red;
-    background-color: lighten($red, 35%);
-    border: 2px solid lighten($red, 25%);
+    color: $outrageous-orange;
+    background-color: lighten($outrageous-orange, 35%);
+    border: 2px solid lighten($outrageous-orange, 25%);
   }
 }
