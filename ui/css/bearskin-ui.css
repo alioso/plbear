@@ -3296,7 +3296,7 @@ strong {
 
 .ui--grey #msearch {
   font-size: 22px;
-  color: black;
+  color: #251c18;
   -webkit-transition: .2s color ease-in-out;
   transition: .2s color ease-in-out;
 }
@@ -3368,7 +3368,7 @@ strong {
 }
 
 .ui--grey #search-block-form .form-submit {
-  margin-left: 1em;
+  margin: 0rem 0rem 0rem 0.8125rem;
 }
 
 .ui--grey .breadcrumb__item {
@@ -4090,7 +4090,7 @@ strong {
 
 .ui--blue #msearch {
   font-size: 22px;
-  color: black;
+  color: #251c18;
   -webkit-transition: .2s color ease-in-out;
   transition: .2s color ease-in-out;
 }
@@ -4162,7 +4162,7 @@ strong {
 }
 
 .ui--blue #search-block-form .form-submit {
-  margin-left: 1em;
+  margin: 0rem 0rem 0rem 0.8125rem;
 }
 
 .ui--blue .breadcrumb__item {
@@ -4884,7 +4884,7 @@ strong {
 
 .ui--green #msearch {
   font-size: 22px;
-  color: black;
+  color: #251c18;
   -webkit-transition: .2s color ease-in-out;
   transition: .2s color ease-in-out;
 }
@@ -4956,7 +4956,7 @@ strong {
 }
 
 .ui--green #search-block-form .form-submit {
-  margin-left: 1em;
+  margin: 0rem 0rem 0rem 0.8125rem;
 }
 
 .ui--green .breadcrumb__item {

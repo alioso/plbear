@@ -375,6 +375,10 @@ code {
   margin: 0.8125rem 0;
 }
 
+.form-submit {
+  margin-bottom: 0.8125rem;
+}
+
 .form-checkboxes input {
   margin: 0 5px 0 0;
 }
@@ -576,6 +580,10 @@ details .details-wrapper {
   opacity: 1;
 }
 
+.menu__item:last-child {
+  margin-right: 0;
+}
+
 .sub-menu {
   visibility: hidden;
   position: absolute;
@@ -667,7 +675,6 @@ details .details-wrapper {
 
 .tabs {
   margin: 0.8125rem 0;
-  display: inline-block;
   padding: 0;
   list-style-type: none;
   font-size: 0;
@@ -675,7 +682,7 @@ details .details-wrapper {
 
 .tabs__tab {
   font-size: 1rem;
-  display: inline-block;
+  width: 100%;
   overflow: auto;
   border-bottom: 1px solid #ebebeb;
   border-right: 1px solid #ebebeb;
@@ -696,6 +703,7 @@ details .details-wrapper {
 .tabs__tab-link {
   padding: 0.4875rem 0.8125rem;
   display: inline-block;
+  width: 100%;
   background: whitesmoke;
 }
 
@@ -746,6 +754,18 @@ details .details-wrapper {
 .wrapper-header__inner {
   margin-top: 1.625rem;
   margin-bottom: 1.625rem;
+}
+
+@media (min-width: 33.75em) {
+
+  .tabs {
+    display: inline-block;
+  }
+
+  .tabs__tab {
+    display: inline-block;
+    width: auto;
+  }
 }
 
 @media (min-width: 48em) {

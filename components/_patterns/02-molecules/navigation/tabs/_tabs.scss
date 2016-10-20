@@ -1,20 +1,29 @@
 .tabs {
   @include margin(.5, 0);
 
-  display: inline-block;
   padding: 0;
   list-style-type: none;
   font-size: 0;
 
+  @include breakpoint($bp-540) {
+    display: inline-block;
+  }
+
   &__tab {
     @include font-size(1);
 
-    display: inline-block;
+    width: 100%;
+
     overflow: auto;
     border-bottom: 1px solid $gallery;
     border-right: 1px solid $gallery;
     border-top: 1px solid $gallery;
     border-radius: 5px 5px 0 0;
+
+    @include breakpoint($bp-540) {
+      display: inline-block;
+      width: auto;
+    }
 
     &.is-active {
       border: 1px solid $gallery;
@@ -31,6 +40,7 @@
     @include padding(.3, .5);
 
     display: inline-block;
+    width: 100%;
     background: $wild-sand;
 
     &.is-active {

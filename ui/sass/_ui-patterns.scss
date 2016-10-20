@@ -332,7 +332,7 @@ code {
 
 #msearch {
   font-size: 22px;
-  color: $black;
+  color: $zeus;
 
   transition: .2s color ease-in-out;
 
@@ -405,7 +405,7 @@ code {
   align-items: center;
 
   .form-submit {
-    margin-left: 1em;
+    @include margin(0, 0, 0, .5);
   }
 }
 
