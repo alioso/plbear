@@ -31,17 +31,21 @@
  * @see html.html.twig
  */
 #}
+
+{% set main_class = 'page-404' %}
+
 {% extends "@pages/page/page.twig" %}
 
   {% block region_header %}
     {% include "@organisms/header/header.twig" with {
     "content": {
-    "join()": [
-    page.header,
-    page.navigation
-    ]
+      "join()": [
+        page.header,
+        page.navigation
+        ]
+      }
     }
-    } %}
+  %}
   {% endblock %}
 
   {% block region_search %}
@@ -53,7 +57,9 @@
   {% endblock %}
 
   {% block region_content %}
-    plop
+    <h1>404<span class="visually-hidden"> Page Not Found</span></h1>
+    <h2>Uh Oh! Looks like we've stopped you dead in your tracks</h2>
+    <a href="/" title="Back to home"><button class="button button--404">Back to home</button></a>
   {% endblock %}
 
   {% block region_breadcrumb %}

@@ -5,12 +5,12 @@
 {% block region_highlighted %}
 <div class="wrapper-highlighted">
   <div class="wrapper--inner wrapper-highlighted__inner">
-    {% endblock %}
+    {{ region_highlighted }}
   </div>
 </div>
-{{ region_highlighted }}
+{% endblock %}
 
-<div class="wrapper-main">
+<div class="wrapper-main {{main_class}}">
   <div class="wrapper--inner wrapper-main__inner">
 
     <div class="column main" role="main">

@@ -35,13 +35,14 @@
 
   {% block region_header %}
     {% include "@organisms/header/header.twig" with {
-    "content": {
-    "join()": [
-    page.header,
-    page.navigation
-    ]
-    }
-    } %}
+      "content": {
+        "join()": [
+          page.header,
+          page.navigation
+          ]
+        }
+      }
+    %}
   {% endblock %}
 
   {% block region_search %}
@@ -49,7 +50,11 @@
   {% endblock %}
 
   {% block region_highlighted %}
-    {{ page.highlighted }}
+  <div class="wrapper-highlighted">
+    <div class="wrapper--inner wrapper-highlighted__inner">
+      {{ page.highlighted }}
+    </div>
+  </div>
   {% endblock %}
 
   {% block region_help %}
@@ -69,7 +74,11 @@
   {% endblock %}
 
   {% block region_breadcrumb %}
-    {{ page.breadcrumb }}
+  <div class="wrapper-breadcrumb">
+    <div class="wrapper--inner wrapper-breadcrumb__inner">
+      {{ page.breadcrumb }}
+    </div>
+  </div>
   {% endblock %}
 
   {% block region_footer %}
