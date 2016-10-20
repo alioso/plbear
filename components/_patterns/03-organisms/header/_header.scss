@@ -1,7 +1,7 @@
- .wrapper-header{
-
-   &__inner {
-     @include margin-top(1);
-     @include margin-bottom(1);
-   }
- }
+.wrapper-header {
+  
+  &__inner {
+    @include margin-top(1);
+    @include margin-bottom(1);
+  }
+}
