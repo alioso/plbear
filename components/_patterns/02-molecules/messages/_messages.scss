@@ -4,9 +4,9 @@
   @include margin-bottom(.5);
 
 
-  color: $dark-grey;
+  color: $gray;
   background-color: $light-grey;
-  border: 2px solid darken($grey, 5%);
+  border: 2px solid darken($gallery, 5%);
 
   display: flex;
   align-items: center;

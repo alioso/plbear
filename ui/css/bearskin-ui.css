@@ -2,7 +2,7 @@
 @import url("//fonts.googleapis.com/css?family=Noto+Serif:400,700");
 body {
   font-family: "Noto Serif";
-  color: #261D19;
+  color: #261d19;
 }
 
 h1,
@@ -3072,7 +3072,7 @@ strong {
   transition: background .2s ease-in-out;
   background: -webkit-linear-gradient(false, false);
   background: linear-gradient(false, false);
-  color: white;
+  color: #fff;
   padding: 0.5rem 1rem;
   border-radius: 5px;
   font-family: "Montserrat";
@@ -3133,7 +3133,7 @@ strong {
   font-size: 9px;
   padding: 11px 12px 10px 12px;
   background: #808080;
-  color: white;
+  color: #fff;
   right: 0;
   top: -1px;
   border-radius: 0 5px 5px 0;
@@ -3264,7 +3264,7 @@ strong {
 
 .ui--grey .dropbutton-widget .dropbutton-toggle button,
 .ui--grey .dropbutton-widget a {
-  color: white;
+  color: #fff;
 }
 
 .ui--grey code {
@@ -3287,7 +3287,7 @@ strong {
 }
 
 .ui--grey #mnav.open {
-  color: white;
+  color: #fff;
 }
 
 .ui--grey #mnav.open i:before {
@@ -3456,12 +3456,12 @@ strong {
   transition: background .2s ease-in-out;
   background: -webkit-linear-gradient(false, false);
   background: linear-gradient(false, false);
-  color: white;
+  color: #fff;
   padding: 0.5rem 1rem;
   border-radius: 5px;
   font-family: "Montserrat";
   font-size: 1rem;
-  color: white;
+  color: #fff;
   font-family: "Noto Serif";
 }
 
@@ -3503,7 +3503,7 @@ strong {
 }
 
 .ui--grey .menu--main.open .menu__link {
-  color: white;
+  color: #fff;
   text-decoration: none;
   font-family: "Montserrat";
   text-transform: uppercase;
@@ -3515,7 +3515,7 @@ strong {
 }
 
 .ui--grey .menu--main.open .menu__link:hover, .ui--grey .menu--main.open .menu__link:focus {
-  color: white;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -3795,7 +3795,7 @@ strong {
   transition: background .2s ease-in-out;
   background: -webkit-linear-gradient(#427AB3, #2E6296);
   background: linear-gradient(#427AB3, #2E6296);
-  color: white;
+  color: #fff;
   padding: 0.5rem 1rem;
   border-radius: 5px;
   font-family: "Montserrat";
@@ -3856,7 +3856,7 @@ strong {
   font-size: 9px;
   padding: 11px 12px 10px 12px;
   background: #808080;
-  color: white;
+  color: #fff;
   right: 0;
   top: -1px;
   border-radius: 0 5px 5px 0;
@@ -3987,7 +3987,7 @@ strong {
 
 .ui--blue .dropbutton-widget .dropbutton-toggle button,
 .ui--blue .dropbutton-widget a {
-  color: white;
+  color: #fff;
 }
 
 .ui--blue code {
@@ -4010,7 +4010,7 @@ strong {
 }
 
 .ui--blue #mnav.open {
-  color: white;
+  color: #fff;
 }
 
 .ui--blue #mnav.open i:before {
@@ -4179,12 +4179,12 @@ strong {
   transition: background .2s ease-in-out;
   background: -webkit-linear-gradient(#427AB3, #2E6296);
   background: linear-gradient(#427AB3, #2E6296);
-  color: white;
+  color: #fff;
   padding: 0.5rem 1rem;
   border-radius: 5px;
   font-family: "Montserrat";
   font-size: 1rem;
-  color: white;
+  color: #fff;
   font-family: "Noto Serif";
 }
 
@@ -4226,7 +4226,7 @@ strong {
 }
 
 .ui--blue .menu--main.open .menu__link {
-  color: white;
+  color: #fff;
   text-decoration: none;
   font-family: "Montserrat";
   text-transform: uppercase;
@@ -4238,7 +4238,7 @@ strong {
 }
 
 .ui--blue .menu--main.open .menu__link:hover, .ui--blue .menu--main.open .menu__link:focus {
-  color: white;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -4518,7 +4518,7 @@ strong {
   transition: background .2s ease-in-out;
   background: -webkit-linear-gradient(#02978E, #0A8277);
   background: linear-gradient(#02978E, #0A8277);
-  color: white;
+  color: #fff;
   padding: 0.5rem 1rem;
   border-radius: 5px;
   font-family: "Montserrat";
@@ -4579,7 +4579,7 @@ strong {
   font-size: 9px;
   padding: 11px 12px 10px 12px;
   background: #808080;
-  color: white;
+  color: #fff;
   right: 0;
   top: -1px;
   border-radius: 0 5px 5px 0;
@@ -4710,7 +4710,7 @@ strong {
 
 .ui--green .dropbutton-widget .dropbutton-toggle button,
 .ui--green .dropbutton-widget a {
-  color: white;
+  color: #fff;
 }
 
 .ui--green code {
@@ -4733,7 +4733,7 @@ strong {
 }
 
 .ui--green #mnav.open {
-  color: white;
+  color: #fff;
 }
 
 .ui--green #mnav.open i:before {
@@ -4902,12 +4902,12 @@ strong {
   transition: background .2s ease-in-out;
   background: -webkit-linear-gradient(#02978E, #0A8277);
   background: linear-gradient(#02978E, #0A8277);
-  color: white;
+  color: #fff;
   padding: 0.5rem 1rem;
   border-radius: 5px;
   font-family: "Montserrat";
   font-size: 1rem;
-  color: white;
+  color: #fff;
   font-family: "Noto Serif";
 }
 
@@ -4949,7 +4949,7 @@ strong {
 }
 
 .ui--green .menu--main.open .menu__link {
-  color: white;
+  color: #fff;
   text-decoration: none;
   font-family: "Montserrat";
   text-transform: uppercase;
@@ -4961,7 +4961,7 @@ strong {
 }
 
 .ui--green .menu--main.open .menu__link:hover, .ui--green .menu--main.open .menu__link:focus {
-  color: white;
+  color: #fff;
   text-decoration: none;
 }
 

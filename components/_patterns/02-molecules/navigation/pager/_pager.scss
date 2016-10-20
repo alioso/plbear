@@ -2,7 +2,7 @@
 
   &__items {
     @include padding(1, 0);
-    
+
     list-style: none;
     margin: 0 auto;
     text-align: center;
@@ -14,15 +14,15 @@
     display: inline-block;
 
     &.is-active {
-      background: $grey;
-      color: $dark-grey;
+      background: $gallery;
+      color: $gray;
     }
 
     &--ellipsis {
       @include padding(0, .2);
 
-      &:after {
-        color: $dark-grey;
+      &::after {
+        color: $gray;
         content: '. . .';
       }
     }
@@ -38,58 +38,57 @@
   }
 
   &__link {
+    color: $gray;
     display: block;
     padding: 2px 8px;
-    color: $dark-grey;
     position: relative;
   }
 
   i {
-    font-size: 12px;
-    text-align: center;
-    background: $dark-grey;
-    color: $white;
+    background: $gray;
     border-radius: 50%;
-    width: 23px;
-    height: 23px;
+    color: $white;
     display: inline-block;
-    text-align: center;
-    position: relative;
-    top: 6px;
+    font-size: 12px;
+    height: 23px;
     margin: 0;
+    position: relative;
+    text-align: center;
+    top: 6px;
+    width: 23px;
 
-    &:before {
-      position: absolute;
-      top: 4px;
+    &::before {
       left: 3px;
+      position: absolute;
       right: 0;
+      top: 4px;
     }
   }
 
   .single-left-arrow {
 
-    &:after {
+    &::after {
       content: '\25C0';
     }
   }
 
   .double-left-arrow {
 
-    &:after {
+    &::after {
       content: '\00ab';
     }
   }
 
   .single-right-arrow {
 
-    &:after {
+    &::after {
       content: '\25b6';
     }
   }
 
   .double-right-arrow {
 
-    &:after {
+    &::after {
       content: '\00bb';
     }
   }

@@ -239,14 +239,14 @@ h5, h6 {
 }
 
 a {
-  color: #728EAD;
+  color: #728ead;
   -webkit-transition: all .3s;
   transition: all .3s;
   text-decoration: none;
 }
 
 a:visited {
-  color: #728EAD;
+  color: #728ead;
 }
 
 a:active {
@@ -268,7 +268,7 @@ figure {
 
 figcaption {
   line-height: 1.625;
-  color: #261D19;
+  color: #261d19;
   margin-bottom: 0;
 }
 
@@ -525,19 +525,19 @@ details .details-wrapper {
 }
 
 .messages--status {
-  color: #40C27A;
+  color: #40c27a;
   background-color: #eefaf3;
   border: 2px solid #c7edd8;
 }
 
 .messages--warning {
-  color: #E09600;
+  color: #e09600;
   background-color: #fff5e0;
   border: 2px solid #ffe4ad;
 }
 
 .messages--error {
-  color: #FF6A40;
+  color: #ff6a40;
   background-color: #fff5f3;
   border: 2px solid #ffcdc0;
 }
@@ -606,7 +606,7 @@ details .details-wrapper {
   padding: 0 0.325rem;
 }
 
-.pager__item--ellipsis:after {
+.pager__item--ellipsis::after {
   color: #888;
   content: '. . .';
 }
@@ -622,47 +622,46 @@ details .details-wrapper {
 }
 
 .pager__link {
+  color: #888;
   display: block;
   padding: 2px 8px;
-  color: #888;
   position: relative;
 }
 
 .pager i {
-  font-size: 12px;
-  text-align: center;
   background: #888;
-  color: white;
   border-radius: 50%;
-  width: 23px;
-  height: 23px;
+  color: #fff;
   display: inline-block;
-  text-align: center;
-  position: relative;
-  top: 6px;
+  font-size: 12px;
+  height: 23px;
   margin: 0;
+  position: relative;
+  text-align: center;
+  top: 6px;
+  width: 23px;
 }
 
-.pager i:before {
-  position: absolute;
-  top: 4px;
+.pager i::before {
   left: 3px;
+  position: absolute;
   right: 0;
+  top: 4px;
 }
 
-.pager .single-left-arrow:after {
+.pager .single-left-arrow::after {
   content: '\25C0';
 }
 
-.pager .double-left-arrow:after {
+.pager .double-left-arrow::after {
   content: '\00ab';
 }
 
-.pager .single-right-arrow:after {
+.pager .single-right-arrow::after {
   content: '\25b6';
 }
 
-.pager .double-right-arrow:after {
+.pager .double-right-arrow::after {
   content: '\00bb';
 }
 
