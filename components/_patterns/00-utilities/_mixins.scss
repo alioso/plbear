@@ -54,8 +54,10 @@
     @return lighten($color, 5%);
   }
 }
-
-@mixin alpha($type, $color, $percentage) {
+// Alpha Color
+// Include in an element to create a transparent background or color with a hex
+// value fallback for older browsers.
+@mixin alpha-color($type, $color, $percentage) {
   @if $type == color {
     color: hex($color, $percentage);
     color: rgba($color, $percentage);
