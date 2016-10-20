@@ -357,9 +357,6 @@ code {
 
 .branding {
 
-  display: flex;
-  align-items: center;
-
   &__site-logo {
     max-width: 50px;
 
@@ -376,6 +373,16 @@ code {
 
     @include breakpoint($bp-768) {
       @include font-size(1.2);
+      @include margin(0, 1, 0, 1);
+    }
+  }
+
+  &__site-slogan {
+    @include font-size(.7);
+    @include margin(0, .5, 0, .5);
+
+    @include breakpoint($bp-768) {
+      @include font-size(.75);
       @include margin(0, 1, 0, 1);
     }
   }

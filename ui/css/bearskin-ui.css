@@ -3317,15 +3317,6 @@ strong {
   color: white;
 }
 
-.ui--grey .branding {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 .ui--grey .branding__site-logo {
   max-width: 50px;
 }
@@ -3334,6 +3325,11 @@ strong {
   font-size: 1rem;
   margin: 0rem 0.8125rem 0rem;
   text-transform: uppercase;
+}
+
+.ui--grey .branding__site-slogan {
+  font-size: 0.7rem;
+  margin: 0rem 0.8125rem 0rem;
 }
 
 .ui--grey #msearch-content {
@@ -4121,15 +4117,6 @@ strong {
   color: white;
 }
 
-.ui--blue .branding {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 .ui--blue .branding__site-logo {
   max-width: 50px;
 }
@@ -4138,6 +4125,11 @@ strong {
   font-size: 1rem;
   margin: 0rem 0.8125rem 0rem;
   text-transform: uppercase;
+}
+
+.ui--blue .branding__site-slogan {
+  font-size: 0.7rem;
+  margin: 0rem 0.8125rem 0rem;
 }
 
 .ui--blue #msearch-content {
@@ -4925,15 +4917,6 @@ strong {
   color: white;
 }
 
-.ui--green .branding {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 .ui--green .branding__site-logo {
   max-width: 50px;
 }
@@ -4942,6 +4925,11 @@ strong {
   font-size: 1rem;
   margin: 0rem 0.8125rem 0rem;
   text-transform: uppercase;
+}
+
+.ui--green .branding__site-slogan {
+  font-size: 0.7rem;
+  margin: 0rem 0.8125rem 0rem;
 }
 
 .ui--green #msearch-content {
@@ -5387,6 +5375,10 @@ strong {
     font-size: 1.2rem;
     margin: 0rem 1.625rem 0rem;
   }
+  .ui--grey .branding__site-slogan{
+    font-size: 0.75rem;
+    margin: 0rem 1.625rem 0rem;
+  }
   .ui--blue .branding__site-logo{
     max-width: 100px;
   }
@@ -5394,11 +5386,19 @@ strong {
     font-size: 1.2rem;
     margin: 0rem 1.625rem 0rem;
   }
+  .ui--blue .branding__site-slogan{
+    font-size: 0.75rem;
+    margin: 0rem 1.625rem 0rem;
+  }
   .ui--green .branding__site-logo{
     max-width: 100px;
   }
   .ui--green .branding__site-name{
     font-size: 1.2rem;
+    margin: 0rem 1.625rem 0rem;
+  }
+  .ui--green .branding__site-slogan{
+    font-size: 0.75rem;
     margin: 0rem 1.625rem 0rem;
   }
 }
