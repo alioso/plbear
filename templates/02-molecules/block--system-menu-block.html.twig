@@ -40,7 +40,7 @@ set classes = [
 ]
 %}
 {% set heading_id = attributes.id ~ '-menu'|clean_id %}
-{% embed "@molecules/blocks/block--system-menu-block/block--system-menu-block.twig" %}
+{% embed "@molecules/blocks/menu-block/menu-block.twig" %}
 {% block content %}
   {{ content }}
 {% endblock %}

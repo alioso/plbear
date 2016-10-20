@@ -6,7 +6,7 @@
       ]
     }
   },
-  "site_logo": "/themes/bearskin8pl/logo.svg",
+  "site_logo": "../../../../logo.svg",
   "site_name": "Website Title",
   "site_slogan": "The website slogan"
 }
