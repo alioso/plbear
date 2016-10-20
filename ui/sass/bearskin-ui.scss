@@ -26,6 +26,6 @@
   }
 
   &--green {
-    @include ui-color($ui-yellow, $ui-green, $ui-dark-green, $ui-green-button-gradient-top, $ui-green-button-gradient-bottom, $ui-green-button-hover-gradient-top, $ui-green-button-hover-gradient-bottom);
+    @include ui-color($ui-light-green, $ui-green, $ui-dark-green, $ui-green-button-gradient-top, $ui-green-button-gradient-bottom, $ui-green-button-hover-gradient-top, $ui-green-button-hover-gradient-bottom);
   }
 }
