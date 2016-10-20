@@ -240,8 +240,8 @@ h5, h6 {
 
 a {
   color: #728dac;
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  -webkit-transition: color .3s;
+  transition: color .3s;
   text-decoration: none;
 }
 
