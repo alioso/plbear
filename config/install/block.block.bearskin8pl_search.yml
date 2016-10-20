@@ -5,7 +5,7 @@ dependencies:
     - search
   theme:
     - bearskin8pl
-id: bearskin8pl_search
+id: main_search
 theme: bearskin8pl
 region: search
 weight: -1

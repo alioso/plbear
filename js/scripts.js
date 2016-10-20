@@ -24,6 +24,16 @@
         $mainMenu.toggleClass('open');
       });
 
+      var $mainSearch = $('#msearch-content');
+
+      $('#msearch', context).on('click', function () {
+        $mainSearch.toggleClass('open');
+      });
+
+      $('#msearch-close', context).on('click', function () {
+        $mainSearch.removeClass('open');
+      });
+
     }
   };
 

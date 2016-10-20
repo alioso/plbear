@@ -4,8 +4,7 @@
       type: type,
       messages: messages,
       heading: status_headings[type],
-      modifier_class: attributes.addClass('messages--' ~ type).class|safe_join(' '),
-      attributes: attributes.removeAttribute('class', 'role', 'aria-label')
-    } only
+      modifier_class: attributes.addClass('messages--' ~ type).class|safe_join(' ')
+    }
   %}
 {% endfor %}

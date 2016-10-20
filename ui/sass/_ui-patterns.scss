@@ -330,6 +330,27 @@ code {
   }
 }
 
+#msearch {
+  font-size: 22px;
+  color: $black;
+
+  transition: .2s color ease-in-out;
+
+  &:hover,
+  &:focus {
+    color: $normal;
+  }
+}
+
+#msearch-close {
+  display: flex;
+  align-items: center;
+
+  margin-left: 2em;
+  font-size: 26px;
+  color: $white;
+}
+
 //**********
 // Molecules
 //**********
@@ -357,6 +378,34 @@ code {
       @include font-size(1.2);
       @include margin(0, 1, 0, 1);
     }
+  }
+}
+
+#msearch-content {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: -200px;
+  z-index: 5;
+
+  background: rgba(0, 0, 0, .85);
+  transition: all .2s ease-in-out;
+
+  display: flex;
+  justify-content: center;
+
+  &.open {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+#search-block-form {
+  display: flex;
+  align-items: center;
+
+  .form-submit {
+    margin-left: 1em;
   }
 }
 
@@ -562,7 +611,6 @@ details {
 }
 
 //pager
-
 .pager {
   li {
     font-family: $sans;
@@ -624,6 +672,14 @@ details {
     align-items: center;
     justify-content: space-between;
   }
+}
+
+.region--search {
+  flex-grow: 1;
+  justify-content: flex-end;
+  display: flex;
+
+  margin-right: 1em;
 }
 
 .wrapper-breadcrumb {
