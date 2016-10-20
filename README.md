@@ -8,7 +8,7 @@ Before getting started, make sure that you have the latest version of [node.js](
 
 ## Pattern Lab
 
-Bear Skin 8 uses an atomic design system created with [Pattern Lab](http://patternlab.io/docs/). Next, you will need to install pattern lab dependencies from Composer. `cd` to the `pattern-lab` directory and run:
+Bear Skin 8 uses an atomic design system created with [Pattern Lab](http://patternlab.io/docs/). Next, you will need to install Pattern Lab dependencies from Composer. `cd` to the `pattern-lab` directory and run:
 ```sh
 $ composer install
 ```
