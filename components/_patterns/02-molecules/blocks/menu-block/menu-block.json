@@ -4,9 +4,21 @@
       "role": "navigation",
       "aria-labelledby": "heading_id",
       "class": [
-        "menu"
+        "menu",
+        "contextual-region",
+        "nav",
+        "nav--main",
+        "menu--main"
       ]
     }
   },
-  "content": ""
+  "content": {
+    "join()": [
+      {
+        "include()": {
+          "pattern": "molecules-menu"
+        }
+      }
+    ]
+  }
 }
