@@ -1,56 +1,15 @@
-/* Calculations
-   ========================================================================== */
+// Calculations
 
-// Mobile base & leading
-$base: 16 * ($base-font-size / 100);
-$leading: round($base * $line-height);
-$leading-rem: $leading / $base;
-
-// Desktop base & leading
-$base-desktop: 16 * ($base-font-size-desktop / 100);
-$leading-desktop: round($base-desktop * $line-height-desktop);
-$leading-rem-desktop: $leading-desktop / $base-desktop;
-
-@import 'gutenberg-mixins';
 @import '../breakpoint/stylesheets/breakpoint';
 
-/* Font themes
-   ========================================================================== */
+// Font themes
+$f-serif: "Georgia", serif;
+$f-sans: "Arial", sans-serif;
 
-$font-body: null;
-$font-headings: null;
+$font-body: $f-serif;
+$font-headings: $f-serif;
 
-@if $theme == Merriweather {
-
-  // Import Merriweather
-  @import url(https://fonts.googleapis.com/css?family=Merriweather:400,700,400italic);
-
-  // Set body font
-  $font-body: Merriweather, Georgia, serif;
-
-} @else if $theme == OpenSans {
-
-  // Import Open Sans
-  @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic);
-
-  // Set body font
-  $font-body: Open Sans, Arial, Helvetica, Sans-serif;
-
-} @else if $theme == custom {
-
-  // Set custom body font
-  $font-body: $custom-font-body;
-
-  // Set custom headings font
-  @if $custom-font-headings != $custom-font-body {
-    $font-headings: $custom-font-headings;
-  }
-}
-
-
-/* Defaults
-   ========================================================================== */
-
+// Defaults
 body,
 html {
 
@@ -64,10 +23,11 @@ html {
 
 // Font defaults
 html {
-  font-size: #{$base + 'px'};
   font-size: #{$base-font-size + '%'};
-  font-family: $font-body;
-  color: $color-font-body;
+  font-size: #{$base + 'px'};
+  font-family: $f-serif;
+  color: $font-body;
+  font-weight: 400;
 
   @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
     font-size: #{$base-desktop + 'px'};
@@ -80,25 +40,20 @@ html {
 * {
   @include line-height(1);
 
-  @include breakpoint($breakpoint-medium-width) {
+  @include breakpoint($bp-768) {
     $leading: $leading-desktop;
     $leading-rem: $leading-rem-desktop;
 
     @include line-height(1);
-    max-width: #{$max-width * $base-desktop + 'px'};
-    max-width: #{$max-width + 'rem'};
-    //margin-left: auto;
-    //margin-right: auto;
   }
 
 }
 
-
-/* Paragraph
-   ========================================================================== */
+// Paragraph
 
 p {
   @include margin-bottom(1);
+  //@include font-size(1.1);
 }
 
 @if $paragraph-indent == true {
@@ -147,8 +102,9 @@ p {
 
 }
 
-/* Headings
-   ========================================================================== */
+//
+// Headings
+//
 
 // Set headings sizes, line-heights and margins
 @each $heading, $properties in $headings {
@@ -222,50 +178,61 @@ h5 + h6 {
 
 }
 
-h6 {
-  font-style: italic;
-  font-weight: normal;
-}
-
 // Change headings font if a heading font is set
 @if $font-headings != null {
   h1,
   h2,
   h3,
-  h4,
-  h5,
-  h6 {
-    font-family: $font-headings;
+  h4 {
+    font-family: $f-serif;
+    font-weight: normal;
+
+    &.grid-title {
+      margin: 0;
+    }
   }
 }
 
-/* Links
-   ========================================================================== */
+h5, h6 {
+  text-transform: uppercase;
+  font-family: $f-sans;
+  font-weight: 700;
+}
+
+//
+// Links (to be configured in _gutenberg-config.scss)
+//
 
 a {
   color: $color-link-normal;
-  transition: all .3s;
+  transition: color .3s;
   text-decoration: none;
 
-  &:hover {
-    color: $color-link-hover;
-  }
-
   &:visited {
-    color: $color-link-visited;
-
-    &:hover {
-      color: $color-link-hover;
-    }
+    color: $color-link-normal;
   }
 
   &:active {
     color: $color-link-active;
   }
+
+  &:hover {
+    color: $color-link-hover;
+
+    &:visited {
+      color: $color-link-hover;
+    }
+  }
 }
 
-/* Figures & other elements
-   ========================================================================== */
+//
+// Figures & other elements
+//
+
+figure {
+  margin: 0;
+  display: inline-block;
+}
 
 figure.floatLeft,
 figure.floatRight {
@@ -326,10 +293,7 @@ figure.floatRight {
 figcaption {
   @include line-height(1);
   color: $color-font-figcaption;
-  font-size: .8125rem;
-  font-style: italic;
   margin-bottom: 0;
-  text-align: center;
 
   @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
     $leading: $leading-desktop;
@@ -344,14 +308,13 @@ figcaption {
 }
 
 blockquote {
-  font-style: italic;
-  padding-left: 1.4375rem;
-  // font-size: 95%;
+  @include margin(1, 0);
 
-  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
-    padding-left: 2rem;
+  font-weight: 500;
+
+  @include breakpoint($bp-1200) {
+    @include margin(1, -2);
   }
-
 }
 
 cite {
@@ -425,7 +388,7 @@ hr {
   @if $hr-style == 'line' {
     background-size: 100% #{$leading + 'px'};
     background-size: 100% #{$leading-rem + 'rem'};
-    background-image: linear-gradient(to bottom, transparent 1px, transparent #{ 0.5 * $leading - (0.5 * $hr-height) + 'px'},  $hr-color #{ 0.5 * $leading - (0.5 * $hr-height) + 'px'}, $hr-color #{ (0.5 * $leading  - (0.5 * $hr-height)) + $hr-height + 'px'}, transparent #{ (0.5 * $leading  - (0.5 * $hr-height)) + $hr-height + 'px'}, transparent #{$leading + 'px'});
+    background-image: linear-gradient(to bottom, transparent 1px, transparent #{ 0.5 * $leading - (0.5 * $hr-height) + 'px'}, $hr-color #{ 0.5 * $leading - (0.5 * $hr-height) + 'px'}, $hr-color #{ (0.5 * $leading  - (0.5 * $hr-height)) + $hr-height + 'px'}, transparent #{ (0.5 * $leading  - (0.5 * $hr-height)) + $hr-height + 'px'}, transparent #{$leading + 'px'});
 
     @if $hr-width == null {
       width: 100%;
@@ -483,47 +446,6 @@ code {
     @import 'gutenberg-mixins';
 
     @include padding-equal(1);
-  }
-
-}
-
-// Attention grabber
-.attention-grabber {
-  @include font-size(1.2);
-}
-
-
-/* Grid
-   ========================================================================== */
-
-// Grid background
-.grid {
-  background-image: linear-gradient(to bottom, hsla(200, 100%, 50%, .3) 1px, transparent 1px);
-  background-position: left top;
-  background-repeat: repeat;
-  background-size: 100% #{$leading + 'px'};
-  background-size: 100% #{$leading-rem + 'rem'};
-
-  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
-    $leading: $leading-desktop;
-    $leading-rem: $leading-rem-desktop;
-
-    background-size: 100% #{$leading + 'px'};
-    background-size: 100% #{$leading-rem + 'rem'};
-  }
-
-}
-
-// Double grid background
-.grid-double {
-  @extend .grid;
-  background-image: linear-gradient(to bottom, hsla(200, 100%, 50%, .3) 1px, transparent 1px, transparent #{ .5 * $leading + 'px'}, hsla(200, 100%, 50%, .2) #{ .5 * $leading + 'px'}, transparent #{ .5 * $leading + 1 + 'px'}, transparent #{$leading + 'px'});
-
-  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
-    $leading: $leading-desktop;
-    $leading-rem: $leading-rem-desktop;
-
-    background-image: linear-gradient(to bottom, hsla(200, 100%, 50%, .3) 1px, transparent 1px, transparent #{ .5 * $leading + 'px'},  hsla(200, 100%, 50%, .2) #{ .5 * $leading + 'px'}, transparent #{ 0.5 * $leading + 1 + 'px'}, transparent #{$leading + 'px'});
   }
 
 }

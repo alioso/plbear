@@ -1,4 +1,4 @@
-/*! Gutenberg reset — adapted from Normalize */
+//*! Gutenberg reset — adapted from Normalize */
 
 // Prevent iOS text size adjust after orientation change, without disabling
 // user zoom.
@@ -13,8 +13,7 @@ body {
   margin: 0;
 }
 
-/* HTML5 display definitions
-   ========================================================================== */
+//* HTML5 display definitions */
 
 // Correct `block` display not defined for any HTML5 element in IE 8/9.
 // Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
@@ -48,8 +47,8 @@ audio,
 canvas,
 progress,
 video {
-  display: inline-block; /* 1 */
-  vertical-align: baseline; /* 2 */
+  display: inline-block; //* 1 */
+  vertical-align: baseline; //* 2 */
 }
 
 // Prevent modern browsers from displaying `audio` without controls.
@@ -66,10 +65,9 @@ template {
   display: none;
 }
 
-/* Links
-   ========================================================================== */
+//* Links */
 
-// Remove the gray background color from active links in IE 10.
+// Remove the grey background color from active links in IE 10.
 a {
   background: transparent;
 }
@@ -80,8 +78,7 @@ a:hover {
   outline: 0;
 }
 
-/* Text-level semantics
-   ========================================================================== */
+//* Text-level semantics */
 // Enable small caps if available & fix letter spacing
 abbr {
   letter-spacing: 0.1em;
@@ -139,8 +136,7 @@ i {
   vertical-align: baseline;
 }
 
-/* Embedded content
-   ========================================================================== */
+//* Embedded content */
 
 // Remove border when inside `a` element in IE 8/9/10.
 img {
@@ -152,8 +148,7 @@ svg:not(:root) {
   overflow: hidden;
 }
 
-/* Grouping content
-   ========================================================================== */
+//* Grouping content */
 
 // Address differences between Firefox and other browsers.
 hr {
@@ -175,8 +170,7 @@ samp {
   font-family: monospace, monospace;
 }
 
-/* Tables
-   ========================================================================== */
+//* Tables */
 
 // Remove most spacing between table cells.
 table {
@@ -189,8 +183,7 @@ th {
   padding: 0;
 }
 
-/* Images
-   ========================================================================== */
+//* Images */
 
 img {
   max-width: 100%;

@@ -1,0 +1,30 @@
+@import url('//fonts.googleapis.com/css?family=Montserrat:400,700');
+@import url('//fonts.googleapis.com/css?family=Noto+Serif:400,700');
+
+$serif: 'Noto Serif';
+$sans: 'Montserrat';
+
+body {
+  color: $zeus;
+  font-family: $serif;
+}
+
+h1,
+h4 {
+  font-family: $sans;
+  text-transform: uppercase;
+}
+
+h2,
+h3 {
+  font-family: $sans;
+}
+
+b,
+strong {
+  font-weight: 700;
+}
+
+.clearfix {
+  clear: both;
+}

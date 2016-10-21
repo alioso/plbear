@@ -1,0 +1,95 @@
+.pager {
+
+  &__items {
+    @include padding(1, 0);
+
+    list-style: none;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__item {
+    @include font-size(1);
+
+    display: inline-block;
+
+    &.is-active {
+      background: $gallery;
+      color: $grey;
+    }
+
+    &--ellipsis {
+      @include padding(0, .2);
+
+      &::after {
+        color: $grey;
+        content: '. . .';
+      }
+    }
+
+    &--first,
+    &--previous {
+      transform: rotate(180deg);
+
+      i {
+        top: 3px !important;
+      }
+    }
+  }
+
+  &__link {
+    color: $grey;
+    display: block;
+    padding: 2px 8px;
+    position: relative;
+  }
+
+  i {
+    background: $grey;
+    border-radius: 50%;
+    color: $white;
+    display: inline-block;
+    font-size: 12px;
+    height: 23px;
+    margin: 0;
+    position: relative;
+    text-align: center;
+    top: 6px;
+    width: 23px;
+
+    &::before {
+      left: 3px;
+      position: absolute;
+      right: 0;
+      top: 6px;
+    }
+  }
+
+  .single-left-arrow {
+
+    &::after {
+      content: '\25C0';
+    }
+  }
+
+  .double-left-arrow {
+
+    &::after {
+      content: '\00ab';
+    }
+  }
+
+  .single-right-arrow {
+
+    &::after {
+      content: '\25b6';
+    }
+  }
+
+  .double-right-arrow {
+
+    &::after {
+      content: '\00bb';
+    }
+  }
+}
