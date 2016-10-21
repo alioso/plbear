@@ -593,7 +593,7 @@ details {
     }
 
     a {
-      @include link($ui-black, none, $ui-black, underline);
+      @include link($ui-grey, none, $ui-grey, underline);
 
       &.is-active {
         @include button($gradient-top, $gradient-bottom, $hover-gradient-top, $hover-gradient-bottom);
@@ -650,6 +650,21 @@ details {
           }
         }
       }
+    }
+  }
+}
+
+// to show active class in PL
+.menu-item {
+
+  &--active-trail {
+
+    a {
+      @include button($gradient-top, $gradient-bottom, $hover-gradient-top, $hover-gradient-bottom);
+      @include font-size(1);
+
+      color: $white;
+      font-family: $serif;
     }
   }
 }
