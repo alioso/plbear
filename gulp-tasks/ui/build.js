@@ -4,6 +4,7 @@ var sassGlob = require('gulp-sass-glob');
 var sourcemaps = require('gulp-sourcemaps');
 var sass = require('gulp-sass');
 var postcss = require('gulp-postcss');
+var flexibility = require('postcss-flexibility');
 var cached = require('gulp-cached');
 var autoprefixer = require('autoprefixer');
 var mqpacker = require('css-mqpacker');
@@ -17,6 +18,7 @@ module.exports = function (gulp, options) {
 
   var processors = [
     autoprefixer({browsers: options.ui.browsers}),
+    flexibility(),
     mqpacker({sort: true})
   ];
 

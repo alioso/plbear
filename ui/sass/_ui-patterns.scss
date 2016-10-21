@@ -292,9 +292,12 @@ input[type="search"] {
     margin-top: 5px
   }
 
-  .dropbutton-toggle button,
-  a {
+  .dropbutton-toggle {
+    button,
+    a {
+
     color: $white;
+    }
   }
 }
 
