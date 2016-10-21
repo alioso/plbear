@@ -351,6 +351,32 @@ code {
   color: $white;
 }
 
+.ajax-progress-throbber {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, .8);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .throbber {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: .3rem solid $normal;
+    border-top-color: $gallery;
+    animation: spin 1s infinite linear;
+  }
+}
+
+div[id^="ajax-wrapper"] {
+  position: relative;
+}
+
 //**********
 // Molecules
 //**********
@@ -459,10 +485,10 @@ fieldset {
 }
 
 .messages {
- @include font-size(.9);
- @include padding(1, 1);
+  @include font-size(.9);
+  @include padding(1, 1);
 
- font-family: $sans;
+  font-family: $sans;
 }
 
 details {
@@ -751,6 +777,13 @@ table {
     padding-left: 15px;
   }
 
+  .form-item {
+
+    label {
+      display: block;
+    }
+  }
+
   .checkbox-wrapper {
     display: block;
     width: auto;
@@ -805,7 +838,6 @@ table {
     flex-direction: column;
 
     height: 100%;
-    background: url('../svg/bg_bear_tracks.svg') no-repeat center right;
   }
 }
 
