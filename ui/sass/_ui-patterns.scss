@@ -655,6 +655,7 @@ details {
 .menu-item {
 
   &--active-trail {
+    
     a {
       @include button($gradient-top, $gradient-bottom, $hover-gradient-top, $hover-gradient-bottom);
       @include font-size(1);
