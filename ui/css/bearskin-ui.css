@@ -3284,6 +3284,7 @@ strong {
 .ui--grey #mnav i {
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
+  margin: 0;
 }
 
 .ui--grey #mnav.open {
@@ -3354,6 +3355,11 @@ strong {
 }
 
 .ui--grey .branding__site-name {
+  position: absolute;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
   font-size: 1rem;
   margin: 0rem 0.8125rem 0rem;
   text-transform: uppercase;
@@ -3369,7 +3375,7 @@ strong {
   width: 100%;
   left: 0;
   top: -200px;
-  z-index: 5;
+  z-index: 15;
   background: rgba(0, 0, 0, 0.85);
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
@@ -4119,6 +4125,7 @@ strong {
 .ui--blue #mnav i {
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
+  margin: 0;
 }
 
 .ui--blue #mnav.open {
@@ -4189,6 +4196,11 @@ strong {
 }
 
 .ui--blue .branding__site-name {
+  position: absolute;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
   font-size: 1rem;
   margin: 0rem 0.8125rem 0rem;
   text-transform: uppercase;
@@ -4204,7 +4216,7 @@ strong {
   width: 100%;
   left: 0;
   top: -200px;
-  z-index: 5;
+  z-index: 15;
   background: rgba(0, 0, 0, 0.85);
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
@@ -4954,6 +4966,7 @@ strong {
 .ui--green #mnav i {
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
+  margin: 0;
 }
 
 .ui--green #mnav.open {
@@ -5024,6 +5037,11 @@ strong {
 }
 
 .ui--green .branding__site-name {
+  position: absolute;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
   font-size: 1rem;
   margin: 0rem 0.8125rem 0rem;
   text-transform: uppercase;
@@ -5039,7 +5057,7 @@ strong {
   width: 100%;
   left: 0;
   top: -200px;
-  z-index: 5;
+  z-index: 15;
   background: rgba(0, 0, 0, 0.85);
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
@@ -5477,6 +5495,13 @@ strong {
     max-width: 100px;
   }
   .ui--grey .branding__site-name{
+    position: relative;
+    height: auto;
+    width: auto;
+    overflow: inherit;
+    clip: none;
+  }
+  .ui--grey .branding__site-name{
     font-size: 1.2rem;
     margin: 0rem 1.625rem 0rem;
   }
@@ -5488,6 +5513,13 @@ strong {
     max-width: 100px;
   }
   .ui--blue .branding__site-name{
+    position: relative;
+    height: auto;
+    width: auto;
+    overflow: inherit;
+    clip: none;
+  }
+  .ui--blue .branding__site-name{
     font-size: 1.2rem;
     margin: 0rem 1.625rem 0rem;
   }
@@ -5497,6 +5529,13 @@ strong {
   }
   .ui--green .branding__site-logo{
     max-width: 100px;
+  }
+  .ui--green .branding__site-name{
+    position: relative;
+    height: auto;
+    width: auto;
+    overflow: inherit;
+    clip: none;
   }
   .ui--green .branding__site-name{
     font-size: 1.2rem;

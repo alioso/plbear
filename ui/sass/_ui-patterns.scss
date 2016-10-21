@@ -313,6 +313,7 @@ code {
 
   i {
     transition: all .2s ease-in-out;
+    margin: 0;
   }
 
   &.open {
@@ -392,10 +393,16 @@ div[id^="ajax-wrapper"] {
   }
 
   &__site-name {
+    @include element-invisible;
+
     @include font-size(1);
     @include margin(0, .5, 0, .5);
 
     text-transform: uppercase;
+
+    @include breakpoint($bp-768) {
+      @include element-invisible-off;
+    }
 
     @include breakpoint($bp-768) {
       @include font-size(1.2);
@@ -419,7 +426,7 @@ div[id^="ajax-wrapper"] {
   width: 100%;
   left: 0;
   top: -200px;
-  z-index: 5;
+  z-index: 15;
 
   background: rgba(0, 0, 0, .85);
   transition: all .2s ease-in-out;
