@@ -3581,6 +3581,33 @@ strong {
   background: gray;
 }
 
+.ui--grey .menu-item--active-trail a {
+  font-size: 0.8rem;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+  border-style: none;
+  -webkit-transition: background .2s ease-in-out;
+  transition: background .2s ease-in-out;
+  background: -webkit-linear-gradient(false, false);
+  background: linear-gradient(false, false);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-family: "Montserrat";
+  font-size: 1rem;
+  color: white;
+  font-family: "Noto Serif";
+}
+
+.ui--grey .menu-item--active-trail a:hover, .ui--grey .menu-item--active-trail a:focus, .ui--grey .menu-item--active-trail a:visited {
+  background: -webkit-linear-gradient(false, false);
+  background: linear-gradient(false, false);
+  text-decoration: none;
+}
+
 .ui--grey .list-group__link:not(:first-child) {
   margin-top: 0.8125rem;
 }
@@ -4381,6 +4408,33 @@ strong {
   background: #ebf5ff;
 }
 
+.ui--blue .menu-item--active-trail a {
+  font-size: 0.8rem;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+  border-style: none;
+  -webkit-transition: background .2s ease-in-out;
+  transition: background .2s ease-in-out;
+  background: -webkit-linear-gradient(#427ab3, #2e6194);
+  background: linear-gradient(#427ab3, #2e6194);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-family: "Montserrat";
+  font-size: 1rem;
+  color: white;
+  font-family: "Noto Serif";
+}
+
+.ui--blue .menu-item--active-trail a:hover, .ui--blue .menu-item--active-trail a:focus, .ui--blue .menu-item--active-trail a:visited {
+  background: -webkit-linear-gradient(#225e9b, #1e4876);
+  background: linear-gradient(#225e9b, #1e4876);
+  text-decoration: none;
+}
+
 .ui--blue .list-group__link:not(:first-child) {
   margin-top: 0.8125rem;
 }
@@ -5179,6 +5233,33 @@ strong {
 
 .ui--green .menu--main.open .menu__link:hover, .ui--green .menu--main.open .menu__link:focus, .ui--green .menu--main.open .menu__link.is-active {
   background: #07887d;
+}
+
+.ui--green .menu-item--active-trail a {
+  font-size: 0.8rem;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+  border-style: none;
+  -webkit-transition: background .2s ease-in-out;
+  transition: background .2s ease-in-out;
+  background: -webkit-linear-gradient(#02978d, #0a8076);
+  background: linear-gradient(#02978d, #0a8076);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-family: "Montserrat";
+  font-size: 1rem;
+  color: white;
+  font-family: "Noto Serif";
+}
+
+.ui--green .menu-item--active-trail a:hover, .ui--green .menu-item--active-trail a:focus, .ui--green .menu-item--active-trail a:visited {
+  background: -webkit-linear-gradient(#016f68, #00524b);
+  background: linear-gradient(#016f68, #00524b);
+  text-decoration: none;
 }
 
 .ui--green .list-group__link:not(:first-child) {

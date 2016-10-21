@@ -613,6 +613,20 @@ details {
   }
 }
 
+// to show active class in PL
+.menu-item {
+
+  &--active-trail {
+    a {
+      @include button($gradient-top, $gradient-bottom, $hover-gradient-top, $hover-gradient-bottom);
+      @include font-size(1);
+
+      color: $white;
+      font-family: $serif;
+    }
+  }
+}
+
 .list-group {
 
   &__link:not(:first-child) {
