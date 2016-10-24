@@ -44,11 +44,11 @@ module.exports = function (gulp, options) {
     .pipe(gulp.dest(options.css.dest))
     .on('end', function () {
       if (options.browserSync.patterns.enabled) {
-        browserSync.get('patterns').reload();
+        browserSync.get('patterns').reload({stream: true});
       }
 
       if (options.browserSync.site.enabled) {
-        browserSync.get('site').reload();
+        browserSync.get('site').reload({stream: true});
       }
     });
 };

@@ -1,5 +1,3 @@
-@import url("//fonts.googleapis.com/css?family=Montserrat:400,700");
-@import url("//fonts.googleapis.com/css?family=Noto+Serif:400,700");
 body {
   color: #251c18;
   font-family: "Noto Serif";
@@ -5541,82 +5539,100 @@ strong {
   height: 100%;
 }
 
-@media (min-width: 48em){
-  .ui--grey .branding__site-logo{
+@media (min-width: 48em) {
+
+  .ui--grey .branding__site-logo {
     max-width: 100px;
   }
-  .ui--grey .branding__site-name{
+
+  .ui--grey .branding__site-name {
     position: relative;
     height: auto;
     width: auto;
     overflow: inherit;
     clip: none;
   }
-  .ui--grey .branding__site-name{
+
+  .ui--grey .branding__site-name {
     font-size: 1.2rem;
     margin: 0rem 1.59722rem 0rem;
   }
-  .ui--grey .branding__site-slogan{
+
+  .ui--grey .branding__site-slogan {
     font-size: 0.75rem;
     margin: 0rem 1.59722rem 0rem;
   }
-  .ui--blue .branding__site-logo{
+
+  .ui--blue .branding__site-logo {
     max-width: 100px;
   }
-  .ui--blue .branding__site-name{
+
+  .ui--blue .branding__site-name {
     position: relative;
     height: auto;
     width: auto;
     overflow: inherit;
     clip: none;
   }
-  .ui--blue .branding__site-name{
+
+  .ui--blue .branding__site-name {
     font-size: 1.2rem;
     margin: 0rem 1.59722rem 0rem;
   }
-  .ui--blue .branding__site-slogan{
+
+  .ui--blue .branding__site-slogan {
     font-size: 0.75rem;
     margin: 0rem 1.59722rem 0rem;
   }
-  .ui--green .branding__site-logo{
+
+  .ui--green .branding__site-logo {
     max-width: 100px;
   }
-  .ui--green .branding__site-name{
+
+  .ui--green .branding__site-name {
     position: relative;
     height: auto;
     width: auto;
     overflow: inherit;
     clip: none;
   }
-  .ui--green .branding__site-name{
+
+  .ui--green .branding__site-name {
     font-size: 1.2rem;
     margin: 0rem 1.59722rem 0rem;
   }
-  .ui--green .branding__site-slogan{
+
+  .ui--green .branding__site-slogan {
     font-size: 0.75rem;
     margin: 0rem 1.59722rem 0rem;
   }
 }
 
-@media (min-width: 62em){
-  .ui--grey #mnav{
+@media (min-width: 62em) {
+
+  .ui--grey #mnav {
     display: none;
   }
-  .ui--grey .menu--main{
+
+  .ui--grey .menu--main {
     position: relative;
     top: 0;
   }
-  .ui--blue #mnav{
+
+  .ui--blue #mnav {
     display: none;
   }
-  .ui--blue .menu--main{
+
+  .ui--blue .menu--main {
     position: relative;
     top: 0;
   }
-  .ui--green #mnav{
+
+  .ui--green #mnav {
     display: none;
   }
-  .ui--green .menu--main{
+
+  .ui--green .menu--main {
     position: relative;
     top: 0;
   }

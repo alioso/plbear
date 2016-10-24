@@ -18,9 +18,11 @@ ui:
   version: 1.x
   css:
     theme:
-      ui/css/bearskin-ui.css: {}
+      https://fonts.googleapis.com/css?family=Montserrat:400,700: {type: external, minified: true}
+      https://fonts.googleapis.com/css?family=Noto+Serif:400,700: {type: external, minified: true}
+      ui/css/bearskin-ui.css: {minified: false}
   js:
-    ui/js/bearskin-ui.js: {}
+    ui/js/bearskin-ui.js: {minified: false}
 
 flexboxgrid:
   css:
