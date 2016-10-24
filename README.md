@@ -91,7 +91,13 @@ if (file_exists(__DIR__ . '/settings.local.php')) {
   include __DIR__ . '/settings.local.php';
 }
 ```
+Open `settings.php` file in `sites/default` and add these lines:
 
+```php
+if (file_exists(__DIR__ . '/settings.local.php')) {
+  include __DIR__ . '/settings.local.php';
+}
+```
 This will include the local settings file as part of Drupal's settings file.
 
 Open `settings.local.php` and uncomment this line to enable the null cache service:
