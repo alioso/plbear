@@ -1,4 +1,4 @@
-{% extends '@templates/layouts/base-layout.twig' %}
+{% extends '@layouts/base-layout.twig' %}
 
 {% block content %}
 
@@ -9,8 +9,8 @@
   {% endblock %}
 
   {% block left_sidebar %}
-    <aside class="sidebar sidebar--left col-xs-12 col-md-4 first-md {{plClass}}">
-      {{ content.left }}
+    <aside class="sidebar sidebar--right col-xs-12 col-md-4 {{plClass}}">
+      {{ content.right }}
     </aside>
   {% endblock %}
 
