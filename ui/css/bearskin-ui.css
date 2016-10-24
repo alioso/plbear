@@ -3561,9 +3561,9 @@ strong {
   padding: 0.5rem 1rem;
   border-radius: 5px;
   font-family: "Montserrat";
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: white;
-  font-family: "Montserrat";
+  font-family: "Noto Serif";
 }
 
 .ui--grey .menu--main a.is-active:hover, .ui--grey .menu--main a.is-active:focus, .ui--grey .menu--main a.is-active:visited,
@@ -4419,9 +4419,9 @@ strong {
   padding: 0.5rem 1rem;
   border-radius: 5px;
   font-family: "Montserrat";
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: white;
-  font-family: "Montserrat";
+  font-family: "Noto Serif";
 }
 
 .ui--blue .menu--main a.is-active:hover, .ui--blue .menu--main a.is-active:focus, .ui--blue .menu--main a.is-active:visited,
@@ -5277,9 +5277,9 @@ strong {
   padding: 0.5rem 1rem;
   border-radius: 5px;
   font-family: "Montserrat";
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: white;
-  font-family: "Montserrat";
+  font-family: "Noto Serif";
 }
 
 .ui--green .menu--main a.is-active:hover, .ui--green .menu--main a.is-active:focus, .ui--green .menu--main a.is-active:visited,

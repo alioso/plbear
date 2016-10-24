@@ -600,10 +600,10 @@ details {
     // to show active class styling in PL
     .menu-item--active-trail a {
       @include button($gradient-top, $gradient-bottom, $hover-gradient-top, $hover-gradient-bottom);
-      @include font-size(.8);
+      @include font-size(1);
 
       color: $white;
-      font-family: $sans;
+      font-family: $serif;
     }
 
     &.open {
