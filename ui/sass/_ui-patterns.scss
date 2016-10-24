@@ -594,13 +594,16 @@ details {
 
     a {
       @include link($ui-grey, none, $ui-grey, underline);
+      @include font-size(.95);
 
-      &.is-active {
+      &.is-active,
+      // to show active class styling in PL
+      .menu--active-trail a {
         @include button($gradient-top, $gradient-bottom, $hover-gradient-top, $hover-gradient-bottom);
-        @include font-size(1);
+        @include font-size(.8);
 
         color: $white;
-        font-family: $serif;
+        font-family: $sans;
       }
     }
 
@@ -650,21 +653,6 @@ details {
           }
         }
       }
-    }
-  }
-}
-
-// to show active class in PL
-.menu-item {
-
-  &--active-trail {
-
-    a {
-      @include button($gradient-top, $gradient-bottom, $hover-gradient-top, $hover-gradient-bottom);
-      @include font-size(1);
-
-      color: $white;
-      font-family: $serif;
     }
   }
 }
