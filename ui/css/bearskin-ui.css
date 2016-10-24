@@ -3537,13 +3537,13 @@ strong {
 }
 
 .ui--grey .menu--main a {
-  color: gray;
+  color: #212121;
   text-decoration: none;
   font-size: 0.95rem;
 }
 
 .ui--grey .menu--main a:hover, .ui--grey .menu--main a:focus {
-  color: gray;
+  color: #212121;
   text-decoration: underline;
 }
 
@@ -4396,13 +4396,13 @@ strong {
 }
 
 .ui--blue .menu--main a {
-  color: gray;
+  color: #212121;
   text-decoration: none;
   font-size: 0.95rem;
 }
 
 .ui--blue .menu--main a:hover, .ui--blue .menu--main a:focus {
-  color: gray;
+  color: #212121;
   text-decoration: underline;
 }
 
@@ -5255,13 +5255,13 @@ strong {
 }
 
 .ui--green .menu--main a {
-  color: gray;
+  color: #212121;
   text-decoration: none;
   font-size: 0.95rem;
 }
 
 .ui--green .menu--main a:hover, .ui--green .menu--main a:focus {
-  color: gray;
+  color: #212121;
   text-decoration: underline;
 }
 

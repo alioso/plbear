@@ -593,8 +593,7 @@ details {
     }
 
     a {
-      @include link($ui-grey, none, $ui-grey, underline);
-      @include font-size(.95);
+      @include link($ui-black, none, $ui-black, underline);
 
       &.is-active,
       // to show active class styling in PL
