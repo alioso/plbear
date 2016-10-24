@@ -28,11 +28,13 @@
     }
 
     &--first,
-    &--previous {
-      transform: rotate(180deg);
+    &--last {
 
-      i {
-        top: 3px !important;
+     a  i {
+
+        &::before {
+          width: auto;
+        }
       }
     }
   }
@@ -45,51 +47,21 @@
   }
 
   i {
-    background: $grey;
-    border-radius: 50%;
     color: $white;
     display: inline-block;
     font-size: 12px;
-    height: 23px;
     margin: 0;
     position: relative;
     text-align: center;
-    top: 6px;
-    width: 23px;
 
     &::before {
-      left: 3px;
-      position: absolute;
+      background: $grey;
+      display: block;
+      border-radius: 50%;
       right: 0;
-      top: 6px;
-    }
-  }
-
-  .single-left-arrow {
-
-    &::after {
-      content: '\25C0';
-    }
-  }
-
-  .double-left-arrow {
-
-    &::after {
-      content: '\00ab';
-    }
-  }
-
-  .single-right-arrow {
-
-    &::after {
-      content: '\25b6';
-    }
-  }
-
-  .double-right-arrow {
-
-    &::after {
-      content: '\00bb';
+      padding: 8px;
+      width: 12px;
+      height: 12px;
     }
   }
 }
