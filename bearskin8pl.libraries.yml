@@ -9,10 +9,9 @@ global-scripts:
   js:
     js/scripts.js: {}
   dependencies:
-    - core/jquery
-    - core/drupal.ajax
     - core/drupal
     - core/drupalSettings
+    - core/jquery
     - core/jquery.once
 
 ui:

@@ -6,10 +6,10 @@ core: 8.x
 
 libraries:
   - bearskin8pl/gutenberg
-  - bearskin8pl/global-styles
-  - bearskin8pl/global-scripts
   - bearskin8pl/flexboxgrid
   - bearskin8pl/flexibility
+  - bearskin8pl/global-styles
+  - bearskin8pl/global-scripts
 
 libraries-override:
   system/base: false
