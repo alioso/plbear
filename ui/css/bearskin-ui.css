@@ -3539,7 +3539,6 @@ strong {
 .ui--grey .menu--main a {
   color: #212121;
   text-decoration: none;
-  font-size: 0.95rem;
 }
 
 .ui--grey .menu--main a:hover, .ui--grey .menu--main a:focus {
@@ -3641,13 +3640,13 @@ strong {
   font-family: "Montserrat";
 }
 
-.ui--grey .pager i {
+.ui--grey .pager i:before {
   background: gray;
   -webkit-transition: background .2s ease-in-out;
   transition: background .2s ease-in-out;
 }
 
-.ui--grey .pager i:hover, .ui--grey .pager i:focus {
+.ui--grey .pager i:hover:before, .ui--grey .pager i:focus:before {
   background: #212121;
 }
 
@@ -4398,7 +4397,6 @@ strong {
 .ui--blue .menu--main a {
   color: #212121;
   text-decoration: none;
-  font-size: 0.95rem;
 }
 
 .ui--blue .menu--main a:hover, .ui--blue .menu--main a:focus {
@@ -4500,13 +4498,13 @@ strong {
   font-family: "Montserrat";
 }
 
-.ui--blue .pager i {
+.ui--blue .pager i:before {
   background: #ebf5ff;
   -webkit-transition: background .2s ease-in-out;
   transition: background .2s ease-in-out;
 }
 
-.ui--blue .pager i:hover, .ui--blue .pager i:focus {
+.ui--blue .pager i:hover:before, .ui--blue .pager i:focus:before {
   background: #004785;
 }
 
@@ -5257,7 +5255,6 @@ strong {
 .ui--green .menu--main a {
   color: #212121;
   text-decoration: none;
-  font-size: 0.95rem;
 }
 
 .ui--green .menu--main a:hover, .ui--green .menu--main a:focus {
@@ -5359,13 +5356,13 @@ strong {
   font-family: "Montserrat";
 }
 
-.ui--green .pager i {
+.ui--green .pager i:before {
   background: #07887d;
   -webkit-transition: background .2s ease-in-out;
   transition: background .2s ease-in-out;
 }
 
-.ui--green .pager i:hover, .ui--green .pager i:focus {
+.ui--green .pager i:hover:before, .ui--green .pager i:focus:before {
   background: #00615a;
 }
 

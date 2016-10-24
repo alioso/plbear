@@ -671,12 +671,18 @@ details {
   }
 
   i {
-    background: $normal;
-    transition: background .2s ease-in-out;
+
+    &:before {
+      background: $normal;
+      transition: background .2s ease-in-out;
+    }
 
     &:hover,
     &:focus {
-      background: $dark;
+
+      &:before {
+        background: $dark;
+      }
     }
   }
 }
