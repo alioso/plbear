@@ -1,4 +1,5 @@
 (function ($, Drupal) {
+
   'use strict';
 
   Drupal.behaviors.polyfillFlexbox = {
@@ -17,23 +18,33 @@
     attach: function (context, settings) {
 
       // define the navigation to be turned into a mobile one
-      var $mainMenu = $('.menu--main');
+      var $mainMenu = $('.menu--main', context);
 
-      $('#mnav', context).on('click', function () {
-        $(this).toggleClass('open');
-        $mainMenu.toggleClass('open');
-      });
+      if ($mainMenu.length) {
+        $mainMenu.once('mobileNavigation', function () {
 
-      var $mainSearch = $('#msearch-content');
+          // elements that toggle mobile menu
+          var $nav = $('#mnav', context);
+          var $search = $('#msearch', context);
+          var $closer = $('#msearch-close', context);
 
-      $('#msearch', context).on('click', function () {
-        $mainSearch.toggleClass('open');
-      });
+          // search content
+          var $mainSearch = $('#msearch-content');
 
-      $('#msearch-close', context).on('click', function () {
-        $mainSearch.removeClass('open');
-      });
+          $nav.on('click', function () {
+            $(this).toggleClass('open');
+            $mainMenu.toggleClass('open');
+          });
 
+          $search.on('click', function () {
+            $mainSearch.toggleClass('open');
+          });
+
+          $closer.on('click', function () {
+            $mainSearch.removeClass('open');
+          });
+        });
+      }
     }
   };
 

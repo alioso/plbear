@@ -19,7 +19,6 @@ patternLab:
   patterns: "components/_patterns/**/*.{twig,json}"
 css:
   src: ["components/**/*.scss"]
-  ui: ["ui/**/*.scss"]
   dest: "css"
   buildSourceMaps: false
   lint:
