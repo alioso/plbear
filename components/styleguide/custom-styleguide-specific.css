@@ -103,3 +103,29 @@ samp {
   background: #f5f5f5;
   border: 1px solid #ccc;
 }
+
+.pl .pl-banner-image {
+  width: 720px;
+  height: 300px;
+}
+
+@media (min-width: 768px) {
+  .pl .pl-banner-image {
+    width: 995px;
+    height: 350px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .pl .pl-banner-image {
+    width: 1125px;
+    height: 400px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .pl .pl-banner-image {
+    width: 1600px;
+    height: 500px;
+  }
+}
