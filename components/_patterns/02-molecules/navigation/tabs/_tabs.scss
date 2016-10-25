@@ -37,14 +37,27 @@
   }
 
   &__tab-link {
+    @include font-size(.8);
     @include padding(.3, .5);
+
+    font-family: $sans;
+    text-transform: uppercase;
+    border-radius: $ui-border-radius;
+    color: $ui-grey;
 
     display: inline-block;
     width: 100%;
     background: $wild-sand;
 
+    &:hover,
+    &:focus,
     &.is-active {
+      color: $ui-black;
       background: transparent;
+    }
+
+    &.is-active {
+
     }
   }
 
@@ -67,5 +80,32 @@
         border-radius: 0;
       }
     }
+  }
+}
+
+
+.js-form-type-vertical-tabs {
+  display: inline-block;
+  width: 100%;
+}
+
+.vertical-tabs {
+
+  &__menu-item-title {
+    text-decoration: none !important;
+  }
+
+  &__pane {
+    clear: none;
+  }
+
+  .summary,
+  .details-wrapper {
+    border: none !important;
+  }
+
+  &__menu-item-summary {
+
+    padding-left: 5px;
   }
 }

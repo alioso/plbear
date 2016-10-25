@@ -3,6 +3,9 @@
   position: relative;
   max-width: 500px;
 
+  border-radius: $ui-border-radius;
+  background: $ui-lightest-grey;
+
   &::after {
     @include font-size(.7);
 
@@ -12,6 +15,14 @@
     content: '\25bc';
     display: inline-block;
     pointer-events: none;
+    font-size: 9px;
+    padding: 11px 12px 10px 12px;
+    background: $ui-grey;
+    color: $white;
+    right: 0;
+    top: -1px;
+    border-radius: 0 $ui-border-radius $ui-border-radius 0;
+    max-height: 34px;
   }
 
   &__select {

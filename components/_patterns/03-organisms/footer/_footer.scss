@@ -1,3 +1,12 @@
+.wrapper-footer {
+  background: $ui-lightest-grey;
+
+  &__inner {
+    @include margin-top(1);
+    @include margin-bottom(1);
+  }
+}
+
 .sticky-footer {
   display: flex;
   min-height: 100vh;
