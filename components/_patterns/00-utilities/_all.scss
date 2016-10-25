@@ -1,9 +1,9 @@
 // vendor
-@import '../../vendor/gutenberg/gutenberg';
 
 // utilities
-@import 'mixins';
 @import 'variables';
+@import '../../vendor/scss/gutenberg/gutenberg';
+@import 'mixins';
 @import 'utility';
 @import 'reusable-classes';
 @import 'animations';
