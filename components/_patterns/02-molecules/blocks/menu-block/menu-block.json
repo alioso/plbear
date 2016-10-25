@@ -20,5 +20,13 @@
         }
       }
     ]
+  },
+  "configuration": {
+    "label": "Menu"
+  },
+  "title_attributes": {
+    "Attribute()": {
+      "class": "visually-hidden"
+    }
   }
 }

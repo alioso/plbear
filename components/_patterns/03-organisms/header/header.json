@@ -3,20 +3,17 @@
     "join()": [
       {
         "include()": {
-          "pattern": "molecules-branding-block",
-          "with": {
-            "pl_open_wrapper_header":  false,
-            "pl_open_wrapper_header_inner": false,
-            "pl_open_region_header": false,
-            "pl_close_wrapper_header":  false,
-            "pl_close_wrapper_header_inner": false,
-            "pl_close_region_header": false
-          }
+          "pattern": "organisms-region-header"
         }
       },
       {
         "include()": {
-          "pattern": "molecules-menu-block"
+          "pattern": "organisms-region-search"
+        }
+      },
+      {
+        "include()": {
+          "pattern": "organisms-region-navigation"
         }
       }
     ]
