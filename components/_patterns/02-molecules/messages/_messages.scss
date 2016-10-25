@@ -1,8 +1,9 @@
 .messages {
-  @include font-size(.8);
-  @include padding(.3, .8);
+  @include font-size(.9);
+  @include padding(1, 1);
   @include margin-bottom(.5);
 
+  font-family: $sans;
   color: $grey;
   background-color: $wild-sand;
   border: 2px solid darken($gallery, 5%);

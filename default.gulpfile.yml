@@ -21,31 +21,13 @@ bower:
   src: "components/vendor/bower/raw"
   dest: "components/vendor/bower"
 css:
-  src: ["components/**/*.scss"]
+  src: ["components/**/*.scss", "!components/_patterns/**/ui/*.scss"]
   dest: "css"
   buildSourceMaps: false
   lint:
     enabled: true
     failOnError: false
   browsers: ["last 2 version", "> 5%", "IE 9"]
-ui:
-  src: ["ui/sass/**/*.scss"]
-  dest: "ui/css"
-  buildSourceMaps: false
-  lint:
-    enabled: true
-    failOnError: false
-  browsers: ["last 2 version", "> 5%", "IE 9"]
-  iconfont:
-    src: "ui/svg/icons/**/*.svg"
-    dest: "ui/fonts"
-    scssFile: "../sass/_ui-font-icon.scss"
-    fontPath: "../fonts/"
-    config:
-      normalize: true
-      fontName: "bearskinui"
-      prependUnicode: true
-      formats: ["ttf", "eot", "woff", "woff2", "svg"]
 js:
   src: ["js/*.js"]
   dest: "./js"

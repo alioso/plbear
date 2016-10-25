@@ -67,3 +67,99 @@
     background-color: rgba($color, $percentage);
   }
 }
+
+@mixin button($gradient-top, $gradient-bottom, $hover-gradient-top, $hover-gradient-bottom) {
+  @include font-size(.8);
+
+  position: relative;
+  display: inline-block;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+  border-style: none;
+  transition: background .2s ease-in-out;
+
+  background: linear-gradient($gradient-top, $gradient-bottom);
+  color: $white;
+  padding: $ui-button-padding;
+  border-radius: $ui-border-radius;
+  font-family: $sans;
+
+  &:hover,
+  &:focus,
+  &:visited {
+    background: linear-gradient($hover-gradient-top, $hover-gradient-bottom);
+    text-decoration: none;
+  }
+}
+
+@mixin placeholder {
+  @include font-size(.8);
+
+  font-weight: 400;
+}
+
+@mixin ui-color($light, $normal, $dark, $gradient-top, $gradient-bottom, $hover-gradient-top, $hover-gradient-bottom) {
+
+
+//****************************
+// Reusable typography classes
+//****************************
+
+.light {
+  color: $light;
+
+  &--bg {
+    background-color: $light;
+  }
+}
+
+.normal {
+  color: $normal;
+
+  &--bg {
+    background-color: $normal;
+  }
+}
+
+.dark {
+  color: $dark;
+
+  &--bg {
+    background-color: $dark;
+  }
+}
+
+.lightest-grey {
+  color: $ui-lightest-grey;
+
+  &--bg {
+    background-color: $ui-lightest-grey;
+  }
+}
+
+.light-grey {
+  color: $ui-light-grey;
+
+  &--bg {
+    background-color: $ui-light-grey;
+  }
+}
+
+.grey {
+  color: $ui-grey;
+
+  &--bg {
+    background-color: $ui-grey;
+  }
+}
+
+.serif {
+  font-family: $serif;
+}
+
+.sans {
+  font-family: $sans;
+}
+
+} // closing the mixin

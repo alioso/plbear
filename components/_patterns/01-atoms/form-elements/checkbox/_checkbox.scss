@@ -1,10 +1,45 @@
 .form-checkboxes {
 
+  label {
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    padding-left: 25px;
+    margin-left: -20px;
+    cursor: pointer;
+  }
+
   input {
     margin: 0 5px 0 0;
   }
+}
+
+.checkbox-wrapper {
+  top: 2px;
+  display: inline-block;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  border: 2px solid $ui-light-grey;
+  border-radius: $ui-border-radius;
+  z-index: 1;
+  background: $ui-lightest-grey;
 
   i {
-    visibility: hidden;
+    color: $normal;
+    font-size: 22px;
+    position: absolute;
+    top: -6px;
+    left: -2px;
+    opacity: 0;
+    transition: opacity .2s ease-in-out;
+  }
+
+  .form-checkbox {
+    display: none;
+
+    &:checked + i {
+      opacity: 1;
+    }
   }
 }

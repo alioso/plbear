@@ -3,6 +3,8 @@ global-styles:
   css:
     theme:
       css/bearskin8pl.css: {}
+      https://fonts.googleapis.com/css?family=Montserrat:400,700: {type: external, minified: true}
+      https://fonts.googleapis.com/css?family=Noto+Serif:400,700: {type: external, minified: true}
 
 global-scripts:
   version: 1.x
@@ -13,16 +15,6 @@ global-scripts:
     - core/drupalSettings
     - core/jquery
     - core/jquery.once
-
-ui:
-  version: 1.x
-  css:
-    theme:
-      https://fonts.googleapis.com/css?family=Montserrat:400,700: {type: external, minified: true}
-      https://fonts.googleapis.com/css?family=Noto+Serif:400,700: {type: external, minified: true}
-      ui/css/bearskin-ui.css: {minified: false}
-  js:
-    ui/js/bearskin-ui.js: {minified: false}
 
 flexboxgrid:
   css:

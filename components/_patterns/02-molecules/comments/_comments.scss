@@ -12,7 +12,12 @@
 
 .comment {
 
+  &__content {
+    font-family: $serif;
+  }
+
   footer {
+    font-family: $sans;
 
     p {
       color: $emperor;
