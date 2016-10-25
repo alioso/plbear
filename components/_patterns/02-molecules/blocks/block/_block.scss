@@ -1,0 +1,6 @@
+code {
+  @include margin(.5, 0);
+
+  border: 1px dotted $ui-light-grey;
+  background: $ui-lightest-grey;
+}

@@ -1,0 +1,146 @@
+::-webkit-input-placeholder {
+   @include placeholder;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   @include placeholder;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   @include placeholder;
+}
+
+:-ms-input-placeholder {
+   @include placeholder;
+}
+
+form {
+  @include margin(1, 0);
+}
+
+.form-item {
+  @include margin-bottom(.5);
+}
+
+label {
+  @include font-size(.9);
+  @include margin-bottom(.1);
+
+  display: block;
+  font-family: $sans;
+}
+
+.button {
+  @include button($gradient-top, $gradient-bottom, $hover-gradient-top, $hover-gradient-bottom);
+}
+
+.form-submit {
+  @extend .button;
+  @include margin-bottom(.5);
+}
+
+.form-text,
+.form-email,
+.form-textarea,
+.form-date {
+  @include padding(.2, .2);
+  @include font-size(1);
+
+  font-family: $sans;
+
+  width: 100%;
+  max-width: 30em;
+  border: 1px solid $ui-light-grey;
+  transition: border .2s ease-in-out;
+
+  &:focus {
+    outline: 0;
+    border-color: $normal;
+  }
+}
+
+button.link {
+  margin-left: 5px;
+  border: 1px solid $ui-light-grey;
+  font-family: $sans;
+  background: $ui-lightest-grey;
+}
+
+input[type="search"] {
+  @extend .form-text;
+
+  appearance: initial;
+}
+
+.filter-wrapper {
+  border: 1px solid $ui-light-grey;
+}
+
+.description {
+  @include font-size(.7);
+  @include margin-top(.2);
+
+  color: $ui-grey;
+}
+
+.field-suffix {
+  @extend .description;
+
+  display: block;
+}
+
+.dropbutton-multiple {
+  margin-right: 5px;
+}
+
+.dropbutton-widget {
+  @extend .button;
+
+  .form-submit {
+    padding: 0;
+    margin: 0;
+    background: transparent;
+  }
+
+  .secondary-action {
+    margin-top: 5px
+  }
+
+  .dropbutton-toggle {
+    button,
+    a {
+
+    color: $white;
+    }
+  }
+}
+
+.ajax-progress-throbber {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, .8);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .throbber {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: .3rem solid $normal;
+    border-top-color: $gallery;
+    animation: spin 1s infinite linear;
+  }
+}
+
+div[id^="ajax-wrapper"] {
+  position: relative;
+}
+
+fieldset {
+  border: 1px solid $ui-light-grey;
+}

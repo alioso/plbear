@@ -1,0 +1,26 @@
+global-styles:
+  version: 1.x
+  css:
+    theme:
+      css/bearskin8pl.css: {}
+      https://fonts.googleapis.com/css?family=Montserrat:400,700: {type: external, minified: true}
+      https://fonts.googleapis.com/css?family=Noto+Serif:400,700: {type: external, minified: true}
+
+global-scripts:
+  version: 1.x
+  js:
+    js/scripts.js: {}
+  dependencies:
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery
+    - core/jquery.once
+
+flexboxgrid:
+  css:
+    theme:
+      css/flexboxgrid.css: {}
+
+flexibility:
+  js:
+    js/vendor/flexibility.js: {}

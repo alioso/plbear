@@ -1,21 +1,92 @@
 //
-// COLORS
+// BASE COLORS
+//
+$black:              hsla(0, 0%, 0%, 1);
+$zeus:               hsla(18, 21%, 12%, 1);
+$emperor:            hsla(0, 0%, 33%, 1);
+$grey:               hsla(0, 0%, 53%, 1);
+$gallery:            hsla(0, 0%, 92%, 1);
+$wild-sand:          hsla(0, 0%, 96%, 1);
+$white:              hsla(0, 100%, 100%, 1);
+$bermuda-grey:       hsla(212, 26%, 56%, 1);
+$dark-bermuda-grey:  darken($bermuda-grey, 20%);
+$light-bermuda-grey: lighten($bermuda-grey, 20%);
+$emerald:            hsla(147, 52%, 51%, 1);
+$saffron:            hsla(40, 94%, 59%, 1);
+$tangerine:          hsla(40, 100%, 44%, 1);
+$outrageous-orange:  hsla(13, 100%, 63%, 1);
+$persian-red:        hsla(0, 64%, 51%, 1);
+
+$default-body: $zeus;
+$link: $bermuda-grey;
+$link-hover: $dark-bermuda-grey;
+
+
+//
+// UI COLORS
 //
 
-$black: #261D19;
-$off-black: #555;
-$dark-gray: #888;
-$gray: #eaeaea;
-$light-gray: #f5f5f5;
-$red: #FF6A40;
-$blue: #728EAD;
-$dark-blue: darken($blue, 20%);
-$light-blue: lighten($blue, 20%);
-$green: #40C27A;
-$yellow: #F9B634;
-$white: white;
+$ui-button-padding: .5rem 1rem;
+$ui-border-radius: 5px;
 
-$dotted: #aaa;
+$ui-black:                              hsla(0, 0%, 13%, 1);
+
+// grey color scheme
+$ui-lightest-grey:                      hsla(0, 0%, 96%, 1);
+$ui-light-grey:                         hsla(0, 0%, 86%, 1);
+$ui-grey:                               hsla(0, 0%, 50%, 1);
+$ui-dark-grey:                          hsla(0, 0%, 13%, 1);
+
+// blue color scheme
+$ui-blue:                               hsla(209, 100%, 96%, 1);
+$ui-light-blue:                         hsla(210, 48%, 55%, 1);
+$ui-dark-blue:                          hsla(208, 100%, 26%, 1);
+$ui-blue-button-gradient-top:           hsla(210, 46%, 48%, 1);
+$ui-blue-button-gradient-bottom:        hsla(210, 53%, 38%, 1);
+$ui-blue-button-hover-gradient-top:     hsla(210, 64%, 37%, 1);
+$ui-blue-button-hover-gradient-bottom:  hsla(211, 59%, 29%, 1);
+
+// green color scheme
+$ui-light-green:                        hsla(175, 100%, 96%, 1);
+$ui-green:                              hsla(175, 90%, 28%, 1);
+$ui-dark-green:                         hsla(176, 100%, 19%, 1);
+$ui-green-button-gradient-top:          hsla(176, 97%, 30%, 1);
+$ui-green-button-gradient-bottom:       hsla(175, 86%, 27%, 1);
+$ui-green-button-hover-gradient-top:    hsla(176, 98%, 22%, 1);
+$ui-green-button-hover-gradient-bottom: hsla(175, 100%, 16%, 1);
+
+
+$light: $ui-light-grey;
+$normal: $ui-grey;
+$dark: $ui-dark-grey;
+$gradient-top: $ui-grey;
+$gradient-bottom: $ui-grey;
+$hover-gradient-top: $ui-grey;
+$hover-gradient-bottom: $ui-grey;
+
+
+$ui: green;
+
+@if $ui == blue {
+  $light: $ui-light-blue;
+  $normal: $ui-blue;
+  $dark: $ui-dark-blue;
+  $gradient-top: $ui-blue-button-gradient-top;
+  $gradient-bottom: $ui-blue-button-gradient-bottom;
+  $hover-gradient-top: $ui-blue-button-hover-gradient-top;
+  $hover-gradient-bottom: $ui-blue-button-hover-gradient-bottom;
+}
+
+@else if $ui == green {
+  $light: $ui-light-green;
+  $normal: $ui-green;
+  $dark: $ui-dark-green;
+  $gradient-top: $ui-green-button-gradient-top;
+  $gradient-bottom: $ui-green-button-gradient-bottom;
+  $hover-gradient-top: $ui-green-button-hover-gradient-top;
+  $hover-gradient-bottom: $ui-green-button-hover-gradient-bottom;
+}
+
 
 //
 // LAYOUT
@@ -26,24 +97,23 @@ $site-max-width: 1200px / 16px * 1em;
 //
 // TYPOGRAPHY
 //
-
-// see ../vendor/gutenberg/_gutenberg-typography.scss
-
+$serif: 'Noto Serif';
+$sans: 'Montserrat';
+// other typography settings see ../vendor/scss/gutenberg/_gutenberg-typography.scss
 
 //
 // LAYOUT
 //
 
-// Configure Gutenberg for specific layout options in sass/vendor/gutemberg/_gutenberg-config.scss
-
+// Configure max-width in sass/vendor/scss/gutemberg/_gutenberg-config.scss
 
 //
 // BREAKPOINTS
 //
-$breakpoint-min-width: min-width 0 !default;
-$breakpoint-small-width: min-width 25em !default;
-$breakpoint-med-small-width: min-width 40.5em !default;
-$breakpoint-medium-width: min-width 50em !default;
-$breakpoint-large-width: min-width 62.5em !default;
-$breakpoint-to-max-width: min-width $site-max-width !default;
-$breakpoint-full-width: max-width $site-max-width !default;
+$bp-540:    min-width 33.75em !default;
+$bp-768:    min-width 48em !default;
+$bp-768-wp: min-width 54.6em !default;
+$bp-1024:   min-width 62em !default;
+$bp-1200:   min-width 75em !default;
+$bp-1500:   min-width 93.75em !default;
+$bp-1800:   min-width 112.5em !default;
