@@ -7,9 +7,9 @@
     }
   },
   "region_header": {
-      "include()": {
-        "pattern": "organisms-header"
-      }
+    "include()": {
+      "pattern": "organisms-header"
+    }
   },
   "region_navigation": "Navigation Region",
   "content": "Page content will live here",

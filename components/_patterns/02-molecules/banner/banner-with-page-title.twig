@@ -1,7 +1,8 @@
 {% spaceless %}
   {% embed "@atoms/fields/figure/figure.twig" %}
     {% block media %}
-      <img src='http://placekitten.com/1200/600'>
+      {% embed "@atoms/banner/banner.twig" %}
+      {% endembed %}
     {% endblock %}
     {% block caption %}
       <h1>I am the page title.</h1>
