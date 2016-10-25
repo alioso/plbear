@@ -3545,7 +3545,7 @@ strong {
 }
 
 .ui--grey .menu--main a.is-active,
-.ui--grey .menu--main a .menu--active-trail a {
+.ui--grey .menu--main .menu-item--active-trail a {
   font-size: 0.8rem;
   position: relative;
   display: inline-block;
@@ -3561,15 +3561,15 @@ strong {
   padding: 0.5rem 1rem;
   border-radius: 5px;
   font-family: "Montserrat";
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: white;
-  font-family: "Montserrat";
+  font-family: "Noto Serif";
 }
 
 .ui--grey .menu--main a.is-active:hover, .ui--grey .menu--main a.is-active:focus, .ui--grey .menu--main a.is-active:visited,
-.ui--grey .menu--main a .menu--active-trail a:hover,
-.ui--grey .menu--main a .menu--active-trail a:focus,
-.ui--grey .menu--main a .menu--active-trail a:visited {
+.ui--grey .menu--main .menu-item--active-trail a:hover,
+.ui--grey .menu--main .menu-item--active-trail a:focus,
+.ui--grey .menu--main .menu-item--active-trail a:visited {
   background: -webkit-linear-gradient(false, false);
   background: linear-gradient(false, false);
   text-decoration: none;
@@ -4403,7 +4403,7 @@ strong {
 }
 
 .ui--blue .menu--main a.is-active,
-.ui--blue .menu--main a .menu--active-trail a {
+.ui--blue .menu--main .menu-item--active-trail a {
   font-size: 0.8rem;
   position: relative;
   display: inline-block;
@@ -4419,15 +4419,15 @@ strong {
   padding: 0.5rem 1rem;
   border-radius: 5px;
   font-family: "Montserrat";
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: white;
-  font-family: "Montserrat";
+  font-family: "Noto Serif";
 }
 
 .ui--blue .menu--main a.is-active:hover, .ui--blue .menu--main a.is-active:focus, .ui--blue .menu--main a.is-active:visited,
-.ui--blue .menu--main a .menu--active-trail a:hover,
-.ui--blue .menu--main a .menu--active-trail a:focus,
-.ui--blue .menu--main a .menu--active-trail a:visited {
+.ui--blue .menu--main .menu-item--active-trail a:hover,
+.ui--blue .menu--main .menu-item--active-trail a:focus,
+.ui--blue .menu--main .menu-item--active-trail a:visited {
   background: -webkit-linear-gradient(#225e9b, #1e4876);
   background: linear-gradient(#225e9b, #1e4876);
   text-decoration: none;
@@ -5261,7 +5261,7 @@ strong {
 }
 
 .ui--green .menu--main a.is-active,
-.ui--green .menu--main a .menu--active-trail a {
+.ui--green .menu--main .menu-item--active-trail a {
   font-size: 0.8rem;
   position: relative;
   display: inline-block;
@@ -5277,15 +5277,15 @@ strong {
   padding: 0.5rem 1rem;
   border-radius: 5px;
   font-family: "Montserrat";
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: white;
-  font-family: "Montserrat";
+  font-family: "Noto Serif";
 }
 
 .ui--green .menu--main a.is-active:hover, .ui--green .menu--main a.is-active:focus, .ui--green .menu--main a.is-active:visited,
-.ui--green .menu--main a .menu--active-trail a:hover,
-.ui--green .menu--main a .menu--active-trail a:focus,
-.ui--green .menu--main a .menu--active-trail a:visited {
+.ui--green .menu--main .menu-item--active-trail a:hover,
+.ui--green .menu--main .menu-item--active-trail a:focus,
+.ui--green .menu--main .menu-item--active-trail a:visited {
   background: -webkit-linear-gradient(#016f68, #00524b);
   background: linear-gradient(#016f68, #00524b);
   text-decoration: none;

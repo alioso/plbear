@@ -594,16 +594,16 @@ details {
 
     a {
       @include link($ui-black, none, $ui-black, underline);
+    }
 
-      &.is-active,
-      // to show active class styling in PL
-      .menu--active-trail a {
-        @include button($gradient-top, $gradient-bottom, $hover-gradient-top, $hover-gradient-bottom);
-        @include font-size(.8);
+    a.is-active,
+    // to show active class styling in PL
+    .menu-item--active-trail a {
+      @include button($gradient-top, $gradient-bottom, $hover-gradient-top, $hover-gradient-bottom);
+      @include font-size(1);
 
-        color: $white;
-        font-family: $sans;
-      }
+      color: $white;
+      font-family: $serif;
     }
 
     &.open {

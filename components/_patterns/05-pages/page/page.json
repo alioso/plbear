@@ -6,7 +6,11 @@
       ]
     }
   },
-  "region_header": "Header Region",
+  "region_header": {
+      "include()": {
+        "pattern": "organisms-header"
+      }
+  },
   "region_navigation": "Navigation Region",
   "content": "Page content will live here",
   "region_breadcrumb": "Breadcrumb Region",
