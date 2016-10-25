@@ -6,6 +6,7 @@
   "devDependencies": {
     "autoprefixer": "^6.3.6",
     "backstopjs": "^1.3.4",
+    "bower": "^1.7.9",
     "browser-sync": "^2.6.0",
     "chalk": "^1.1.3",
     "css-mqpacker": "^5.0.1",
@@ -17,11 +18,13 @@
     "gulp-cached": "^1.1.0",
     "gulp-csslint": "^1.0.0",
     "gulp-eslint": "^2.0.0",
+    "gulp-filter": "^4.0.0",
     "gulp-flatten": "^0.3.1",
     "gulp-iconfont": "^8.0.1",
     "gulp-iconfont-css": "^2.1.0",
     "gulp-if": "^2.0.1",
     "gulp-imagemin": "^3.0.1",
+    "gulp-inject": "^4.1.0",
     "gulp-notify": "^2.2.0",
     "gulp-plumber": "^1.1.0",
     "gulp-postcss": "^6.1.1",
@@ -38,22 +41,23 @@
     "lodash.assign": "^4.2.0",
     "lodash.includes": "^4.1.3",
     "lodash.merge": "^4.6.0",
+    "main-bower-files": "^2.13.1",
     "path": "^0.12.7",
     "postcss-flexibility": "^1.1.0",
     "postcss-scss": "^0.2.1",
     "require-gulp-tasks": "^1.0.0",
+    "slimerjs": "^0.906.2",
     "yargs": "^4.7.1",
-    "yeoman-generator": "^0.23.3"
-  },
-  "dependencies": {
-    "flexboxgrid": "^6.3.1",
-    "lodash.assign": "^4.2.0",
-    "slimerjs": "^0.906.2"
+    "yeoman-generator": "^0.23.3",
+    "yo": "^1.8.5"
   },
   "scripts": {
-    "lint": "./node_modules/.bin/sass-lint 'components/_patterns/**/*.scss' --verbose --no-exit ; ./node_modules/.bin/eslint js/scripts.js",
+    "bowerinstall": "./node_modules/.bin/bower install",
+    "composerinstall": "cd pattern-lab ; composer install --no-interaction",
+    "lint": "sass-lint 'components/_patterns/**/*.scss' --verbose --no-exit ; ./node_modules/.bin/eslint js/scripts.js",
     "new": "yo ./pattern-lab/generator/index.js",
-    "postinstall": "find node_modules/ -name \"*.info\" -type f -delete && cd pattern-lab ; composer install --no-interaction"
+    "preinstall": "npm run bowerinstall ; find components/bower/raw/ -name \"*.info\" -type f -delete ; npm run composerinstall",
+    "postinstall": "npm run preinstall ; find node_modules/ -name \"*.info\" -type f -delete ; ./node_modules/.bin/gulp bower:build"
   },
   "main": "gulpfile.js",
   "repository": {
@@ -69,5 +73,6 @@
   "bugs": {
     "url": "https://github.com/zivtech/ias/issues"
   },
-  "homepage": "https://github.com/zivtech/ias#readme"
+  "homepage": "https://github.com/zivtech/ias#readme",
+  "dependencies": {}
 }
