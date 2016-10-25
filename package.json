@@ -16,6 +16,8 @@
     "fs": "0.0.1-security",
     "gulp": "^3.9.1",
     "gulp-cached": "^1.1.0",
+    "gulp-clean": "^0.3.2",
+    "gulp-css-urls": "^0.2.2",
     "gulp-csslint": "^1.0.0",
     "gulp-eslint": "^2.0.0",
     "gulp-filter": "^4.0.0",
@@ -46,6 +48,7 @@
     "postcss-flexibility": "^1.1.0",
     "postcss-scss": "^0.2.1",
     "require-gulp-tasks": "^1.0.0",
+    "run-sequence": "^1.2.2",
     "slimerjs": "^0.906.2",
     "yargs": "^4.7.1",
     "yeoman-generator": "^0.23.3",
@@ -57,7 +60,7 @@
     "lint": "sass-lint 'components/_patterns/**/*.scss' --verbose --no-exit ; ./node_modules/.bin/eslint js/scripts.js",
     "new": "yo ./pattern-lab/generator/index.js",
     "preinstall": "npm run bowerinstall ; find components/bower/raw/ -name \"*.info\" -type f -delete ; npm run composerinstall",
-    "postinstall": "npm run preinstall ; find node_modules/ -name \"*.info\" -type f -delete ; ./node_modules/.bin/gulp bower:build"
+    "postinstall": "npm run preinstall ; find node_modules/ -name \"*.info\" -type f -delete"
   },
   "main": "gulpfile.js",
   "repository": {
