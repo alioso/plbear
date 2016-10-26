@@ -2,24 +2,8 @@ flexibility:
   js:
     components/vendor/bower/js/flexibility.js:
       minified: false
-jquerycycle2:
-  js:
-    components/vendor/bower/js/jquery.cycle2.js:
-      minified: false
 flexboxgrid:
   css:
     theme:
       components/vendor/bower/css/flexboxgrid.css:
-        minified: false
-jquery:
-  js:
-    components/vendor/bower/js/jquery.js:
-      minified: false
-bxslider4:
-  js:
-    components/vendor/bower/js/jquery.bxslider.js:
-      minified: false
-  css:
-    theme:
-      components/vendor/bower/css/jquery.bxslider.css:
         minified: false

@@ -3,8 +3,6 @@
   "license": "MIT",
   "dependencies": {
     "flexibility": "1.0.6",
-    "jquery-cycle2": "^2.1.6",
-    "flexboxgrid": "^6.3.2",
-    "bxslider-4": "^4.2.5"
+    "flexboxgrid": "^6.3.2"
   }
 }
