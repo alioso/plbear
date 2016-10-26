@@ -23,6 +23,8 @@ Also, you will need to have [composer](https://getcomposer.org/doc/00-intro.md) 
 1. [Bower for front-end plugins](docs/bower.md)
     - [Serving location of Bower files](docs/bower.md#serving-location-of-bower-files)
     - [Forcing usage of specific files from Bower](docs/bower.md#forcing-usage-of-specific-files-from-bower)
+1. [Using Probo.CI](docs/probo.md)
+    - [Linting with Probo](docs/probo.md#linting-with-probo)
 
 
 * * *
