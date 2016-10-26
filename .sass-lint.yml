@@ -24,7 +24,7 @@ rules:
         - src
   no-empty-rulesets: 1
   no-extends: 0
-  no-ids: 2
+  no-ids: 1
   no-important: 1
   no-misspelled-properties:
     - 1
