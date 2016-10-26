@@ -32,5 +32,7 @@
 	"unique-headings": false,
 	"universal-selector": false,
 	"unqualified-attributes": false,
-	"zero-units": false
+	"zero-units": false,
+	"quotes": false,
+	"no-ids": false
 }

@@ -10,7 +10,7 @@
 
   &__item {
     @include font-size(1);
-
+    
     display: inline-block;
     font-family: $sans;
 
@@ -24,17 +24,20 @@
 
       &::after {
         color: $grey;
-        content: '. . .';
+        content: '...';
       }
     }
 
     &--first,
     &--last {
 
-     a  i {
+      a {
 
-        &::before {
-          width: auto;
+        i {
+
+          &::before {
+            width: auto;
+          }
         }
       }
     }
@@ -64,11 +67,11 @@
       width: 12px;
       height: 12px;
       background: $normal;
-      transition: background .2s ease-in-out;
+      transition: background 0.2s ease-in-out;
     }
 
-    &:hover,
-    &:focus {
+    &:focus,
+    &:hover {
 
       &:before {
         background: $dark;

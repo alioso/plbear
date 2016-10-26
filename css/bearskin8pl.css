@@ -650,8 +650,6 @@ fieldset {
 .select-wrapper::after {
   font-size: 0.7rem;
   position: absolute;
-  top: 10px;
-  right: 10px;
   content: '\25bc';
   display: inline-block;
   pointer-events: none;
@@ -685,7 +683,8 @@ i {
   font-weight: bold;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^="icon-"],
+[class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
   speak: none;
@@ -694,7 +693,6 @@ i {
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: greyscale;
 }
@@ -4065,7 +4063,6 @@ details[open] .details-wrapper, [open].accordion .details-wrapper {
   left: 0;
   right: 0;
   top: 0;
-  width: 100%;
   background: rgba(0, 0, 0, 0.85);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4171,7 +4168,7 @@ details[open] .details-wrapper, [open].accordion .details-wrapper {
 
 .pager__item--ellipsis::after {
   color: #878787;
-  content: '. . .';
+  content: '...';
 }
 
 .pager__item--first a i::before, .pager__item--last a i::before {
@@ -4203,11 +4200,11 @@ details[open] .details-wrapper, [open].accordion .details-wrapper {
   width: 12px;
   height: 12px;
   background: #07887d;
-  -webkit-transition: background .2s ease-in-out;
-  transition: background .2s ease-in-out;
+  -webkit-transition: background 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out;
 }
 
-.pager i:hover:before, .pager i:focus:before {
+.pager i:focus:before, .pager i:hover:before {
   background: #00615a;
 }
 
