@@ -13,14 +13,6 @@ details {
 
   .summary {
     @include padding(.5, .5);
-
-    background: $wild-sand;
-    cursor: pointer;
-
-    &__icon,
-    &__title {
-      display: inline-block;
-    }
   }
 
   .details-wrapper {
@@ -32,8 +24,6 @@ details {
     .summary {
       @include margin-bottom(.5);
 
-      border-bottom: 0;
-
       &__icon {
         float: right;
       }
@@ -42,25 +32,15 @@ details {
         transform: rotate(180deg);
       }
     }
-
-    .details-wrapper {
-      border: 1px solid $ui-light-grey;
-      border-top: 0;
-      animation-name: fadeInDown;
-      animation-duration: 0.5s;
-    }
   }
 }
 
 .summary {
   @include margin-bottom(1);
 
-  background: $ui-lightest-grey;
-  border: 1px solid $ui-light-grey;
   display: block;
   float: left;
   width: 100%;
-  outline: 0;
   position: relative;
   z-index: 2;
 

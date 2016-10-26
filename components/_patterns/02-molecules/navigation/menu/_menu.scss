@@ -1,7 +1,7 @@
 .menu {
   margin: 0;
   padding: 0;
-  transition: background .2s ease-in-out;
+
 
   &__item {
     @include margin(0, .5, 0, 0);
@@ -28,39 +28,8 @@
   }
 
   &--main {
-    position: absolute;
-    top: -200px;
-
-    @include breakpoint($bp-1024) {
-      position: relative;
-      top: 0;
-    }
-
-    a {
-      @include link($ui-black, none, $ui-black, underline);
-    }
-
-    a.is-active,
-    // to show active class styling in PL
-    .menu-item--active-trail a {
-      @include button($gradient-top, $gradient-bottom, $hover-gradient-top, $hover-gradient-bottom);
-      @include font-size(1);
-
-      color: $white;
-      font-family: $serif;
-    }
 
     &.open {
-      @include font-size(1.4);
-
-      z-index: 5;
-      width: 100%;
-      height: 100%;
-      left: 0;
-      right: 0;
-      top: 0;
-      background: rgba(0, 0, 0, .85);
-
       display: flex;
       align-items: center;
       justify-content: center;
@@ -76,23 +45,9 @@
         }
 
         &__link {
-          @include link($white, none, $white, none);
-
-          font-family: $sans;
-          text-transform: uppercase;
           display: block;
           padding: 10px;
           width: 100%;
-          background: transparent;
-          border-radius: 0 !important;
-
-          &:hover,
-          &:focus,
-          &.is-active {
-            @include font-size(1.4);
-
-            background: $normal;
-          }
         }
       }
     }
@@ -107,13 +62,7 @@
   }
 }
 
-.sub-menu {
-  visibility: hidden;
-  position: absolute;
-  left: 0;
-  opacity: 0;
-  transition: opacity .3s ease-in-out;
-}
+
 
 
 #mnav {
@@ -124,12 +73,10 @@
   color: $ui-black;
 
   i {
-    transition: all .2s ease-in-out;
     margin: 0;
   }
 
   &.open {
-    color: $white;
 
     i {
       &:before {

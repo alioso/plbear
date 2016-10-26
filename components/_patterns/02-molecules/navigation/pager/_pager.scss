@@ -9,15 +9,7 @@
   }
 
   &__item {
-    @include font-size(1);
-    
     display: inline-block;
-    font-family: $sans;
-
-    &.is-active {
-      background: $gallery;
-      color: $grey;
-    }
 
     &--ellipsis {
       @include padding(0, .2);
@@ -32,9 +24,7 @@
     &--last {
 
       a {
-
         i {
-
           &::before {
             width: auto;
           }
@@ -44,14 +34,12 @@
   }
 
   &__link {
-    color: $grey;
     display: block;
     padding: 2px 8px;
     position: relative;
   }
 
   i {
-    color: $white;
     display: inline-block;
     font-size: 12px;
     margin: 0;
@@ -59,23 +47,9 @@
     text-align: center;
 
     &::before {
-      background: $grey;
       display: block;
-      border-radius: 50%;
       right: 0;
       padding: 8px;
-      width: 12px;
-      height: 12px;
-      background: $normal;
-      transition: background 0.2s ease-in-out;
-    }
-
-    &:focus,
-    &:hover {
-
-      &:before {
-        background: $dark;
-      }
     }
   }
 }
