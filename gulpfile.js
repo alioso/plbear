@@ -34,7 +34,7 @@
   var backstopTasks = require('./gulp-tasks/backstop.js');
   backstopTasks(gulp, config);
 
-  gulp.task('watch', ['serve', 'styles:watch', 'ui:watch', 'scripts:watch', 'pl:watch']);
+  gulp.task('watch', ['serve', 'styles:watch', 'scripts:watch', 'pl:watch']);
   gulp.task('default', ['watch']);
   gulp.task('build', ['images:build', 'ui:build', 'styles:build', 'pl:build']);
 }());
