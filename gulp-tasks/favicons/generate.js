@@ -18,7 +18,17 @@ module.exports = function (gulp, options) {
       online: false,
       html: 'icons.html',
       pipeHTML: true,
-      replace: true
+      replace: true,
+      icons: {
+        android: true,
+        appleIcon: true,
+        appleStartup: false,
+        coast: false,
+        favicons: true,
+        firefox: true,
+        windows: false,
+        yandex: false
+      }
     }))
     .on('error', gutil.log)
     .pipe(gulp.dest(options.favicons.dest));
