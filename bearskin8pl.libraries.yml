@@ -30,14 +30,6 @@ flexibility:
   js:
     components/vendor/bower/js/flexibility.js:
       minified: false
-bxslider:
-  js:
-    components/vendor/bower/js/jquery.bxSlider.js:
-      minified: false
-  css:
-    theme:
-      components/vendor/bower/css/bx_styles.css:
-        minified: false
 jquerycycle2:
   js:
     components/vendor/bower/js/jquery.cycle2.js:
@@ -46,6 +38,18 @@ flexboxgrid:
   css:
     theme:
       components/vendor/bower/css/flexboxgrid.css:
+        minified: false
+jquery:
+  js:
+    components/vendor/bower/js/jquery.js:
+      minified: false
+bxslider4:
+  js:
+    components/vendor/bower/js/jquery.bxslider.js:
+      minified: false
+  css:
+    theme:
+      components/vendor/bower/css/jquery.bxslider.css:
         minified: false
 
 # endinject
