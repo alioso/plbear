@@ -36,5 +36,7 @@
 
   gulp.task('watch', ['serve', 'styles:watch', 'scripts:watch', 'pl:watch']);
   gulp.task('default', ['watch']);
-  gulp.task('build', ['images:build', 'ui:build', 'styles:build', 'pl:build']);
+  gulp.task('build', ['images:build', 'ui:build', 'styles:build', 'pl:build', 'favicons:build']);
+  gulp.task('favicons:build', ['favicons:generate', 'favicons:inject']);
+
 }());
