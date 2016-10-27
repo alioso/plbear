@@ -168,7 +168,6 @@ details {
 
 #mnav {
   font-size: 26px;
-  display: block;
   position: relative;
   z-index: 6;
   color: $ui-black;
@@ -423,6 +422,10 @@ table {
 #search-block-form {
   display: flex;
   align-items: center;
+
+  .form-item {
+    margin: 0;
+  }
 
   .form-submit {
     @include margin(0, 0, 0, .5);
