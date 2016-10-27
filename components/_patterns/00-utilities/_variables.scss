@@ -78,10 +78,12 @@ $sans: 'Montserrat';
 //
 // BREAKPOINTS
 //
-$bp-540:    min-width 33.75em !default;
-$bp-768:    min-width 48em !default;
-$bp-768-wp: min-width 54.6em !default;
-$bp-1024:   min-width 62em !default;
-$bp-1200:   min-width 75em !default;
-$bp-1500:   min-width 93.75em !default;
-$bp-1800:   min-width 112.5em !default;
+
+@import '../../vendor/scss/gutenberg/gutenberg-config';
+
+$bp-540:    min-width 540 / $base * 1em !default;
+$bp-768:    min-width 768 / $base * 1em !default;
+$bp-1024:   min-width 1024 / $base * 1em !default;
+$bp-1200:   min-width 1200 / $base * 1em !default;
+$bp-1500:   min-width 1500 / $base * 1em !default;
+$bp-1800:   min-width 1800 / $base * 1em !default;
