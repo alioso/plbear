@@ -22,7 +22,7 @@ bower:
   src: "components/vendor/bower/raw"
   dest: "components/vendor/bower"
 css:
-  src: ["components/**/*.scss", "!components/_patterns/**/ui/*.scss"]
+  src: ["components/**/*.scss"]
   dest: "css"
   buildSourceMaps: false
   lint:
