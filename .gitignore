@@ -4,3 +4,4 @@ export
 ; pattern-lab
 gulpfile.yml
 components/vendor/bower/raw
+.idea

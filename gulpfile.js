@@ -5,17 +5,8 @@
   var yaml = require('js-yaml');
   var fs = require('fs');
   var assign = require('lodash.assign');
-  var backstopConfig  = require('./backstop.json'),
-  gulp            = require('gulp'),
-  shell           = require('gulp-shell'),
-  gutil           = require('gulp-util'),
-  notify          = require('gulp-notify'),
-  argv            = require('yargs').argv,
-  gulpif          = require('gulp-if'),
-  browserSync     = require('browser-sync').create();
-
-  //  should we build sourcemaps? "gulp build --sourcemaps"
-  var buildSourceMaps = !!argv.sourcemaps;
+  var backstopConfig  = require('./backstop.json');
+  var argv = require('yargs').argv;
 
   // read default config settings
   var config = yaml.safeLoad(fs.readFileSync('default.gulpfile.yml', 'utf8'), {json: true});
@@ -26,6 +17,10 @@
   } catch (e) {
     console.log('No custom config found! Proceeding with default config only.');
   }
+
+  //  should we build sourcemaps? "gulp build --sourcemaps"
+  var buildSourceMaps = !!argv.sourcemaps;
+  config.buildSourceMaps = buildSourceMaps;
 
   var gulpRequireTasks = require('gulp-require-tasks');
   gulpRequireTasks({
@@ -39,8 +34,9 @@
   var backstopTasks = require('./gulp-tasks/backstop.js');
   backstopTasks(gulp, config);
 
-  gulp.task('watch', ['serve', 'styles:watch', 'ui:watch', 'scripts:watch', 'pl:watch']);
+  gulp.task('watch', ['serve', 'styles:watch', 'scripts:watch', 'pl:watch']);
   gulp.task('default', ['watch']);
-  gulp.task('build', ['images:build', 'ui:build', 'styles:build', 'pl:build']);
+  gulp.task('build', ['images:build', 'styles:build', 'pl:build', 'favicons:build']);
+  gulp.task('favicons:build', ['favicons:generate', 'favicons:inject']);
 
 }());

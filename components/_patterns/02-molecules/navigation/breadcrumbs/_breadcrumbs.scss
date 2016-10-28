@@ -1,7 +1,5 @@
 .wrapper-breadcrumb {
   @include margin-top(2);
-
-  border-top: 1px solid $ui-lightest-grey;
 }
 
 .breadcrumb {
@@ -14,16 +12,11 @@
   }
 
   &__item {
-    @include font-size(.8);
-
     display: inline;
-    font-family: $sans;
-    text-transform: uppercase;
     margin-right: 5px;
   }
 
   &__link {
     padding-right: 5px;
-
   }
 }

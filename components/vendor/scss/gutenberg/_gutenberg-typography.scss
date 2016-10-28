@@ -26,7 +26,6 @@ html {
   font-size: #{$base-font-size + '%'};
   font-size: #{$base + 'px'};
   font-family: $f-serif;
-  color: $font-body;
   font-weight: 400;
 
   @media screen and (min-width: #{ $max-width + 5 + 'em'}) {

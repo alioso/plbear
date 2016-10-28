@@ -29,63 +29,31 @@ $link-hover: $dark-bermuda-grey;
 $ui-button-padding: .5rem 1rem;
 $ui-border-radius: 5px;
 
-$ui-black:                              hsla(0, 0%, 13%, 1);
+$ui-black: #222;
 
 // grey color scheme
-$ui-lightest-grey:                      hsla(0, 0%, 96%, 1);
-$ui-light-grey:                         hsla(0, 0%, 86%, 1);
-$ui-grey:                               hsla(0, 0%, 50%, 1);
-$ui-dark-grey:                          hsla(0, 0%, 13%, 1);
+$ui-lightest-grey: #F5F5F5;
+$ui-light-grey: #DCDCDC;
+$ui-grey: #808080;
+$ui-dark-grey: #3F3F3F;
 
 // blue color scheme
-$ui-blue:                               hsla(209, 100%, 96%, 1);
-$ui-light-blue:                         hsla(210, 48%, 55%, 1);
-$ui-dark-blue:                          hsla(208, 100%, 26%, 1);
-$ui-blue-button-gradient-top:           hsla(210, 46%, 48%, 1);
-$ui-blue-button-gradient-bottom:        hsla(210, 53%, 38%, 1);
-$ui-blue-button-hover-gradient-top:     hsla(210, 64%, 37%, 1);
-$ui-blue-button-hover-gradient-bottom:  hsla(211, 59%, 29%, 1);
+$ui-light-blue: #EAF5FF;
+$ui-blue: #548BC3;
+$ui-dark-blue: #004987;
+$ui-blue-button-gradient-top: #427AB3;
+$ui-blue-button-gradient-bottom: #2E6296;
+$ui-blue-button-hover-gradient-top: #225E9A;
+$ui-blue-button-hover-gradient-bottom: #1E4976;
 
 // green color scheme
-$ui-light-green:                        hsla(175, 100%, 96%, 1);
-$ui-green:                              hsla(175, 90%, 28%, 1);
-$ui-dark-green:                         hsla(176, 100%, 19%, 1);
-$ui-green-button-gradient-top:          hsla(176, 97%, 30%, 1);
-$ui-green-button-gradient-bottom:       hsla(175, 86%, 27%, 1);
-$ui-green-button-hover-gradient-top:    hsla(176, 98%, 22%, 1);
-$ui-green-button-hover-gradient-bottom: hsla(175, 100%, 16%, 1);
-
-
-$light: $ui-light-grey;
-$normal: $ui-grey;
-$dark: $ui-dark-grey;
-$gradient-top: $ui-grey;
-$gradient-bottom: $ui-grey;
-$hover-gradient-top: $ui-grey;
-$hover-gradient-bottom: $ui-grey;
-
-
-$ui: green;
-
-@if $ui == blue {
-  $light: $ui-light-blue;
-  $normal: $ui-blue;
-  $dark: $ui-dark-blue;
-  $gradient-top: $ui-blue-button-gradient-top;
-  $gradient-bottom: $ui-blue-button-gradient-bottom;
-  $hover-gradient-top: $ui-blue-button-hover-gradient-top;
-  $hover-gradient-bottom: $ui-blue-button-hover-gradient-bottom;
-}
-
-@else if $ui == green {
-  $light: $ui-light-green;
-  $normal: $ui-green;
-  $dark: $ui-dark-green;
-  $gradient-top: $ui-green-button-gradient-top;
-  $gradient-bottom: $ui-green-button-gradient-bottom;
-  $hover-gradient-top: $ui-green-button-hover-gradient-top;
-  $hover-gradient-bottom: $ui-green-button-hover-gradient-bottom;
-}
+$ui-yellow: #E6AB0F;
+$ui-green: #078A80;
+$ui-dark-green: #00635D;
+$ui-green-button-gradient-top: #02978E;
+$ui-green-button-gradient-bottom: #0A8277;
+$ui-green-button-hover-gradient-top: #016F68;
+$ui-green-button-hover-gradient-bottom: #00534C;
 
 
 //
@@ -110,10 +78,12 @@ $sans: 'Montserrat';
 //
 // BREAKPOINTS
 //
-$bp-540:    min-width 33.75em !default;
-$bp-768:    min-width 48em !default;
-$bp-768-wp: min-width 54.6em !default;
-$bp-1024:   min-width 62em !default;
-$bp-1200:   min-width 75em !default;
-$bp-1500:   min-width 93.75em !default;
-$bp-1800:   min-width 112.5em !default;
+
+@import '../../vendor/scss/gutenberg/gutenberg-config';
+
+$bp-540:    min-width 540 / $base * 1em !default;
+$bp-768:    min-width 768 / $base * 1em !default;
+$bp-1024:   min-width 1024 / $base * 1em !default;
+$bp-1200:   min-width 1200 / $base * 1em !default;
+$bp-1500:   min-width 1500 / $base * 1em !default;
+$bp-1800:   min-width 1800 / $base * 1em !default;

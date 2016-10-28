@@ -3,6 +3,7 @@
 # setting to match your system
 #
 
+themeName: "bearskin8pl"
 patternLab:
   enabled: true
   configFile: "pattern-lab/config/config.yml"
@@ -21,7 +22,7 @@ bower:
   src: "components/vendor/bower/raw"
   dest: "components/vendor/bower"
 css:
-  src: ["components/**/*.scss", "!components/_patterns/**/ui/*.scss"]
+  src: ["components/**/*.scss"]
   dest: "css"
   buildSourceMaps: false
   lint:
@@ -37,6 +38,10 @@ js:
 images:
   src: ["images/**/*.{jpg,jpeg,gif,png}"]
   dest: "./images"
+favicons:
+  src: "images/bearskin-logo.png"
+  dest: "./images/favicons"
+  bgColor: "#FFFFFF"
 templates:
   src: ["templates/**/*.html.twig"]
 drush:

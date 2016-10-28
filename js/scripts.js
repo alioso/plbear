@@ -2,18 +2,6 @@
 
   'use strict';
 
-  Drupal.behaviors.bsPolyfillFlexbox = {
-    attach: function (context, settings) {
-
-      $('body', context).once('bsPolyfillFlexbox').each(function (i) {
-        if (flexibility instanceof Object) {
-          flexibility(document.body);
-        }
-      });
-
-    }
-  };
-
   Drupal.behaviors.bsMobileNavigation = {
     attach: function (context, settings) {
 
